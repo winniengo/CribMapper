@@ -1,1 +1,1 @@
-json.extract! @listing
+json.partial! 'listing', listing: @listing
