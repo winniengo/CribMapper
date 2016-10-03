@@ -1,13 +1,16 @@
 import React from 'react';
 import Map from './map';
+import Filters from './filters';
 
 const Search = ({ listings, requestListings, updateBounds }) => (
   <div className="search">
-    Search
     <Map
       listings={listings}
-      requestListings={listings}
+      requestListings={requestListings}
       updateBounds={updateBounds} />
+    <Filters
+      listings={listings}
+      requestListings={requestListings} />
   </div>
 );
 

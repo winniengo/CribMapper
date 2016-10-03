@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  requestBenches: () => dispatch(requestBenches()),
+  requestListings: () => dispatch(requestListings()),
   updateBounds: bounds => console.log(bounds)
 });
 

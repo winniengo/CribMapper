@@ -3,8 +3,7 @@ import React from 'react';
 import SearchContainer from './search/search_container';
 
 const App = () => (
-  <div className='app'>
-    CribMapper
+  <div id='app'>
     <SearchContainer />
   </div>
 );
