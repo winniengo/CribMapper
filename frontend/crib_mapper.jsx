@@ -9,7 +9,21 @@ import { requestListings, requestListing } from './actions/listings';
 import { fetchListings, createListing } from './utils/listings_api';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const store = configureStore();
+  // let store;
+  //
+  // if (window.currentUser) {
+  //   const preloadedState = {session: {currentUser: window.currentUser}}
+  //   store = configureStore(preloadedState);
+  // } else {
+  //   store = configureStore();
+  // }
+
+  const preloadedState = {session: {
+    currentUser: window.currentUser ? window.currentUser : null,
+    errors: []
+  }};
+
+  const store = configureStore(preloadedState);
   const rootEl = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, rootEl);
 

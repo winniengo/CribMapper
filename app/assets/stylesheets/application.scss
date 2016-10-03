@@ -84,15 +84,16 @@ form {
 
 }
 
-label.signup-form {
-  background: black;
-}
-
-input.signup-form {
-  background: blue;
-}
-
 .signup-form {
+}
+
+div.signup-form > h2 {
+  font-weight: 400;
+}
+label.signup-form-field {
+}
+
+input.signup-form-field {
 }
 
 .login-form {

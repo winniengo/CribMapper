@@ -36,7 +36,7 @@ class SignupForm extends React.Component {
   render() {
     return (
       <div className='signup-form'>
-        Create an Account
+        <h2>Create an Account</h2>
         <SessionErrors errors={this.props.errors} />
         <form onSubmit={this.handleSubmit}>
           <label className='signup-form-field'>
@@ -71,9 +71,9 @@ class SignupForm extends React.Component {
               onChange={this.update('confirmPassword')}
               className='signup-form-field'/>
           </label>
-          <input type='submit' value='Sign Up' />
+          <input type='submit' value='Sign up' />
         </form>
-        Already have an account? <Link to="/login">Log in</Link>
+        Already have an account? <Link to="/login">Log in!</Link>
       </div>
     );
   }
