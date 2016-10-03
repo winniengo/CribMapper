@@ -38,6 +38,11 @@ ul {
   list-style: none;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+}
+
 .app {
 }
 
@@ -79,10 +84,17 @@ ul {
 
 }
 
-.signup-form {
+label.signup-form {
+  background: black;
+}
 
+input.signup-form {
+  background: blue;
+}
+
+.signup-form {
 }
 
 .login-form {
-  
+
 }

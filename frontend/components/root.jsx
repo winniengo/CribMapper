@@ -4,6 +4,8 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
 // components
 import App from './app';
+import SearchContainer from './search/search_container';
+import SignupFormContainer from './session/signup_form_container';
 
 const Root = ({ store }) => {
   const _ensureLoggedIn = (nextState, replace) => {
@@ -23,7 +25,10 @@ const Root = ({ store }) => {
   return (
     <Provider store={store}>
       <Router history={hashHistory}>
-        <Route path='/' component={App} />
+        <Route path="/" component={App}>
+          <IndexRoute component={SearchContainer} />
+          <Route path='/signup' component={SignupFormContainer} />
+        </Route>
       </Router>
     </Provider>
   );
