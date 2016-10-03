@@ -1,6 +1,6 @@
 class Api::ListingsController < ApplicationController
   def index
-    @listings = Listing.all
+    @listings = filter_params ? Listing.filter(filter_params) : Listing.all
   end
 
   def show
@@ -30,5 +30,9 @@ class Api::ListingsController < ApplicationController
       :description,
       :listing_type,
     )
+  end
+
+  def filter_params
+    params[:filters]
   end
 end

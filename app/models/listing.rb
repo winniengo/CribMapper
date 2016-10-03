@@ -10,10 +10,10 @@ class Listing < ApplicationRecord
 
   validates :lat, uniqueness: { scope: :lng }
 
-  def self.in_bounds(bounds)
-    self.where("lat < ?", bounds[:northEast][:lat])
-        .where("lat > ?", bounds[:southWest][:lat])
-        .where("lng < ?", bounds[:northEast][:lng])
-        .where("lng > ?", bounds[:southWest][:lng])
+  def self.filter(filters)
+    self.where("lat < ?", filters[:bounds][:northEast][:lat])
+        .where("lat > ?", filters[:bounds][:southWest][:lat])
+        .where("lng < ?", filters[:bounds][:northEast][:lng])
+        .where("lng > ?", filters[:bounds][:southWest][:lng])
   end
 end

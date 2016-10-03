@@ -1,8 +1,10 @@
 import { connect } from 'react-redux';
+
 import { allListings } from '../../reducers/selectors';
 import { requestListings } from '../../actions/listings';
+import { updateBounds } from '../../actions/filters';
+
 import Search from './search';
-// import { updateBounds } from '../../actions/filter_actions';
 
 const mapStateToProps = state => ({
   listings: allListings(state)
@@ -10,10 +12,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   requestListings: () => dispatch(requestListings()),
-  updateBounds: bounds => console.log(bounds)
+  updateBounds: bounds => dispatch(updateBounds(bounds))
 });
-
-// updateBounds: bounds => dispatch(updateBounds(bounds))
 
 export default connect(
   mapStateToProps,
