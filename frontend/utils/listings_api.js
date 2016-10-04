@@ -6,7 +6,7 @@ export const fetchListings = (filters, success, error) => (
     success,
     error
   })
-)
+);
 
 export const createListing = (listing, success, error) => (
   $.ajax({
@@ -16,4 +16,13 @@ export const createListing = (listing, success, error) => (
     success,
     error
   })
-)
+);
+
+export const fetchListing = (id, success, error) => (
+  $.ajax({
+    url: `api/listings/${id}`,
+    method: 'GET',
+    success,
+    error
+  })
+);

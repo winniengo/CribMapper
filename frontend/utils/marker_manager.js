@@ -1,3 +1,5 @@
+import { hashHistory } from 'react-router';
+
 export default class MarkerManager {
   constructor(map) {
     this.map = map;
@@ -33,6 +35,11 @@ export default class MarkerManager {
       listingId: id,
       position
     });
+
+    marker.addListener('click', (e) => { // redirects to ListingShow on click
+      hashHistory.push(`/listings/${marker.listingId}`);
+    });
+    
     this.markers.push(marker);
   }
 

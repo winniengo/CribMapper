@@ -1,7 +1,8 @@
 import React from 'react';
 
-const ListingIndexItem = ({ listing }) => (
-  <li className='listing-index-item'>
+const ListingIndexItem = ({ listing, handleClick }) => (
+  <li className='listing-index-item' onClick={handleClick}>
+    <h3>ListingIndexItem</h3>
     {listing.id} -  ${listing.rent}
   </li>
 );

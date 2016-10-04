@@ -7,6 +7,9 @@ import App from './app';
 import SearchContainer from './search/search_container';
 import SignupFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
+import ListingShowContainer from './listings/listing_show_container';
+
+import { requestListing } from '../actions/listings';
 
 const Root = ({ store }) => {
   const _ensureLoggedIn = (nextState, replace) => {
@@ -23,6 +26,13 @@ const Root = ({ store }) => {
     }
   };
 
+  const _ensureListing = nextState => {
+    const id = nextState.params.id;
+    if (!store.getState().listings[id]) {
+      store.dispatch(requestListing(id));
+    }
+  };
+
   return (
     <Provider store={store}>
       <Router history={hashHistory}>
@@ -30,6 +40,7 @@ const Root = ({ store }) => {
           <IndexRoute component={SearchContainer} />
           <Route path='/signup' component={SignupFormContainer} onEnter={_redirectIfLoggedIn} />
           <Route path='/login' component={LoginFormContainer} onEnter={_redirectIfLoggedIn} />
+          <Route path="/listings/:id" component={ListingShowContainer} onEnter={_ensureListing} />
         </Route>
       </Router>
     </Provider>

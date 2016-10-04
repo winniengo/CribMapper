@@ -1,17 +1,15 @@
-// import { connect } from 'react-redux';
-// import Header from './header';
-//
-// // TODO
-// const mapStateToProps = (state, ownProps) => ({
-//
-// });
-//
-// // TODO
-// const mapDispatchToProps = (dispatch) => ({
-//
-// });
-//
-// export default connect(
-//   mapStateToProps,
-//   mapDispatchToProps
-// )(Header);
+import { connect } from 'react-redux';
+import Navbar from './navbar';
+
+const mapStateToProps = (state, ownProps) => ({
+
+});
+
+const mapDispatchToProps = (dispatch) => ({
+
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Navbar);

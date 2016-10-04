@@ -1,6 +1,6 @@
-import { REQUEST_LISTINGS, receiveListings, CREATE_LISTING, receiveListing } from '../actions/listings';
+import { REQUEST_LISTINGS, receiveListings, CREATE_LISTING, receiveListing, REQUEST_LISTING } from '../actions/listings';
 import { UPDATE_BOUNDS } from '../actions/filters';
-import { fetchListings, createListing } from '../utils/listings_api';
+import { fetchListings, createListing, fetchListing } from '../utils/listings_api';
 
 const listingsMiddleware = store => next => action => {
   const error = e => console.log(e);
@@ -15,6 +15,10 @@ const listingsMiddleware = store => next => action => {
       next(action);
       store.dispatch(requestListings({bounds: action.bounds}));
       break;
+    case REQUEST_LISTING:
+      success = data => store.dispatch(receiveListing(data));
+      fetchListing(action.id, success, error);
+      return next(action);
     case CREATE_LISTING:
       success = data => store.dispatch(receiveListing(data));
       createListing(action.listing, success, error);

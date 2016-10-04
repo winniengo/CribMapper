@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter, Link } from 'react-router';
+import { Link } from 'react-router';
 
 import SessionErrors from './session_errors';
 

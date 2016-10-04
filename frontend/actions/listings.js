@@ -1,7 +1,8 @@
-export const RECEIVE_LISTINGS = "RECEIVE_LISTINGS";
 export const REQUEST_LISTINGS = "REQUEST_LISTINGS";
+export const RECEIVE_LISTINGS = "RECEIVE_LISTINGS";
 export const CREATE_LISTING = "CREATE_LISTING";
 export const RECEIVE_LISTING = "RECEIVE_LISTING";
+export const REQUEST_LISTING = "REQUEST_LISTING";
 
 export const requestListings = filters => ({
   type: REQUEST_LISTINGS,
@@ -21,4 +22,9 @@ export const createListing = listing => ({
 export const receiveListing = listing => ({
   type: RECEIVE_LISTING,
   listing
+});
+
+export const requestListing = id => ({
+  type: REQUEST_LISTING,
+  id
 });

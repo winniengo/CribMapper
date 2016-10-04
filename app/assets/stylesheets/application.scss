@@ -99,3 +99,9 @@ input.signup-form-field {
 .login-form {
 
 }
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

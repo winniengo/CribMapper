@@ -55,6 +55,13 @@ class Map extends React.Component {
     // });
   }
 
+  // _handleClick(coords) {
+  //   this.props.router.push({
+  //     pathname: "benches/new",
+  //     query: coords
+  //   });
+  // }
+
   render() {
     return (
       <div id='map'>
