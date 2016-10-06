@@ -16,7 +16,7 @@ const defaultFilters = {
     min: 0,
     max: 5000.0
   },
-  listingType: {
+  listingTypes: {
     lease: false,
     sublet: false,
   },
