@@ -1,7 +1,7 @@
-import React from 'react';
-import merge from 'lodash/merge';
+import React from "react";
+import merge from "lodash/merge";
 
-import ListingIndex from '../listings/listing_index';
+import ListingIndex from "../listings/listing_index";
 
 class Filters extends React.Component{
   constructor(props) {
@@ -10,6 +10,7 @@ class Filters extends React.Component{
 
     this.handleChange = this.handleChange.bind(this);
     this.renderCheckboxes = this.renderCheckboxes.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleRentChange(field) {
@@ -34,13 +35,20 @@ class Filters extends React.Component{
     }
   }
 
+  handleClick(filter, dispatchAction) {
+    return e => {
+      this.setState({[filter]: !this.state[filter]});
+      dispatchAction();
+    }
+  }
+
   renderCheckboxes(filter, handler) {
     return (
       Object.keys(filter).map(option => (
-        <label className='filters-form-field'>
+        <label className="filters-form-field">
           {option}
           <input
-            type='checkbox'
+            type="checkbox"
             checked={filter[option] ? "checked" : ""}
             onChange={handler(option)} />
         </label>
@@ -49,26 +57,42 @@ class Filters extends React.Component{
   }
 
   render() {
-    const { rent, listingType, bedrooms, bathrooms, pets } = this.state;
-    const { updateRent, updateListingType, updateBedrooms, updateBathrooms, updatePets} = this.props;
+    const {
+      rent,
+      listingType,
+      bedrooms,
+      bathrooms,
+      fee,
+      parking,
+      pets
+    } = this.state;
+    const {
+      updateRent,
+      updateListingType,
+      updateBedrooms,
+      updateBathrooms,
+      updateFee,
+      updateParking,
+      updatePets
+    } = this.props;
 
     return (
       <div className="filters-form">
         <form>
           <h3>Rent</h3>
-          <label className='filters-form-field'>
+          <label className="filters-form-field">
             Min
             <input
-              type='number'
+              type="number"
               value={rent.min}
-              onChange={this.handleRentChange('min')} />
+              onChange={this.handleRentChange("min")} />
           </label>
-          <label className='filters-form-field'>
+          <label className="filters-form-field">
             Max
             <input
-              type='number'
+              type="number"
               value={rent.max}
-              onChange={this.handleRentChange('max')} />
+              onChange={this.handleRentChange("max")} />
           </label>
           <h3>Type</h3>
           {this.renderCheckboxes(listingType, this.handleChange("listingType", updateListingType))}
@@ -78,6 +102,25 @@ class Filters extends React.Component{
           {this.renderCheckboxes(bathrooms, this.handleChange("bathrooms", updateBathrooms))}
           <h3>Pets</h3>
           {this.renderCheckboxes(pets, this.handleChange("pets", updatePets))}
+          <h3>Advanced</h3>
+          <label className="filters-form-field">
+            <button
+              type="button"
+              className={fee ? "selected" : ""}
+              value="fee"
+              onClick={this.handleClick("fee", updateFee)}>
+            Broker Fee
+            </button>
+          </label>
+          <label className="filters-form-field">
+            <button
+              type="button"
+              className={parking ? "selected" : ""}
+              value="parking"
+              onClick={this.handleClick("parking", updateParking)}>
+            Parking
+            </button>
+          </label>
         </form>
       </div>
     )

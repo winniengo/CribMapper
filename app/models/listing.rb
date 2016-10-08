@@ -24,7 +24,9 @@ class Listing < ApplicationRecord
     listings.where("#{attr} IN #{params}")
   end
 
-  def self.filter_with_max(listings, attr, max)
-    listings.or(self.where("#{attr} >= ?", max))
+  def self.filter_with_max(listings, attr, max, other_params)
+    other_params ?
+      listings.or(self.where("#{attr} >= ?", max)) :
+      listings.where("#{attr} >= ?", max)
   end
 end

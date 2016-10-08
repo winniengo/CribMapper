@@ -1,6 +1,19 @@
-import { REQUEST_LISTINGS, receiveListings, CREATE_LISTING, receiveListing, REQUEST_LISTING } from '../actions/listings';
-import { UPDATE_BOUNDS, UPDATE_RENT, UPDATE_LISTING_TYPE, UPDATE_BEDROOMS, UPDATE_BATHROOMS, UPDATE_PETS } from '../actions/filters';
-import { fetchListings, createListing, fetchListing } from '../utils/listings_api';
+import { REQUEST_LISTINGS,
+  receiveListings,
+  CREATE_LISTING,
+  receiveListing,
+  REQUEST_LISTING } from '../actions/listings';
+import { UPDATE_BOUNDS,
+  UPDATE_RENT,
+  UPDATE_LISTING_TYPE,
+  UPDATE_BEDROOMS,
+  UPDATE_BATHROOMS,
+  UPDATE_FEE,
+  UPDATE_PARKING,
+  UPDATE_PETS } from '../actions/filters';
+import { fetchListings,
+  createListing,
+  fetchListing } from '../utils/listings_api';
 
 const listingsMiddleware = store => next => action => {
   const error = e => console.log(e);
@@ -24,6 +37,8 @@ const listingsMiddleware = store => next => action => {
     case UPDATE_LISTING_TYPE:
     case UPDATE_BEDROOMS:
     case UPDATE_BATHROOMS:
+    case UPDATE_FEE:
+    case UPDATE_PARKING:
     case UPDATE_PETS:
       next(action);
       store.dispatch(requestListings(store.getState().filters));

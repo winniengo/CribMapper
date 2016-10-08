@@ -3,21 +3,30 @@ import Map from './map';
 import Filters from './filters';
 import ListingIndex from '../listings/listing_index';
 
-// const Search = ({ listings, requestListings, updateBounds }) => (
-//
-// );
-
 class Search extends React.Component {
   constructor(props) {
     super(props);
   }
 
   componentDidMount() {
-    this.props.requestListings();
+    // this.props.requestListings();
   }
 
   render() {
-    const { listings, filters, requestListings, updateBounds, updateRent, updateListingType, updateBedrooms, updateBathrooms, updatePets } = this.props;
+    const {
+      listings,
+      filters,
+      requestListings,
+      updateBounds,
+      updateRent,
+      updateListingType,
+      updateBedrooms,
+      updateBathrooms,
+      updateFee,
+      updateParking,
+      updatePets
+    } = this.props;
+
     return (
       <div className="search">
         <Map
@@ -31,6 +40,8 @@ class Search extends React.Component {
             updateListingType={updateListingType}
             updateBedrooms={updateBedrooms}
             updateBathrooms={updateBathrooms}
+            updateFee={updateFee}
+            updateParking={updateParking}
             updatePets={updatePets} />
           <ListingIndex
             listings={listings} />

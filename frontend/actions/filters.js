@@ -3,6 +3,8 @@ export const UPDATE_RENT = "UPDATE_RENT";
 export const UPDATE_LISTING_TYPE = "UPDATE_LISTING_TYPE";
 export const UPDATE_BEDROOMS = "UPDATE_BEDROOMS";
 export const UPDATE_BATHROOMS = "UDPATE_BATHROOMS";
+export const UPDATE_FEE = "UPDATE_FEE";
+export const UPDATE_PARKING = "UPDATE_PARKING";
 export const UPDATE_PETS = "UPDATE_PETS";
 
 export const updateBounds = bounds => ({
@@ -28,6 +30,14 @@ export const updateBedrooms = bedrooms => ({
 export const updateBathrooms = bathrooms => ({
   type: UPDATE_BATHROOMS,
   bathrooms
+});
+
+export const updateFee = () => ({
+  type: UPDATE_FEE
+});
+
+export const updateParking = () => ({
+  type: UPDATE_PARKING
 });
 
 export const updatePets = pets => ({

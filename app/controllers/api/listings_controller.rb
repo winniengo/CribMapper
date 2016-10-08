@@ -7,8 +7,8 @@ class Api::ListingsController < ApplicationController
       @listings = Listing.filter_by_attr(@listings, :bathrooms, query_string(:bathrooms)) unless default_params(:bathrooms)
       @listings = Listing.filter_by_attr(@listings, :listing_type, query_string(:listingType)) unless default_params(:listingType)
 
-      @listings = Listing.filter_with_max(@listings, :bedrooms, "5") if filters_params[:bedrooms]["5"] == "true"
-      @listings = Listing.filter_with_max(@listings, :bathrooms, "4") if filters_params[:bathrooms]["4"] == "true"
+      @listings = Listing.filter_with_max(@listings, :bedrooms, "5", !default_params(:bedrooms)) if filters_params[:bedrooms]["5"] == "true"
+      @listings = Listing.filter_with_max(@listings, :bathrooms, "4", !default_params(:bathrooms)) if filters_params[:bathrooms]["4"] == "true"
     else
       @listings = Listing.all
     end
@@ -41,7 +41,7 @@ class Api::ListingsController < ApplicationController
       :description,
       :listing_type,
       :fee,
-      :parking:
+      :parking,
       :cats,
       :dogs
     )

@@ -43,6 +43,10 @@ form {
   flex-direction: column;
 }
 
+button {
+  background: #8EAEBD;
+}
+
 .app {
 }
 
@@ -56,6 +60,10 @@ form {
 
 #map {
   width:100%;
+}
+
+.selected {
+  background: #0F1626;
 }
 
 .results {
