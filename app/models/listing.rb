@@ -7,6 +7,7 @@ class Listing < ApplicationRecord
   validates :bedrooms, numericality: { only_integer: true }
 
   validates :listing_type, inclusion: { in: ['lease', 'sublet'] }
+  validates :fee, :parking, :cats, :dogs, inclusion: { in: [true, false] }
 
   validates :lat, uniqueness: { scope: :lng }
 

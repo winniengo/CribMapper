@@ -10,6 +10,12 @@ u1 = User.create!({
   password: 'password'
 })
 
+u2 = User.create!({
+  email: `winnie@gmail.com`,
+  name: 'Winnie',
+  password: 'password'
+})
+
 l1 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94108, USA',
   lat: 37.778104,
@@ -19,6 +25,9 @@ l1 = Listing.create!({
   bedrooms: 7,
   description: Faker::Lorem.paragraph,
   listing_type: "lease",
+  fee: true,
+  parking: true,
+  dogs: true,
 })
 
 l2 = Listing.create!({
@@ -30,6 +39,8 @@ l2 = Listing.create!({
   bedrooms: 3,
   description: Faker::Lorem.paragraph,
   listing_type: 'lease',
+  fee: true,
+  cats: true,
 })
 
 l3 = Listing.create!({
@@ -41,4 +52,17 @@ l3 = Listing.create!({
   bedrooms: 1,
   description: Faker::Lorem.paragraph,
   listing_type: 'sublet',
+})
+
+l4 = Listing.create!({
+  address: Faker::Address.street_address + ', San Francisco, CA 94110, USA',
+  lat: 37.761968,
+  lng: -122.417221,
+  rent: 5000.00,
+  bathrooms: 2,
+  bedrooms: 3,
+  description: Faker::Lorem.paragraph,
+  listing_type: 'sublet',
+  dogs: true,
+  cats: true
 })

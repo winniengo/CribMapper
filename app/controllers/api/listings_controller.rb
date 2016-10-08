@@ -40,6 +40,10 @@ class Api::ListingsController < ApplicationController
       :bathrooms,
       :description,
       :listing_type,
+      :fee,
+      :parking:
+      :cats,
+      :dogs
     )
   end
 
