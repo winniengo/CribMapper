@@ -22,23 +22,23 @@ l1 = Listing.create!({
 })
 
 l2 = Listing.create!({
-    address: Faker::Address.street_address + ', San Francisco, CA 94108, USA',
-    lat: 37.734989,
-    lng: -122.388824,
-    rent: 5750.00,
-    bathrooms: 1.0,
-    bedrooms: 3,
-    description: Faker::Lorem.paragraph,
-    listing_type: 'lease',
-  })
+  address: Faker::Address.street_address + ', San Francisco, CA 94108, USA',
+  lat: 37.734989,
+  lng: -122.388824,
+  rent: 5750.00,
+  bathrooms: 1.0,
+  bedrooms: 3,
+  description: Faker::Lorem.paragraph,
+  listing_type: 'lease',
+})
 
-  l3 = Listing.create!({
-    address: Faker::Address.street_address + ', San Francisco, CA 94108, USA',
-    lat: 37.787364,
-    lng: -122.413031,
-    rent: 2000.00,
-    bathrooms: 1.0,
-    bedrooms: 1,
-    description: Faker::Lorem.paragraph,
-    listing_type: 'sublet',
-  })
+l3 = Listing.create!({
+  address: Faker::Address.street_address + ', San Francisco, CA 94108, USA',
+  lat: 37.787364,
+  lng: -122.413031,
+  rent: 2000.00,
+  bathrooms: 1.0,
+  bedrooms: 1,
+  description: Faker::Lorem.paragraph,
+  listing_type: 'sublet',
+})

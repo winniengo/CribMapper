@@ -6,5 +6,5 @@ json.extract! listing,
   :address,
   :rent,
   :bedrooms,
-  :bathrooms,
-  :listing_type
+  :bathrooms
+json.listingType listing.listing_type

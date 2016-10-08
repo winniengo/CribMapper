@@ -1,6 +1,6 @@
 export const UPDATE_BOUNDS = "UPDATE_BOUNDS";
 export const UPDATE_RENT = "UPDATE_RENT";
-export const UPDATE_LISTING_TYPES = "UPDATE_LISTING_TYPES";
+export const UPDATE_LISTING_TYPE = "UPDATE_LISTING_TYPE";
 export const UPDATE_BEDROOMS = "UPDATE_BEDROOMS";
 export const UPDATE_BATHROOMS = "UDPATE_BATHROOMS";
 export const UPDATE_PETS = "UPDATE_PETS";
@@ -15,9 +15,9 @@ export const updateRent = rent => ({
   rent
 });
 
-export const updateListingTypes = listingTypes => ({
-  type: UPDATE_LISTING_TYPES,
-  listingTypes
+export const updateListingType = listingType => ({
+  type: UPDATE_LISTING_TYPE,
+  listingType
 });
 
 export const updateBedrooms = bedrooms => ({

@@ -1,5 +1,5 @@
 import { REQUEST_LISTINGS, receiveListings, CREATE_LISTING, receiveListing, REQUEST_LISTING } from '../actions/listings';
-import { UPDATE_BOUNDS, UPDATE_RENT, UPDATE_LISTING_TYPES, UPDATE_BEDROOMS, UPDATE_BATHROOMS, UPDATE_PETS } from '../actions/filters';
+import { UPDATE_BOUNDS, UPDATE_RENT, UPDATE_LISTING_TYPE, UPDATE_BEDROOMS, UPDATE_BATHROOMS, UPDATE_PETS } from '../actions/filters';
 import { fetchListings, createListing, fetchListing } from '../utils/listings_api';
 
 const listingsMiddleware = store => next => action => {
@@ -21,7 +21,7 @@ const listingsMiddleware = store => next => action => {
       return next(action);
     case UPDATE_BOUNDS:
     case UPDATE_RENT:
-    case UPDATE_LISTING_TYPES:
+    case UPDATE_LISTING_TYPE:
     case UPDATE_BEDROOMS:
     case UPDATE_BATHROOMS:
     case UPDATE_PETS:

@@ -17,7 +17,7 @@ class Search extends React.Component {
   }
 
   render() {
-    const { listings, filters, requestListings, updateBounds, updateRent, updateListingTypes, updateBedrooms, updateBathrooms, updatePets } = this.props;
+    const { listings, filters, requestListings, updateBounds, updateRent, updateListingType, updateBedrooms, updateBathrooms, updatePets } = this.props;
     return (
       <div className="search">
         <Map
@@ -28,7 +28,7 @@ class Search extends React.Component {
           <Filters
             filters={filters}
             updateRent={updateRent}
-            updateListingTypes={updateListingTypes}
+            updateListingType={updateListingType}
             updateBedrooms={updateBedrooms}
             updateBathrooms={updateBathrooms}
             updatePets={updatePets} />

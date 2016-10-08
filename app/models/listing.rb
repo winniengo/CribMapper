@@ -15,5 +15,23 @@ class Listing < ApplicationRecord
         .where("lat > ?", filters[:bounds][:southWest][:lat])
         .where("lng < ?", filters[:bounds][:northEast][:lng])
         .where("lng > ?", filters[:bounds][:southWest][:lng])
+        .where("rent <= ?", filters[:rent][:max])
+        .where("rent >= ?", filters[:rent][:min])
+  end
+
+  # def self.filter_bedrooms(listings, filter)
+  #   listings.where("bedrooms IN #{filter}")
+  # end
+  #
+  # def self.filter_bathrooms(listings, filter)
+  #   listings.where("bedrooms IN #{filter}")
+  # end
+  #
+  # def self.filter_listing_type(listings, filter)
+  #   listings.where("listing_type IN #{filter}")
+  # end
+
+  def self.filter_by_attr(listings, attr, filter)
+    listings.where("#{attr} IN #{filter}")
   end
 end
