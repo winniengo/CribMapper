@@ -1,10 +1,14 @@
 class Api::ListingsController < ApplicationController
   def index
     if filters_params
-      @listings = Listing.filter(filters_params) # by bounds and rent
+      @listings = Listing.filter(filters_params) # filter by bounds and rent
+
       @listings = Listing.filter_by_attr(@listings, :bedrooms, query_string(:bedrooms)) unless default_params(:bedrooms)
       @listings = Listing.filter_by_attr(@listings, :bathrooms, query_string(:bathrooms)) unless default_params(:bathrooms)
       @listings = Listing.filter_by_attr(@listings, :listing_type, query_string(:listingType)) unless default_params(:listingType)
+
+      @listings = Listing.filter_with_max(@listings, :bedrooms, "5") if filters_params[:bedrooms]["5"] == "true"
+      @listings = Listing.filter_with_max(@listings, :bathrooms, "4") if filters_params[:bathrooms]["4"] == "true"
     else
       @listings = Listing.all
     end
@@ -44,11 +48,23 @@ class Api::ListingsController < ApplicationController
   end
 
   def default_params(attr)
-    filters_params[attr].keys.all? { |key| filters_params[attr][key] == 'false' }
+    if attr == :bedrooms || attr == :bathrooms
+      filters_params[attr].keys.slice(0..-2).all? { |key| filters_params[attr][key] == 'false' }
+    else
+      filters_params[attr].keys.all? { |key| filters_params[attr][key] == 'false' }
+    end
+  end
+
+  def query_params(attr)
+    if attr == :bedrooms || attr == :bathrooms
+      filters_params[attr].keys.slice(0..-2).select { |key| filters_params[attr][key] == 'true' }
+    else
+      filters_params[attr].keys.select { |key| filters_params[attr][key] == 'true' }
+    end
   end
 
   def query_string(attr)
-    "('#{filters_params[attr].keys.select { |key| filters_params[attr][key] == 'true' }.join("', '")}')"
+    "('#{query_params(attr).join("', '")}')"
   end
 
 end

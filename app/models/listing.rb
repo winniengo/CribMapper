@@ -19,19 +19,11 @@ class Listing < ApplicationRecord
         .where("rent >= ?", filters[:rent][:min])
   end
 
-  # def self.filter_bedrooms(listings, filter)
-  #   listings.where("bedrooms IN #{filter}")
-  # end
-  #
-  # def self.filter_bathrooms(listings, filter)
-  #   listings.where("bedrooms IN #{filter}")
-  # end
-  #
-  # def self.filter_listing_type(listings, filter)
-  #   listings.where("listing_type IN #{filter}")
-  # end
+  def self.filter_by_attr(listings, attr, params)
+    listings.where("#{attr} IN #{params}")
+  end
 
-  def self.filter_by_attr(listings, attr, filter)
-    listings.where("#{attr} IN #{filter}")
+  def self.filter_with_max(listings, attr, max)
+    listings.or(self.where("#{attr} >= ?", max))
   end
 end
