@@ -33,7 +33,7 @@ class Search extends React.Component {
           listings={listings}
           requestListings={requestListings}
           updateBounds={updateBounds} />
-        <div className="results">
+        <div className="filters">
           <Filters
             filters={filters}
             updateRent={updateRent}
