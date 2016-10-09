@@ -6,6 +6,7 @@ export const UPDATE_BATHROOMS = "UDPATE_BATHROOMS";
 export const UPDATE_FEE = "UPDATE_FEE";
 export const UPDATE_PARKING = "UPDATE_PARKING";
 export const UPDATE_PETS = "UPDATE_PETS";
+export const RESET_FILTERS = "RESET_FILTERS";
 
 export const updateBounds = bounds => ({
   type: UPDATE_BOUNDS,
@@ -43,4 +44,8 @@ export const updateParking = () => ({
 export const updatePets = pets => ({
   type: UPDATE_PETS,
   pets
+});
+
+export const resetFilters = () => ({
+  type: RESET_FILTERS
 });

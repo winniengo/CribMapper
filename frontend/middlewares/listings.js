@@ -1,17 +1,21 @@
-import { REQUEST_LISTINGS,
+import {
+  REQUEST_LISTINGS,
   receiveListings,
   CREATE_LISTING,
   receiveListing,
   REQUEST_LISTING } from '../actions/listings';
-import { UPDATE_BOUNDS,
+import {
+  UPDATE_BOUNDS,
   UPDATE_RENT,
   UPDATE_LISTING_TYPE,
   UPDATE_BEDROOMS,
   UPDATE_BATHROOMS,
   UPDATE_FEE,
   UPDATE_PARKING,
-  UPDATE_PETS } from '../actions/filters';
-import { fetchListings,
+  UPDATE_PETS,
+  RESET_FILTERS } from '../actions/filters';
+import {
+  fetchListings,
   createListing,
   fetchListing } from '../utils/listings_api';
 
@@ -40,6 +44,7 @@ const listingsMiddleware = store => next => action => {
     case UPDATE_FEE:
     case UPDATE_PARKING:
     case UPDATE_PETS:
+    case RESET_FILTERS:
       next(action);
       store.dispatch(requestListings(store.getState().filters));
       break;

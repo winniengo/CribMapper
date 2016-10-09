@@ -24,8 +24,8 @@ class Search extends React.Component {
       updateBathrooms,
       updateFee,
       updateParking,
-      updatePets
-    } = this.props;
+      updatePets,
+      resetFilters } = this.props;
 
     return (
       <div className="search">
@@ -42,7 +42,8 @@ class Search extends React.Component {
             updateBathrooms={updateBathrooms}
             updateFee={updateFee}
             updateParking={updateParking}
-            updatePets={updatePets} />
+            updatePets={updatePets}
+            resetFilters={resetFilters} />
           <ListingIndex
             listings={listings} />
         </div>

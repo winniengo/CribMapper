@@ -13,6 +13,10 @@ class Filters extends React.Component{
     this.handleClick = this.handleClick.bind(this);
   }
 
+  componentWillReceiveProps(newProps) {
+    this.setState(newProps.filters);
+  }
+
   handleRentChange(field) {
     return e => {
       const nextState = merge({}, this.state.rent, {
@@ -64,8 +68,7 @@ class Filters extends React.Component{
       bathrooms,
       noFeeSelected,
       parkingSelected,
-      pets
-    } = this.state;
+      pets } = this.state;
     const {
       updateRent,
       updateListingType,
@@ -73,8 +76,8 @@ class Filters extends React.Component{
       updateBathrooms,
       updateFee,
       updateParking,
-      updatePets
-    } = this.props;
+      updatePets,
+      resetFilters } = this.props;
 
     // console.log(noFeeSelected, parkingSelected);
 
@@ -109,21 +112,24 @@ class Filters extends React.Component{
             <button
               type="button"
               className={noFeeSelected ? "selected" : ""}
-              value="fee"
               onClick={this.handleClick("noFeeSelected", updateFee)}>
-            No Broker Fee
+              No Broker Fee
             </button>
           </label>
           <label className="filters-form-field">
             <button
               type="button"
               className={parkingSelected ? "selected" : ""}
-              value="parking"
               onClick={this.handleClick("parkingSelected", updateParking)}>
-            Parking
+              Parking
             </button>
           </label>
         </form>
+        <button
+          type="button"
+          onClick={resetFilters}>
+          Reset
+        </button>
       </div>
     )
   }

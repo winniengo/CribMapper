@@ -2,14 +2,16 @@ import { connect } from 'react-redux';
 
 import { allListings } from '../../reducers/selectors';
 import { requestListings } from '../../actions/listings';
-import { updateBounds,
+import {
+  updateBounds,
   updateRent,
   updateListingType,
   updateBedrooms,
   updateBathrooms,
   updateFee,
   updateParking,
-  updatePets } from '../../actions/filters';
+  updatePets,
+  resetFilters } from '../../actions/filters';
 
 import Search from './search';
 
@@ -27,7 +29,8 @@ const mapDispatchToProps = dispatch => ({
   updateBathrooms: bathrooms => dispatch(updateBathrooms(bathrooms)),
   updateFee: () => dispatch(updateFee()),
   updateParking: () => dispatch(updateParking()),
-  updatePets: pets => dispatch(updatePets(pets))
+  updatePets: pets => dispatch(updatePets(pets)),
+  resetFilters: () => dispatch(resetFilters())
 });
 
 export default connect(
