@@ -2,11 +2,12 @@ import React from 'react';
 
 const ListingIndexItem = ({ listing, handleClick }) => (
   <li className='listing-index-item' onClick={handleClick}>
-    <h3>ListingIndexItem</h3>
-    {listing.id} -  ${listing.rent} <br/>
-    Bathrooms: {listing.bathrooms} <br/>
-    Bedrooms: {listing.bedrooms} <br/>
-    Type: {listing.listingType}
+    <img />
+    <description>
+      <h3>${listing.rent}</h3>
+      <h4>{listing.bedrooms} Bed / {listing.bathrooms} Bath</h4>
+      <h4>{listing.listingType}</h4>
+    </description>
   </li>
 );
 

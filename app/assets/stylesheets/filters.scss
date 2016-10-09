@@ -1,5 +1,6 @@
 .filters {
-  width: 500px;
+  overflow-y: scroll;
+  min-width: 400px;
   background: #F5F5F5;
   font-size: 14px;
 }
@@ -22,13 +23,13 @@
 
 .filter h3 {
   width: 125px;
-  text-transform: uppercase;
 }
 
 .filter-fields {
   width: 225px;
   display: flex;
   text-transform: capitalize;
+  margin-left:  2px;
 }
 
 .rent {
@@ -48,27 +49,24 @@
   background: #f5f5f5;
   border: 1px solid #f5f5f5;
   border-radius: 2px;
-  margin: 2px;
+  margin-bottom: 2px;
 }
 
 .filter-fields button {
-  background: #a5cfe2;
-  border-radius: 2px;
-  border: 1px solid #8EAEBD;
+  margin-left: 2px;
+}
+
+.filters form > button {
+  width: 50%;
+  margin: 20px auto;
+}
+
+.filter-buttons {
+  display: flex;
+  padding: 20px 10px;
+}
+
+.filter-buttons button {
   padding: 5px 0;
-  margin: 0 2px;
-  width: 100%;
-  text-align: center;
-  text-transform: capitalize;
-}
-
-.filter-fields button:hover {
-  background: #8EAEBD;
-}
-
-.filter-fields button.selected {
-  background: #30415D;
-  border: 1px solid #30415D;
-  opacity: 0.9;
-  color: white;
+  margin: 0 10px;
 }

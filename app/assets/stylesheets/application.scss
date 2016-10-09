@@ -64,6 +64,13 @@ button {
   background: #8EAEBD;
 }
 
+h3 {
+  text-transform: uppercase;
+}
+
+h4 {
+  text-transform: capitalize;
+}
 .app {
 }
 
@@ -81,22 +88,7 @@ button {
 
 
 
-.listing-index {
 
-}
-
-.listing-index-item {
-  margin: 10px;
-  height: 150px;
-  border: 1px solid;
-  border-radius: 1px;
-  border-color: #8EAEBD;
-  background: #FFFFFF;
-}
-
-.listing-index-item:hover {
-  border-color: #0F1626;
-}
 
 .session-errors {
 
@@ -122,4 +114,26 @@ input.signup-form-field {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+
+button {
+  background: #a5cfe2;
+  border-radius: 2px;
+  border: 1px solid #8EAEBD;
+  padding: 5px 0;
+  width: 100%;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+button:hover {
+  background: #8EAEBD;
+}
+
+button.selected {
+  background: #30415D;
+  border: 1px solid #30415D;
+  opacity: 0.9;
+  color: white;
 }

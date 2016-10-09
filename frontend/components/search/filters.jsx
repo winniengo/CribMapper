@@ -157,11 +157,18 @@ class Filters extends React.Component{
               </button>
             </div>
           </div>
-        <button
-          type="button"
-          onClick={resetFilters}>
-          Reset
-        </button>
+        <div className="filter-buttons">
+          <button
+            type="button"
+            onClick={resetFilters}>
+            More Filters
+          </button>
+          <button
+            type="button"
+            onClick={resetFilters}>
+            Reset
+          </button>
+        </div>
         </form>
     )
   }
