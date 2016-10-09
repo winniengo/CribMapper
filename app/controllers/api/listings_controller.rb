@@ -9,6 +9,12 @@ class Api::ListingsController < ApplicationController
 
       @listings = Listing.filter_with_max(@listings, :bedrooms, "5", !default_params(:bedrooms)) if filters_params[:bedrooms]["5"] == "true"
       @listings = Listing.filter_with_max(@listings, :bathrooms, "4", !default_params(:bathrooms)) if filters_params[:bathrooms]["4"] == "true"
+
+      @listings = Listing.filter_by_pets(@listings, filters_params[:pets]) unless default_params(:pets)
+
+      @listings = Listing.filter_by_selected(@listings, :fee) if filters_params[:noFeeSelected] == "true"
+      @listings = Listing.filter_by_selected(@listings, :parking) if filters_params[:parkingSelected] == "true"
+
     else
       @listings = Listing.all
     end

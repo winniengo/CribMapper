@@ -40,12 +40,12 @@ const defaultFilters = {
     3: false,
     4: false
   },
-  fee: false,
-  parking: false,
   pets: {
     dogs: false,
     cats: false
-  }
+  },
+  noFeeSelected: false,
+  parkingSelected: false,
 };
 
 const filters = (state = defaultFilters, action) => {
@@ -72,11 +72,11 @@ const filters = (state = defaultFilters, action) => {
       });
     case UPDATE_FEE:
       return merge({}, state, {
-        fee: !state.fee
+        noFeeSelected: !state.noFeeSelected
       });
     case UPDATE_PARKING:
       return merge({}, state, {
-        parking: !state.parking
+        parkingSelected: !state.parkingSelected
       });
     case UPDATE_PETS:
       return merge({}, state, {

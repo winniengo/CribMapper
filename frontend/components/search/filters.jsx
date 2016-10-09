@@ -6,7 +6,7 @@ import ListingIndex from "../listings/listing_index";
 class Filters extends React.Component{
   constructor(props) {
     super(props);
-    this.state = this.props.filters;
+    this.state = merge({}, this.props.filters);
 
     this.handleChange = this.handleChange.bind(this);
     this.renderCheckboxes = this.renderCheckboxes.bind(this);
@@ -62,8 +62,8 @@ class Filters extends React.Component{
       listingType,
       bedrooms,
       bathrooms,
-      fee,
-      parking,
+      noFeeSelected,
+      parkingSelected,
       pets
     } = this.state;
     const {
@@ -75,6 +75,8 @@ class Filters extends React.Component{
       updateParking,
       updatePets
     } = this.props;
+
+    // console.log(noFeeSelected, parkingSelected);
 
     return (
       <div className="filters-form">
@@ -106,18 +108,18 @@ class Filters extends React.Component{
           <label className="filters-form-field">
             <button
               type="button"
-              className={fee ? "selected" : ""}
+              className={noFeeSelected ? "selected" : ""}
               value="fee"
-              onClick={this.handleClick("fee", updateFee)}>
-            Broker Fee
+              onClick={this.handleClick("noFeeSelected", updateFee)}>
+            No Broker Fee
             </button>
           </label>
           <label className="filters-form-field">
             <button
               type="button"
-              className={parking ? "selected" : ""}
+              className={parkingSelected ? "selected" : ""}
               value="parking"
-              onClick={this.handleClick("parking", updateParking)}>
+              onClick={this.handleClick("parkingSelected", updateParking)}>
             Parking
             </button>
           </label>

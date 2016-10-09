@@ -11,13 +11,13 @@ class Listing < ApplicationRecord
 
   validates :lat, uniqueness: { scope: :lng }
 
-  def self.filter(filters)
-    self.where("lat < ?", filters[:bounds][:northEast][:lat])
-        .where("lat > ?", filters[:bounds][:southWest][:lat])
-        .where("lng < ?", filters[:bounds][:northEast][:lng])
-        .where("lng > ?", filters[:bounds][:southWest][:lng])
-        .where("rent <= ?", filters[:rent][:max])
-        .where("rent >= ?", filters[:rent][:min])
+  def self.filter(params)
+    self.where("lat < ?", params[:bounds][:northEast][:lat])
+        .where("lat > ?", params[:bounds][:southWest][:lat])
+        .where("lng < ?", params[:bounds][:northEast][:lng])
+        .where("lng > ?", params[:bounds][:southWest][:lng])
+        .where("rent <= ?", params[:rent][:max])
+        .where("rent >= ?", params[:rent][:min])
   end
 
   def self.filter_by_attr(listings, attr, params)
@@ -28,5 +28,14 @@ class Listing < ApplicationRecord
     other_params ?
       listings.or(self.where("#{attr} >= ?", max)) :
       listings.where("#{attr} >= ?", max)
+  end
+
+  def self.filter_by_pets(listings, params)
+    op = params.keys.all? { |key| params[key] == "true"} ? "AND" : "OR"
+    listings.where("cats IS #{params[:cats]} #{op} dogs IS #{params[:dogs]}")
+  end
+
+  def self.filter_by_selected(listings, attr)
+    attr == :fee ? listings.where("fee IS false") : listings.where("parking IS true")
   end
 end
