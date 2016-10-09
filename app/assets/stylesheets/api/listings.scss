@@ -1,0 +1,67 @@
+/* Listing Show **************************/
+.listing-show {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.listing-main {
+  min-width: 600px;
+  margin: 10px;
+}
+
+.listing-main h2 {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.listing-main h3 {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.listing-main description {
+  background: #F5F5F5;
+}
+
+
+.listing-sidebar {
+  width: 350px;
+  min-width: 350px;
+  margin: 10px;
+}
+
+/* Listing Details **************************/
+.listing-details {
+  margin: 10px;
+}
+
+.listing-details ul {
+  margin-top: 10px;
+}
+
+.listing-details ul li {
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 300;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.listing-details ul li:nth-child(even) {
+  background: #FAFAFA;
+}
+
+.listing-details ul li:nth-child(odd) {
+  background: #F1F1F1;
+}
+
+.listing-details ul li h4 {
+  font-weight: 400;
+}
+
+/* Listing Contact **************************/
+.listing-contact {
+  margin: 10px;
+}

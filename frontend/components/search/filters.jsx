@@ -2,16 +2,18 @@ import React from "react";
 import merge from "lodash/merge";
 
 import ListingIndex from "../listings/listing_index";
+import Nouislider from 'react-nouislider';
+import InputRange from 'react-input-range';
 
 class Filters extends React.Component{
   constructor(props) {
     super(props);
     this.state = merge({}, this.props.filters);
 
-    this.handleChange = this.handleChange.bind(this);
-    // this.renderCheckboxes = this.renderCheckboxes.bind(this);
     this.renderFields = this.renderFields.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
+    // this.handleSlider = this.handleSlider.bind(this);
   }
 
   componentWillReceiveProps(newProps) {
@@ -29,7 +31,7 @@ class Filters extends React.Component{
     }
   }
 
-  handleChange(filter, dispatchAction) {
+  handleClick(filter, dispatchAction) {
     return field => e => {
       const nextState = merge({}, this.state[filter], {
         [field]: !this.state[filter][field]
@@ -40,25 +42,21 @@ class Filters extends React.Component{
     }
   }
 
-  handleClick(filter, dispatchAction) {
+  handleSelect(filter, dispatchAction) {
     return e => {
       this.setState({[filter]: !this.state[filter]});
       dispatchAction();
     }
   }
 
-  // renderCheckboxes(filter, handler) {
-  //   return (
-  //     Object.keys(filter).map(option => (
-  //       <label>
-  //         {option}
-  //         <input
-  //           type="checkbox"
-  //           checked={filter[option] ? "checked" : ""}
-  //           onChange={handler(option)} />
-  //       </label>
-  //     ))
-  //   )
+  // handleSlider(component, values) {
+  //   const nextState = {
+  //     min: values[0],
+  //     max: values[1]
+  //   };
+  //
+  //   this.setState({rent: nextState});
+  //   this.props.updateRent(nextState);
   // }
 
   renderFields(filter, handler) {
@@ -93,18 +91,18 @@ class Filters extends React.Component{
       updatePets,
       resetFilters } = this.props;
 
-    // console.log(noFeeSelected, parkingSelected);
-
     return (
         <form>
           <div className="filter">
             <h3>rent</h3>
-            <div className="filter-fields">
+              <div className="filter-fields rent">
               <label>
                 min
                 <input
                   type="number"
                   value={rent.min}
+                  step="50"
+                  max={rent.max}
                   onChange={this.handleRentChange("min")} />
               </label>
               <label>
@@ -112,6 +110,8 @@ class Filters extends React.Component{
                 <input
                   type="number"
                   value={rent.max}
+                  step="50"
+                  min={rent.min}
                   onChange={this.handleRentChange("max")} />
               </label>
             </div>
@@ -119,25 +119,25 @@ class Filters extends React.Component{
           <div className="filter">
             <h3>type</h3>
             <div className="filter-fields">
-              {this.renderFields(listingType, this.handleChange("listingType", updateListingType))}
+              {this.renderFields(listingType, this.handleClick("listingType", updateListingType))}
             </div>
           </div>
           <div className="filter">
             <h3>bedrooms</h3>
             <div className="filter-fields">
-              {this.renderFields(bedrooms, this.handleChange("bedrooms", updateBedrooms))}
+              {this.renderFields(bedrooms, this.handleClick("bedrooms", updateBedrooms))}
             </div>
           </div>
           <div className="filter">
             <h3>bathrooms</h3>
             <div className="filter-fields">
-              {this.renderFields(bathrooms, this.handleChange("bathrooms", updateBathrooms))}
+              {this.renderFields(bathrooms, this.handleClick("bathrooms", updateBathrooms))}
             </div>
           </div>
           <div className="filter">
             <h3>pets</h3>
             <div className="filter-fields">
-              {this.renderFields(pets, this.handleChange("pets", updatePets))}
+              {this.renderFields(pets, this.handleClick("pets", updatePets))}
             </div>
           </div>
           <div className="filter">
@@ -146,13 +146,13 @@ class Filters extends React.Component{
               <button
                 type="button"
                 className={noFeeSelected ? "selected" : ""}
-                onClick={this.handleClick("noFeeSelected", updateFee)}>
+                onClick={this.handleSelect("noFeeSelected", updateFee)}>
                 no broker fee
               </button>
               <button
                 type="button"
                 className={parkingSelected ? "selected" : ""}
-                onClick={this.handleClick("parkingSelected", updateParking)}>
+                onClick={this.handleSelect("parkingSelected", updateParking)}>
                 parking
               </button>
             </div>

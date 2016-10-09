@@ -1,3 +1,19 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
 // LIGHT BLUE
 // #8EAEBD
 // ULTRAMARINE
@@ -10,6 +26,7 @@
 // #AB987A
 // CORAL
 // #FF533D
+
 
 html, body, header, nav, h1, a,
 ul, li, strong, main, button, i,
@@ -62,59 +79,8 @@ button {
   width:100%;
 }
 
-.filters {
-  width: 500px;
-  background: #F5F5F5;
-  font-size: 14px;
-}
 
-.filters form {
-  margin: 10px;
-  background: white;
-  border: 1px solid #8EAEBD;
-  border-radius: 2px;
-}
 
-.filter {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 0;
-  margin: 0 20px;
-  border-bottom: 1px solid #FF533D;
-  align-items: center;
-}
-
-.filter h3 {
-  width: 125px;
-  text-transform: uppercase;
-}
-
-.filter-fields {
-  width: 225px;
-  display: flex;
-}
-
-.filter-fields button {
-  background: #a5cfe2;
-  border-radius: 2px;
-  border: 1px solid #8EAEBD;
-  padding: 5px 0;
-  margin: 0 2px;
-  width: 100%;
-  text-align: center;
-  text-transform: capitalize;
-}
-
-.filter-fields button:hover {
-  background: #8EAEBD;
-}
-
-.filter-fields button.selected {
-  background: #30415D;
-  border: 1px solid #30415D;
-  opacity: 0.9;
-  color: white;
-}
 .listing-index {
 
 }
@@ -156,74 +122,4 @@ input.signup-form-field {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-
-// Listing Show
-
-.listing-show {
-  display: flex;
-  justify-content: space-between;
-  margin: 10px;
-}
-
-.listing-main {
-  min-width: 600px;
-  margin: 10px;
-}
-
-.listing-main h2 {
-  font-size: 32px;
-  font-weight: 400;
-}
-
-.listing-main h3 {
-  font-size: 28px;
-  font-weight: 400;
-}
-
-.listing-main description {
-  background: #F5F5F5;
-}
-
-
-.listing-sidebar {
-  width: 350px;
-  min-width: 350px;
-  margin: 10px;
-}
-
-
-// Listing Details
-.listing-details {
-  margin: 10px;
-}
-
-.listing-details ul {
-  margin-top: 10px;
-}
-
-.listing-details ul li {
-  padding: 10px;
-  font-size: 12px;
-  font-weight: 300;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.listing-details ul li:nth-child(even) {
-  background: #FAFAFA;
-}
-
-.listing-details ul li:nth-child(odd) {
-  background: #F1F1F1;
-}
-
-.listing-details ul li h4 {
-  font-weight: 400;
-}
-
-// Listing Contact
-.listing-contact {
-  margin: 10px;
 }

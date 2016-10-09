@@ -8,11 +8,22 @@ import Root from './components/root';
 import { requestListings, requestListing } from './actions/listings';
 import { fetchListings, createListing } from './utils/listings_api';
 
+// import Nouislider from 'react-nouislider';
+
+// <Nouislider
+//   range={{min: 0, max: 200}}
+//   start={[0, 100]}
+//   tooltips
+//   connect
+// />
+
 document.addEventListener('DOMContentLoaded', () => {
   // let store;
   //
   // if (window.currentUser) {
-  //   const preloadedState = {session: {currentUser: window.currentUser}}
+  //   const preloadedState = {session: {
+  //     currentUser: window.currentUser
+  //   }};
   //   store = configureStore(preloadedState);
   // } else {
   //   store = configureStore();
@@ -24,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }};
 
   const store = configureStore(preloadedState);
+
   const rootEl = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, rootEl);
 

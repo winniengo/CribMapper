@@ -1,0 +1,74 @@
+.filters {
+  width: 500px;
+  background: #F5F5F5;
+  font-size: 14px;
+}
+
+.filters form {
+  margin: 10px;
+  background: white;
+  border: 1px solid #8EAEBD;
+  border-radius: 2px;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  margin: 0 20px;
+  border-bottom: 1px solid #FF533D;
+  align-items: center;
+}
+
+.filter h3 {
+  width: 125px;
+  text-transform: uppercase;
+}
+
+.filter-fields {
+  width: 225px;
+  display: flex;
+  text-transform: capitalize;
+}
+
+.rent {
+  flex-direction: column;
+}
+
+.filter-fields label {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-fields label input {
+  text-align: right;
+  padding: 1px;
+  background: #f5f5f5;
+  border: 1px solid #f5f5f5;
+  border-radius: 2px;
+  margin: 2px;
+}
+
+.filter-fields button {
+  background: #a5cfe2;
+  border-radius: 2px;
+  border: 1px solid #8EAEBD;
+  padding: 5px 0;
+  margin: 0 2px;
+  width: 100%;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.filter-fields button:hover {
+  background: #8EAEBD;
+}
+
+.filter-fields button.selected {
+  background: #30415D;
+  border: 1px solid #30415D;
+  opacity: 0.9;
+  color: white;
+}
