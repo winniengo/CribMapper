@@ -1,1 +1,3 @@
-json.extract! user, :id, :name
+json.extract! user, :id, :name, :email, :favorites
+
+# TODO

@@ -11,6 +11,11 @@ class Listing < ApplicationRecord
 
   validates :lat, uniqueness: { scope: :lng }
 
+  has_many :favorites, dependent: :destroy
+  has_many :users_favorited,
+    through: :favorites,
+    source: :user
+    
   def self.filter(params)
     self.where("lat < ?", params[:bounds][:northEast][:lat])
         .where("lat > ?", params[:bounds][:southWest][:lat])

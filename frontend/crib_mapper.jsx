@@ -4,19 +4,6 @@ import ReactDOM from 'react-dom';
 import configureStore from './store';
 import Root from './components/root';
 
-// for testing
-import { requestListings, requestListing } from './actions/listings';
-import { fetchListings, createListing } from './utils/listings_api';
-
-// import Nouislider from 'react-nouislider';
-
-// <Nouislider
-//   range={{min: 0, max: 200}}
-//   start={[0, 100]}
-//   tooltips
-//   connect
-// />
-
 document.addEventListener('DOMContentLoaded', () => {
   // let store;
   //
@@ -31,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const preloadedState = {session: {
     currentUser: window.currentUser ? window.currentUser : null,
-    errors: []
   }};
 
   const store = configureStore(preloadedState);
@@ -41,9 +27,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // for testing
   window.store = store;
-  window.error = e => console.log(e);
-  window.success = data => console.log(data);
-  window.requestListings = requestListings;
-  window.requestListing = requestListing;
-  window.fetchListings = fetchListings;
 });

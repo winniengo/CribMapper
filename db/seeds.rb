@@ -11,7 +11,7 @@ u1 = User.create!({
 })
 
 u2 = User.create!({
-  email: `winnie@gmail.com`,
+  email: 'winnie@gmail.com',
   name: 'Winnie',
   password: 'password'
 })
@@ -66,3 +66,9 @@ l4 = Listing.create!({
   dogs: true,
   cats: true
 })
+
+f1 = Favorite.create!({user_id: guest.id, listing_id: l1.id})
+f1 = Favorite.create!({user_id: guest.id, listing_id: l2.id})
+f1 = Favorite.create!({user_id: u1.id, listing_id: l1.id})
+f1 = Favorite.create!({user_id: u1.id, listing_id: l4.id})
+f1 = Favorite.create!({user_id: u2.id, listing_id: l3.id})

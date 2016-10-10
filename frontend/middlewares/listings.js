@@ -1,5 +1,6 @@
 import {
   REQUEST_LISTINGS,
+  requestListings,
   receiveListings,
   CREATE_LISTING,
   receiveListing,
