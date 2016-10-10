@@ -6,6 +6,8 @@ import Root from './components/root';
 
 // for testing
 import { createFavorite, destroyFavorite } from './utils/favorites_api';
+import { logout } from './utils/session_api';
+import { receiveErrors } from './actions/errors';
 
 document.addEventListener('DOMContentLoaded', () => {
   // let store;
@@ -34,4 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.error = e => console.log(e)
   window.createFavorite = createFavorite;
   window.destroyFavorite = destroyFavorite;
+  window.logout = logout;
+  window.receiveErrors = receiveErrors;
 });

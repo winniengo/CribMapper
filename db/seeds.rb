@@ -1,5 +1,5 @@
 guest = User.create!({
-    email: 'guest@email.com',
+    email: 'guest',
     name: 'Guest',
     password: 'password'
 })

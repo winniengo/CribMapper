@@ -5,7 +5,7 @@ import NavbarContainer from './navbar/navbar_container';
 const App = ({ children }) => {
   return (
     <div id='app'>
-      <NavbarContainer />
+      <NavbarContainer pathname={children.props.location.pathname}/>
       {children}
     </div>
   )

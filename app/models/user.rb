@@ -21,15 +21,13 @@ class User < ActiveRecord::Base
     SecureRandom::urlsafe_base64(16)
   end
 
-  def is_password?(unencrypted_password)
-    BCrypt::Password.new(self.password_digest).is_password?(unencrypted_password)
+  def is_password?(password)
+    BCrypt::Password.new(self.password_digest).is_password?(password)
   end
 
-  def password=(unencrypted_password)
-    if unencrypted_password.present?
-      @password = unencrypted_password
-      self.password_digest = BCrypt::Password.create(unencrypted_password)
-    end
+  def password=(password)
+    @password = password
+    self.password_digest = BCrypt::Password.create(password)
   end
 
   def reset_session_token!

@@ -10,13 +10,18 @@ class SignupForm extends React.Component {
       name: "",
       email: "",
       password: "",
-      confirmPassword: ""
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
+    // if (this.props.errors.length !== 0) {
+    //   this.props.clearErrors();
+    // }
+  }
+
+  componentWillUnmount() {
     if (this.props.errors.length !== 0) {
       this.props.clearErrors();
     }
@@ -61,14 +66,6 @@ class SignupForm extends React.Component {
               type='password'
               value={this.state.password}
               onChange={this.update('password')}
-              className='signup-form-field'/>
-          </label>
-          <label className='signup-form-field'>
-            Confirm Password
-            <input
-              type='password'
-              value={this.state.confirmPassword}
-              onChange={this.update('confirmPassword')}
               className='signup-form-field'/>
           </label>
           <input type='submit' value='Sign up' />

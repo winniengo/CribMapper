@@ -39,6 +39,7 @@ span, article, footer, time, small, h4 {
   outline: 0;
   font: inherit;
   color: inherit;
+  text-transform: inherit;
   text-align: inherit;
   text-decoration: inherit;
   vertical-align: inherit;
@@ -58,10 +59,6 @@ ul {
 form {
   display: flex;
   flex-direction: column;
-}
-
-button {
-  background: #8EAEBD;
 }
 
 h3 {
@@ -114,10 +111,23 @@ input.signup-form-field {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  text-transform: uppercase;
 }
 
+.navbar .links {
+  display: flex;
+  flex-direction: row;
+}
 
-button {
+.links button {
+  margin-left: 20px;
+}
+
+.links a {
+  margin-left: 20px;
+}
+
+.search button {
   background: #a5cfe2;
   border-radius: 2px;
   border: 1px solid #8EAEBD;
@@ -127,11 +137,11 @@ button {
   text-transform: capitalize;
 }
 
-button:hover {
+.search button:hover {
   background: #8EAEBD;
 }
 
-button.selected {
+.search button.selected {
   background: #30415D;
   border: 1px solid #30415D;
   opacity: 0.9;

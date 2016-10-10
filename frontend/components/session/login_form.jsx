@@ -3,20 +3,24 @@ import { Link } from 'react-router';
 
 import SessionErrors from './session_errors';
 
-class SignupForm extends React.Component {
+class LoginForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
       email: "",
       password: "",
-      confirmPassword: ""
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
+    if (this.props.errors.length !== 0) {
+      this.props.clearErrors();
+    }
+  }
+
+  componentWillUnmount() {
     if (this.props.errors.length !== 0) {
       this.props.clearErrors();
     }
@@ -30,7 +34,7 @@ class SignupForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.signup(this.state);
+    this.props.login(this.state);
   }
 
   render() {
@@ -65,4 +69,4 @@ class SignupForm extends React.Component {
 }
 
 
-export default SignupForm;
+export default LoginForm;

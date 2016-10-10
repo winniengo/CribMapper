@@ -1,15 +1,17 @@
 import {
   receiveCurrentUser,
-  receiveErrors,
   LOGIN,
   LOGOUT,
   SIGNUP } from '../actions/session';
 
+import { receiveErrors } from '../actions/errors';
 import { login, signup, logout } from '../utils/session_api';
 import { hashHistory } from 'react-router';
 
 const sessionMiddleware = store => next => action => {
-  const error = e => store.dispatch(receiveErrors(e.responseJSON));
+  const error = e => {
+    store.dispatch(receiveErrors('session', e.responseJSON));
+  }
   const success = data => {
     store.dispatch(receiveCurrentUser(data));
     hashHistory.push('/');
@@ -22,7 +24,7 @@ const sessionMiddleware = store => next => action => {
     case LOGOUT:
       logout(() => {
         next(action);
-        hashHistory.push('/login');
+        hashHistory.push('/');
       });
       break;
     case SIGNUP:
