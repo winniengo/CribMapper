@@ -61,8 +61,9 @@ class Filters extends React.Component{
 
   renderFields(filter, handler) {
     return (
-      Object.keys(filter).map(field => (
+      Object.keys(filter).map((field, idx) => (
         <button
+          key={idx}
           type="button"
           className={filter[field] ? "selected" : ""}
           onClick={handler(field)}>

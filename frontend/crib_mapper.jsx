@@ -4,6 +4,9 @@ import ReactDOM from 'react-dom';
 import configureStore from './store';
 import Root from './components/root';
 
+// for testing
+import { createFavorite, destroyFavorite } from './utils/favorites_api';
+
 document.addEventListener('DOMContentLoaded', () => {
   // let store;
   //
@@ -27,4 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // for testing
   window.store = store;
+  window.success = data => console.log(data)
+  window.error = e => console.log(e)
+  window.createFavorite = createFavorite;
+  window.destroyFavorite = destroyFavorite;
 });
