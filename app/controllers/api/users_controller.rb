@@ -6,11 +6,12 @@ class Api::UsersController < ApplicationController
       login(@user)
       render 'api/users/show'
     else
-      render json: @user.errors.full_messages, status: 422
+      @errors = @favorite.errors.full_messages
+      render "api/shared/errors", status: 422
     end
   end
 
-  def show
+  def show # TODO remove action
     @user = User.find(params[:id])
   end
 

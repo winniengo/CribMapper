@@ -1,3 +1,3 @@
 json.set! @listing.id do
-  json.partial! 'shared/listing', listing: @listing
+  json.partial! 'listing', listing: @listing
 end

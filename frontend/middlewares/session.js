@@ -3,23 +3,30 @@ import {
   LOGIN,
   LOGOUT,
   SIGNUP } from '../actions/session';
-
-import { receiveErrors } from '../actions/errors';
 import { login, signup, logout } from '../utils/session_api';
+import {
+  FAVORITE_LISTING,
+  UNFAVORITE_LISTING,
+  receiveFavorite,
+  removeFavorite } from '../actions/favoriteListings';
+import { createFavorite, destroyFavorite } from '../utils/favorites_api';
+import { receiveErrors } from '../actions/errors';
+
 import { hashHistory } from 'react-router';
 
-const sessionMiddleware = store => next => action => {
+const sessionMiddleware = ({ dispatch, getState }) => next => action => {
   const error = e => {
-    store.dispatch(receiveErrors('session', e.responseJSON));
+    debugger
+    dispatch(receiveErrors('session', e.responseJSON));
   }
-  const success = data => {
-    store.dispatch(receiveCurrentUser(data));
+  const currentUserSuccess = currentUser => {
+    dispatch(receiveCurrentUser(currentUser));
     hashHistory.push('/');
   }
 
   switch(action.type) {
     case LOGIN:
-      login(action.user, success, error);
+      login(action.user, currentUserSuccess, error);
       return next(action);
     case LOGOUT:
       logout(() => {
@@ -29,6 +36,14 @@ const sessionMiddleware = store => next => action => {
       break;
     case SIGNUP:
       signup(action.user, success, error)
+      return next(action);
+    case FAVORITE_LISTING:
+      const favoriteSuccess = ({ listingId }) => dispatch(receiveFavorite(listingId));
+      createFavorite(action.listingId, favoriteSuccess, error);
+      return next(action);
+    case UNFAVORITE_LISTING:
+      const unfavoriteSuccess = ({ listingId }) => dispatch(removeFavorite(listingId));
+      destroyFavorite(action.listingId, unfavoriteSuccess, error);
       return next(action);
     default:
       return next(action);

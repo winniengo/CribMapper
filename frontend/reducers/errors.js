@@ -1,11 +1,10 @@
 import { RECEIVE_ERRORS, CLEAR_ERRORS, ADD_ERRORS } from '../actions/errors';
 import merge from 'lodash/merge';
-import union from 'lodash/union';
+// import union from 'lodash/union';
 
 const defaultErrors = {
   session: [],
   listing: [],
-  favorite: []
 }
 
 const errors = (state = defaultErrors, action) => {

@@ -6,6 +6,7 @@ import Root from './components/root';
 
 // for testing
 import { createFavorite, destroyFavorite } from './utils/favorites_api';
+import { favoriteListing, unfavoriteListing } from './actions/favoriteListings';
 import { logout } from './utils/session_api';
 import { receiveErrors } from './actions/errors';
 
@@ -20,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // } else {
   //   store = configureStore();
   // }
-
   const preloadedState = {session: {
     currentUser: window.currentUser ? window.currentUser : null,
   }};
@@ -38,4 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.destroyFavorite = destroyFavorite;
   window.logout = logout;
   window.receiveErrors = receiveErrors;
+  window.favoriteListing = favoriteListing;
+  window.unfavoriteListing = unfavoriteListing;
 });
