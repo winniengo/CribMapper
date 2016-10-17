@@ -1,10 +1,6 @@
 import React from "react";
 import merge from "lodash/merge";
 
-import ListingIndex from "../listings/listing_index";
-import Nouislider from 'react-nouislider';
-import InputRange from 'react-input-range';
-
 class Filters extends React.Component{
   constructor(props) {
     super(props);
@@ -13,7 +9,6 @@ class Filters extends React.Component{
     this.renderFields = this.renderFields.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
-    // this.handleSlider = this.handleSlider.bind(this);
   }
 
   componentWillReceiveProps(newProps) {
