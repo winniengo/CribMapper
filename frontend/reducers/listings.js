@@ -6,6 +6,7 @@ const listings = (state = {}, action) => {
     case RECEIVE_LISTINGS:
       return merge({}, action.listings);
     case RECEIVE_LISTING:
+      // debugger
       return merge({}, state, action.listing);
     default:
       return state;

@@ -16,7 +16,7 @@ import { hashHistory } from 'react-router';
 
 const sessionMiddleware = ({ dispatch, getState }) => next => action => {
   const error = e => {
-    debugger
+    // debugger
     dispatch(receiveErrors('session', e.responseJSON));
   }
   const currentUserSuccess = currentUser => {
@@ -42,7 +42,10 @@ const sessionMiddleware = ({ dispatch, getState }) => next => action => {
       createFavorite(action.listingId, favoriteSuccess, error);
       return next(action);
     case UNFAVORITE_LISTING:
-      const unfavoriteSuccess = ({ listingId }) => dispatch(removeFavorite(listingId));
+      const unfavoriteSuccess = ({ listingId }) => {
+        // debugger
+        dispatch(removeFavorite(listingId));
+      };
       destroyFavorite(action.listingId, unfavoriteSuccess, error);
       return next(action);
     default:

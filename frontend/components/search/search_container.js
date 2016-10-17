@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 
-import { allListings } from '../../reducers/selectors';
+import { allListings, allFavoriteListings } from '../../reducers/selectors';
 import { requestListings } from '../../actions/listings';
 import {
   updateBounds,
@@ -12,13 +13,18 @@ import {
   updateParking,
   updatePets,
   resetFilters } from '../../actions/filters';
+import { favoriteListing, unfavoriteListing } from '../../actions/favoriteListings';
 
 import Search from './search';
 
-const mapStateToProps = state => ({
-  listings: allListings(state),
-  filters: state.filters
-});
+const mapStateToProps = state => {
+  // debugger
+  return ({
+    listings: allListings(state),
+    favorites: allFavoriteListings(state),
+    filters: state.filters
+  });
+};
 
 const mapDispatchToProps = dispatch => ({
   requestListings: () => dispatch(requestListings()),
@@ -30,10 +36,12 @@ const mapDispatchToProps = dispatch => ({
   updateFee: () => dispatch(updateFee()),
   updateParking: () => dispatch(updateParking()),
   updatePets: pets => dispatch(updatePets(pets)),
-  resetFilters: () => dispatch(resetFilters())
+  resetFilters: () => dispatch(resetFilters()),
+  favoriteListing: listingId => dispatch(favoriteListing(listingId)),
+  unfavoriteListing: listingId => dispatch(unfavoriteListing(listingId))
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Search);
+);

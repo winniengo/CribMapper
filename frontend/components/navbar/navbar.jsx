@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { withRouter, Link } from 'react-router';
 
 const Navbar = ({ loggedIn, pathname, logout }) => {
   let sessionLink;
@@ -24,4 +24,4 @@ const Navbar = ({ loggedIn, pathname, logout }) => {
   );
 }
 
-export default Navbar;
+export default withRouter(Navbar);

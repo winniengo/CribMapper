@@ -1,8 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 
-import Details from './details';
-import Contact from './contact';
+import Details from './listing_show_details';
+import Contact from './listing_show_contact';
 
 const _emptyListing = {
   id: "",
@@ -19,15 +19,13 @@ const _emptyListing = {
 class ListingShow extends React.Component {
   constructor(props) {
     super(props);
-    const listing = this.props.listings[this.props.params.id];
-    this.state = listing || _emptyListing;
+    this.state = this.props.listing || _emptyListing;
 
     this.returnToListings = this.returnToListings.bind(this);
   }
 
-  componentWillReceiveProps({ listings, params }) {
-    const listing = listings[params.id];
-    this.setState(listing);
+  componentWillReceiveProps(newProps) {
+    this.setState(newProps.listing);
   }
 
   returnToListings(e) {

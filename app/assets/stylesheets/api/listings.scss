@@ -58,7 +58,7 @@
 }
 
 .listing-details ul li h4 {
-  font-weight: 400;
+  font-weight: 300;
 }
 
 /* Listing Contact **************************/
@@ -96,8 +96,34 @@
   margin: 20px;
 }
 
-.listing-index-item description h3 {
+.listing-index-item header {
   border-bottom: 1px solid #AB987A;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.listing-index-item h4 {
+  font-size: 18px;
+}
+
+.favorite-icon {
+  width: 35px;
+  height: 35px;
+  background-image: image-url("favorite.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.unfavorited {
+  opacity: 0.1;
+}
+
+.unfavorited:hover {
+  opacity: 0.5
+}
+
+.favorited {
+  opacity: 1;
 }

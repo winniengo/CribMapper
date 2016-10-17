@@ -3,10 +3,10 @@ import { logout } from '../../actions/session';
 
 import Navbar from './navbar';
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = ({ session }, { pathname }) => {
   return {
-    loggedIn: Boolean(state.session.currentUser),
-    pathname: ownProps.pathname
+    loggedIn: Boolean(session.currentUser),
+    pathname
   }
 };
 

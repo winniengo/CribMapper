@@ -1,6 +1,8 @@
 import React from 'react';
-import Map from './map';
-import Filters from './filters';
+import { withRouter } from 'react-router';
+
+import Map from './search_map';
+import Filters from './search_filters';
 import ListingIndex from '../listings/listing_index';
 
 class Search extends React.Component {
@@ -14,7 +16,9 @@ class Search extends React.Component {
 
   render() {
     const {
+      router,
       listings,
+      favorites,
       filters,
       requestListings,
       updateBounds,
@@ -25,7 +29,9 @@ class Search extends React.Component {
       updateFee,
       updateParking,
       updatePets,
-      resetFilters } = this.props;
+      resetFilters,
+      favoriteListing,
+      unfavoriteListing } = this.props;
 
     return (
       <div className="search">
@@ -45,11 +51,14 @@ class Search extends React.Component {
             updatePets={updatePets}
             resetFilters={resetFilters} />
           <ListingIndex
-            listings={listings} />
+            listings={listings}
+            favorites={favoriteListings}
+            favoriteListing={favorites}
+            unfavoriteListing={unfavoriteListing} />
         </div>
       </div>
     )
   }
 }
 
-export default Search;
+export default withRouter(Search);

@@ -25,10 +25,8 @@ const session = (state = nullUser, action) => {
       });
     case REMOVE_FAVORITE:
       const nextState = merge({}, state);
-      nextState.currentUser.favoriteListings.splice(
-        nextState.currentUser.favoriteListings.indexOf(action.listingId),
-        1
-      );
+      const idx = nextState.currentUser.favoriteListings.indexOf(action.listingId);
+      nextState.currentUser.favoriteListings.splice(idx, 1);
       return nextState;
     default:
       return state;
