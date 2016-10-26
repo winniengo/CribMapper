@@ -6,9 +6,10 @@ import Root from './components/root';
 
 // for testing
 import { createFavorite, destroyFavorite } from './utils/favorites_api';
-import { favoriteListing, unfavoriteListing } from './actions/favoriteListings';
+import { favoriteListing, unfavoriteListing } from './actions/favorites';
 import { logout } from './utils/session_api';
 import { receiveErrors } from './actions/errors';
+import ListingCarousel from './components/listings/listing_carousel';
 
 document.addEventListener('DOMContentLoaded', () => {
   // let store;
@@ -29,6 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const rootEl = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, rootEl);
+
+
+  // ReactDOM.render(<ListingCarousel images={images} clssName={'thumbnail'});
 
   // for testing
   window.store = store;

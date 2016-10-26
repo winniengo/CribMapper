@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
-import { allFavoriteListings } from '../../reducers/selectors';
-import { favoriteListing, unfavoriteListing } from '../../actions/favoriteListings';
+import { allFavoriteListings } from '../../../reducers/selectors';
+import { favoriteListing, unfavoriteListing } from '../../../actions/favorites';
 
 import ListingIndex from './listing_index';
 

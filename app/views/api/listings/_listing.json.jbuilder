@@ -12,3 +12,4 @@ json.extract! listing,
   :fee,
   :parking
 json.listingType listing.listing_type
+json.images listing.images, :src

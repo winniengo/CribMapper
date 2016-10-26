@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Details = ({ listing }) => (
+const ListingShowDetails = ({ listing }) => (
   <div className="listing-details">
     <h3>Details</h3>
     <ul>
@@ -40,4 +40,4 @@ const Details = ({ listing }) => (
   </div>
 );
 
-export default Details;
+export default ListingShowDetails;

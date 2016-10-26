@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Contact = ({ contact }) => (
+const ListingShowContact = ({ contact }) => (
   <section className="listing-contact">
     Contact
   </section>
 );
 
-export default Contact;
+export default ListingShowContact;

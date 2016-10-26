@@ -1,8 +1,9 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 
-import Details from './listing_show_details';
-import Contact from './listing_show_contact';
+import ListingShowDetails from './listing_show_details';
+import ListingShowContact from './listing_show_contact';
+// import ListingCarousel from '../listing_carousel';
 
 const _emptyListing = {
   id: "",
@@ -13,7 +14,8 @@ const _emptyListing = {
   rent: "",
   bedrooms: "",
   bathrooms: "",
-  listingType: ""
+  listingType: "",
+  images: []
 };
 
 class ListingShow extends React.Component {
@@ -44,7 +46,8 @@ class ListingShow extends React.Component {
       dogs,
       fee,
       parking,
-      listingType } = this.state;
+      listingType,
+      images } = this.state;
 
     const header = `$${rent} - ${bedrooms} Bed / ${bathrooms} Bath`;
 
@@ -58,11 +61,12 @@ class ListingShow extends React.Component {
           </button>
           <h2>{header}</h2>
           <h3>{address}</h3>
+          <img />
           <description>{description}</description>
         </section>
         <section className="listing-sidebar">
-          <Details listing={this.state}/>
-          <Contact contact={""}/>
+          <ListingShowDetails listing={this.state}/>
+          <ListingShowContact contact={""}/>
         </section>
       </div>
     );

@@ -8,7 +8,7 @@ import {
   FAVORITE_LISTING,
   UNFAVORITE_LISTING,
   receiveFavorite,
-  removeFavorite } from '../actions/favoriteListings';
+  removeFavorite } from '../actions/favorites';
 import { createFavorite, destroyFavorite } from '../utils/favorites_api';
 import { receiveErrors } from '../actions/errors';
 

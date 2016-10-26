@@ -1,7 +1,7 @@
 class Api::ListingsController < ApplicationController
   def index
     if filters_params
-      @listings = Listing.filter(filters_params) # filter by bounds and rent
+      @listings = Listing.includes(:images).filter(filters_params) # filter by bounds and rent
 
       @listings = Listing.filter_by_attr(@listings, :bedrooms, query_string(:bedrooms)) unless default_params(:bedrooms)
       @listings = Listing.filter_by_attr(@listings, :bathrooms, query_string(:bathrooms)) unless default_params(:bathrooms)
@@ -14,9 +14,8 @@ class Api::ListingsController < ApplicationController
 
       @listings = Listing.filter_by_selected(@listings, :fee) if filters_params[:noFeeSelected] == "true"
       @listings = Listing.filter_by_selected(@listings, :parking) if filters_params[:parkingSelected] == "true"
-
     else
-      @listings = Listing.all
+      @listings = Listing.includes(:images).all
     end
   end
 

@@ -1,5 +1,5 @@
 import { LOGOUT, RECEIVE_CURRENT_USER } from '../actions/session';
-import { RECEIVE_FAVORITE, REMOVE_FAVORITE } from '../actions/favoriteListings';
+import { RECEIVE_FAVORITE, REMOVE_FAVORITE } from '../actions/favorites';
 import merge from 'lodash/merge';
 
 const nullUser = Object.freeze({

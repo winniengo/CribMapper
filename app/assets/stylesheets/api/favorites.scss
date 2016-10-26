@@ -1,3 +1,19 @@
-// Place all the styles related to the api::favorites controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.favorite-icon {
+  width: 35px;
+  height: 35px;
+  background-image: image-url("favorite.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.unfavorited {
+  opacity: 0.1;
+}
+
+.unfavorited:hover {
+  opacity: 0.5
+}
+
+.favorited {
+  opacity: 1;
+}

@@ -5,5 +5,5 @@ export const allListings = ({ listings }) => (
 export const selectListing = ({ listings }, { params }) => listings[params.id];
 
 export const allFavoriteListings = ({ session }) => (
-  session.currentUser.favoriteListings ? session.currentUser.favoriteListings : []
+  session.currentUser ? session.currentUser.favoriteListings : []
 );

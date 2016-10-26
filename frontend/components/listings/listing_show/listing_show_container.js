@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 // import { withRouter } from 'react-router';
 
-import { selectListing } from '../../reducers/selectors';
+import { selectListing } from '../../../reducers/selectors';
 
 import ListingShow from './listing_show';
 

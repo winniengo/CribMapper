@@ -7,7 +7,6 @@ import sessionMiddleware from './session';
 const logger = createLogger();
 
 export default applyMiddleware(
-  logger,
   listingsMiddleware,
   sessionMiddleware,
 );

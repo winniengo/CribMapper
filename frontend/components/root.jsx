@@ -7,7 +7,7 @@ import App from './app';
 import SearchContainer from './search/search_container';
 import SignupFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
-import ListingShowContainer from './listings/listing_show_container';
+import ListingShowContainer from './listings/listing_show/listing_show_container';
 
 import { requestListing } from '../actions/listings';
 

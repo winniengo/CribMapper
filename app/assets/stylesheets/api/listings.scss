@@ -1,7 +1,7 @@
 /* Listing Show **************************/
 .listing-show {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin: 10px;
 }
 
@@ -31,6 +31,10 @@
   margin: 10px;
 }
 
+.listing-sidebar h3 {
+  font-size: 18px;
+}
+
 /* Listing Details **************************/
 .listing-details {
   margin: 10px;
@@ -42,7 +46,7 @@
 
 .listing-details ul li {
   padding: 10px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 300;
   display: flex;
   justify-content: space-between;
@@ -58,7 +62,7 @@
 }
 
 .listing-details ul li h4 {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* Listing Contact **************************/
@@ -87,8 +91,14 @@
  box-shadow: 2px 2px 5px grey;
 }
 
-.listing-index-item img {
+.listing-index-item .container {
   min-width: 50%
+}
+
+.thumbnail {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 150px;
 }
 
 .listing-index-item description {
@@ -106,24 +116,4 @@
 
 .listing-index-item h4 {
   font-size: 18px;
-}
-
-.favorite-icon {
-  width: 35px;
-  height: 35px;
-  background-image: image-url("favorite.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.unfavorited {
-  opacity: 0.1;
-}
-
-.unfavorited:hover {
-  opacity: 0.5
-}
-
-.favorited {
-  opacity: 1;
 }

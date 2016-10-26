@@ -14,19 +14,27 @@
  *= require_self
  */
 
-// LIGHT BLUE
-// #8EAEBD
-// ULTRAMARINE
-// #031424
-// INDIGO
-// #30415D
-// NAVY BLUE
-// #0F1626
-// LEATHER
-// #AB987A
-// CORAL
-// #FF533D
+.slick-container {
+  /* margin: 0 auto; */
+  padding: 30px;
+  /* width: 80%; */
+  height: 400px;
+  color: #333;
+  background: #419be0;
+}
 
+.slick-slide img {
+  display: block;
+  margin: 0 auto;
+  height: 400px;
+}
+
+$ligh-blue: #8EAEBD;
+$ultramarine: #031424;
+$indigo: #30415D;
+$navy-blue: #0F1626;
+$leather: #AB987A;
+$coral: #FF533D;
 
 html, body, header, nav, h1, a,
 ul, li, strong, main, button, i,
@@ -68,6 +76,7 @@ h3 {
 h4 {
   text-transform: capitalize;
 }
+
 .app {
 }
 
@@ -81,30 +90,6 @@ h4 {
 
 #map {
   width:100%;
-}
-
-
-
-
-
-.session-errors {
-
-}
-
-.signup-form {
-}
-
-div.signup-form > h2 {
-  font-weight: 400;
-}
-label.signup-form-field {
-}
-
-input.signup-form-field {
-}
-
-.login-form {
-
 }
 
 .navbar {
