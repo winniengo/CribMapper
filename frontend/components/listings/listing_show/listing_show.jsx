@@ -60,7 +60,7 @@ class ListingShow extends React.Component {
           </header>
           <h3>{address}</h3>
           <ListingShowGallery images={images} />
-          <description>{description}</description>
+          <section className='description'>{description}</section>
         </section>
         <section className="listing-sidebar">
           <ListingShowDetails listing={this.state}/>
