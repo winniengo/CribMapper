@@ -3,40 +3,32 @@ import { withRouter } from 'react-router';
 
 import ListingShowDetails from './listing_show_details';
 import ListingShowContact from './listing_show_contact';
-// import ListingCarousel from '../listing_carousel';
-
-const _emptyListing = {
-  id: "",
-  lat: "",
-  lng: "",
-  description: "",
-  address: "",
-  rent: "",
-  bedrooms: "",
-  bathrooms: "",
-  listingType: "",
-  images: []
-};
+import ListingShowGallery from './listing_show_gallery';
 
 class ListingShow extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.listing || _emptyListing;
+    this.state = this.props.listing;
 
     this.returnToListings = this.returnToListings.bind(this);
+    this.handleFavorite = this.handleFavorite.bind(this);
   }
 
   componentWillReceiveProps(newProps) {
     this.setState(newProps.listing);
   }
 
-  returnToListings(e) {
-    e.preventDefault();
+  returnToListings() {
     this.props.router.goBack();
+  }
+
+  handleFavorite() {
+    this.props.favoriteAction();
   }
 
   render() {
     const {
+      id,
       description,
       address,
       rent,
@@ -50,18 +42,24 @@ class ListingShow extends React.Component {
       images } = this.state;
 
     const header = `$${rent} - ${bedrooms} Bed / ${bathrooms} Bath`;
+    const clssName = this.props.favorited ? "favorited" : "unfavorited";
 
     return (
       <div className='listing-show'>
         <section className="listing-main">
           <button
-            type="button"
+            className='back-to-results'
             onClick={this.returnToListings}>
             ← Back to results
           </button>
-          <h2>{header}</h2>
+          <header>
+            <h2>{header}</h2>
+            <div
+              className={`favorite-icon ${clssName}`}
+              onClick={this.handleFavorite} />
+          </header>
           <h3>{address}</h3>
-          <img />
+          <ListingShowGallery images={images} />
           <description>{description}</description>
         </section>
         <section className="listing-sidebar">

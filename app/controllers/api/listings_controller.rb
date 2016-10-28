@@ -20,7 +20,7 @@ class Api::ListingsController < ApplicationController
   end
 
   def show
-    @listing = Listing.find(params[:id])
+    @listing = Listing.includes(:images).find(params[:id])
   end
 
   def create

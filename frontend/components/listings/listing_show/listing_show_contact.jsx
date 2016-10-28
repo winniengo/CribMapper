@@ -2,7 +2,11 @@ import React from 'react';
 
 const ListingShowContact = ({ contact }) => (
   <section className="listing-contact">
-    Contact
+    <h3>contact</h3>
+    <section>
+      <div className='avatar'/>
+      <description />
+    </section>
   </section>
 );
 

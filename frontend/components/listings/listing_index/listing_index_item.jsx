@@ -2,11 +2,9 @@ import React from 'react';
 
 const ListingIndexItem = ({ listing, clssName, handleFavorite, handleClick }) => (
   <li className='listing-index-item' onClick={handleClick}>
-    <div className='container'>
-      <div
-        className='thumbnail'
-        style={{backgroundImage: `url(${listing.images[0].src})`}} />
-    </div>
+    <div
+      className='thumbnail'
+      style={{backgroundImage: `url(${listing.images[0].src})`}} />
     <description>
       <header>
         <h3>${listing.rent}</h3>
