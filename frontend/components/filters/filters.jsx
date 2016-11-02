@@ -88,6 +88,7 @@ class Filters extends React.Component{
       resetFilters } = this.props;
 
     return (
+      <div className='filters'>
         <form>
           <div className="filter">
             <h3>rent</h3>
@@ -153,19 +154,20 @@ class Filters extends React.Component{
               </button>
             </div>
           </div>
-        <div className="filter-buttons">
-          <button
-            type="button"
-            onClick={resetFilters}>
-            More Filters
-          </button>
-          <button
-            type="button"
-            onClick={resetFilters}>
-            Reset
-          </button>
-        </div>
+          <div className="filter-buttons">
+            <button
+              type="button"
+              onClick={resetFilters}>
+              More Filters
+            </button>
+            <button
+              type="button"
+              onClick={resetFilters}>
+              Reset
+            </button>
+          </div>
         </form>
+      </div>
     )
   }
 }

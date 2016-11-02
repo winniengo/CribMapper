@@ -40,8 +40,8 @@ button.back-to-results:hover {
 }
 
 .listing-main h2 {
-  font-weight: 400;
-  font-size: 32px;
+  // font-weight: 400;
+  font-size: 38px;
   // font-weight: 400;
 }
 
@@ -117,7 +117,7 @@ section.display {
   opacity: 1;
 }
 
-section.gallery {
+section.thumbnail-gallery {
   height: 110px;
   background: #F5F5F5;
   display: flex;
@@ -126,7 +126,7 @@ section.gallery {
   padding-bottom: 10px;
 }
 
-.gallery > div {
+.thumbnail-gallery > div {
   height: 98px;
   min-width: 125px;
   margin: 10px 5px 0 0;
@@ -137,11 +137,11 @@ section.gallery {
 
 }
 
-.gallery > div:hover {
+.thumbnail-gallery > div:hover {
   box-shadow: 2px 2px 5px grey;
 }
 
-.gallery > div.selected {
+.thumbnail-gallery > div.selected {
   border-color: $navy-blue;
   box-shadow: 2px 2px 5px grey;
   opacity: 1;
@@ -156,6 +156,7 @@ section.gallery {
 
 .listing-details ul {
   margin-top: 10px;
+  border-top: 1px solid #AB987A;
 }
 
 .listing-details ul li {
@@ -165,6 +166,7 @@ section.gallery {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #AB987A;
 }
 
 .listing-details ul li:nth-child(even) {

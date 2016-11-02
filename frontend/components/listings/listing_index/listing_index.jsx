@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router';
 
 import ListingIndexItem from './listing_index_item';
+import FiltersContainer from '../../filters/filters_container';
 
 class ListingIndex extends React.Component{
   constructor(props) {
@@ -15,7 +16,7 @@ class ListingIndex extends React.Component{
     return e => {
       e.preventDefault();
       if (!e.target.className.includes("favorite-icon")) {
-        this.props.router.push(`/listings/${listingId}`);
+        this.props.router.push(`/search/${listingId}`);
       }
     }
   }
@@ -36,6 +37,7 @@ class ListingIndex extends React.Component{
 
     return (
       <div className='listing-index'>
+        <FiltersContainer />
         <ul>
         {listings.map((listing, idx) => {
           const favorited = favorites.includes(listing.id);

@@ -1,6 +1,6 @@
 import React from 'react';
 
-class ListingShowGallery extends React.Component {
+class ListingPreviewGallery extends React.Component {
   constructor(props) {
     super(props)
     this.state = {selected: 0}
@@ -45,21 +45,22 @@ class ListingShowGallery extends React.Component {
     const selectedSrc = this.props.images[this.state.selected].src;
 
     return (
-      <section className='listing-gallery'>
-        <section className='display'>
-          <div className='previous' onClick={this.handlePrevious} />
+      <section className='listing-preview-gallery'>
+        <section className='preview-display'>
           <div
             className='selected'
             style={{backgroundImage: `url(${selectedSrc})`}} />
-          <div className='next' onClick={this.handleNext}/>
+          <div className='arrows'>
+            <button className='previous' onClick={this.handlePrevious} />
+            <button className='next' onClick={this.handleNext}/>
+          </div>
         </section>
-        <section className='thumbnail-gallery'>
-          {this.props.images.map(({ src }, idx) => (
+        <section className='dots-gallery'>
+          {this.props.images.map((img, idx) => (
             <div
               key={idx}
-              className={`thumbnail ${this.state.selected == idx ? 'selected' : ''}`}
-              onClick={this.handleSelect(idx)}
-              style={{backgroundImage: `url(${src})`}} />
+              className={`${this.state.selected == idx ? 'selected' : ''}`}
+              onClick={this.handleSelect(idx)} />
           ))}
         </section>
       </section>
@@ -67,4 +68,4 @@ class ListingShowGallery extends React.Component {
   }
 };
 
-export default ListingShowGallery;
+export default ListingPreviewGallery;

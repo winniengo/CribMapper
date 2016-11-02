@@ -54,13 +54,13 @@ class ListingShow extends React.Component {
           </button>
           <header>
             <h2>{header}</h2>
-            <div
+            <button
               className={`favorite-icon ${clssName}`}
               onClick={this.handleFavorite} />
           </header>
           <h3>{address}</h3>
           <ListingShowGallery images={images} />
-          <section className='description'>{description}</section>
+          <p className='description'>{description}</p>
         </section>
         <section className="listing-sidebar">
           <ListingShowDetails listing={this.state}/>

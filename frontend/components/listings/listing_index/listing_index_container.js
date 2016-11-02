@@ -1,15 +1,17 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
-import { allFavoriteListings } from '../../../reducers/selectors';
+import { allFavoriteListings, allListings } from '../../../reducers/selectors';
 import { favoriteListing, unfavoriteListing } from '../../../actions/favorites';
 
 import ListingIndex from './listing_index';
 
-const mapStateToProps = (state, { listings }) => ({
-  favorites: allFavoriteListings(state),
-  listings
-});
+const mapStateToProps = (state) => {
+  return ({
+    favorites: allFavoriteListings(state),
+    listings: allListings(state)
+  })
+};
 
 const mapDispatchToProps = dispatch => ({
   favoriteListing: listingId => dispatch(favoriteListing(listingId)),

@@ -8,7 +8,7 @@ const ListingIndexItem = ({ listing, clssName, handleFavorite, handleClick }) =>
     <description>
       <header>
         <h3>${listing.rent}</h3>
-        <div className={`favorite-icon ${clssName}`} onClick={handleFavorite} />
+        <button className={`favorite-icon ${clssName}`} onClick={handleFavorite} />
       </header>
       <h4>{listing.bedrooms} Bed / {listing.bathrooms} Bath</h4>
       <h4>{listing.listingType}</h4>
