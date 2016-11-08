@@ -1,5 +1,7 @@
 import { hashHistory } from 'react-router';
 
+const icon = 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478636840/listings/pointer.png';
+
 export default class MarkerManager {
   constructor(map) {
     this.map = map;
@@ -8,17 +10,17 @@ export default class MarkerManager {
 
   updateMarkers(listings) {
     this.listings = listings;
-    this.listingIds = this.listings.map(listing => listing.id);
+    this.listingIds = this.listings.map(({ id }) => id);
 
     this._listingsToAdd().forEach(this._createMarker.bind(this));
     this._markersToRemove().forEach(this._removeMarker.bind(this));
   }
 
   _listingsToAdd() {
-    const currentBenchIds = this.markers.map(marker => marker.listingId);
+    const currentListingIds = this.markers.map(({ listingId }) => listingId);
 
-    return this.listings.filter(listing => (
-      !currentBenchIds.includes(listing.id)
+    return this.listings.filter(({ id }) => (
+      !currentListingIds.includes(id)
     ));
   }
 
@@ -33,19 +35,36 @@ export default class MarkerManager {
     const marker = new google.maps.Marker({
       map: this.map,
       listingId: id,
+      icon,
       position
     });
 
-    marker.addListener('click', (e) => { // redirects to ListingShow on click
-      hashHistory.push(`/listings/${marker.listingId}`);
-    });
-    
+    this._addListeners(marker);
     this.markers.push(marker);
   }
 
-  _removeMarker(marker) { // receives marker object
-    const idx = this.markers.indexOf(marker);
-    this.markers[idx].setMap(null);
-    this.markers.splice(idx, 1);
+  _removeMarker(marker) {
+    marker.setMap(null);
+    this.markers.splice(this.markers.indexOf(marker), 1);
+  }
+
+  _addListeners(marker) {
+    marker.addListener('mouseover', e => {
+      this._addBounce(marker);
+    });
+
+    marker.addListener('mouseout', e => {
+      this._removeBounce(marker);
+    });
+
+    marker.addListener('click', e => hasHistory.push('/listings/${marker.listingId}'));
+  }
+
+  _addBounce(marker) {
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+  }
+
+  _removeBounce(marker) {
+    marker.setAnimation(null);
   }
 }

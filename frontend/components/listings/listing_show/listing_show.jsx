@@ -43,6 +43,7 @@ class ListingShow extends React.Component {
 
     const header = `$${rent} - ${bedrooms} Bed / ${bathrooms} Bath`;
     const clssName = this.props.favorited ? "favorited" : "unfavorited";
+    const petFriendly = cats || dogs ? "- Friendly" : "No Pets";
 
     return (
       <div className='listing-show'>
@@ -61,6 +62,11 @@ class ListingShow extends React.Component {
           <h3>{address}</h3>
           <ListingShowGallery images={images} />
           <p className='description'>{description}</p>
+          <div className='pets'>
+            {cats ? <div className='cats' /> : ""}
+            {dogs ? <div className='dogs' /> : ""}
+            {petFriendly}
+          </div>
         </section>
         <section className="listing-sidebar">
           <ListingShowDetails listing={this.state}/>

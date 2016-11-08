@@ -5,6 +5,28 @@ $navy-blue: #0F1626;
 $leather: #AB987A;
 $coral: #FF533D;
 
+.pets {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.pets > div {
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-size: contain;
+    margin-left: 2px;
+}
+
+.cats {
+  background-image: image-url('cat.png');
+}
+
+.dogs {
+  background-image: image-url('dog.png');
+}
+
 /* Listing Show **************************/
 .listing-show {
   display: flex;
@@ -36,6 +58,7 @@ button.back-to-results:hover {
   padding-top: 20px;
   display: flex;
   flex-direction: row;
+      align-items: center;
   justify-content: space-between;
 }
 
