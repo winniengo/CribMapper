@@ -2,11 +2,11 @@ import { LOGOUT, RECEIVE_CURRENT_USER } from '../actions/session';
 import { RECEIVE_FAVORITE, REMOVE_FAVORITE } from '../actions/favorites';
 import merge from 'lodash/merge';
 
-const nullUser = Object.freeze({
+const nullSession = Object.freeze({
   currentUser: null,
 });
 
-const session = (state = nullUser, action) => {
+const session = (state = nullSession, action) => {
   switch(action.type) {
     case LOGOUT:
       return merge({}, nullUser);

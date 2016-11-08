@@ -5,6 +5,7 @@ import configureStore from './store';
 import Root from './components/root';
 
 // for testing
+import { requestListings, requestListing, selectListing, deselectListing } from './actions/listings';
 import { createFavorite, destroyFavorite } from './utils/favorites_api';
 import { favoriteListing, unfavoriteListing } from './actions/favorites';
 import { logout } from './utils/session_api';
@@ -28,12 +29,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const store = configureStore(preloadedState);
 
   const rootEl = document.getElementById('root');
-  ReactDOM.render(<Root store={store} />, rootEl);
+  ReactDOM.render(<h1>CribMapper</h1>, rootEl);
+  // ReactDOM.render(<Root store={store} />, rootEl);
 
   // for testing
   window.store = store;
   window.success = data => console.log(data)
   window.error = e => console.log(e)
+  window.requestListings = requestListings;
+  window.requestListing = requestListing;
+  window.selectListing = selectListing;
+  window.deselectListing = deselectListing;
   window.createFavorite = createFavorite;
   window.destroyFavorite = destroyFavorite;
   window.logout = logout;
