@@ -1,9 +1,8 @@
 $light-blue: #8EAEBD;
-$ultramarine: #031424;
-$indigo: #30415D;
 $navy-blue: #0F1626;
 $leather: #AB987A;
 $coral: #FF533D;
+$grey: #e8edf3;
 
 .pets {
   display: flex;
@@ -36,7 +35,7 @@ $coral: #FF533D;
 
 button.back-to-results {
   background: #a5cfe2;
-  border-radius: 2px;
+  border-radius: 1px;
   border: 1px solid #8EAEBD;
   padding: 5px 0;
   width: 150px;
@@ -76,7 +75,6 @@ button.back-to-results:hover {
 }
 
 .listing-main > .description {
-  // background: #F5F5F5;
   padding-top: 20px;
 }
 
@@ -142,7 +140,7 @@ section.display {
 
 section.thumbnail-gallery {
   height: 110px;
-  background: #F5F5F5;
+  background: $grey;
   display: flex;
   flex-direction: row;
   overflow: scroll;

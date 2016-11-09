@@ -10,6 +10,8 @@ class ListingIndex extends React.Component{
 
     this._handleClick = this._handleClick.bind(this);
     this._handleFavorite = this._handleFavorite.bind(this);
+    this._handleMouseOver = this._handleMouseOver.bind(this);
+    this._handleMouseOut = this._handleMouseOut.bind(this)
   }
 
   _handleClick(listingId) {
@@ -26,6 +28,14 @@ class ListingIndex extends React.Component{
       e.preventDefault();
       action(listingId);
     }
+  }
+
+  _handleMouseOver(listingId) {
+    return () => this.props.mouseOver(listingId);
+  }
+
+  _handleMouseOut() {
+    return () => this.props.mouseOut();
   }
 
   render() {
@@ -49,7 +59,9 @@ class ListingIndex extends React.Component{
               listing={listing}
               clssName={clssName}
               handleFavorite={this._handleFavorite(action, listing.id)}
-              handleClick={this._handleClick(listing.id)} />
+              handleClick={this._handleClick(listing.id)}
+              handleMouseOver={this._handleMouseOver(listing.id)}
+              handleMouseOut={this._handleMouseOut()} />
           );
         })}
         </ul>

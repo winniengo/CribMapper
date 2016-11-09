@@ -4,7 +4,7 @@ import { Router, Route, IndexRoute, hashHistory, IndexRedirect } from 'react-rou
 
 // components
 import App from './app';
-import SearchContainer from './search/search_container';
+import Search from './search/search';
 import SignupFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
 import ListingIndexContainer from './listings/listing_index/listing_index_container';
@@ -40,7 +40,7 @@ const Root = ({ store }) => {
       <Router history={hashHistory}>
         <Route path="/" component={App}>
           <IndexRedirect to="/search/index" />
-          <Route path="search" component={SearchContainer}>
+          <Route path="search" component={Search}>
             <Route path='index' component={ListingIndexContainer} />
             <Route path=':id' component={ListingPreviewContainer} onEnter={_ensureListing} />
           </Route>

@@ -1,4 +1,5 @@
 import React from "react";
+
 import merge from "lodash/merge";
 
 class Filters extends React.Component{
@@ -44,16 +45,6 @@ class Filters extends React.Component{
     }
   }
 
-  // handleSlider(component, values) {
-  //   const nextState = {
-  //     min: values[0],
-  //     max: values[1]
-  //   };
-  //
-  //   this.setState({rent: nextState});
-  //   this.props.updateRent(nextState);
-  // }
-
   renderFields(filter, handler) {
     return (
       Object.keys(filter).map((field, idx) => (
@@ -77,6 +68,7 @@ class Filters extends React.Component{
       noFeeSelected,
       parkingSelected,
       pets } = this.state;
+
     const {
       updateRent,
       updateListingType,
@@ -92,81 +84,86 @@ class Filters extends React.Component{
         <form>
           <div className="filter">
             <h3>rent</h3>
-              <div className="filter-fields rent">
+            <div className="fields">
               <label>
                 min
-                <input
-                  type="number"
-                  value={rent.min}
-                  step="50"
-                  max={rent.max}
-                  onChange={this.handleRentChange("min")} />
-              </label>
-              <label>
-                max
-                <input
-                  type="number"
-                  value={rent.max}
-                  step="50"
-                  min={rent.min}
-                  onChange={this.handleRentChange("max")} />
-              </label>
-            </div>
-          </div>
-          <div className="filter">
-            <h3>type</h3>
-            <div className="filter-fields">
-              {this.renderFields(listingType, this.handleClick("listingType", updateListingType))}
-            </div>
+                <div className="rent">
+                  <div className="dollar-img background-img" />
+                  <input
+                    type="number"
+                    value={rent.min}
+                    step="50"
+                    max={rent.max}
+                    onChange={this.handleRentChange("min")} />
+                </div>
+                </label>
+                <label>
+                  max
+                  <div className='rent'>
+                    <div className="dollar-img background-img" />
+                    <input
+                      type="number"
+                      value={rent.max}
+                      step="50"
+                      min={rent.min}
+                      onChange={this.handleRentChange("max")} />
+                  </div>
+                </label>
+              </div>
           </div>
           <div className="filter">
             <h3>bedrooms</h3>
-            <div className="filter-fields">
+            <div className="fields">
               {this.renderFields(bedrooms, this.handleClick("bedrooms", updateBedrooms))}
             </div>
           </div>
           <div className="filter">
             <h3>bathrooms</h3>
-            <div className="filter-fields">
+            <div className="fields">
               {this.renderFields(bathrooms, this.handleClick("bathrooms", updateBathrooms))}
             </div>
           </div>
-          <div className="filter">
-            <h3>pets</h3>
-            <div className="filter-fields">
-              {this.renderFields(pets, this.handleClick("pets", updatePets))}
+          <div id='expand'>
+            <div className="filter">
+              <h3>type</h3>
+              <div className="fields">
+                {this.renderFields(listingType, this.handleClick("listingType", updateListingType))}
+              </div>
             </div>
-          </div>
-          <div className="filter">
-            <h3>advanced</h3>
-            <div className='filter-fields'>
-              <button
-                type="button"
-                className={noFeeSelected ? "selected" : ""}
-                onClick={this.handleSelect("noFeeSelected", updateFee)}>
-                no broker fee
-              </button>
-              <button
-                type="button"
-                className={parkingSelected ? "selected" : ""}
-                onClick={this.handleSelect("parkingSelected", updateParking)}>
-                parking
-              </button>
+            <div className="filter">
+              <h3>pets</h3>
+              <div className="fields">
+                {this.renderFields(pets, this.handleClick("pets", updatePets))}
+              </div>
             </div>
-          </div>
-          <div className="filter-buttons">
-            <button
-              type="button"
-              onClick={resetFilters}>
-              More Filters
-            </button>
-            <button
-              type="button"
-              onClick={resetFilters}>
-              Reset
-            </button>
+            <div className="filter">
+              <h3>advanced</h3>
+              <div className='fields'>
+                <button
+                  type="button"
+                  className={noFeeSelected ? "selected" : ""}
+                  onClick={this.handleSelect("noFeeSelected", updateFee)}>
+                  no broker fee
+                </button>
+                <button
+                  type="button"
+                  className={parkingSelected ? "selected" : ""}
+                  onClick={this.handleSelect("parkingSelected", updateParking)}>
+                  parking
+                </button>
+              </div>
+            </div>
           </div>
         </form>
+        <div className="filter-buttons">
+          <input id="toggle" type="checkbox"/>
+          <label>More Filters</label>
+          <button
+            type="button"
+            onClick={resetFilters}>
+            Reset
+          </button>
+        </div>
       </div>
     )
   }

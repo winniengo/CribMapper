@@ -1,11 +1,14 @@
 import { hashHistory } from 'react-router';
 
-const icon = 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478636840/listings/pointer.png';
+const icon = 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478649422/listings/pointer-coral.png';
+const selected = 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478649431/listings/pointer-navy.png'
 
 export default class MarkerManager {
   constructor(map) {
     this.map = map;
     this.markers = [];
+    this.hovered = [];
+    this.selected = [];
   }
 
   updateMarkers(listings) {
@@ -48,23 +51,49 @@ export default class MarkerManager {
     this.markers.splice(this.markers.indexOf(marker), 1);
   }
 
+  styleMarkers(selectedId, hoveredId) {
+    if (selectedId) {
+      this.selected = this.markers.filter(({ listingId }) => listingId === selectedId);
+      this._addIcon();
+    } else {
+      this._removeIcon();
+    }
+
+    if (hoveredId) {
+      this.hovered = this.markers.filter(({ listingId }) => listingId === hoveredId);
+      this._addBounce();
+    } else {
+      this._removeBounce();
+    }
+  }
+
   _addListeners(marker) {
     marker.addListener('mouseover', e => {
-      this._addBounce(marker);
+      this.hovered.push(marker);
+      this._addBounce();
     });
 
     marker.addListener('mouseout', e => {
-      this._removeBounce(marker);
+      this._removeBounce();
     });
 
-    marker.addListener('click', e => hasHistory.push('/listings/${marker.listingId}'));
+    marker.addListener('click', e => hashHistory.push(`/search/${marker.listingId}`));
   }
 
-  _addBounce(marker) {
-    marker.setAnimation(google.maps.Animation.BOUNCE);
+  _addBounce() {
+    this.hovered.forEach(marker => marker.setAnimation(google.maps.Animation.BOUNCE));
   }
 
-  _removeBounce(marker) {
-    marker.setAnimation(null);
+  _removeBounce() {
+    this.hovered.forEach(marker => marker.setAnimation(null));
+    this.hovered = [];
+  }
+
+  _addIcon() {
+    this.selected.forEach(marker => marker.setIcon(selected));
+  }
+
+  _removeIcon() {
+    this.selected.forEach(marker => marker.setIcon(icon))
   }
 }

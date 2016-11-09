@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const store = configureStore(preloadedState);
 
   const rootEl = document.getElementById('root');
-  ReactDOM.render(<h1>CribMapper</h1>, rootEl);
-  // ReactDOM.render(<Root store={store} />, rootEl);
+  // ReactDOM.render(<h1>CribMapper</h1>, rootEl);
+  ReactDOM.render(<Root store={store} />, rootEl);
 
   // for testing
   window.store = store;

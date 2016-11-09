@@ -9,9 +9,9 @@ const nullSession = Object.freeze({
 const session = (state = nullSession, action) => {
   switch(action.type) {
     case LOGOUT:
-      return merge({}, nullUser);
+      return merge({}, nullSession);
     case RECEIVE_CURRENT_USER:
-      return merge({}, nullUser, {
+      return merge({}, nullSession, {
         currentUser: action.currentUser
       });
     case RECEIVE_FAVORITE:

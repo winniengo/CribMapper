@@ -15,11 +15,10 @@
  */
 
 $ligh-blue: #8EAEBD;
-$ultramarine: #031424;
-$indigo: #30415D;
 $navy-blue: #0F1626;
 $leather: #AB987A;
 $coral: #FF533D;
+$grey: #e8edf3;
 
 html, body, header, nav, h1, a,
 ul, li, strong, main, button, i,
@@ -54,73 +53,31 @@ form {
   flex-direction: column;
 }
 
+h2 {
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+}
+
 h3 {
   text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
 }
 
 h4 {
   text-transform: capitalize;
 }
 
-.app {
+a {
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.search {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: stretch;
-  flex-direction: row;
+button {
+  cursor: pointer;
 }
 
-#map {
-  width:100%;
-}
-
-.navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  text-transform: uppercase;
-}
-
-.navbar .links {
-  display: flex;
-  flex-direction: row;
-}
-
-.links button {
-  margin-left: 20px;
-}
-
-.links a {
-  margin-left: 20px;
-}
-
-.filter-fields > button {
-  background: #a5cfe2;
-  border-radius: 2px;
-  border: 1px solid #8EAEBD;
-  padding: 5px 0;
-  width: 100%;
-  text-align: center;
-  text-transform: capitalize;
-}
-
-.filter-fields > button:hover {
-  background: #8EAEBD;
-}
-
-.filter-fields > button.selected {
-  background: #30415D;
-  border: 1px solid #30415D;
-  opacity: 0.9;
-  color: white;
-}
-
-.sidebar {
-  overflow-y: scroll;
-  min-width: 550px;
-  background: #F5F5F5;
-  font-size: 14px;
+.background-img {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }

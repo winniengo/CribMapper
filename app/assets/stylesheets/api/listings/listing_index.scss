@@ -14,7 +14,7 @@ $coral: #FF533D;
   margin: 10px;
   height: 150px;
   border: 1px solid;
-  border-radius: 2px;
+  border-radius: 1px;
   border-color: #8EAEBD;
   background: #FFFFFF;
   display: flex;
@@ -32,11 +32,12 @@ $coral: #FF533D;
 
 .listing-index-item .thumbnail {
   height: 150px;
-  min-width: 50%;
+  width: 50%;
+  background-size: cover;
 }
 
 .thumbnail {
-  background-repeat: no-repeat;
+  // background-repeat: no-repeat;
   background-size: cover;
 }
 

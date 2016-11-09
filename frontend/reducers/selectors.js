@@ -1,5 +1,5 @@
 export const allListings = ({ listings }) => (
-  Object.keys(listings).map(id => listings[id])
+  Object.keys(listings.all).map(id => listings.all[id])
 );
 
 const _emptyListing = {
@@ -16,7 +16,7 @@ const _emptyListing = {
 };
 
 export const selectListing = ({ listings }, { params }) => (
-  listings[params.id] ? listings[params.id] : _emptyListing
+  listings.all[params.id] ? listings.all[params.id] : _emptyListing
 );
 
 export const allFavoriteListings = ({ session }) => (

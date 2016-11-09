@@ -7,6 +7,7 @@ import MarkerManager from '../../utils/marker_manager';
 class Map extends React.Component {
   constructor(props) {
     super(props);
+    // debugger
   }
 
   componentDidMount() {
@@ -23,11 +24,13 @@ class Map extends React.Component {
     this.map = new google.maps.Map(mapDOMNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
     this.MarkerManager.updateMarkers(this.props.listings);
+    this.MarkerManager.styleMarkers(this.props.selected, this.props.hovered);
     this._registerListeners();
   }
 
   componentWillReceiveProps(nextProps) {
     this.MarkerManager.updateMarkers(nextProps.listings);
+    this.MarkerManager.styleMarkers(nextProps.selected, nextProps.hovered);
   }
 
   _registerListeners() {

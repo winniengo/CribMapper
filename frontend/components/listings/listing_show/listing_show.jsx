@@ -19,11 +19,12 @@ class ListingShow extends React.Component {
   }
 
   returnToListings() {
-    this.props.router.goBack();
+    this.props.deselect();
+    this.props.router.push('/');
   }
 
   handleFavorite() {
-    this.props.favoriteAction();
+    this.props.favorite();
   }
 
   render() {

@@ -5,10 +5,12 @@ import { allListings } from '../../reducers/selectors';
 import { requestListings } from '../../actions/listings';
 import { updateBounds } from '../../actions/filters';
 
-import Search from './search';
+import Map from './map';
 
 const mapStateToProps = state => ({
-  listings: allListings(state)
+  listings: allListings(state),
+  selected: state.listings.selected,
+  hovered: state.listings.hovered
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -19,4 +21,4 @@ const mapDispatchToProps = dispatch => ({
 export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(Search));
+)(Map));

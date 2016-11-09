@@ -18,7 +18,6 @@ const mapStateToProps = ({ filters }) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-
   updateRent: rent => dispatch(updateRent(rent)),
   updateListingType: listingType => dispatch(updateListingType(listingType)),
   updateBedrooms: bedrooms => dispatch(updateBedrooms(bedrooms)),

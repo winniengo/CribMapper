@@ -1,9 +1,13 @@
 import React from 'react';
 
-const ListingIndexItem = ({ listing, clssName, handleFavorite, handleClick }) => (
-  <li className='listing-index-item' onClick={handleClick}>
+const ListingIndexItem = ({ listing, clssName, handleFavorite, handleClick, handleMouseOver, handleMouseOut }) => (
+  <li
+    className='listing-index-item'
+    onClick={handleClick}
+    onMouseOver={handleMouseOver}
+    onMouseOut={handleMouseOut}>
     <div
-      className='thumbnail'
+      className='thumbnail background-img'
       style={{backgroundImage: `url(${listing.images[0].src})`}} />
     <description>
       <header>

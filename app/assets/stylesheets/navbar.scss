@@ -1,0 +1,43 @@
+$ligh-blue: #8EAEBD;
+$indigo: #30415D;
+$navy-blue: #0F1626;
+$leather: #AB987A;
+$coral: #FF533D;
+$mustard: #e6cf8b;
+$grey: #e8edf3;
+
+.navbar {
+  display: flex;
+  height: 39px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.8;
+  padding: 0 10px;
+  border-bottom: 1px solid $grey;
+}
+
+.navbar .links {
+}
+
+.links > a {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0 20px;
+  border-left: 1px solid $leather;
+}
+.logo > a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.logo-img {
+  background-image: image-url('home-map-location.png');
+  width: 30px;
+  height: 30px;
+  margin-right: 2px;
+}

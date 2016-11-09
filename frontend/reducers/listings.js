@@ -1,11 +1,12 @@
 import {
   RECEIVE_LISTINGS,
   RECEIVE_LISTING,
-  SELECT_LISTING,
-  DESELECT_LISTING } from '../actions/listings';
+  SELECT,
+  HOVER } from '../actions/listings';
 import merge from 'lodash/merge';
 
 const nullListings = {
+  hovered: null,
   selected: null,
   all: {}
 };
@@ -15,22 +16,24 @@ const listings = (state = nullListings, action) => {
   switch(action.type) {
     case RECEIVE_LISTINGS:
       return merge({}, {
+        hovered: null,
         selected: state.selected,
         all: action.listings
       });
     case RECEIVE_LISTING:
-      return merge({}, {
+      return merge({}, state, {
+        hovered: null,
         selected: action.listing.id,
         all: {[action.listing.id]: action.listing}
       });
-    case SELECT_LISTING:
+    case SELECT:
       return merge({}, state, {
         selected: action.id
       });
-    case DESELECT_LISTING:
+    case HOVER:
       return merge({}, state, {
-        selected: null
-      });
+        hovered: action.id
+      })
     default:
       return state;
   }

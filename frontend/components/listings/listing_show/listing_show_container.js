@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { allFavoriteListings, favoriteStatus } from '../../../reducers/selectors';
 import { favoriteListing, unfavoriteListing } from '../../../actions/favorites';
+import { select } from '../../../actions/listings';
 
 // import { withRouter } from 'react-router';
 
@@ -19,14 +20,14 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, { params }) => ({
   favoriteListing: () => dispatch(favoriteListing(params.id)),
-  unfavoriteListing: () => dispatch(unfavoriteListing(params.id))
+  unfavoriteListing: () => dispatch(unfavoriteListing(params.id)),
+  deselect: () => dispatch(select(null))
 });
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => {
-  const favoriteAction = stateProps.favorited ? dispatchProps.unfavoriteListing : dispatchProps.favoriteListing;
-
   return merge({}, stateProps, ownProps, {
-    favoriteAction
+    favorite: stateProps.favorited ? dispatchProps.unfavoriteListing : dispatchProps.favoriteListing,
+    deselect: dispatchProps.deselect
   });
 }
 

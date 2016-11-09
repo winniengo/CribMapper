@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { allFavoriteListings, favoriteStatus } from '../../../reducers/selectors';
 import { favoriteListing, unfavoriteListing } from '../../../actions/favorites';
-
+import { select } from '../../../actions/listings';
 
 import merge from 'lodash/merge';
 
@@ -17,7 +17,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, { params }) => ({
   favoriteListing: () => dispatch(favoriteListing(params.id)),
-  unfavoriteListing: () => dispatch(unfavoriteListing(params.id))
+  unfavoriteListing: () => dispatch(unfavoriteListing(params.id)),
+  deselect: () => dispatch(select(null))
 });
 
 export default connect(

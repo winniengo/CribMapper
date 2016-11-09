@@ -1,27 +1,13 @@
 import React from 'react';
-// import { withRouter } from 'react-router';
+import MapContainer from './map_container';
 
-import Map from './search_map';
-import FiltersContainer from '../filters/filters_container';
-// import ListingIndexContainer from '../listings/listing_index/listing_index_container';
-
-const Search = ({ listings, requestListings, updateBounds, children }) => (
+const Search = ({ children }) => (
   <div className="search">
-    <Map
-      listings={listings}
-      requestListings={requestListings}
-      updateBounds={updateBounds} />
+    <MapContainer />
     <section className="sidebar">
       {children}
     </section>
   </div>
 );
-
-// const Search = props => {
-//   debugger
-//   return (
-//     <div></div>
-//   )
-// }
 
 export default Search;

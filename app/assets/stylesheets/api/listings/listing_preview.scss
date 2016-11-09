@@ -11,7 +11,7 @@ $coral: #FF533D;
     display: flex;
     flex-direction: column;
       border: 1px solid;
-      border-radius: 2px;
+      border-radius: 1px;
       border-color: #8EAEBD;
 }
 
@@ -60,7 +60,7 @@ div.details {
   // background: white;
   margin-bottom: 20px;
   // border: 1px solid #8EAEBD;
-  border-radius: 2px;
+  border-radius: 1px;
 
 }
 
@@ -84,7 +84,7 @@ section.preview-display {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  // border-radius: 2px;
+  // border-radius: 1px;
   // border: 1px solid white;
 }
 
@@ -104,7 +104,7 @@ section.preview-display {
 
 .arrows > button:hover {
   opacity: 1;
-  
+
 }
 
 .next {
@@ -127,7 +127,6 @@ section.preview-display {
 
 section.dots-gallery {
   height: 10px;
-  // background: #F5F5F5;
   display: flex;
   flex-direction: row;
   justify-content: center;

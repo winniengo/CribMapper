@@ -3,8 +3,9 @@ export const RECEIVE_LISTINGS = "RECEIVE_LISTINGS";
 // export const CREATE_LISTING = "CREATE_LISTING";
 export const REQUEST_LISTING = "REQUEST_LISTING";
 export const RECEIVE_LISTING = "RECEIVE_LISTING";
-export const SELECT_LISTING = "SELECT_LISTING";
-export const DESELECT_LISTING = "DESELCT_LISTING";
+
+export const SELECT = "SELECT";
+export const HOVER = "HOVER";
 
 export const requestListings = filters => ({
   type: REQUEST_LISTINGS,
@@ -31,11 +32,12 @@ export const receiveListing = listing => ({
   listing
 });
 
-export const selectListing = id => ({
-  type: SELECT_LISTING,
+export const select = id => ({
+  type: SELECT,
   id
 });
 
-export const deselectListing = () => ({
-  type: DESELECT_LISTING
+export const hover = id => ({
+  type: HOVER,
+  id
 });
