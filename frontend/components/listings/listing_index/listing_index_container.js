@@ -19,7 +19,7 @@ const mapDispatchToProps = dispatch => ({
   unfavoriteListing: listingId => dispatch(unfavoriteListing(listingId)),
   selectListing: listingId => dispatch(selectListing(listingId)),
   deselectListing: () => dispatch(deselectListing()),
-  mouseOver: listingId => dispatch(hover(listingId)),
+  mouseEnter: listingId => dispatch(hover(listingId)),
   mouseOut: () => dispatch(hover(null))
 });
 

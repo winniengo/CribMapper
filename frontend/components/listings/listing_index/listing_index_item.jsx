@@ -1,10 +1,10 @@
 import React from 'react';
 
-const ListingIndexItem = ({ listing, clssName, handleFavorite, handleClick, handleMouseOver, handleMouseOut }) => (
+const ListingIndexItem = ({ listing, clssName, handleFavorite, handleClick, handleMouseEnter, handleMouseOut }) => (
   <li
     className='listing-index-item'
     onClick={handleClick}
-    onMouseOver={handleMouseOver}
+    onMouseEnter={handleMouseEnter}
     onMouseOut={handleMouseOut}>
     <div
       className='thumbnail background-img'
@@ -12,7 +12,7 @@ const ListingIndexItem = ({ listing, clssName, handleFavorite, handleClick, hand
     <description>
       <header>
         <h3>${listing.rent}</h3>
-        <button className={`favorite-icon ${clssName}`} onClick={handleFavorite} />
+        <button className={`background-img favorite-icon ${clssName}`} onClick={handleFavorite} />
       </header>
       <h4>{listing.bedrooms} Bed / {listing.bathrooms} Bath</h4>
       <h4>{listing.listingType}</h4>

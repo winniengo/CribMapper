@@ -113,24 +113,30 @@ $dark-grey: #d0dae6;
   // color: white;
 }
 
-.filter-buttons {
+.sidebar-buttons {
   display: flex;
 padding: 20px;
   justify-content: space-between;
 }
 
-.filter-buttons button {
-  background: #a5cfe2;
-  border-radius: 1px;
-  border: 1px solid $light-blue;
-  padding: 5px 0;
-  width: 150px;
-  text-align: center;
-  text-transform: capitalize;
+.sidebar-buttons button {
+    /* background: #a5cfe2; */
+    /* border-radius: 1px; */
+    /* border: 1px solid #8EAEBD; */
+    background: $light-grey;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    // font-size: 16px;
+  }
+
+.sidebar-buttons button:hover {
+  background: $light-blue;
 }
 
-.filter-buttons button:hover {
-  background: $light-blue;
+.sidebar-buttons button:nth-child(1) {
+  margin-right: 2px;
 }
 
 .hidden {

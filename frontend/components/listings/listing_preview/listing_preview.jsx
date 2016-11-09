@@ -50,19 +50,17 @@ class ListingPreview extends React.Component {
             <h4>{listing.listingType}</h4>
           </div>
           <button
-            className={`favorite-icon ${clssName}`}
+            className={`background-img favorite-icon ${clssName}`}
             onClick={this.handleFavorite} />
         </description>
-        <section>
+        <section className='sidebar-buttons'>
           <button
-            className='back-to-results'
             onClick={this.returnToListings}>
-            ← Back to results
+            ← back to results
           </button>
           <button
-            className='back-to-results'
             onClick={this.redirectToDetails}>
-            More Details
+            more details
           </button>
         </section>
       </div>

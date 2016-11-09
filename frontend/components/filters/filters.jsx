@@ -165,7 +165,7 @@ class Filters extends React.Component{
             </div>
           </div>
         </form>
-        <div className="filter-buttons">
+        <div className="sidebar-buttons">
           <button
             type="button"
             onClick={this.expandFilters}>
@@ -174,7 +174,7 @@ class Filters extends React.Component{
           <button
             type="button"
             onClick={resetFilters}>
-            Reset
+            reset
           </button>
         </div>
       </div>

@@ -57,7 +57,7 @@ class ListingShow extends React.Component {
           <header>
             <h2>{header}</h2>
             <button
-              className={`favorite-icon ${clssName}`}
+              className={`background-img favorite-icon ${clssName}`}
               onClick={this.handleFavorite} />
           </header>
           <h3>{address}</h3>
