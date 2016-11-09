@@ -133,20 +133,14 @@ padding: 20px;
   background: $light-blue;
 }
 
-#expand {
+.hidden {
   height: 0px;
   overflow: hidden;
   transition: height 0.5s;
 }
 
-// button.more-filters:selected ~ #expand {
-//   height: 250px;
-// }
-//
-// button.more-filters:hover {
-//   background: white;
-// }
-
-// #toggle:checked ~ #expand {
-//   height: 250px;
-// }
+.expanded {
+  height: 210px;
+    overflow: hidden;
+  transition: height 0.5s;
+}

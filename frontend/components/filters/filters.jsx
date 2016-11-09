@@ -5,11 +5,14 @@ import merge from "lodash/merge";
 class Filters extends React.Component{
   constructor(props) {
     super(props);
-    this.state = merge({}, this.props.filters);
+    this.state = merge({}, this.props.filters, {
+      expanded: false
+    });
 
     this.renderFields = this.renderFields.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
+    this.expandFilters = this.expandFilters.bind(this);
   }
 
   componentWillReceiveProps(newProps) {
@@ -45,6 +48,12 @@ class Filters extends React.Component{
     }
   }
 
+  expandFilters(e) {
+    this.setState({
+      expanded: !this.state.expanded
+    });
+  }
+
   renderFields(filter, handler) {
     return (
       Object.keys(filter).map((field, idx) => (
@@ -67,7 +76,8 @@ class Filters extends React.Component{
       bathrooms,
       noFeeSelected,
       parkingSelected,
-      pets } = this.state;
+      pets,
+      expanded } = this.state;
 
     const {
       updateRent,
@@ -123,7 +133,7 @@ class Filters extends React.Component{
               {this.renderFields(bathrooms, this.handleClick("bathrooms", updateBathrooms))}
             </div>
           </div>
-          <div id='expand'>
+          <div id='expand' className={expanded ? "expanded" : "hidden"}>
             <div className="filter">
               <h3>type</h3>
               <div className="fields">
@@ -156,8 +166,11 @@ class Filters extends React.Component{
           </div>
         </form>
         <div className="filter-buttons">
-          <input id="toggle" type="checkbox"/>
-          <label>More Filters</label>
+          <button
+            type="button"
+            onClick={this.expandFilters}>
+            {expanded ? "done" : "more filters"}
+          </button>
           <button
             type="button"
             onClick={resetFilters}>
