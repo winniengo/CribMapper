@@ -8,9 +8,12 @@ export const login = user => ({
   user
 });
 
-export const logout = () => ({
-  type: LOGOUT
-});
+export const logout = () => {
+  // debugger
+  return ({
+    type: LOGOUT
+  });
+};
 
 export const signup = user => ({
   type: SIGNUP,

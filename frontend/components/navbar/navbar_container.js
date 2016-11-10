@@ -6,7 +6,6 @@ import Navbar from './navbar';
 const mapStateToProps = ({ session }, { pathname }) => {
   return {
     loggedIn: Boolean(session.currentUser),
-    pathname
   }
 };
 

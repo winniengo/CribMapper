@@ -29,7 +29,9 @@ const sessionMiddleware = ({ dispatch, getState }) => next => action => {
       login(action.user, currentUserSuccess, error);
       return next(action);
     case LOGOUT:
+      // debugger
       logout(() => {
+        // debugger
         next(action);
         hashHistory.push('/');
       });

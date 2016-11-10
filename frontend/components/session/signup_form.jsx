@@ -15,18 +15,6 @@ class SignupForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
-    // if (this.props.errors.length !== 0) {
-    //   this.props.clearErrors();
-    // }
-  }
-
-  componentWillUnmount() {
-    if (this.props.errors.length !== 0) {
-      this.props.clearErrors();
-    }
-  }
-
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -41,36 +29,50 @@ class SignupForm extends React.Component {
   render() {
     return (
       <div className='signup-form'>
-        <h2>Create an Account</h2>
-        <SessionErrors errors={this.props.errors} />
+        <section className='header'>
+          <h2>Create an Account</h2>
+          to find the perfect rental
+          <SessionErrors errors={this.props.errors} />
+        </section>
         <form onSubmit={this.handleSubmit}>
-          <label className='signup-form-field'>
-            Name
-            <input
-              type='text'
-              value={this.state.name}
-              onChange={this.update('name')}
-              className='signup-form-field'/>
+          <label>
+            <div className='signup-form-field'>
+              <input
+                type='text'
+                value={this.state.name}
+                placeholder="Name"
+                onChange={this.update('name')} />
+              <div className="name-img background-img" />
+            </div>
           </label>
-          <label className='signup-form-field'>
-            Email
-            <input
-              type='text'
-              value={this.state.email}
-              onChange={this.update('email')}
-              className='signup-form-field'/>
+          <label>
+            <div className='signup-form-field'>
+              <input
+                type='text'
+                value={this.state.email}
+                placeholder="Email"
+                onChange={this.update('email')} />
+              <div className="email-img background-img" />
+            </div>
           </label>
-          <label className='signup-form-field'>
-            Password
-            <input
-              type='password'
-              value={this.state.password}
-              onChange={this.update('password')}
-              className='signup-form-field'/>
+          <label>
+            <div className='signup-form-field'>
+              <input
+                type='password'
+                value={this.state.password}
+                placeholder='Password'
+                onChange={this.update('password')} />
+              <div className="password-img background-img" />
+            </div>
           </label>
-          <input type='submit' value='Sign up' />
+          <input type='submit' value='Sign up' className='session-btn'/>
         </form>
-        Already have an account? <Link to="/login">Log in!</Link>
+        <section className='footer'>
+          Already have an account?
+          <div
+            className="switch-session-form"
+            onClick={() => this.props.switchForm()}>Log in!</div>
+        </section>
       </div>
     );
   }

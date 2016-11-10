@@ -14,11 +14,12 @@
  *= require_self
  */
 
-$ligh-blue: #8EAEBD;
+$light-blue: #8EAEBD;
 $navy-blue: #0F1626;
 $leather: #AB987A;
 $coral: #FF533D;
-$grey: #e8edf3;
+$light-grey: #e8edf3;
+$dark-grey: #d0dae6;
 
 html, body, header, nav, h1, a,
 ul, li, strong, main, button, i,
@@ -51,6 +52,7 @@ ul {
 form {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 h2 {

@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Modal from 'react-modal';
 
 import configureStore from './store';
 import Root from './components/root';
@@ -22,15 +23,18 @@ document.addEventListener('DOMContentLoaded', () => {
   // } else {
   //   store = configureStore();
   // }
+
   const preloadedState = {session: {
     currentUser: window.currentUser ? window.currentUser : null,
   }};
-
   const store = configureStore(preloadedState);
+
+  Modal.setAppElement(document.body);
 
   const rootEl = document.getElementById('root');
   // ReactDOM.render(<h1>CribMapper</h1>, rootEl);
   ReactDOM.render(<Root store={store} />, rootEl);
+
 
   // for testing
   window.store = store;

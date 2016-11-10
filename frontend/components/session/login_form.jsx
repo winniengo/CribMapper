@@ -14,18 +14,6 @@ class LoginForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (this.props.errors.length !== 0) {
-      this.props.clearErrors();
-    }
-  }
-
-  componentWillUnmount() {
-    if (this.props.errors.length !== 0) {
-      this.props.clearErrors();
-    }
-  }
-
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -40,29 +28,40 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div className='signup-form'>
-        <h2>Sign in</h2>
-        to save your favorite settings
+        <section className='header'>
+          <h2>Sign in</h2>
+          to save your favorite listings
+        </section>
         <SessionErrors errors={this.props.errors} />
         <form onSubmit={this.handleSubmit}>
-          <label className='signup-form-field'>
-            Email
-            <input
-              type='text'
-              value={this.state.email}
-              onChange={this.update('email')}
-              className='signup-form-field'/>
+          <label>
+            <div className='signup-form-field'>
+              <input
+                type='text'
+                value={this.state.email}
+                placeholder="Email"
+                onChange={this.update('email')} />
+              <div className="email-img background-img" />
+            </div>
           </label>
-          <label className='signup-form-field'>
-            Password
-            <input
-              type='password'
-              value={this.state.password}
-              onChange={this.update('password')}
-              className='signup-form-field'/>
+          <label>
+            <div className='signup-form-field'>
+              <input
+                type='password'
+                value={this.state.password}
+                placeholder="Password"
+                onChange={this.update('password')} />
+              <div className="password-img background-img" />
+            </div>
           </label>
-          <input type='submit' value='Sign in' />
+          <input type='submit' value='Sign in' className='session-btn'/>
         </form>
-        New to CribMapper? <Link to="/signup">Create an account!</Link>
+        <section className='footer'>
+          New to CribMapper?
+          <div
+            className="switch-session-form"
+            onClick={() => this.props.switchForm()}>Create an account!</div>
+        </section>
       </div>
     );
   }
