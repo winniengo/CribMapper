@@ -7,6 +7,7 @@ $coral: #FF533D;
 
 .listing-preview {
       margin: 10px;
+      padding: 10px;
     background: white;
     display: flex;
     flex-direction: column;
@@ -18,7 +19,7 @@ $coral: #FF533D;
 .listing-preview > section {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  // padding: 10px;
 
 }
 
@@ -100,6 +101,7 @@ section.preview-display {
   background-position: center;
   width: 20px;
   opacity: 0.8;
+  cursor: pointer;
 }
 
 .arrows > button:hover {
@@ -137,6 +139,7 @@ section.dots-gallery {
 }
 
 .dots-gallery > div {
+  cursor: pointer;
   height: 10px;
   min-width: 10px;
   margin: 0 2px;

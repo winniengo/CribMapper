@@ -126,7 +126,7 @@ section.display {
 
 .next {
   margin: 0 10px;
-
+  cursor: pointer;
   opacity: 0.5;
   background-image: image-url("arrow-right.png");
 }
@@ -136,6 +136,8 @@ section.display {
 }
 
 .previous {
+  cursor: pointer;
+
   margin: 0 10px;
   opacity: 0.5;
   background-image: image-url("arrow-left.png");
@@ -155,6 +157,7 @@ section.thumbnail-gallery {
 }
 
 .thumbnail-gallery > div {
+  cursor: pointer;
   height: 98px;
   min-width: 125px;
   margin: 10px 5px 0 0;

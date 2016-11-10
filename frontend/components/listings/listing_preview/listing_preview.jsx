@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router';
 
 import ListingPreviewGallery from './listing_preview_gallery';
+import StreetView from '../street_view';
 
 class ListingPreview extends React.Component {
   constructor(props) {
@@ -53,8 +54,10 @@ class ListingPreview extends React.Component {
             className={`background-img favorite-icon ${clssName}`}
             onClick={this.handleFavorite} />
         </description>
+        <StreetView lat={listing.lat} lng={listing.lng} />
         <section className='sidebar-buttons'>
           <button
+            className="back-to-results"
             onClick={this.returnToListings}>
             ← back to results
           </button>

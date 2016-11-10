@@ -33,11 +33,12 @@ const sessionMiddleware = ({ dispatch, getState }) => next => action => {
       logout(() => {
         // debugger
         next(action);
-        hashHistory.push('/');
+        // hashHistory.push('/');
       });
       break;
     case SIGNUP:
-      signup(action.user, success, error)
+
+      signup(action.user, currentUserSuccess, error)
       return next(action);
     case FAVORITE_LISTING:
       const favoriteSuccess = ({ listingId }) => dispatch(receiveFavorite(listingId));

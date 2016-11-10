@@ -11,23 +11,27 @@ class SessionForm extends React.Component {
     super(props);
     this.state = {sessionType: 'login'};
 
+    this.clearErrors = this.clearErrors.bind(this);
     this.switchForm = this.switchForm.bind(this);
     this.renderForm = this.renderForm.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.errors.length !== 0) {
-      this.props.clearErrors();
-    }
+    // this.clearErrors();
   }
 
   componentWillUnmount() {
+    this.clearErrors();
+  }
+
+  clearErrors() {
     if (this.props.errors.length !== 0) {
       this.props.clearErrors();
     }
   }
 
   switchForm() {
+    this.clearErrors();
     this.setState({
       sessionType: this.state.sessionType === 'login' ? 'signup' : 'login'
     })

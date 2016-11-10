@@ -1,7 +1,8 @@
 import { hashHistory } from 'react-router';
 
 const icon = 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478649422/listings/pointer-coral.png';
-const selected = 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478649431/listings/pointer-navy.png'
+const selected = 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478649431/listings/pointer-navy.png';
+const hovered = 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478648973/listings/pointer-red-big.png';
 
 export default class MarkerManager {
   constructor(map) {
@@ -60,7 +61,12 @@ export default class MarkerManager {
     }
 
     if (hoveredId) {
+      if (this.hovered.length !== 0) {
+        // debugger
+        this._removeBounce();
+      }
       this.hovered = this.markers.filter(({ listingId }) => listingId === hoveredId);
+      // console.log(this.hovered)
       this._addBounce();
     } else {
       this._removeBounce();
@@ -81,11 +87,14 @@ export default class MarkerManager {
   }
 
   _addBounce() {
+    // console.log(this.hovered)
+      // this.hovered.forEach(marker => marker.setIcon(hovered));
     this.hovered.forEach(marker => marker.setAnimation(google.maps.Animation.BOUNCE));
   }
 
   _removeBounce() {
-    this.hovered.forEach(marker => marker.setAnimation(null));
+        this.hovered.forEach(marker => marker.setAnimation(null));
+    // this.markers.forEach(marker => marker.setIcon(icon));
     this.hovered = [];
   }
 
@@ -95,5 +104,6 @@ export default class MarkerManager {
 
   _removeIcon() {
     this.selected.forEach(marker => marker.setIcon(icon))
+    this.selected = [];
   }
 }

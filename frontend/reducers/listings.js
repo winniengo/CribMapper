@@ -12,7 +12,6 @@ const nullListings = {
 };
 
 const listings = (state = nullListings, action) => {
-  console.log(action); // testing
   switch(action.type) {
     case RECEIVE_LISTINGS:
       return merge({}, {
@@ -33,7 +32,7 @@ const listings = (state = nullListings, action) => {
     case HOVER:
       return merge({}, state, {
         hovered: action.id
-      })
+      });
     default:
       return state;
   }

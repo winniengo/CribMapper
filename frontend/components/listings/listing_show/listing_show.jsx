@@ -4,6 +4,7 @@ import { withRouter } from 'react-router';
 import ListingShowDetails from './listing_show_details';
 import ListingShowContact from './listing_show_contact';
 import ListingShowGallery from './listing_show_gallery';
+import StreetView from '../street_view';
 
 class ListingShow extends React.Component {
   constructor(props) {
@@ -30,6 +31,8 @@ class ListingShow extends React.Component {
   render() {
     const {
       id,
+      lat,
+      lng,
       description,
       address,
       rent,
@@ -68,9 +71,10 @@ class ListingShow extends React.Component {
             {dogs ? <div className='dogs' /> : ""}
             {petFriendly}
           </div>
+          <StreetView lat={lat} lng={lng} />
         </section>
         <section className="listing-sidebar">
-          <ListingShowDetails listing={this.state}/>
+          <ListingShowDetails listing={this.props.listing} />
           <ListingShowContact contact={""}/>
         </section>
       </div>

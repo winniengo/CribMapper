@@ -14,7 +14,6 @@ const customStyles = {
   }
 };
 
-
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
@@ -33,9 +32,19 @@ class Navbar extends React.Component {
     this.setState({modalIsOpen: false});
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.loggedIn) {
+      this.closeModal();
+    }
+  }
+
   renderSessionLink() {
     if (this.props.loggedIn) {
-      return <div onClick={this.props.logout}>log out</div>;
+      return (
+        <div className='link-container'>
+          <a onClick={this.props.logout}>Log Out</a>
+        </div>
+      )
     } else {
       return (
         <div className='link-container'>

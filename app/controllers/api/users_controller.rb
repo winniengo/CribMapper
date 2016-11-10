@@ -6,7 +6,7 @@ class Api::UsersController < ApplicationController
       login(@user)
       render 'api/users/show'
     else
-      @errors = @favorite.errors.full_messages
+      @errors = @user.errors.full_messages
       render "api/shared/errors", status: 422
     end
   end
