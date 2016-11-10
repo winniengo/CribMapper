@@ -2,11 +2,13 @@ import React from 'react';
 
 import NavbarContainer from './navbar/navbar_container';
 
-const App = ({ children }) => {
+const App = ({ children, main, footer }) => {
   return (
     <div id='app'>
-      <NavbarContainer pathname={children.props.location.pathname}/>
+      <NavbarContainer/>
       {children}
+      {main}
+      {footer}
     </div>
   )
 };

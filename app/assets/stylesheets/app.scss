@@ -157,3 +157,31 @@ padding-top: 20px;
   width: 100%;
   height: 250px;
 }
+
+
+/* about me *********************/
+
+.about-me {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2px;
+}
+
+.about-me div {
+  width: 24px;
+  height: 24px;
+  margin-left: 2px;
+  opacity: 0.5;
+}
+
+.about-me div:hover {
+  opacity: 0.9;
+}
+
+.github {
+  background-image: image-url('github-logo.png');
+}
+
+.linkedin {
+  background-image: image-url('linkedin-logo.png');
+}

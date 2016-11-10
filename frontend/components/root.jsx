@@ -5,6 +5,7 @@ import { Router, Route, IndexRoute, hashHistory, IndexRedirect } from 'react-rou
 // components
 import App from './app';
 import Search from './search/search';
+import AboutMe from './about_me';
 import SessionFormContainer from './session/session_form_container';
 // import SignupFormContainer from './session/signup_form_container';
 // import LoginFormContainer from './session/login_form_container';
@@ -45,8 +46,7 @@ const Root = ({ store }) => {
             <Route path='index' component={ListingIndexContainer} />
             <Route path=':id' component={ListingPreviewContainer} onEnter={_ensureListing} />
           </Route>
-          <Route path='session' component={SessionFormContainer} />
-          <Route path="listings/:id" component={ListingShowContainer} onEnter={_ensureListing} />
+          <Route path="listings/:id" components={{main: ListingShowContainer, footer: AboutMe}} onEnter={_ensureListing} />
         </Route>
       </Router>
     </Provider>

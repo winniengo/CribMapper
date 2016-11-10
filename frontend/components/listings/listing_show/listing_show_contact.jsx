@@ -4,7 +4,7 @@ const ListingShowContact = ({ contact }) => (
   <section className="listing-contact">
     <h3>contact</h3>
     <section>
-      <div className='avatar'/>
+      <div className='avatar background-img'/>
       <description />
     </section>
   </section>
