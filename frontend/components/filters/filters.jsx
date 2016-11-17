@@ -8,12 +8,12 @@ import merge from "lodash/merge";
 const Filters = ({ filters, updateFilter, resetFilters, tags }) => {
   return (
     <div>
+      <FilterTags
+        tags={tags} />
       <FilterForm
         filters={filters}
         updateFilter={updateFilter}
         resetFilters={resetFilters} />
-      <FilterTags
-        tags={tags} />
     </div>
   );
 }

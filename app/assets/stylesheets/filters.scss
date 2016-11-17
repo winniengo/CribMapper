@@ -96,6 +96,10 @@ $dark-grey: #d0dae6;
 
 #filter-tags {
   display: none;
+  position: fixed;
+  z-index: 1;
+  width: 508px;
+  margin-top: 0;
 }
 
 .tags {
