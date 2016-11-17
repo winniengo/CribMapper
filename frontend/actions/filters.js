@@ -1,6 +1,7 @@
 export const UPDATE_BOUNDS = "UPDATE_BOUNDS";
-export const UPDATE_RENT = "UPDATE_RENT";
+// export const UPDATE_RENT = "UPDATE_RENT";
 export const UPDATE_FILTER = "UPDATE_FILTER";
+export const RESET_FILTER = "RESET_FILTER";
 export const RESET_FILTERS = "RESET_FILTERS";
 
 export const updateBounds = bounds => ({
@@ -8,13 +9,19 @@ export const updateBounds = bounds => ({
   bounds
 });
 
-export const updateRent = rent => ({
-  type: UPDATE_RENT,
-  rent
-});
+// export const updateRent = rent => ({
+//   type: UPDATE_RENT,
+//   rent
+// });
 
 export const updateFilter = (field, filter) => ({
   type: UPDATE_FILTER,
+  field,
+  filter
+});
+
+export const resetFilter = (field, filter) => ({
+  type: RESET_FILTER,
   field,
   filter
 });

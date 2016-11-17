@@ -1,11 +1,12 @@
 import {
   UPDATE_BOUNDS,
   UPDATE_FILTER,
+  RESET_FILTER,
   RESET_FILTERS } from '../actions/filters';
 
 import merge from 'lodash/merge';
 
-const defaultFilters = {
+const defaultState = {
   bounds: {
     northEast: {
       lat: null,
@@ -47,7 +48,7 @@ const defaultFilters = {
   }
 };
 
-const filters = (state = defaultFilters, action) => {
+const filters = (state = defaultState, action) => {
   switch(action.type) {
     case UPDATE_BOUNDS:
       return merge({}, state, {
@@ -57,8 +58,13 @@ const filters = (state = defaultFilters, action) => {
       return merge({}, state, {
         [action.field]: action.filter
       });
+    case RESET_FILTER:
+      const { field, filter } = action;
+      let nextState = merge({}, state);
+      nextState[field][filter] = defaultState[field][filter];
+      return nextState;
     case RESET_FILTERS:
-      return merge({}, defaultFilters, {
+      return merge({}, defaultState, {
         bounds: state.bounds
       });
     default:
