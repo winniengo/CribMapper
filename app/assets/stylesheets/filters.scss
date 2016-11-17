@@ -94,6 +94,10 @@ $dark-grey: #d0dae6;
 
 /* filter tags *************/
 
+#filter-tags {
+  display: none;
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;

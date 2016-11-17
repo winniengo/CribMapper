@@ -30,11 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const store = configureStore(preloadedState);
 
   Modal.setAppElement(document.body);
-
   const rootEl = document.getElementById('root');
   // ReactDOM.render(<h1>CribMapper</h1>, rootEl);
   ReactDOM.render(<Root store={store} />, rootEl);
 
+
+  const $filterTags = $('#filter-tags');
+  $('#sidebar').scroll(() => {
+    $filterTags.css({display: $('#sidebar').scrollTop() > 300 ? "block" : "none"});
+  });
 
   // for testing
   window.store = store;

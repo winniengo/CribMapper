@@ -62,7 +62,7 @@ class FilterForm extends React.Component{
     const { expanded } = this.state;
 
     return (
-      <div className='filters'>
+      <div id='filter-form' className='filters'>
         <form>
           <FilterFormInput
             field="rent"

@@ -6,7 +6,7 @@ import AboutMe from '../about_me';
 const Search = ({ children }) => (
   <div className="search">
     <MapContainer />
-    <section className="sidebar">
+    <section id="sidebar">
       {children}
       <AboutMe />
     </section>
