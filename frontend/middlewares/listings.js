@@ -7,13 +7,7 @@ import {
   REQUEST_LISTING } from '../actions/listings';
 import {
   UPDATE_BOUNDS,
-  UPDATE_RENT,
-  UPDATE_LISTING_TYPE,
-  UPDATE_BEDROOMS,
-  UPDATE_BATHROOMS,
-  UPDATE_FEE,
-  UPDATE_PARKING,
-  UPDATE_PETS,
+  UPDATE_FILTER,
   RESET_FILTERS } from '../actions/filters';
 import {
   fetchListings,
@@ -38,13 +32,7 @@ const listingsMiddleware = ({ dispatch, getState }) => next => action => {
       createListing(action.listing, success, error);
       return next(action);
     case UPDATE_BOUNDS:
-    case UPDATE_RENT:
-    case UPDATE_LISTING_TYPE:
-    case UPDATE_BEDROOMS:
-    case UPDATE_BATHROOMS:
-    case UPDATE_FEE:
-    case UPDATE_PARKING:
-    case UPDATE_PETS:
+    case UPDATE_FILTER:
     case RESET_FILTERS:
       next(action);
       dispatch(requestListings(getState().filters));

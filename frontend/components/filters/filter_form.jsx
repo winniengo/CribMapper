@@ -33,15 +33,7 @@ class FilterForm extends React.Component{
   renderFields(field, type) {
     return (
       Object.keys(this.state[field]).map((filter, idx) => (
-        type === "button" ? (
-          <button
-            key={idx}
-            type="button"
-            className={this.state[field][filter] ? "selected" : ""}
-            onClick={this.handleInput(field, filter)} >
-            {filter}
-          </button>
-        ) : (
+        type ? (
           <label key={idx}>
             {filter}
             <div className="rent">
@@ -53,6 +45,14 @@ class FilterForm extends React.Component{
                 onChange={this.handleInput(field, filter)} />
             </div>
           </label>
+        ) : (
+          <button
+            key={idx}
+            type="button"
+            className={this.state[field][filter] ? "selected" : ""}
+            onClick={this.handleInput(field, filter)} >
+            {filter}
+          </button>
         )
       ))
     );
@@ -69,20 +69,20 @@ class FilterForm extends React.Component{
             fields={this.renderFields("rent", "number")} />
           <FilterFormInput
             field="bedrooms"
-            fields={this.renderFields("bedrooms", "button")} />
+            fields={this.renderFields("bedrooms")} />
           <FilterFormInput
             field="bathrooms"
-            fields={this.renderFields("bathrooms", "button")} />
-          <div id='expand' className={expanded ? "expanded" : "hidden"}>
+            fields={this.renderFields("bathrooms")} />
+          <div className={`more-filters ${expanded ? "expanded" : "hidden"}`}>
             <FilterFormInput
               field="type"
-              fields={this.renderFields("listingType", "button")} />
+              fields={this.renderFields("listingType")} />
             <FilterFormInput
               field="pets"
-              fields={this.renderFields("pets", "button")} />
+              fields={this.renderFields("pets")} />
             <FilterFormInput
               field="advanced"
-              fields={this.renderFields("advanced", "button")} />
+              fields={this.renderFields("advanced")} />
           </div>
         </form>
         <div className="sidebar-buttons">

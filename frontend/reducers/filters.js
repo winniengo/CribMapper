@@ -1,6 +1,5 @@
 import {
   UPDATE_BOUNDS,
-  UPDATE_RENT,
   UPDATE_FILTER,
   RESET_FILTERS } from '../actions/filters';
 
@@ -53,10 +52,6 @@ const filters = (state = defaultFilters, action) => {
     case UPDATE_BOUNDS:
       return merge({}, state, {
         bounds: action.bounds
-      });
-    case UPDATE_RENT:
-      return merge({}, state, {
-        rent: action.rent
       });
     case UPDATE_FILTER:
       return merge({}, state, {

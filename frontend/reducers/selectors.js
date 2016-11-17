@@ -45,5 +45,18 @@ export const allTags = ({ filters }) => {
   if (filters.advanced.noFee) tags.push('no fee');
   if (filters.advanced.parking) tags.push('parking');
 
+  // fewer lines of code but less space efficient
+  // ["bedrooms", "bathrooms"].forEach(field => {
+  //   Object.keys(filters[field]).forEach(filter => {
+  //     if (filters[field][filter]) tags.push(`${filter} ${field}`)
+  //   });
+  // });
+  //
+  // ["listingType", "pets", "advanced"].forEach(field => {
+  //   Object.keys(filters[field]).forEach(filter => {
+  //     if (filters[field][filter]) tags.push(filter)
+  //   });
+  // });
+
   return tags;
 }
