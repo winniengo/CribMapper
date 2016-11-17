@@ -3,12 +3,10 @@ class Api::ListingsController < ApplicationController
     if filters_params
       @listings = Listing.includes(:images).filter(filters_params) # filter by bounds and rent
 
-      @listings = Listing.filter_by_attr(@listings, :bedrooms, query_string(:bedrooms)) unless default_params(:bedrooms)
-      @listings = Listing.filter_by_attr(@listings, :bathrooms, query_string(:bathrooms)) unless default_params(:bathrooms)
-      @listings = Listing.filter_by_attr(@listings, :listing_type, query_string(:listingType)) unless default_params(:listingType)
+      filter_by_rooms(:bedrooms, "5")
+      filter_by_rooms(:bathrooms, "4")
 
-      @listings = Listing.filter_with_max(@listings, :bedrooms, "5", !default_params(:bedrooms)) if filters_params[:bedrooms]["5"] == "true"
-      @listings = Listing.filter_with_max(@listings, :bathrooms, "4", !default_params(:bathrooms)) if filters_params[:bathrooms]["4"] == "true"
+      @listings = Listing.filter_by_attr(@listings, :listing_type, query_string(:listingType)) unless default_params(:listingType)
 
       @listings = Listing.filter_by_pets(@listings, filters_params[:pets]) unless default_params(:pets)
 
@@ -74,6 +72,19 @@ class Api::ListingsController < ApplicationController
 
   def query_string(attr)
     "('#{query_params(attr).join("', '")}')"
+  end
+
+  def filter_by_rooms(attr, max)
+    attr_default = default_params(attr)
+    attr_max = filters_params[attr][max] == "true"
+
+    if attr_max && !attr_default
+      @listings = Listing.filter_by_max_and_attr(@listings, attr, max, query_string(attr))
+    elsif !attr_default
+      @listings = Listing.filter_by_attr(@listings, attr, query_string(attr))
+    elsif attr_max
+      @listings = Listing.filter_by_max(@listings, attr, max)
+    end
   end
 
 end

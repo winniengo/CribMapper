@@ -51,7 +51,7 @@ class FilterForm extends React.Component{
             type="button"
             className={this.state[field][filter] ? "selected" : ""}
             onClick={this.handleInput(field, filter)} >
-            {filter}
+            {filter === "noFee" ? "no broker fee" : filter}
           </button>
         )
       ))

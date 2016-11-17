@@ -30,11 +30,25 @@ class Listing < ApplicationRecord
     listings.where("#{attr} IN #{params}")
   end
 
-  def self.filter_with_max(listings, attr, max, other_params)
-    other_params ?
-      listings.or(self.where("#{attr} >= ?", max)) :
-      listings.where("#{attr} >= ?", max)
+  # def self.filter_with_max(listings, attr, max, other_params)
+  #   debugger
+  #   other_params ?
+  #     listings.or(self.where("#{attr} >= ?", max)) :
+  #     listings.where("#{attr} >= ?", max)
+  # end
+
+  def self.filter_by_max_and_attr(listings, attr, max, params)
+    listings.where("#{attr} IN #{params} OR #{attr} >= #{max}")
   end
+
+  def self.filter_by_max(listings, attr, max)
+    listings.where("#{attr} >= #{max}")
+  end
+
+
+  # def self.filter_by_listing_type(listings, params)
+  #   listings.where("listing_type IN #{params}")
+  # end
 
   def self.filter_by_pets(listings, params)
     op = params.keys.all? { |key| params[key] == "true"} ? "AND" : "OR"

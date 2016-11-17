@@ -40,12 +40,12 @@ export const allTags = ({ filters }) => {
 
   if (filters.listingType.lease) tags.push('lease');
   if (filters.listingType.sublet) tags.push('sublet');
-  if (filters.pets.cats) tags.push('cats');
   if (filters.pets.dogs) tags.push('dogs');
+  if (filters.pets.cats) tags.push('cats');
   if (filters.advanced.noFee) tags.push('no fee');
   if (filters.advanced.parking) tags.push('parking');
 
-  // fewer lines of code but less space efficient
+  // fewer lines of code but less space efficiency
   // ["bedrooms", "bathrooms"].forEach(field => {
   //   Object.keys(filters[field]).forEach(filter => {
   //     if (filters[field][filter]) tags.push(`${filter} ${field}`)
