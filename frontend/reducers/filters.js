@@ -1,13 +1,9 @@
 import {
   UPDATE_BOUNDS,
   UPDATE_RENT,
-  UPDATE_LISTING_TYPE,
-  UPDATE_BEDROOMS,
-  UPDATE_BATHROOMS,
-  UPDATE_FEE,
-  UPDATE_PARKING,
-  UPDATE_PETS,
+  UPDATE_FILTER,
   RESET_FILTERS } from '../actions/filters';
+
 import merge from 'lodash/merge';
 
 const defaultFilters = {
@@ -46,8 +42,10 @@ const defaultFilters = {
     dogs: false,
     cats: false
   },
-  noFeeSelected: false,
-  parkingSelected: false,
+  advanced: {
+    noFee: false,
+    parking: false
+  }
 };
 
 const filters = (state = defaultFilters, action) => {
@@ -60,29 +58,9 @@ const filters = (state = defaultFilters, action) => {
       return merge({}, state, {
         rent: action.rent
       });
-    case UPDATE_LISTING_TYPE:
+    case UPDATE_FILTER:
       return merge({}, state, {
-        listingType: action.listingType
-      });
-    case UPDATE_BEDROOMS:
-      return merge({}, state, {
-        bedrooms: action.bedrooms
-      });
-    case UPDATE_BATHROOMS:
-      return merge({}, state, {
-        bathrooms: action.bathrooms
-      });
-    case UPDATE_PETS:
-      return merge({}, state, {
-        pets: action.pets
-      });
-    case UPDATE_FEE:
-      return merge({}, state, {
-        noFeeSelected: !state.noFeeSelected
-      });
-    case UPDATE_PARKING:
-      return merge({}, state, {
-        parkingSelected: !state.parkingSelected
+        [action.field]: action.filter
       });
     case RESET_FILTERS:
       return merge({}, defaultFilters, {

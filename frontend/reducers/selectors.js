@@ -26,3 +26,24 @@ export const allFavoriteListings = ({ session }) => (
 export const favoriteStatus = (state, { params }) => (
   allFavoriteListings(state).includes(parseInt(params.id))
 );
+
+export const allTags = ({ filters }) => {
+  let tags = [`> $${filters.rent.min}`, `< $${filters.rent.max}`];
+
+  Object.keys(filters.bedrooms).forEach(bed => {
+    if (filters.bedrooms[bed]) tags.push(`${bed} bed`)
+  });
+
+  Object.keys(filters.bathrooms).forEach(bath => {
+    if (filters.bathrooms[bath]) tags.push(`${bath} bath`)
+  });
+
+  if (filters.listingType.lease) tags.push('lease');
+  if (filters.listingType.sublet) tags.push('sublet');
+  if (filters.pets.cats) tags.push('cats');
+  if (filters.pets.dogs) tags.push('dogs');
+  if (filters.advanced.noFee) tags.push('no fee');
+  if (filters.advanced.parking) tags.push('parking');
+
+  return tags;
+}

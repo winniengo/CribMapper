@@ -54,6 +54,9 @@ export default class MarkerManager {
 
   styleMarkers(selectedId, hoveredId) {
     if (selectedId) {
+      if (this.hovered.length !== 0) {
+        this._removeIcon();
+      }
       this.selected = this.markers.filter(({ listingId }) => listingId === selectedId);
       this._addIcon();
     } else {
@@ -62,7 +65,6 @@ export default class MarkerManager {
 
     if (hoveredId) {
       if (this.hovered.length !== 0) {
-        // debugger
         this._removeBounce();
       }
       this.hovered = this.markers.filter(({ listingId }) => listingId === hoveredId);

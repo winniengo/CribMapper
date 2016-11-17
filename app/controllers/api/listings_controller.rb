@@ -12,8 +12,8 @@ class Api::ListingsController < ApplicationController
 
       @listings = Listing.filter_by_pets(@listings, filters_params[:pets]) unless default_params(:pets)
 
-      @listings = Listing.filter_by_selected(@listings, :fee) if filters_params[:noFeeSelected] == "true"
-      @listings = Listing.filter_by_selected(@listings, :parking) if filters_params[:parkingSelected] == "true"
+      @listings = Listing.filter_by_selected(@listings, :fee) if filters_params[:noFee] == "true"
+      @listings = Listing.filter_by_selected(@listings, :parking) if filters_params[:parking] == "true"
     else
       @listings = Listing.includes(:images).all
     end

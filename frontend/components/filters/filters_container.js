@@ -9,24 +9,26 @@ import {
   updateFee,
   updateParking,
   updatePets,
+  updateFilter,
+  updateBoolean,
   resetFilters } from '../../actions/filters';
+import { allTags } from '../../reducers/selectors';
 
 import Filters from './filters';
 
-const mapStateToProps = ({ filters }) => ({
-  filters
+const mapStateToProps = state => ({
+  filters: state.filters,
+  tags: allTags(state)
 });
 
-const mapDispatchToProps = dispatch => ({
-  updateRent: rent => dispatch(updateRent(rent)),
-  updateListingType: listingType => dispatch(updateListingType(listingType)),
-  updateBedrooms: bedrooms => dispatch(updateBedrooms(bedrooms)),
-  updateBathrooms: bathrooms => dispatch(updateBathrooms(bathrooms)),
-  updateFee: () => dispatch(updateFee()),
-  updateParking: () => dispatch(updateParking()),
-  updatePets: pets => dispatch(updatePets(pets)),
-  resetFilters: () => dispatch(resetFilters()),
-});
+const mapDispatchToProps = dispatch => {
+  // debugger
+  return ({
+    updateRent: rent => dispatch(updateRent(rent)),
+    updateFilter: (field, filter) => dispatch(updateFilter(field, filter)),
+    resetFilters: () => dispatch(resetFilters()),
+  });
+};
 
 export default withRouter(connect(
   mapStateToProps,
