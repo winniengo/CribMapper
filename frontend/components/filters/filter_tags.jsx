@@ -6,7 +6,7 @@ const FilterTags = ({ tags, resetFilter }) => {
       {tags.map(({ tag, handleClick }, idx) => (
         <div className='tag' key={idx} onClick={handleClick}>
           <div className='cancel background-img' />
-          {tag}
+          {tag === 'noFee' ? 'no fee' : tag}
         </div>
       ))}
     </div>

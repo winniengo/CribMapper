@@ -8,6 +8,7 @@ import {
 import {
   UPDATE_BOUNDS,
   UPDATE_FILTER,
+  RESET_FILTER,
   RESET_FILTERS } from '../actions/filters';
 import {
   fetchListings,
@@ -33,6 +34,7 @@ const listingsMiddleware = ({ dispatch, getState }) => next => action => {
       return next(action);
     case UPDATE_BOUNDS:
     case UPDATE_FILTER:
+    case RESET_FILTER:
     case RESET_FILTERS:
       next(action);
       dispatch(requestListings(getState().filters));
