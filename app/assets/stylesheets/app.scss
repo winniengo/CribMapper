@@ -5,14 +5,17 @@ $coral: #FF533D;
 $light-grey: #e8edf3;
 $dark-grey: #d0dae6;
 
-.app {
-
+#app {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .search {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 40px);
   display: flex;
+  flex: 1;
   align-items: stretch;
   flex-direction: row;
 }

@@ -62,7 +62,7 @@ class FilterForm extends React.Component{
     const { expanded } = this.state;
 
     return (
-      <div id='filter-form' className='filters'>
+      <section id='filter-form' className='filter-form'>
         <form>
           <FilterFormInput
             field="rent"
@@ -97,7 +97,7 @@ class FilterForm extends React.Component{
             reset
           </button>
         </div>
-      </div>
+      </section>
     )
   }
 }
