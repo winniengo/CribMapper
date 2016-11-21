@@ -73,7 +73,7 @@ class FilterForm extends React.Component{
           <FilterFormInput
             field="bathrooms"
             fields={this.renderFields("bathrooms")} />
-          <div className={`more-filters ${expanded ? "expanded" : "hidden"}`}>
+          <div id='more-filters' className={`more-filters ${expanded ? "expanded" : "hidden"}`}>
             <FilterFormInput
               field="type"
               fields={this.renderFields("listingType")} />

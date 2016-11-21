@@ -44,8 +44,8 @@ class ListingPreview extends React.Component {
     return (
       <div className='listing-preview'>
         <ListingPreviewGallery images={listing.images} />
-        <description>
-          <h3>${listing.rent}</h3>
+        <section>
+          <h2>${listing.rent}</h2>
           <div className='details'>
             <h4>{listing.bedrooms} Bed / {listing.bathrooms} Bath</h4>
             <h4>{listing.listingType}</h4>
@@ -53,8 +53,13 @@ class ListingPreview extends React.Component {
           <button
             className={`background-img favorite-icon ${clssName}`}
             onClick={this.handleFavorite} />
+        </section>
+        <description>
+          {listing.description}
         </description>
-        <StreetView lat={listing.lat} lng={listing.lng} />
+        <description>
+          <StreetView lat={listing.lat} lng={listing.lng} />
+        </description>
         <section className='sidebar-buttons'>
           <button
             className="back-to-results"

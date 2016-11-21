@@ -34,8 +34,10 @@ class StreetView extends React.Component {
 
   render() {
     return (
-      <div id='street-view'>
-      </div>
+      <section>
+        <h3>Street View</h3>
+        <div id='street-view'/>
+      </section>
     )
   }
 }

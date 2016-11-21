@@ -21,6 +21,10 @@ $dark-grey: #d0dae6;
     margin: 10px;
 }
 
+.filter-form > form {
+  padding-bottom: 20px;
+}
+
 .filter {
   display: flex;
   justify-content: space-between;

@@ -18,28 +18,35 @@ $coral: #FF533D;
 
 .listing-preview > section {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  padding-bottom: 20px;
   // padding: 10px;
 
 }
 
 .listing-preview > description {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: center;
   padding-bottom: 20px;
-  align-items: center;
+  // align-items: center;
+  width: 508px;
+  white-space: pre-line;
 }
 
-.listing-preview h3 {
+.listing-preview h2 {
   font-weight: 400;
   font-size: 38px;
-  border-right: 1px solid #AB987A;
+  // border-right: 1px solid #AB987A;
   padding: 0 10px;
 }
 
 .listing-preview button.favorite-icon {
   margin: 0 10px;
+}
+
+.listing-preview h3 {
+  font-size: 18px;
 }
 
 div.details {
@@ -49,6 +56,8 @@ div.details {
     justify-content: space-between;
     padding: 0 10px;
     border-right: 1px solid #AB987A;
+    border-left: 1px solid #AB987A;
+
 }
 
 
@@ -56,10 +65,10 @@ div.details {
 /* Listing Gallery **************************/
 .listing-preview-gallery {
       flex-direction: column;
-  height: 430px;
+  height: 400px;
   // padding: 20px 0;
   // background: white;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
   // border: 1px solid #8EAEBD;
   border-radius: 1px;
 

@@ -37,7 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const $filterTags = $('#filter-tags');
   $('#sidebar').scroll(() => {
-    $filterTags.css({display: $('#sidebar').scrollTop() > 295 ? "flex" : "none"});
+    $('#filter-tags').css({display: $('#sidebar').scrollTop() > 295 ? "flex" : "none"});
+    // $('#more-filters').css({display: $('#sidebar').scrollTop() > 295 ? "none" : ""});
   });
 
   // for testing

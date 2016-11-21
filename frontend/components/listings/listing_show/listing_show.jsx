@@ -65,12 +65,14 @@ class ListingShow extends React.Component {
           </header>
           <h3>{address}</h3>
           <ListingShowGallery images={images} />
-          <p className='description'>{description}</p>
-          <div className='pets'>
-            {cats ? <div className='cats' /> : ""}
-            {dogs ? <div className='dogs' /> : ""}
-            {petFriendly}
-          </div>
+          <section>
+            <p className='description'>{description}</p>
+            <div className='pets'>
+              {cats ? <div className='cats' /> : ""}
+              {dogs ? <div className='dogs' /> : ""}
+              {petFriendly}
+            </div>
+          </section>
           <StreetView lat={lat} lng={lng} />
         </section>
         <section className="listing-sidebar">
