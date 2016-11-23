@@ -17,32 +17,23 @@ const customStyles = {
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      modalIsOpen: false,
-      redirectToFavorites: false
-    };
+    this.state = {redirectToFavorites: false};
+
     this.renderSessionLink = this.renderSessionLink.bind(this);
     this.handleRedirectToFavorites = this.handleRedirectToFavorites.bind(this);
-    this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
   }
 
-  openModal() {
-    this.setState({modalIsOpen: true});
-  }
-
   closeModal() {
-    this.setState({modalIsOpen: false});
+    this.props.closeModal();
     if (this.state.redirectToFavorites) {
       this.setState({redirectToFavorites: false});
     }
   }
 
   componentWillReceiveProps(nextProps, ownState) {
-    // debugger
     if (!this.props.loggedIn && nextProps.loggedIn) {
       if (this.state.redirectToFavorites) {
-        debugger
         this.props.router.push('favorites');
       }
       this.closeModal();
@@ -53,7 +44,7 @@ class Navbar extends React.Component {
     if (this.props.loggedIn) {
       this.props.router.push('favorites');
     } else {
-      this.openModal();
+      this.props.openModal();
       this.setState({redirectToFavorites: true})
     }
   }
@@ -68,10 +59,9 @@ class Navbar extends React.Component {
     } else {
       return (
         <div className='link-container'>
-          <a onClick={this.openModal}>Sign In</a>
+          <a onClick={this.props.openModal}>Sign In</a>
           <Modal
-            isOpen={this.state.modalIsOpen}
-            onAfterOpen={this.afterOpenModal}
+            isOpen={this.props.modalOpen}
             onRequestClose={this.closeModal}
             style={customStyles}
           >
@@ -83,7 +73,6 @@ class Navbar extends React.Component {
   }
 
   render () {
-    console.log(this.state);
     return (
       <div className='navbar'>
         <div className='logo'>

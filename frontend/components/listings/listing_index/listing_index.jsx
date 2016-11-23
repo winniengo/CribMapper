@@ -26,7 +26,11 @@ class ListingIndex extends React.Component{
   _handleFavorite(action, listingId) {
     return e => {
       e.preventDefault();
-      action(listingId);
+      if (this.props.loggedIn) {
+        action(listingId);
+      } else {
+        this.props.openModal();
+      }
     }
   }
 
