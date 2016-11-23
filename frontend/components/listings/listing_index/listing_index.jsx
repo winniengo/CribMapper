@@ -9,7 +9,6 @@ class ListingIndex extends React.Component{
     super(props);
 
     this._handleClick = this._handleClick.bind(this);
-    this._handleFavorite = this._handleFavorite.bind(this);
     this._handleMouseEnter = this._handleMouseEnter.bind(this);
     this._handleMouseOut = this._handleMouseOut.bind(this)
   }
@@ -23,17 +22,6 @@ class ListingIndex extends React.Component{
     }
   }
 
-  _handleFavorite(action, listingId) {
-    return e => {
-      e.preventDefault();
-      if (this.props.loggedIn) {
-        action(listingId);
-      } else {
-        this.props.openModal();
-      }
-    }
-  }
-
   _handleMouseEnter(listingId) {
     return () => this.props.mouseEnter(listingId);
   }
@@ -43,26 +31,15 @@ class ListingIndex extends React.Component{
   }
 
   render() {
-    const {
-      listings,
-      favorites,
-      favoriteListing,
-      unfavoriteListing } = this.props;
-
     return (
       <div className='listing-index'>
         <FiltersContainer />
         <ul>
-        {listings.map((listing, idx) => {
-          const favorited = favorites.includes(listing.id);
-          let clssName =  favorited ? "favorited" : "unfavorited";
-          let action = favorited ? unfavoriteListing : favoriteListing;
+        {this.props.listings.map((listing, idx) => {
           return (
             <ListingIndexItem
               key={idx}
               listing={listing}
-              clssName={clssName}
-              handleFavorite={this._handleFavorite(action, listing.id)}
               handleClick={this._handleClick(listing.id)}
               handleMouseEnter={this._handleMouseEnter(listing.id)}
               handleMouseOut={this._handleMouseOut()} />

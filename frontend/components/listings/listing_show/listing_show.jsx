@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 
+import FavoriteIconContainer from '../../favorites/favorite_icon_container';
 import ListingShowDetails from './listing_show_details';
 import ListingShowContact from './listing_show_contact';
 import ListingShowGallery from './listing_show_gallery';
@@ -12,7 +13,6 @@ class ListingShow extends React.Component {
     this.state = this.props.listing;
 
     this.returnToListings = this.returnToListings.bind(this);
-    this.handleFavorite = this.handleFavorite.bind(this);
   }
 
   componentWillReceiveProps(newProps) {
@@ -22,10 +22,6 @@ class ListingShow extends React.Component {
   returnToListings() {
     this.props.deselect();
     this.props.router.push('/');
-  }
-
-  handleFavorite() {
-    this.props.favorite();
   }
 
   render() {
@@ -46,7 +42,6 @@ class ListingShow extends React.Component {
       images } = this.state;
 
     const header = `$${rent} - ${bedrooms} Bed / ${bathrooms} Bath`;
-    const clssName = this.props.favorited ? "favorited" : "unfavorited";
     const petFriendly = cats || dogs ? "- Friendly" : "No Pets";
 
     return (
@@ -59,9 +54,7 @@ class ListingShow extends React.Component {
           </button>
           <header>
             <h2>{header}</h2>
-            <button
-              className={`background-img favorite-icon ${clssName}`}
-              onClick={this.handleFavorite} />
+            <FavoriteIconContainer id={id} />
           </header>
           <h3>{address}</h3>
           <ListingShowGallery images={images} />

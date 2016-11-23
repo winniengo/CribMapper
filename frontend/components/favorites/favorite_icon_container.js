@@ -27,16 +27,9 @@ const mapDispatchToProps = (dispatch, { id }) => {
 }
 
 const mergeProps = ({ loggedIn, favorited }, { unfavoriteListing, favoriteListing, openModal}) => {
-  let dispatchAction;
-  if (loggedIn) {
-    dispatchAction = favorited ? unfavoriteListing : favoriteListing;
-  } else {
-    dispatchAction = openModal;
-  }
-
   return {
     className: favorited ? "favorited" : "unfavorited",
-    dispatchAction,
+    dispatchAction: loggedIn ? (favorited ? unfavoriteListing : favoriteListing) : openModal
   }
 }
 
