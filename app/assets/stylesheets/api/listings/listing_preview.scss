@@ -65,7 +65,7 @@ div.details {
 /* Listing Gallery **************************/
 .listing-preview-gallery {
       flex-direction: column;
-  height: 400px;
+  height: 300px;
   // padding: 20px 0;
   // background: white;
   // margin-bottom: 20px;
@@ -75,7 +75,7 @@ div.details {
 }
 
 section.preview-display {
-  height: 400px;
+  height: 100%;
   width: 100%;
   background: white;
   position: relative;
@@ -141,7 +141,7 @@ section.dots-gallery {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  overflow: scroll;
+  // overflow: scroll;
   padding: 10px 0;
   // background: white;
   // padding-bottom: 10px;

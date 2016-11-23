@@ -31,6 +31,8 @@ class LoginForm extends React.Component {
         <section className='header'>
           <h2>Sign in</h2>
           to save your favorite listings
+          <br/>
+          and use our comparison tool
         </section>
         <SessionErrors errors={this.props.errors} />
         <form onSubmit={this.handleSubmit}>

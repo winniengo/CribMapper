@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const preloadedState = {session: {
     currentUser: window.currentUser ? window.currentUser : null,
+    modalOpen: false
   }};
   const store = configureStore(preloadedState);
 

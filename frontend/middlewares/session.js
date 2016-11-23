@@ -12,16 +12,13 @@ import {
 import { createFavorite, destroyFavorite } from '../utils/favorites_api';
 import { receiveErrors } from '../actions/errors';
 
-import { hashHistory } from 'react-router';
 
 const sessionMiddleware = ({ dispatch, getState }) => next => action => {
   const error = e => {
-    // debugger
     dispatch(receiveErrors('session', e.responseJSON));
   }
   const currentUserSuccess = currentUser => {
     dispatch(receiveCurrentUser(currentUser));
-    hashHistory.push('/');
   }
 
   switch(action.type) {
@@ -29,11 +26,8 @@ const sessionMiddleware = ({ dispatch, getState }) => next => action => {
       login(action.user, currentUserSuccess, error);
       return next(action);
     case LOGOUT:
-      // debugger
       logout(() => {
-        // debugger
         next(action);
-        // hashHistory.push('/');
       });
       break;
     case SIGNUP:

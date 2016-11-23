@@ -17,9 +17,12 @@ const customStyles = {
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {modalIsOpen: false};
-
+    this.state = {
+      modalIsOpen: false,
+      redirectToFavorites: false
+    };
     this.renderSessionLink = this.renderSessionLink.bind(this);
+    this.handleRedirectToFavorites = this.handleRedirectToFavorites.bind(this);
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
   }
@@ -30,11 +33,28 @@ class Navbar extends React.Component {
 
   closeModal() {
     this.setState({modalIsOpen: false});
+    if (this.state.redirectToFavorites) {
+      this.setState({redirectToFavorites: false});
+    }
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.loggedIn) {
+  componentWillReceiveProps(nextProps, ownState) {
+    // debugger
+    if (!this.props.loggedIn && nextProps.loggedIn) {
+      if (this.state.redirectToFavorites) {
+        debugger
+        this.props.router.push('favorites');
+      }
       this.closeModal();
+    }
+  }
+
+  handleRedirectToFavorites() {
+    if (this.props.loggedIn) {
+      this.props.router.push('favorites');
+    } else {
+      this.openModal();
+      this.setState({redirectToFavorites: true})
     }
   }
 
@@ -54,7 +74,6 @@ class Navbar extends React.Component {
             onAfterOpen={this.afterOpenModal}
             onRequestClose={this.closeModal}
             style={customStyles}
-            contentLabel="Example Modal"
           >
           <SessionFormContainer />
           </Modal>
@@ -64,6 +83,7 @@ class Navbar extends React.Component {
   }
 
   render () {
+    console.log(this.state);
     return (
       <div className='navbar'>
         <div className='logo'>
@@ -74,7 +94,7 @@ class Navbar extends React.Component {
         </div>
         <div className='links'>
           <div className='link-container'>
-            <a onClick={() => this.props.router.push('/favorites')}>
+            <a onClick={this.handleRedirectToFavorites}>
               Favorites
             </a>
           </div>
