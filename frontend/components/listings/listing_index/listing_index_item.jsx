@@ -1,5 +1,7 @@
 import React from 'react';
 
+import FavoriteIconContainer from '../../favorites/favorite_icon_container';
+
 const ListingIndexItem = ({ listing, clssName, handleFavorite, handleClick, handleMouseEnter, handleMouseOut }) => (
   <li
     className='listing-index-item'
@@ -12,7 +14,7 @@ const ListingIndexItem = ({ listing, clssName, handleFavorite, handleClick, hand
     <description>
       <header>
         <h3>${listing.rent}</h3>
-        <button className={`background-img favorite-icon ${clssName}`} onClick={handleFavorite} />
+        <FavoriteIconContainer id={listing.id} />
       </header>
       <h4>{listing.bedrooms} Bed / {listing.bathrooms} Bath</h4>
       <h4>{listing.listingType}</h4>

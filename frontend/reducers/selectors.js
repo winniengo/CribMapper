@@ -23,8 +23,8 @@ export const allFavoriteListings = ({ session }) => (
   session.currentUser ? session.currentUser.favoriteListings : []
 );
 
-export const favoriteStatus = (state, { params }) => (
-  allFavoriteListings(state).includes(parseInt(params.id))
+export const favoriteStatus = (state, { id }) => (
+  allFavoriteListings(state).includes(parseInt(id))
 );
 
 // export const allTags = ({ filters }) => {
