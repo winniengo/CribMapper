@@ -47,11 +47,11 @@ class ListingShowGallery extends React.Component {
     return (
       <section className='listing-gallery'>
         <section className='display'>
-          <div className='previous' onClick={this.handlePrevious} />
+          <div className='previous background-img' onClick={this.handlePrevious} />
           <div
-            className='selected'
+            className='selected background-img'
             style={{backgroundImage: `url(${selectedSrc})`}} />
-          <div className='next' onClick={this.handleNext}/>
+          <div className='next background-img' onClick={this.handleNext}/>
         </section>
         <section className='thumbnail-gallery'>
           {this.props.images.map(({ src }, idx) => (

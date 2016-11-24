@@ -14,8 +14,8 @@ $dark-grey: #d0dae6;
 .pets > div {
     width: 24px;
     height: 24px;
-    background-position: center;
-    background-size: contain;
+    // background-position: center;
+    // background-size: contain;
     margin-left: 2px;
 }
 
@@ -64,7 +64,7 @@ button.back-to-results:hover {
   padding-bottom: 20px;
 }
 
-.listing-main > header {
+.listing-main header {
   padding-top: 20px;
   display: flex;
   flex-direction: row;
@@ -103,12 +103,12 @@ button.back-to-results:hover {
 
 /* Listing Gallery **************************/
 .listing-gallery {
-  height: 560px;
-  padding-top: 20px;
+  height: 520px;
+  // padding-top: 20px;
 }
 
 section.display {
-  height: 440px;
+  height: 400px;
   background: $navy-blue;
   // padding: 10px;
   display: flex;
@@ -119,9 +119,9 @@ section.display {
 .display > div {
   // height: 100%;
   width: 35px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: contain;
+  // background-position: center;
 }
 
 .display > div.selected {
@@ -153,23 +153,23 @@ section.display {
 }
 
 section.thumbnail-gallery {
-  height: 110px;
-  background: $light-grey;
-  display: flex;
-  flex-direction: row;
-  overflow: scroll;
-  padding-bottom: 10px;
+    height: 100px;
+    background: #e8edf3;
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+    padding: 10px 0;
 }
 
 .thumbnail-gallery > div {
-  cursor: pointer;
-  height: 98px;
-  min-width: 125px;
-  margin: 10px 5px 0 0;
-  border: 1px solid;
-  border-radius: 1px;
-  border-color: $light-blue;
-  opacity: 0.8;
+cursor: pointer;
+height: 98px;
+min-width: 125px;
+margin-right: 5px;
+border: 1px solid;
+border-radius: 1px;
+border-color: #8EAEBD;
+opacity: 0.8;
 
 }
 

@@ -52,17 +52,19 @@ class ListingShow extends React.Component {
             onClick={this.returnToListings}>
             ← Back to results
           </button>
-          <header>
-            <h2>{header}</h2>
-            <FavoriteIconContainer id={id} />
-          </header>
-          <h3>{address}</h3>
+          <section>
+            <header>
+              <h2>{header}</h2>
+              <FavoriteIconContainer id={id} />
+            </header>
+            <h3>{address}</h3>
+          </section>
           <ListingShowGallery images={images} />
           <section>
             <p className='description'>{description}</p>
             <div className='pets'>
-              {cats ? <div className='cats' /> : ""}
-              {dogs ? <div className='dogs' /> : ""}
+              {cats ? <div className='background-img cats' /> : ""}
+              {dogs ? <div className='background-img dogs' /> : ""}
               {petFriendly}
             </div>
           </section>

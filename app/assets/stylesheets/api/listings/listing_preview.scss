@@ -65,7 +65,7 @@ div.details {
 /* Listing Gallery **************************/
 .listing-preview-gallery {
       flex-direction: column;
-  height: 300px;
+  height: 330px;
   // padding: 20px 0;
   // background: white;
   // margin-bottom: 20px;
@@ -105,9 +105,9 @@ section.preview-display {
 }
 
 .arrows > button {
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: contain;
+  // background-position: center;
   width: 20px;
   opacity: 0.8;
   cursor: pointer;
@@ -150,12 +150,12 @@ section.dots-gallery {
 .dots-gallery > div {
   cursor: pointer;
   height: 10px;
-  min-width: 10px;
+  width: 10px;
   margin: 0 2px;
   background-image: image-url("dot-unfilled.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: contain;
+  // background-position: center;
   opacity: 0.2;
 
 }

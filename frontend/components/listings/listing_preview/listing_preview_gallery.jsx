@@ -51,15 +51,15 @@ class ListingPreviewGallery extends React.Component {
             className='selected'
             style={{backgroundImage: `url(${selectedSrc})`}} />
           <div className='arrows'>
-            <button className='previous' onClick={this.handlePrevious} />
-            <button className='next' onClick={this.handleNext}/>
+            <button className='previous background-img' onClick={this.handlePrevious} />
+            <button className='next background-img' onClick={this.handleNext}/>
           </div>
         </section>
         <section className='dots-gallery'>
           {this.props.images.map((img, idx) => (
             <div
               key={idx}
-              className={`${this.state.selected == idx ? 'selected' : ''}`}
+              className={`background-img ${this.state.selected == idx ? 'selected' : ''}`}
               onClick={this.handleSelect(idx)} />
           ))}
         </section>
