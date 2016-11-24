@@ -28,15 +28,16 @@ class SignupForm extends React.Component {
 
   render() {
     return (
-      <div className='signup-form'>
+      <div className='modal-form'>
         <section className='header'>
+          <div className='logo-img background-img' />
           <h2>Create an Account</h2>
           to find the perfect rental
           <SessionErrors errors={this.props.errors} />
         </section>
         <form onSubmit={this.handleSubmit}>
           <label>
-            <div className='signup-form-field'>
+            <div className='modal-form-field'>
               <input
                 type='text'
                 value={this.state.name}
@@ -46,7 +47,7 @@ class SignupForm extends React.Component {
             </div>
           </label>
           <label>
-            <div className='signup-form-field'>
+            <div className='modal-form-field'>
               <input
                 type='text'
                 value={this.state.email}
@@ -56,7 +57,7 @@ class SignupForm extends React.Component {
             </div>
           </label>
           <label>
-            <div className='signup-form-field'>
+            <div className='modal-form-field'>
               <input
                 type='password'
                 value={this.state.password}
@@ -65,7 +66,7 @@ class SignupForm extends React.Component {
               <div className="password-img background-img" />
             </div>
           </label>
-          <input type='submit' value='Sign up' className='session-btn'/>
+          <input type='submit' value='Sign up' className='modal-btn'/>
         </form>
         <section className='footer'>
           Already have an account?

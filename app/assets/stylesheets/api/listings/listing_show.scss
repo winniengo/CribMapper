@@ -174,12 +174,12 @@ opacity: 0.8;
 }
 
 .thumbnail-gallery > div:hover {
-  box-shadow: 2px 2px 5px $light-grey;
+  box-shadow: 0 2px 6px $light-grey;
 }
 
 .thumbnail-gallery > div.selected {
   border-color: $navy-blue;
-  box-shadow: 2px 2px 5px $light-grey;
+  box-shadow: 0px 2px 6px $light-grey;
   opacity: 1;
 }
 

@@ -63,9 +63,8 @@ class Navbar extends React.Component {
           <Modal
             isOpen={this.props.modalOpen}
             onRequestClose={this.closeModal}
-            style={customStyles}
-          >
-          <SessionFormContainer />
+            style={customStyles}>
+            <SessionFormContainer />
           </Modal>
         </div>
       );

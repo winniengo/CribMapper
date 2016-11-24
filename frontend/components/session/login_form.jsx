@@ -27,17 +27,18 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <div className='signup-form'>
+      <div className='modal-form'>
         <section className='header'>
+          <div className='logo-img background-img' />
           <h2>Sign in</h2>
           to save your favorite listings
           <br/>
           and use our comparison tool
+          <SessionErrors errors={this.props.errors} />
         </section>
-        <SessionErrors errors={this.props.errors} />
         <form onSubmit={this.handleSubmit}>
           <label>
-            <div className='signup-form-field'>
+            <div className='modal-form-field'>
               <input
                 type='text'
                 value={this.state.email}
@@ -47,7 +48,7 @@ class LoginForm extends React.Component {
             </div>
           </label>
           <label>
-            <div className='signup-form-field'>
+            <div className='modal-form-field'>
               <input
                 type='password'
                 value={this.state.password}
@@ -56,7 +57,7 @@ class LoginForm extends React.Component {
               <div className="password-img background-img" />
             </div>
           </label>
-          <input type='submit' value='Sign in' className='session-btn'/>
+          <input type='submit' value='Sign in' className='modal-btn'/>
         </form>
         <section className='footer'>
           New to CribMapper?

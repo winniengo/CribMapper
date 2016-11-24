@@ -5,14 +5,14 @@ $coral: #FF533D;
 $light-grey: #e8edf3;
 $dark-grey: #d0dae6;
 
-.session-form {
-    width: 300px;
+.modal {
+    // width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.session-form label {
+.modal label {
     margin-bottom: 10px;
     display: flex;
     flex-direction: row;
@@ -20,19 +20,23 @@ $dark-grey: #d0dae6;
     align-items: center;
 }
 
-.signup-form {
+.modal-form {
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.signup-form > section {
-  // padding: 20px;
-  text-align: center;
-  // display: flex;
-  // justify-content: space-between;
+.session.modal {
+  width: 300px;
 }
+
+// .modal-form > section {
+//   // padding: 20px;
+//   text-align: center;
+//   // display: flex;
+//   // justify-content: space-between;
+// }
 
 .footer {
       // display: flex;
@@ -41,15 +45,21 @@ $dark-grey: #d0dae6;
     align-items: center;
 }
 
-.signup-form form {
-   margin: 20px 0;
+.modal-form form {
+  //  margin: 20px 0;
   padding: 20px 0;
-   border-bottom: 1px solid #FF533D;
-    border-top: 1px solid #FF533D;
+  //  border-bottom: 1px solid #FF533D;
+}
+
+.modal-form section {
+    width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
 
 }
 
-.session-btn {
+.modal-btn {
   cursor: pointer;
       /* background: #a5cfe2; */
     /* border-radius: 1px; */
@@ -61,11 +71,11 @@ $dark-grey: #d0dae6;
     text-transform: uppercase;
 }
 
-.session-btn:hover {
+.modal-btn:hover {
   background: #8EAEBD;
 }
 
-.signup-form-field {
+.modal-form-field {
   padding: 5px;
   width: 100%;
   border-radius: 1px;
@@ -76,7 +86,30 @@ $dark-grey: #d0dae6;
   align-items: center;
   cursor: text;
   font-size: 14px;
+}
 
+.header {
+  border-bottom: 1px solid #FF533D;
+  padding-bottom: 20px;
+}
+
+.header > .logo-img {
+  width: 40px;
+  height: 40px;
+}
+
+.footer {
+  border-top: 1px solid #FF533D;
+    padding-top: 20px;
+}
+
+.footer > .logo-img {
+  width: 20px;
+  height: 20px;
+}
+
+.modal-form-field:focus {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .email-img {
@@ -131,4 +164,5 @@ $dark-grey: #d0dae6;
 
 .session-errors {
   font-size: 12px;
+  text-align: center;
 }

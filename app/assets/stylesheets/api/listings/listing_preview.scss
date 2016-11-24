@@ -167,7 +167,7 @@ section.dots-gallery {
 
 .dots-gallery > div.selected {
   // border-color: $navy-blue;
-  // box-shadow: 2px 2px 5px grey;
+  // box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   background-image: image-url("dot-filled.png");
   opacity: 0.4;
 }

@@ -57,8 +57,7 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-      <div className='session-form'>
-        <div className='logo-img background-img' />
+      <div className='session modal'>
         {this.renderForm()}
       </div>
     );
