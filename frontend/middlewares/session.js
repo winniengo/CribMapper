@@ -1,9 +1,11 @@
 import {
+  updateCurrentUser,
   receiveCurrentUser,
+  UPDATE_CURRENT_USER,
   LOGIN,
   LOGOUT,
   SIGNUP } from '../actions/session';
-import { login, signup, logout } from '../utils/session_api';
+import { login, signup, logout, updateUser } from '../utils/session_api';
 import {
   FAVORITE_LISTING,
   UNFAVORITE_LISTING,
@@ -26,24 +28,21 @@ const sessionMiddleware = ({ dispatch, getState }) => next => action => {
       login(action.user, currentUserSuccess, error);
       return next(action);
     case LOGOUT:
-      logout(() => {
-        next(action);
-      });
+      logout(() => next(action));
       break;
     case SIGNUP:
-
-      signup(action.user, currentUserSuccess, error)
+      signup(action.user, currentUserSuccess, error);
       return next(action);
     case FAVORITE_LISTING:
       const favoriteSuccess = ({ listingId }) => dispatch(receiveFavorite(listingId));
       createFavorite(action.listingId, favoriteSuccess, error);
       return next(action);
     case UNFAVORITE_LISTING:
-      const unfavoriteSuccess = ({ listingId }) => {
-        // debugger
-        dispatch(removeFavorite(listingId));
-      };
+      const unfavoriteSuccess = ({ listingId }) => dispatch(removeFavorite(listingId));
       destroyFavorite(action.listingId, unfavoriteSuccess, error);
+      return next(action);
+    case UPDATE_CURRENT_USER:
+      updateUser(action.user, currentUserSuccess, error);
       return next(action);
     default:
       return next(action);

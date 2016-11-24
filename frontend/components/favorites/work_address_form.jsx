@@ -1,16 +1,12 @@
 import React from 'react';
 
-class WorkForm extends React.Component{
+class WorkAddressForm extends React.Component{
   constructor(props) {
     super(props);
-    this.state = {
-      lat: null,
-      lng: null,
-      placeId: null,
-      formattedAddress: null
-    };
+    const { lat, lng, place_id, address } = this.props.currentUser;
+    this.state = { lat, lng, place_id, address };
 
-    this.updateWorkInfo = this.updateWorkInfo.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() { // using google map and google places apis
@@ -22,8 +18,8 @@ class WorkForm extends React.Component{
     const mapDOMNode = document.getElementById('commute-map');
     const mapOptions = { // default to sf
       center: {
-        lat: 37.7749,
-        lng: -122.4194
+        lat: this.state.lat || 37.7749,
+        lng: this.state.lng || -122.4194
       },
       zoom: 13
     };
@@ -70,40 +66,36 @@ class WorkForm extends React.Component{
       this.setState({
         lat: place.geometry.location.lat(),
         lng: place.geometry.location.lng(),
-        placeId: place.place_id,
-        formattedAddress: place.formatted_address
+        place_id: place.place_id,
+        address: place.formatted_address
       })
     });
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (!nextProps.loggedIn) {
-      this.props.router.push('/');
-    }
-  }
-
-  updateWorkInfo() {
-    console.log(this.state);
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.updateCurrentUser(this.state);
   }
 
   render() {
+    const verb = this.props.currentUser.place_id ? 'Update' : 'Add';
     return (
       <div className='work modal'>
         <div className='modal-form'>
           <section className='header'>
-            <h2>Add your Work Address</h2>
+            <h2>{`${verb} your Work Address`}</h2>
             to calculate the commute to your perfect rental
           </section>
-          <form onSubmit={this.updateWorkInfo}>
+          <form onSubmit={this.handleSubmit}>
             <div id="commute-map"/>
             <label>
               <input
                 id="pac-input"
                 className="controls"
                 type="text"
-                placeholder="Search" />
+                placeholder={this.state.address || "Search"} />
             </label>
-            <input type="submit" value="Add" className="modal-btn"/>
+            <input type="submit" value={`${verb}`} className="modal-btn"/>
           </form>
           <section className='footer'>
             <div className='logo-img background-img' />
@@ -114,4 +106,4 @@ class WorkForm extends React.Component{
   }
 }
 
-export default WorkForm;
+export default WorkAddressForm;

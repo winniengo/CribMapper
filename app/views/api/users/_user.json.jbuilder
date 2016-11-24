@@ -11,5 +11,5 @@
 #   end
 # end
 
-json.extract! user, :id, :name, :email, :lat, :lng
+json.extract! user, :id, :name, :email, :lat, :lng, :place_id, :address
 json.favoriteListings user.favorite_listings.pluck(:id)
