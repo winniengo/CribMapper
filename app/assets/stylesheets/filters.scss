@@ -9,14 +9,14 @@ $dark-grey: #d0dae6;
   // margin: 10px;
   // background: white;
   // border: 1px solid $light-blue;
-  // border-radius: 1px;
+  // border-radius: 2px;
   // padding: 10px;
 }
 
 .filter-form {
     background: white;
     border: 1px solid $light-blue;
-    border-radius: 1px;
+    border-radius: 2px;
     padding: 10px;
     margin: 10px;
 }
@@ -27,22 +27,22 @@ $dark-grey: #d0dae6;
 
 .filter {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   border-bottom: 1px solid #FF533D;
   align-items: center;
   padding: 20px 0;
   // margin: 0 20px;
 }
 
-.filter > h3 {
+.filter h3 {
   width: 250px;
   font-size: 18px;
 }
 
-.filter > .fields {
+.fields {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   text-transform: capitalize;
 }
 
@@ -57,7 +57,7 @@ $dark-grey: #d0dae6;
 .rent {
   display: flex;
   border: 1px solid $light-blue;
-  border-radius: 1px;
+  border-radius: 2px;
   align-items: center;
   cursor: text;
   margin-left: 2px;
@@ -73,16 +73,16 @@ $dark-grey: #d0dae6;
   text-align: right;
   padding: 5px 0;
   width: 100px;
-  border-radius: 1px;
+  border-radius: 2px;
 }
 
 .fields > button {
   background: $light-grey;
-  border-radius: 1px;
+  border-radius: 2px;
   border: 1px solid $light-blue;
-  padding: 5px 0;
+  padding: 5px;
   width: 100%;
-  margin-left: 2px;
+  margin-left: 5px;
   text-align: center;
   text-transform: capitalize;
 }
@@ -127,7 +127,7 @@ $dark-grey: #d0dae6;
 
 .tag {
   background: white;
-  border-radius: 1px;
+  border-radius: 2px;
   border: 1px solid $light-blue;
   padding: 2px 10px;
   // width: 100%;

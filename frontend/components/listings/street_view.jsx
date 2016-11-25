@@ -1,9 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 class StreetView extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.renderStreetView = this.renderStreetView.bind(this);
   }

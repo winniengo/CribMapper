@@ -18,10 +18,44 @@
   opacity: 1;
 }
 
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.commute.fields > button {
+  width: auto;
+}
+
+.filter h4 {
+  width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.commute.fields {
+  justify-content: center;
+}
+
+.driving {
+  background-image: image-url("driving-navy.png");
+  z-index: 1;
+}
+
+.transit {
+  background-image: image-url("transit-navy.png");
+    z-index: 1;
+}
+
+.walking {
+  background-image: image-url("walking-navy.png");
+    z-index: 1;
+}
 
 #commute-map {
-  height: 300px;
-  width: 500px;
+  height: 250px;
+  width: 100%;
 }
 
 .controls {

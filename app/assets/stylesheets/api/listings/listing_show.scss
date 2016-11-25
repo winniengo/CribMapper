@@ -29,25 +29,19 @@ $dark-grey: #d0dae6;
 
 /* Listing Show **************************/
 .listing-show {
+  min-width: 970px;
   display: flex;
   justify-content: center;
   margin: 10px;
 }
 
 button.back-to-results {
-  // background: #a5cfe2;
-  // border-radius: 1px;
-  // border: 1px solid #8EAEBD;
-  // padding: 5px 0;
-  // width: 150px;
-  // text-align: center;
-  // text-transform: capitalize;
-    background: $light-grey;
-    padding: 10px 0;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 16px;
-    width: 244px;
+  background: $light-grey;
+  padding: 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  width: 244px;
 }
 
 button.back-to-results:hover {
@@ -92,7 +86,7 @@ button.back-to-results:hover {
 
 
 .listing-sidebar {
-  width: 350px;
+  // width: 350px;
   min-width: 350px;
   margin: 10px;
 }
@@ -167,7 +161,7 @@ height: 98px;
 min-width: 125px;
 margin-right: 5px;
 border: 1px solid;
-border-radius: 1px;
+border-radius: 2px;
 border-color: #8EAEBD;
 opacity: 0.8;
 

@@ -6,6 +6,7 @@ import ListingShowDetails from './listing_show_details';
 import ListingShowContact from './listing_show_contact';
 import ListingShowGallery from './listing_show_gallery';
 import StreetView from '../street_view';
+import CommuteMap from '../commute_map';
 
 class ListingShow extends React.Component {
   constructor(props) {
@@ -40,6 +41,7 @@ class ListingShow extends React.Component {
       parking,
       listingType,
       images } = this.state;
+    const { destination } = this.props;
 
     const header = `$${rent} - ${bedrooms} Bed / ${bathrooms} Bath`;
     const petFriendly = cats || dogs ? "- Friendly" : "No Pets";
@@ -72,6 +74,9 @@ class ListingShow extends React.Component {
         </section>
         <section className="listing-sidebar">
           <ListingShowDetails listing={this.props.listing} />
+          <CommuteMap
+            origin={{ lat, lng }}
+            destination={{lat: destination.lat, lng: destination.lng}} />
           <ListingShowContact contact={""}/>
         </section>
       </div>

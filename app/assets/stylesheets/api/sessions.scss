@@ -62,7 +62,7 @@ $dark-grey: #d0dae6;
 .modal-btn {
   cursor: pointer;
       /* background: #a5cfe2; */
-    /* border-radius: 1px; */
+    /* border-radius: 2px; */
     /* border: 1px solid #8EAEBD; */
     background: #e8edf3;
     padding: 10px 0;
@@ -78,11 +78,11 @@ $dark-grey: #d0dae6;
 .modal-form-field {
   padding: 5px;
   width: 100%;
-  border-radius: 1px;
+  border-radius: 2px;
   display: flex;
   justify-content: space-between;
   border: 1px solid $light-blue;
-  border-radius: 1px;
+  border-radius: 2px;
   align-items: center;
   cursor: text;
   font-size: 14px;
@@ -135,7 +135,7 @@ $dark-grey: #d0dae6;
   cursor: pointer;
   color: $light-blue;
     //   background: #e8edf3;
-    // border-radius: 1px;
+    // border-radius: 2px;
     // border: 1px solid #8EAEBD;
     // padding: 5px;
     // // width: 100%;

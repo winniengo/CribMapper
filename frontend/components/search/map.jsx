@@ -12,7 +12,6 @@ class Map extends React.Component {
 
   componentDidMount() {
     const mapDOMNode = document.getElementById('map');
-
     const mapOptions = { // default to sf
       center: {
         lat: 37.7749,

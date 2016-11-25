@@ -39,7 +39,7 @@ $dark-grey: #d0dae6;
 
 .sidebar-buttons button {
     /* background: #a5cfe2; */
-    /* border-radius: 1px; */
+    /* border-radius: 2px; */
     /* border: 1px solid #8EAEBD; */
     background: $light-grey;
     padding: 10px 0;
@@ -54,7 +54,7 @@ $dark-grey: #d0dae6;
 }
 
 .sidebar-buttons button:nth-child(1) {
-  margin-right: 2px;
+  margin-right: 5px;
 }
 
 .hidden {
