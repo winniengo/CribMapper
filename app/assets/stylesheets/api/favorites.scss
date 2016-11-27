@@ -35,27 +35,26 @@
 }
 
 .commute.fields {
+  margin-top: 10px;
   justify-content: center;
 }
 
 .driving {
   background-image: image-url("driving-navy.png");
-  z-index: 1;
 }
 
 .transit {
   background-image: image-url("transit-navy.png");
-    z-index: 1;
 }
 
 .walking {
   background-image: image-url("walking-navy.png");
-    z-index: 1;
 }
 
 #commute-map {
   height: 250px;
   width: 100%;
+  margin: 10px 0;
 }
 
 .controls {

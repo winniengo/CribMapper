@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ListingShowDetails = ({ listing }) => (
-  <div className="listing-details">
+  <section className="listing-details">
     <h3>Details</h3>
     <ul>
       <li>
@@ -37,7 +37,7 @@ const ListingShowDetails = ({ listing }) => (
         {listing.parking ? "Yes" : "No"}
       </li>
     </ul>
-  </div>
+  </section>
 );
 
 export default ListingShowDetails;

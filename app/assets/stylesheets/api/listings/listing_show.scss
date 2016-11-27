@@ -95,6 +95,10 @@ button.back-to-results:hover {
   font-size: 18px;
 }
 
+.listing-sidebar > section {
+  margin: 10px;
+}
+
 /* Listing Gallery **************************/
 .listing-gallery {
   height: 520px;
@@ -181,15 +185,15 @@ opacity: 0.8;
 
 /* Listing Details **************************/
 .listing-details {
-  margin: 10px;
+  // margin: 10px;
 }
 
-.listing-details ul {
+.listing-sidebar > section ul {
   margin-top: 10px;
   border-top: 1px solid #AB987A;
 }
 
-.listing-details ul li {
+.listing-sidebar > section ul li {
   padding: 10px;
   font-size: 14px;
   font-weight: 300;
@@ -199,11 +203,11 @@ opacity: 0.8;
   border-bottom: 1px solid #AB987A;
 }
 
-.listing-details ul li:nth-child(even) {
+.listing-sidebar > section ul li:nth-child(even) {
   background: #FAFAFA;
 }
 
-.listing-details ul li:nth-child(odd) {
+.listing-sidebar > section ul li:nth-child(odd) {
   background: #F1F1F1;
 }
 
@@ -211,9 +215,18 @@ opacity: 0.8;
 //   font-weight: 400;
 // }
 
+.listing-commute {
+  // border-bottom: 1px solid #FF533D;
+  display: flex;
+  flex-direction: column;
+}
+
+.listing-commmute ul {
+
+}
 /* Listing Contact **************************/
 .listing-contact {
-  margin: 10px;
+  // margin: 10px;
 }
 
 .listing-contact > section {

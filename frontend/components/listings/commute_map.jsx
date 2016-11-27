@@ -72,29 +72,30 @@ class CommuteMap extends React.Component {
 
   render() {
     return (
-      <section>
+      <section className="listing-commute">
         <h3>Your Work Commute</h3>
-        <div id="commute-map" />
-        <div className="filter">
-          <div className="commute fields">
-            <button
-              className={this.state.travelMode === "DRIVING" ? 'selected' : ''}
-              onClick={this.handleClick("DRIVING")}>
-              <div className="background-img driving icon" />
-            </button>
-            <button
-              className={this.state.travelMode === "TRANSIT" ? 'selected' : ''}
-              onClick={this.handleClick("TRANSIT")}>
-              <div className="background-img transit icon" />
-            </button>
-            <button
-              className={this.state.travelMode === "WALKING" ? 'selected' : ''}
-              onClick={this.handleClick("WALKING")}>
-              <div className="background-img walking icon" />
-            </button>
-            <h4>{`${this.state.distance} ${this.state.duration}`}</h4>
-          </div>
+        <div className="commute fields">
+          <button
+            className={this.state.travelMode === "DRIVING" ? 'selected' : ''}
+            onClick={this.handleClick("DRIVING")}>
+            <div className="background-img driving icon" />
+          </button>
+          <button
+            className={this.state.travelMode === "TRANSIT" ? 'selected' : ''}
+            onClick={this.handleClick("TRANSIT")}>
+            <div className="background-img transit icon" />
+          </button>
+          <button
+            className={this.state.travelMode === "WALKING" ? 'selected' : ''}
+            onClick={this.handleClick("WALKING")}>
+            <div className="background-img walking icon" />
+          </button>
         </div>
+        <ul>
+          <li><h4>Distance</h4>{this.state.distance}</li>
+          <li><h4>Duration</h4>{this.state.duration}</li>
+        </ul>
+        <div id="commute-map" />
       </section>
     );
   }
