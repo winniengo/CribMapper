@@ -14,11 +14,8 @@ class CommuteMap extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log(this.props.origin.lat, nextProps.origin.lat);
     if (this.props.origin.lat !== nextProps.origin.lat) { // received lat, lng
-      console.log("here");
       this.calculateAndDisplayRoute(nextProps);
-
     }
   }
 
@@ -74,27 +71,29 @@ class CommuteMap extends React.Component {
     return (
       <section className="listing-commute">
         <h3>Your Work Commute</h3>
-        <div className="commute fields">
-          <button
-            className={this.state.travelMode === "DRIVING" ? 'selected' : ''}
-            onClick={this.handleClick("DRIVING")}>
-            <div className="background-img driving icon" />
-          </button>
-          <button
-            className={this.state.travelMode === "TRANSIT" ? 'selected' : ''}
-            onClick={this.handleClick("TRANSIT")}>
-            <div className="background-img transit icon" />
-          </button>
-          <button
-            className={this.state.travelMode === "WALKING" ? 'selected' : ''}
-            onClick={this.handleClick("WALKING")}>
-            <div className="background-img walking icon" />
-          </button>
-        </div>
-        <ul>
-          <li><h4>Distance</h4>{this.state.distance}</li>
-          <li><h4>Duration</h4>{this.state.duration}</li>
-        </ul>
+        <section>
+          <div className="commute fields">
+            <button
+              className={this.state.travelMode === "DRIVING" ? 'selected' : ''}
+              onClick={this.handleClick("DRIVING")}>
+              <div className="background-img driving icon" />
+            </button>
+            <button
+              className={this.state.travelMode === "TRANSIT" ? 'selected' : ''}
+              onClick={this.handleClick("TRANSIT")}>
+              <div className="background-img transit icon" />
+            </button>
+            <button
+              className={this.state.travelMode === "WALKING" ? 'selected' : ''}
+              onClick={this.handleClick("WALKING")}>
+              <div className="background-img walking icon" />
+            </button>
+          </div>
+          <ul>
+            <li><h4>Distance</h4>{this.state.distance}</li>
+            <li><h4>Duration</h4>{this.state.duration}</li>
+          </ul>
+        </section>
         <div id="commute-map" />
       </section>
     );

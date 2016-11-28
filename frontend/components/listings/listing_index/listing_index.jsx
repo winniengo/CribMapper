@@ -33,7 +33,6 @@ class ListingIndex extends React.Component{
   render() {
     return (
       <div className='listing-index'>
-        <FiltersContainer />
         <ul>
         {this.props.listings.map((listing, idx) => {
           return (

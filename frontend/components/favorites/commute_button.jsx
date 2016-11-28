@@ -1,7 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
-import WorkAddressForm
-from './work_address_form';
+import CommuteForm from './commute_form';
 
 import merge from 'lodash/merge';
 
@@ -63,7 +62,7 @@ class Favorites extends React.Component{
           onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}
           style={customStyles}>
-          <WorkAddressForm
+          <CommuteForm
             updateCurrentUser={this.updateCurrentUser}
             currentUser={this.props.currentUser} />
         </Modal>

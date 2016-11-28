@@ -5,13 +5,6 @@ import Modal from 'react-modal';
 import configureStore from './store';
 import Root from './components/root';
 
-// for testing
-import { requestListings, requestListing, selectListing, deselectListing } from './actions/listings';
-import { createFavorite, destroyFavorite } from './utils/favorites_api';
-import { favoriteListing, unfavoriteListing } from './actions/favorites';
-import { logout } from './utils/session_api';
-import { receiveErrors } from './actions/errors';
-
 document.addEventListener('DOMContentLoaded', () => {
   // let store;
   //
@@ -44,16 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // for testing
   window.store = store;
-  window.success = data => console.log(data)
-  window.error = e => console.log(e)
-  window.requestListings = requestListings;
-  window.requestListing = requestListing;
-  window.selectListing = selectListing;
-  window.deselectListing = deselectListing;
-  window.createFavorite = createFavorite;
-  window.destroyFavorite = destroyFavorite;
-  window.logout = logout;
-  window.receiveErrors = receiveErrors;
-  window.favoriteListing = favoriteListing;
-  window.unfavoriteListing = unfavoriteListing;
+  window.success = data => console.log(data);
+  window.error = e => console.log(e);
 });

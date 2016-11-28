@@ -17,6 +17,11 @@ class Api::UsersController < ApplicationController
     render 'api/users/show'
   end
 
+  def favorites
+    @listings = User.find(params[:id]).favorite_listings.includes(:images)
+    render 'api/shared/listings'
+  end
+
   private
 
   def user_params

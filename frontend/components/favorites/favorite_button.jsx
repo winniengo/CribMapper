@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FavoriteIcon = ({ className, dispatchAction }) => {
+const FavoriteButton = ({ className, dispatchAction }) => {
   return (
     <button
       className={`background-img favorite-icon ${className}`}
@@ -8,4 +8,4 @@ const FavoriteIcon = ({ className, dispatchAction }) => {
   )
 }
 
-export default FavoriteIcon;
+export default FavoriteButton;

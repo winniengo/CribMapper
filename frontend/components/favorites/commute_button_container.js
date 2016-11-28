@@ -1,9 +1,8 @@
 import { connect } from 'react-redux';
-
 import { updateCurrentUser } from '../../actions/session';
 
 import { withRouter } from 'react-router'
-import Favorites from './favorites';
+import CommuteButton from './commute_button';
 
 
 const mapStateToProps = ({ session }) => ({
@@ -17,4 +16,4 @@ const mapDispatchToProps = dispatch => ({
 export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(Favorites));
+)(CommuteButton));

@@ -26,3 +26,12 @@ export const fetchListing = (id, success, error) => (
     error
   })
 );
+
+export const fetchFavoriteListings = (userId, success, error) => (
+  $.ajax({
+    url: `api/users/${userId}/favorites`,
+    method: 'GET',
+    success,
+    error
+  })
+)

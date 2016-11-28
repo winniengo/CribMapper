@@ -1,9 +1,10 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 
-import FavoriteIconContainer from '../../favorites/favorite_icon_container';
+import FavoriteButtonContainer from '../../favorites/favorite_button_container';
 import ListingPreviewGallery from './listing_preview_gallery';
-import StreetView from '../street_view';
+import CommuteMap from '../commute_map';
+// import StreetView from '../street_view';
 
 class ListingPreview extends React.Component {
   constructor(props) {
@@ -24,25 +25,10 @@ class ListingPreview extends React.Component {
   }
 
   render() {
-    const { listing } = this.props;
+    const { listing, destination } = this.props;
 
     return (
       <div className='listing-preview'>
-        <ListingPreviewGallery images={listing.images} />
-        <section>
-          <h2>${listing.rent}</h2>
-          <div className='details'>
-            <h4>{listing.bedrooms} Bed / {listing.bathrooms} Bath</h4>
-            <h4>{listing.listingType}</h4>
-          </div>
-          <FavoriteIconContainer id={listing.id} />
-        </section>
-        <description>
-          {listing.description}
-        </description>
-        <description>
-          <StreetView lat={listing.lat} lng={listing.lng} />
-        </description>
         <section className='sidebar-buttons'>
           <button
             className="back-to-results"
@@ -54,6 +40,21 @@ class ListingPreview extends React.Component {
             more details
           </button>
         </section>
+        <ListingPreviewGallery images={listing.images} />
+        <section>
+          <h2>${listing.rent}</h2>
+          <div className='details'>
+            <h4>{listing.bedrooms} Bed / {listing.bathrooms} Bath</h4>
+            <h4>{listing.listingType}</h4>
+          </div>
+          <FavoriteButtonContainer id={listing.id} />
+        </section>
+        <description>
+          {listing.description}
+        </description>
+        <CommuteMap
+          origin={{lat: listing.lat, lng: listing.lng}}
+          destination={{lat: destination.lat, lng: destination.lng}} />
       </div>
     );
   }

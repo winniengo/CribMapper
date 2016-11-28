@@ -34,7 +34,7 @@ class Navbar extends React.Component {
   componentWillReceiveProps(nextProps, ownState) {
     if (!this.props.loggedIn && nextProps.loggedIn) {
       if (this.state.redirectToFavorites) {
-        this.props.router.push('favorites');
+        this.props.router.push('favorites/map');
       }
       this.closeModal();
     }
@@ -42,7 +42,7 @@ class Navbar extends React.Component {
 
   handleRedirectToFavorites() {
     if (this.props.loggedIn) {
-      this.props.router.push('favorites');
+      this.props.router.push('favorites/map');
     } else {
       this.props.openModal();
       this.setState({redirectToFavorites: true})

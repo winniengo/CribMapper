@@ -1,4 +1,5 @@
 import {
+  REQUEST_FAVORITE_LISTINGS,
   REQUEST_LISTINGS,
   requestListings,
   receiveListings,
@@ -11,6 +12,7 @@ import {
   RESET_FILTER,
   RESET_FILTERS } from '../actions/filters';
 import {
+  fetchFavoriteListings,
   fetchListings,
   createListing,
   fetchListing } from '../utils/listings_api';
@@ -20,6 +22,10 @@ const listingsMiddleware = ({ dispatch, getState }) => next => action => {
   let success;
 
   switch(action.type) {
+    case REQUEST_FAVORITE_LISTINGS:
+      success = listings => dispatch(receiveListings(listings));
+      fetchFavoriteListings(action.userId, success, error);
+      return next(action);
     case REQUEST_LISTINGS:
       success = listings => dispatch(receiveListings(listings));
       fetchListings(action.filters, success, error);

@@ -19,13 +19,23 @@ export const selectListing = ({ listings }, { params }) => (
   listings.all[params.id] ? listings.all[params.id] : _emptyListing
 );
 
-export const allFavoriteListings = ({ session }) => (
+export const currentUserFavoriteListings = session => (
   session.currentUser ? session.currentUser.favoriteListings : []
 );
 
-export const favoriteStatus = (state, { id }) => (
-  allFavoriteListings(state).includes(parseInt(id))
+export const favoriteStatus = ({ session }, { id }) => (
+  currentUserFavoriteListings(session).includes(parseInt(id))
 );
+
+export const allFavoriteListings = ({ session, listings }) => {
+  let favoriteListings = [];
+  currentUserFavoriteListings(session).forEach(id => {
+    if (listings.all[id]) {
+      favoriteListings.push(listings.all[id]);
+    }
+  });
+  return favoriteListings;
+}
 
 // export const allTags = ({ filters }) => {
 //   let tags = [`> $${filters.rent.min}`, `< $${filters.rent.max}`];

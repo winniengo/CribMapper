@@ -35,8 +35,10 @@
 }
 
 .commute.fields {
-  margin-top: 10px;
-  justify-content: center;
+    margin: 10px;
+    width: 118px;
+    margin-left: 0;
+    align-items: center;
 }
 
 .driving {
@@ -54,7 +56,7 @@
 #commute-map {
   height: 250px;
   width: 100%;
-  margin: 10px 0;
+  // margin: 10px 0;
 }
 
 .controls {
@@ -85,4 +87,42 @@
 
 .work.modal {
   width: 500px;
+}
+
+.comparison-list ul {
+  text-transform: capitalize;
+}
+
+.comparison-list ul li ul {
+  display: flex;
+  justify-content: space-between;
+    display: flex;
+    // flex-direction: column;
+    // margin: 10px 0;
+      border-top: 1px solid #AB987A;
+      flex: 1;
+}
+
+.comparison-list ul li ul li {
+      width: 100px;
+    padding: 0 5px;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+        font-size: 14px;
+        font-weight: 300;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // border-bottom: 1px solid #AB987A;
+}
+
+
+
+.comparison-list ul li:nth-child(odd) {
+    background: #F1F1F1;
+}
+
+.comparison-list ul li:nth-child(even) {
+    background: #FAFAFA;
 }

@@ -19,7 +19,7 @@ $coral: #FF533D;
 .listing-preview > section {
   display: flex;
   justify-content: center;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   // padding: 10px;
 
 }
@@ -30,7 +30,7 @@ $coral: #FF533D;
   // justify-content: center;
   padding-bottom: 20px;
   // align-items: center;
-  width: 508px;
+  width: 458px;
   white-space: pre-line;
 }
 
@@ -39,6 +39,9 @@ $coral: #FF533D;
   font-size: 38px;
   // border-right: 1px solid #AB987A;
   padding: 0 10px;
+}
+.listing-preview > .listing-commute > section {
+  display: flex;
 }
 
 .listing-preview button.favorite-icon {
@@ -170,4 +173,37 @@ section.dots-gallery {
   // box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   background-image: image-url("dot-filled.png");
   opacity: 0.4;
+}
+
+.listing-preview > .listing-commute ul {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+    border-top: 1px solid #AB987A;
+    flex: 1;
+}
+
+.listing-preview > .listing-commute ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+    font-size: 14px;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // border-bottom: 1px solid #AB987A;
+}
+
+
+.listing-preview > .listing-commute ul li:nth-child(odd) {
+    background: #F1F1F1;
+}
+
+.listing-sidebar > .listing-commute ul li:nth-child(even) {
+    background: #FAFAFA;
+}
+
+.commute.fields button:nth-child(1) {
+  margin-left: 0;
 }

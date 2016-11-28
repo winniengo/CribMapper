@@ -7,7 +7,6 @@ import MarkerManager from '../../utils/marker_manager';
 class Map extends React.Component {
   constructor(props) {
     super(props);
-    // debugger
   }
 
   componentDidMount() {
@@ -17,19 +16,23 @@ class Map extends React.Component {
         lat: 37.7749,
         lng: -122.4194
       },
-      zoom: 13
+      zoom: 11
     };
 
     this.map = new google.maps.Map(mapDOMNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
     this.MarkerManager.updateMarkers(this.props.listings);
-    this.MarkerManager.styleMarkers(this.props.selected, this.props.hovered);
-    this._registerListeners();
+    if (this.props.pathname === '/search/index') {
+      this.MarkerManager.styleMarkers(this.props.selected, this.props.hovered);
+      this._registerListeners();
+    }
   }
 
   componentWillReceiveProps(nextProps) {
     this.MarkerManager.updateMarkers(nextProps.listings);
-    this.MarkerManager.styleMarkers(nextProps.selected, nextProps.hovered);
+    if (this.props.pathname === '/search/index') {
+      this.MarkerManager.styleMarkers(nextProps.selected, nextProps.hovered);
+    }
   }
 
   _registerListeners() {
@@ -48,21 +51,7 @@ class Map extends React.Component {
 
       this.props.updateBounds(bounds);
     });
-
-    // google.maps.event.addListener(this.map, 'click', (e) => {
-    //   this._handleClick({
-    //     lat: e.latLng.lat(),
-    //     lng: e.latLng.lng()
-    //   });
-    // });
   }
-
-  // _handleClick(coords) {
-  //   this.props.router.push({
-  //     pathname: "benches/new",
-  //     query: coords
-  //   });
-  // }
 
   render() {
     return (

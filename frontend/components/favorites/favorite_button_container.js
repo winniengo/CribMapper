@@ -1,17 +1,13 @@
 import { connect } from 'react-redux';
-// import { withRouter } from 'react-router';
 
 import { favoriteStatus } from '../../reducers/selectors';
 import { selectListing, deselectListing, hover } from '../../actions/listings';
 import { favoriteListing, unfavoriteListing } from '../../actions/favorites';
 import { openModal } from '../../actions/session';
 
-// import ListingIndex from './listing_index';
-
-import FavoriteIcon from './favorite_icon';
+import FavoriteButton from './favorite_button';
 
 const mapStateToProps = (state, ownProps) => {
-  // debugger
   return ({
     favorited: favoriteStatus(state, ownProps),
     loggedIn: Boolean(state.session.currentUser)
@@ -37,4 +33,4 @@ export default connect(
  mapStateToProps,
  mapDispatchToProps,
  mergeProps
-)(FavoriteIcon);
+)(FavoriteButton);

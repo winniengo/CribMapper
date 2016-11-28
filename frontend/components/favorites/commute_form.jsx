@@ -1,6 +1,6 @@
 import React from 'react';
 
-class WorkAddressForm extends React.Component{
+class CommuteForm extends React.Component{
   constructor(props) {
     super(props);
     const { lat, lng, place_id, address } = this.props.currentUser;
@@ -106,4 +106,4 @@ class WorkAddressForm extends React.Component{
   }
 }
 
-export default WorkAddressForm;
+export default CommuteForm;

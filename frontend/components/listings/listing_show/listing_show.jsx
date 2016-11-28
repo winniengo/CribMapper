@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 
-import FavoriteIconContainer from '../../favorites/favorite_icon_container';
+import FavoriteButtonContainer from '../../favorites/favorite_button_container';
 import ListingShowDetails from './listing_show_details';
 import ListingShowContact from './listing_show_contact';
 import ListingShowGallery from './listing_show_gallery';
@@ -57,7 +57,7 @@ class ListingShow extends React.Component {
           <section>
             <header>
               <h2>{header}</h2>
-              <FavoriteIconContainer id={id} />
+              <FavoriteButtonContainer id={id} />
             </header>
             <h3>{address}</h3>
           </section>
