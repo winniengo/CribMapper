@@ -2,11 +2,12 @@ import React from 'react';
 import { withRouter } from 'react-router';
 
 import FavoriteButtonContainer from '../../favorites/favorite_button_container';
-import ListingShowDetails from './listing_show_details';
+import ListingDetails from '../listing_details';
 import ListingShowContact from './listing_show_contact';
 import ListingShowGallery from './listing_show_gallery';
+import ListingHeader from '../listing_header';
 import StreetView from '../street_view';
-import CommuteMap from '../commute_map';
+import ListingCommute from '../listing_commute';
 
 class ListingShow extends React.Component {
   constructor(props) {
@@ -41,9 +42,8 @@ class ListingShow extends React.Component {
       parking,
       listingType,
       images } = this.state;
-    const { destination } = this.props;
+    const { listing, destination } = this.props;
 
-    const header = `$${rent} - ${bedrooms} Bed / ${bathrooms} Bath`;
     const petFriendly = cats || dogs ? "- Friendly" : "No Pets";
 
     return (
@@ -54,13 +54,7 @@ class ListingShow extends React.Component {
             onClick={this.returnToListings}>
             ← Back to results
           </button>
-          <section>
-            <header>
-              <h2>{header}</h2>
-              <FavoriteButtonContainer id={id} />
-            </header>
-            <h3>{address}</h3>
-          </section>
+          <ListingHeader listing={listing} />
           <ListingShowGallery images={images} />
           <section>
             <p className='description'>{description}</p>
@@ -73,8 +67,8 @@ class ListingShow extends React.Component {
           <StreetView lat={lat} lng={lng} />
         </section>
         <section className="listing-sidebar">
-          <ListingShowDetails listing={this.props.listing} />
-          <CommuteMap
+          <ListingDetails listing={listing} />
+          <ListingCommute
             origin={{ lat, lng }}
             destination={{lat: destination.lat, lng: destination.lng}} />
           <ListingShowContact contact={""}/>

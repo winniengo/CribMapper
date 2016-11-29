@@ -1,6 +1,6 @@
 import React from 'react';
 
-class CommuteMap extends React.Component {
+class ListingCommute extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -89,10 +89,12 @@ class CommuteMap extends React.Component {
               <div className="background-img walking icon" />
             </button>
           </div>
-          <ul>
-            <li><h4>Distance</h4>{this.state.distance}</li>
-            <li><h4>Duration</h4>{this.state.duration}</li>
-          </ul>
+          <section className="listing-details">
+            <ul>
+              <li><h4>Distance</h4>{this.state.distance}</li>
+              <li><h4>Duration</h4>{this.state.duration}</li>
+            </ul>
+          </section>
         </section>
         <div id="commute-map" />
       </section>
@@ -100,4 +102,4 @@ class CommuteMap extends React.Component {
   }
 }
 
-export default CommuteMap;
+export default ListingCommute;

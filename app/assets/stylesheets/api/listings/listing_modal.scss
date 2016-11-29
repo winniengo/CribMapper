@@ -1,0 +1,35 @@
+$light-blue: #8EAEBD;
+$navy-blue: #0F1626;
+$leather: #AB987A;
+$coral: #FF533D;
+$light-grey: #e8edf3;
+$dark-grey: #d0dae6;
+
+.listing-modal {
+}
+
+.listing-modal > section {
+  padding-bottom: 10px;
+  white-space: pre-line;
+}
+
+.listing-modal > section > header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 36px;
+  text-transform: capitalize;
+}
+
+.listing-modal > section.description {
+  font-size: 14px;
+}
+
+.listing-modal h2 {
+  font-size: 36px;
+}
+
+.listing-modal h3 {
+  font-size: 24px;
+}

@@ -1,9 +1,5 @@
 import React from 'react';
 
-import ListingThumbnail from '../listing_thumbnail';
-import ListingPreviewGallery from '../listing_preview_gallery';
-import CommuteMap from '../commute_map';
-
 export default ({ origin, listing, handleClick }) => {
   return (
     <li className='list-item' onClick={handleClick}>

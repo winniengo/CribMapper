@@ -57,24 +57,24 @@ button.back-to-results:hover {
   padding-bottom: 20px;
 }
 
-.listing-main header {
+.listing-header header {
   padding-top: 20px;
   display: flex;
   flex-direction: row;
-      align-items: center;
+  align-items: center;
   justify-content: space-between;
 }
 
-.listing-main h2 {
+.listing-header h2 {
   // font-weight: 400;
-  font-size: 38px;
+  font-size: 36px;
   // font-weight: 400;
 }
 
-.listing-main h3 {
+.listing-header h3 {
   font-size: 24px;
-  padding-top: 5px;
-  text-transform: capitalize;
+  // padding-top: 5px;
+  // text-transform: capitalize;
   // font-weight: 400;
 }
 
@@ -184,15 +184,17 @@ opacity: 0.8;
 
 /* Listing Details **************************/
 .listing-details {
+  text-transform: capitalize;
+  // width: 100%;
   // margin: 10px;
 }
 
-.listing-sidebar > section ul {
+.listing-details > ul {
   margin: 10px 0;
   border-top: 1px solid #AB987A;
 }
 
-.listing-sidebar > section ul li {
+.listing-details > ul li {
   padding: 10px;
   font-size: 14px;
   font-weight: 300;
@@ -202,11 +204,11 @@ opacity: 0.8;
   border-bottom: 1px solid #AB987A;
 }
 
-.listing-sidebar > section ul li:nth-child(even) {
+.listing-details > ul li:nth-child(even) {
   background: #FAFAFA;
 }
 
-.listing-sidebar > section ul li:nth-child(odd) {
+.listing-details > ul li:nth-child(odd) {
   background: #F1F1F1;
 }
 

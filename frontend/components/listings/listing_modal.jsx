@@ -1,22 +1,19 @@
 import React from 'react';
 
 import ListingPreviewGallery from './listing_preview_gallery';
-import ListingShowDetails from './listing_show/listing_show_details';
+import ListingDetails from './listing_details';
+import ListingHeader from './listing_header';
 
 export default ({ listing }) => (
-  <div className='listing-preview'>
+  <div className='listing-modal'>
     <ListingPreviewGallery images={listing.images} />
-    <section>
-      <h2>${listing.rent}</h2>
-      <div className='details'>
-        <h4>{listing.bedrooms} Bed / {listing.bathrooms} Bath</h4>
-        <h4>{listing.listingType}</h4>
-      </div>
-    </section>
-    <description>
+    <ListingHeader listing={listing} />
+    <section className='description'>
       {listing.description}
-    </description>
-    <ListingShowDetails listing={listing} />
+    </section>
+    <section className='details'>
+      <ListingDetails listing={listing} />
+    </section>
   </div>
 );
 

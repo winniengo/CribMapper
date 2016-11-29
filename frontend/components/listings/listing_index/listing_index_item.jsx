@@ -1,7 +1,7 @@
 import React from 'react';
 
 import FavoriteButtonContainer from '../../favorites/favorite_button_container';
-import ListingThumbnail from '../listing_thumbnail';
+import ListingImageThumbnail from '../listing_image_thumbnail';
 
 const ListingIndexItem = ({ listing, clssName, handleFavorite, handleClick, handleMouseEnter, handleMouseOut }) => (
   <li
@@ -9,7 +9,7 @@ const ListingIndexItem = ({ listing, clssName, handleFavorite, handleClick, hand
     onClick={handleClick}
     onMouseEnter={handleMouseEnter}
     onMouseOut={handleMouseOut}>
-    <ListingThumbnail src={listing.images[0].src} />
+    <ListingImageThumbnail src={listing.images[0].src} />
     <description>
       <header>
         <h3>${listing.rent}</h3>

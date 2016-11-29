@@ -3,7 +3,7 @@ import { withRouter } from 'react-router';
 
 import FavoriteButtonContainer from '../../favorites/favorite_button_container';
 import ListingPreviewGallery from '../listing_preview_gallery';
-import CommuteMap from '../commute_map';
+import ListingCommute from '../listing_commute';
 // import StreetView from '../street_view';
 
 class ListingPreview extends React.Component {
@@ -52,7 +52,7 @@ class ListingPreview extends React.Component {
         <description>
           {listing.description}
         </description>
-        <CommuteMap
+        <ListingCommute
           origin={{lat: listing.lat, lng: listing.lng}}
           destination={{lat: destination.lat, lng: destination.lng}} />
       </div>

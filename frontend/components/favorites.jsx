@@ -11,7 +11,12 @@ const customStyles = {
     right                 : 'auto',
     bottom                : 'auto',
     marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
+    transform             : 'translate(-50%, -50%)',
+    width                 : '80%',
+    height                : '80%',
+    overflow              : 'scroll',
+    maxWidth              : '900px',
+    minWidth             : '660px'
   }
 };
 
