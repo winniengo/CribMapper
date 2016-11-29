@@ -8,6 +8,7 @@ export default ({ listings, origin }) => {
       <ul>
         <li className='header'>
           <ul>
+            <li><h3>type</h3></li>
             <li><h3>rent</h3></li>
             <li><h3>bedrooms</h3></li>
             <li><h3>bathrooms</h3></li>

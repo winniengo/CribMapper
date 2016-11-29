@@ -17,7 +17,7 @@ import Favorites from './favorites';
 import Sidebar from './search/sidebar';
 import MapContainer from './search/map_container';
 import ListingListContainer from './listings/listing_list/listing_list_container';
-
+import ListingThumbnailsContainer from './listings/listing_thumbnails_container';
 import { requestListing, requestFavoriteListings } from '../actions/listings';
 import { openModal } from '../actions/session';
 
@@ -61,7 +61,7 @@ const Root = ({ store }) => {
           <Route path="favorites" components={{main: Favorites, footer: AboutMe}} onEnter={_ensureLoggedIn} >
             <Route path='list-view' component={ListingListContainer} onEnter={_ensureFavoriteListings} />
             <Route path='map-view' component={MapContainer} onEnter={_ensureFavoriteListings} />
-            <Route path='thumbnail-view' component={ListingListContainer} onEnter={_ensureFavoriteListings} />
+            <Route path='thumbnail-view' component={ListingThumbnailsContainer} onEnter={_ensureFavoriteListings} />
           </Route>
         </Route>
       </Router>

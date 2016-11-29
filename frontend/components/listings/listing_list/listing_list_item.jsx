@@ -8,6 +8,7 @@ export default ({ origin, listing, handleClick }) => {
   return (
     <li className='list-item' onClick={handleClick}>
       <ul>
+        <li>{listing.listingType}</li>
         <li>${listing.rent}</li>
         <li>{listing.bedrooms}</li>
         <li>{listing.bathrooms}</li>

@@ -109,7 +109,7 @@
     /* justify-content: center; */
     align-items: center;
     background: white;
-    min-width: 1000px;
+    min-width: 960px;
     border-radius: 5px;
 }
 
@@ -147,7 +147,7 @@
 }
 
 .comparison-list > ul > li > ul > li {
-      width: 120px;
+      width: 100px;
     padding: 0 5px;
       display: flex;
       justify-content: space-between;
@@ -186,6 +186,7 @@
 
 
 .favorites {
+  opacity: 0.98;
     display: flex;
     flex-direction: column;
     margin: 10px;
@@ -209,11 +210,13 @@ padding: 20px;
   width: 100%;
   display: flex;
   justify-content: center;
-    background-image: image-url('tn7fjdtau40-patrick-tomasso.jpg');
+    background-image: image-url('ndlpvogrdjm-matthew-smith.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+// /Users/winniengo/dev/cribMapper/app/assets/images/ndlpvogrdjm-matthew-smith.jpg
 
 .views {
   display: flex;
