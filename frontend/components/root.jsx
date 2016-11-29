@@ -55,7 +55,7 @@ const Root = ({ store }) => {
           <IndexRedirect to="search/index" />
           <Route path="search" component={Search}>
             <Route path='index' components={{main: MapContainer, sidebar: Sidebar}} />
-            <Route path=':id' component={{main: MapContainer, sidebar: ListingPreviewContainer}} onEnter={_ensureListing} />
+            <Route path=':id' components={{main: MapContainer, sidebar: ListingPreviewContainer}} onEnter={_ensureListing} />
           </Route>
           <Route path="listings/:id" components={{main: ListingShowContainer, footer: AboutMe}} onEnter={_ensureListing} />
           <Route path="favorites" components={{main: Favorites, footer: AboutMe}} onEnter={_ensureLoggedIn} >

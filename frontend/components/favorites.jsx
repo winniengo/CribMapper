@@ -7,14 +7,14 @@ import AboutMe from './about_me';
 class Favorites extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { selected: 'list-view'};
+    this.state = { selected: props.location.pathname.split('/').slice(-1)[0]};
 
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(e) {
     this.setState({selected: e.currentTarget.value});
-    this.props.router.push(`favorites/${e.currentTarget.value}`);
+    this.props.router.push(`/favorites/${e.currentTarget.value}`);
   }
 
   renderButtons() {
@@ -34,7 +34,7 @@ class Favorites extends React.Component {
 
   render() {
     return (
-
+      <div className='background'>
       <div className='favorites'>
         <div className="views">
           {this.renderButtons()}
@@ -46,6 +46,7 @@ class Favorites extends React.Component {
               </div>
         </section>
       </div>
+    </div>
     )
   }
 }

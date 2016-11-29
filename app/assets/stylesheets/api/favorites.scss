@@ -205,6 +205,16 @@ padding: 20px;
     // align-items: center;
 }
 
+.background {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+    background-image: image-url('tn7fjdtau40-patrick-tomasso.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .views {
   display: flex;
   justify-content: space-around;
@@ -219,7 +229,8 @@ padding: 20px;
       display: flex;
     justify-content: center;
     padding: 10px;
-    border: 2px solid white;
+    // border: 2px solid white;
+    margin: 2px 2px 0 2px;
     background: #e8edf3;
     text-transform: capitalize;
     transition: border-bottom-color 0.2s linear 0s;
@@ -241,9 +252,9 @@ padding: 20px;
 }
 
 .views > button:nth-child(1) {
-  border-left: none;
+  margin-left: 0;
 }
 
 .views > button:nth-last-child(1) {
-  border-right: none;
+  margin-right: 0;
 }
