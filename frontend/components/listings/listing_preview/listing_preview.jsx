@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router';
 
 import FavoriteButtonContainer from '../../favorites/favorite_button_container';
-import ListingPreviewGallery from './listing_preview_gallery';
+import ListingPreviewGallery from '../listing_preview_gallery';
 import CommuteMap from '../commute_map';
 // import StreetView from '../street_view';
 

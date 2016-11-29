@@ -91,6 +91,10 @@ $dark-grey: #d0dae6;
   background: $dark-grey;
 }
 
+.fields > button:nth-child(1) {
+  margin-left: 0;
+}
+
 .fields > button.selected {
   background:$light-blue;
   // color: white;

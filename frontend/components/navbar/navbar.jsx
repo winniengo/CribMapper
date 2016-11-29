@@ -34,7 +34,7 @@ class Navbar extends React.Component {
   componentWillReceiveProps(nextProps, ownState) {
     if (!this.props.loggedIn && nextProps.loggedIn) {
       if (this.state.redirectToFavorites) {
-        this.props.router.push('favorites/map');
+        this.props.router.push('favorites/list-view');
       }
       this.closeModal();
     }
@@ -42,7 +42,7 @@ class Navbar extends React.Component {
 
   handleRedirectToFavorites() {
     if (this.props.loggedIn) {
-      this.props.router.push('favorites/map');
+      this.props.router.push('favorites/list-view');
     } else {
       this.props.openModal();
       this.setState({redirectToFavorites: true})
@@ -73,7 +73,7 @@ class Navbar extends React.Component {
 
   render () {
     return (
-      <div className='navbar'>
+      <header className='navbar'>
         <div className='logo'>
           <Link to="/">
             <div className='logo-img background-img' />
@@ -88,7 +88,7 @@ class Navbar extends React.Component {
           </div>
           {this.renderSessionLink()}
         </div>
-      </div>
+      </header>
     );
   }
 }

@@ -1,3 +1,8 @@
+User.destroy_all
+Listing.destroy_all
+Image.destroy_all
+Favorite.destroy_all
+
 guest = User.create!({
     email: 'guest',
     name: 'Guest',

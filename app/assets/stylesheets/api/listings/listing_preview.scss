@@ -184,8 +184,9 @@ section.dots-gallery {
 }
 
 .listing-preview > .listing-commute ul li {
-  display: flex;
-  justify-content: space-between;
+  // display: flex;
+  // justify-content: space-between;
+  border-bottom: 1px solid #AB987A;
   padding: 10px;
     font-size: 14px;
     font-weight: 300;

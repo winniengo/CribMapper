@@ -12,11 +12,11 @@ import SessionFormContainer from './session/session_form_container';
 import ListingIndexContainer from './listings/listing_index/listing_index_container';
 import ListingShowContainer from './listings/listing_show/listing_show_container';
 import ListingPreviewContainer from './listings/listing_preview/listing_preview_container';
-// import FavoritesContainer from './favorites/favorites_container';
+// import FavoritesContainer from './favorites_container';
 import Favorites from './favorites';
 import Sidebar from './search/sidebar';
 import MapContainer from './search/map_container';
-import ListContainer from './list_container';
+import ListingListContainer from './listings/listing_list/listing_list_container';
 
 import { requestListing, requestFavoriteListings } from '../actions/listings';
 import { openModal } from '../actions/session';
@@ -54,14 +54,14 @@ const Root = ({ store }) => {
         <Route path="/" component={App}>
           <IndexRedirect to="search/index" />
           <Route path="search" component={Search}>
-            <Route path='index' component={Sidebar} />
-            <Route path=':id' component={ListingPreviewContainer} onEnter={_ensureListing} />
+            <Route path='index' components={{main: MapContainer, sidebar: Sidebar}} />
+            <Route path=':id' component={{main: MapContainer, sidebar: ListingPreviewContainer}} onEnter={_ensureListing} />
           </Route>
           <Route path="listings/:id" components={{main: ListingShowContainer, footer: AboutMe}} onEnter={_ensureListing} />
-          <Route path="favorites" component={Favorites} onEnter={_ensureLoggedIn} >
-            <Route path='map' component={MapContainer} onEnter={_ensureFavoriteListings} />
-            <Route path='list' component={ListContainer} onEnter={_ensureFavoriteListings} />
-            <Route path=':id' component={ListingShowContainer} onEnter={_ensureListing} />
+          <Route path="favorites" components={{main: Favorites, footer: AboutMe}} onEnter={_ensureLoggedIn} >
+            <Route path='list-view' component={ListingListContainer} onEnter={_ensureFavoriteListings} />
+            <Route path='map-view' component={MapContainer} onEnter={_ensureFavoriteListings} />
+            <Route path='thumbnail-view' component={ListingListContainer} onEnter={_ensureFavoriteListings} />
           </Route>
         </Route>
       </Router>

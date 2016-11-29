@@ -16,21 +16,21 @@ class Map extends React.Component {
         lat: 37.7749,
         lng: -122.4194
       },
-      zoom: 11
+      zoom: 13
     };
 
     this.map = new google.maps.Map(mapDOMNode, mapOptions);
-    this.MarkerManager = new MarkerManager(this.map);
+    this.MarkerManager = new MarkerManager(this.map, this.props.style);
+    this._registerListeners();
     this.MarkerManager.updateMarkers(this.props.listings);
-    if (this.props.pathname === '/search/index') {
+    if (this.props.style) {
       this.MarkerManager.styleMarkers(this.props.selected, this.props.hovered);
-      this._registerListeners();
     }
   }
 
   componentWillReceiveProps(nextProps) {
     this.MarkerManager.updateMarkers(nextProps.listings);
-    if (this.props.pathname === '/search/index') {
+    if (this.props.style) {
       this.MarkerManager.styleMarkers(nextProps.selected, nextProps.hovered);
     }
   }

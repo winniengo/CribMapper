@@ -1,8 +1,12 @@
 import React from 'react';
 
-const ListItem = ({ listing }) => {
+import ListingThumbnail from '../listing_thumbnail';
+import ListingPreviewGallery from '../listing_preview_gallery';
+import CommuteMap from '../commute_map';
+
+export default ({ origin, listing, handleClick }) => {
   return (
-    <li>
+    <li className='list-item' onClick={handleClick}>
       <ul>
         <li>${listing.rent}</li>
         <li>{listing.bedrooms}</li>
@@ -15,5 +19,3 @@ const ListItem = ({ listing }) => {
     </li>
   );
 };
-
-export default ListItem;

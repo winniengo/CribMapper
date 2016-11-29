@@ -5,11 +5,15 @@ const selected = 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478649431/l
 const hovered = 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478648973/listings/pointer-red-big.png';
 
 export default class MarkerManager {
-  constructor(map) {
+  constructor(map, style) {
+    this.style = style;
     this.map = map;
     this.markers = [];
-    this.hovered = [];
-    this.selected = [];
+
+    if (this.style) {
+      this.hovered = [];
+      this.selected = [];
+    }
   }
 
   updateMarkers(listings) {
@@ -43,7 +47,10 @@ export default class MarkerManager {
       position
     });
 
-    this._addListeners(marker);
+    this._addOnClickListener(marker);
+    if (this.style) {
+      this._addStyleListeners(marker);
+    }
     this.markers.push(marker);
   }
 
@@ -75,7 +82,7 @@ export default class MarkerManager {
     }
   }
 
-  _addListeners(marker) {
+  _addStyleListeners(marker) {
     marker.addListener('mouseover', e => {
       this.hovered.push(marker);
       this._addBounce();
@@ -84,7 +91,9 @@ export default class MarkerManager {
     marker.addListener('mouseout', e => {
       this._removeBounce();
     });
+  }
 
+  _addOnClickListener(marker) {
     marker.addListener('click', e => hashHistory.push(`/search/${marker.listingId}`));
   }
 

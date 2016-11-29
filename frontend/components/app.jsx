@@ -6,11 +6,20 @@ const App = ({ children, main, footer }) => {
   return (
     <div id='app'>
       <NavbarContainer/>
-      {children}
-      {main}
+      <main className='app-content'>
+        {children}
+        {main}
+      </main>
       {footer}
     </div>
   )
 };
 
 export default App;
+
+
+// <body class="Site">
+//   <header>…</header>
+//   <main class="Site-content">…</main>
+//   <footer>…</footer>
+// </body>

@@ -11,6 +11,12 @@ $dark-grey: #d0dae6;
   flex-direction: column;
 }
 
+.app-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
 .app {
   width: 100%;
   height: calc(100vh - 40px);
@@ -18,10 +24,20 @@ $dark-grey: #d0dae6;
   flex: 1;
   align-items: stretch;
   flex-direction: row;
+  min-height: 500px;
+}
+
+.main {
+  // width: 100%;
+      width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 #map {
   width:100%;
+  flex: 1;
+  min-height: 400px;
 }
 
 #sidebar {
