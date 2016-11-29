@@ -1,8 +1,8 @@
 import React from 'react';
 import ListingListItem from './listing_list_item';
 
-export default ({ listings, origin }) => {
-  const handleClick = listing => e => console.log(listing.id);
+export default ({ listings, origin, openModal }) => {
+  const handleClick = listing => e => openModal(listing);
   return (
 
       <ul>

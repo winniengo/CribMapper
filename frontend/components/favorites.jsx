@@ -1,20 +1,46 @@
 import React from 'react';
-import { withRouter }from 'react-router'
+import Modal from 'react-modal';
+import { withRouter }from 'react-router';
 
-// import ListingIndexContainer from './listings/listing_index/listing_index_container';
-import AboutMe from './about_me';
+import ListingModal from './listings/listing_modal';
+
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)'
+  }
+};
+
 
 class Favorites extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { selected: props.location.pathname.split('/').slice(-1)[0]};
+    this.state = {
+      selected: props.location.pathname.split('/').slice(-1)[0],
+      modalIsOpen: false,
+      listing: null
+    };
 
     this.handleClick = this.handleClick.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
   handleClick(e) {
     this.setState({selected: e.currentTarget.value});
     this.props.router.push(`/favorites/${e.currentTarget.value}`);
+  }
+
+  openModal(listing) {
+    this.setState({modalIsOpen: true, listing });
+  }
+
+  closeModal() {
+    this.setState({modalIsOpen: false});
   }
 
   renderButtons() {
@@ -35,18 +61,26 @@ class Favorites extends React.Component {
   render() {
     return (
       <div className='background'>
-      <div className='favorites'>
-        <div className="views">
-          {this.renderButtons()}
+        <div className='favorites'>
+          <Modal
+            isOpen={this.state.modalIsOpen}
+            onAfterOpen={this.afterOpenModal}
+            onRequestClose={this.closeModal}
+            style={customStyles}>
+            <ListingModal
+              listing={this.state.listing} />
+          </Modal>
+          <div className="views">
+            {this.renderButtons()}
+          </div>
+          <section className='view'>
+                <div className='comparison-list'>
+                  <h2>Compare your Favorites</h2>
+                  {React.cloneElement(this.props.children, { openModal: this.openModal })}
+                </div>
+          </section>
         </div>
-        <section className='view'>
-              <div className='comparison-list'>
-                <h2>Compare your Favorites</h2>
-          {this.props.children}
-              </div>
-        </section>
       </div>
-    </div>
     )
   }
 }

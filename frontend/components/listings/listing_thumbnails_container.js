@@ -7,7 +7,7 @@ import { allFavoriteListings } from '../../reducers/selectors';
 
 import ListingThumbnails from './listing_thumbnails';
 
-const mapStateToProps = (state, { pathname } ) => {
+const mapStateToProps = (state, ownProps ) => {
   return ({
     listings: allFavoriteListings(state),
     origin: {lat: state.session.currentUser.lat, lng: state.session.currentUser.lng}

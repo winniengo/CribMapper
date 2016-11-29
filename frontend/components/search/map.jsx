@@ -16,7 +16,7 @@ class Map extends React.Component {
         lat: 37.7749,
         lng: -122.4194
       },
-      zoom: 13,
+      zoom: 12,
       scrollwheel: false
     };
 
@@ -24,7 +24,7 @@ class Map extends React.Component {
     this.MarkerManager = new MarkerManager(this.map, this.props.style);
     this.MarkerManager.updateMarkers(this.props.listings);
     if (this.props.style) {
-      debugger
+      // debugger
       this.MarkerManager.styleMarkers(this.props.selected, this.props.hovered);
       this._registerListeners();
     }

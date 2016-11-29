@@ -15,7 +15,7 @@ const customStyles = {
   }
 };
 
-class Favorites extends React.Component{
+class CommuteButton extends React.Component{
   constructor(props) {
     super(props);
     this.state = {modalIsOpen: false};
@@ -71,4 +71,4 @@ class Favorites extends React.Component{
   }
 }
 
-export default Favorites;
+export default CommuteButton;
