@@ -40,14 +40,14 @@ class ListingPreview extends React.Component {
           </button>
         </section>
         <ListingPreviewGallery images={listing.images} />
-        <section>
+        <header>
           <h2>${listing.rent}</h2>
           <div className='details'>
             <h4>{listing.bedrooms} Bed / {listing.bathrooms} Bath</h4>
             <h4>{listing.listingType}</h4>
           </div>
           <FavoriteButtonContainer id={listing.id} />
-        </section>
+        </header>
         <description>
           {listing.description}
         </description>

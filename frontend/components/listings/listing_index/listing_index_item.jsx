@@ -12,7 +12,7 @@ const ListingIndexItem = ({ listing, clssName, handleFavorite, handleClick, hand
     <ListingImageThumbnail src={listing.images[0].src} />
     <description>
       <header>
-        <h3>${listing.rent}</h3>
+        <h2>${listing.rent}</h2>
         <FavoriteButtonContainer id={listing.id} />
       </header>
       <h4>{listing.bedrooms} Bed / {listing.bathrooms} Bath</h4>

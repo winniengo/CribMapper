@@ -97,8 +97,8 @@ class ListingCommute extends React.Component {
           </div>
           <section className="listing-details">
             <ul>
-              <li><h4>Distance</h4>{this.state.distance}</li>
-              <li><h4>Duration</h4>{this.state.duration}</li>
+              <li>Distance<p>{this.state.distance}</p></li>
+              <li>Duration<p>{this.state.duration}</p></li>
             </ul>
           </section>
         </section>

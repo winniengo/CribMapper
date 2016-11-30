@@ -47,13 +47,10 @@ $coral: #FF533D;
 }
 
 .listing-index-item header {
-  border-bottom: 1px solid #AB987A;
-  font-weight: 400;
-  font-size: 32px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.listing-index-item h4 {
-  font-size: 18px;
+    border-bottom: 1px solid #AB987A;
+    font-weight: 400;
+    font-size: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
