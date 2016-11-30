@@ -1,10 +1,9 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 
-import FavoriteButtonContainer from '../../favorites/favorite_button_container';
+import FavoriteButtonContainer from '../../buttons/favorite_button_container';
 import ListingPreviewGallery from '../listing_preview_gallery';
 import ListingCommute from '../listing_commute';
-// import StreetView from '../street_view';
 
 class ListingPreview extends React.Component {
   constructor(props) {

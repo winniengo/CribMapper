@@ -1,5 +1,7 @@
 import React from 'react';
 
+import CommuteButtonContainer from '../buttons/commute_button_container';
+
 class ListingCommute extends React.Component {
   constructor(props) {
     super(props);
@@ -22,7 +24,7 @@ class ListingCommute extends React.Component {
   componentDidMount() {
     this.directionsService = new google.maps.DirectionsService;
     this.directionsDisplay = new google.maps.DirectionsRenderer;
-    const mapDOMNode = document.getElementById('commute-map');
+    const mapDOMNode = document.getElementById('listing-commute-map');
     const mapOptions = {
       center: {
         lat: this.props.lat || 37.7749,
@@ -70,7 +72,10 @@ class ListingCommute extends React.Component {
   render() {
     return (
       <section className="listing-commute">
-        <h3>Your Work Commute</h3>
+        <header>
+          <h3>Calculate your Commute</h3>
+          <CommuteButtonContainer />
+        </header>
         <section>
           <div className="commute fields">
             <button
@@ -88,6 +93,7 @@ class ListingCommute extends React.Component {
               onClick={this.handleClick("WALKING")}>
               <div className="background-img walking icon" />
             </button>
+
           </div>
           <section className="listing-details">
             <ul>
@@ -96,7 +102,7 @@ class ListingCommute extends React.Component {
             </ul>
           </section>
         </section>
-        <div id="commute-map" />
+        <div id="listing-commute-map" />
       </section>
     );
   }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import FavoriteButtonContainer from '../../favorites/favorite_button_container';
+import FavoriteButtonContainer from '../../buttons/favorite_button_container';
 import ListingImageThumbnail from '../listing_image_thumbnail';
 
 const ListingIndexItem = ({ listing, clssName, handleFavorite, handleClick, handleMouseEnter, handleMouseOut }) => (

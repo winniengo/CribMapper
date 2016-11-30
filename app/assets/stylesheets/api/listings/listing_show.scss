@@ -29,12 +29,15 @@ $dark-grey: #d0dae6;
 
 /* Listing Show **************************/
 .listing-show {
-  min-width: 970px;
+  min-width: 960px;
   display: flex;
   justify-content: center;
   margin: 10px;
 }
 
+.listing-show h3 {
+  font-size: 18px;
+}
 button.back-to-results {
   background: $light-grey;
   padding: 10px 0;
@@ -91,7 +94,7 @@ button.back-to-results:hover {
 }
 
 .listing-sidebar h3 {
-  font-size: 18px;
+  // font-size: 18px;
 }
 
 .listing-sidebar > section {
@@ -220,6 +223,15 @@ opacity: 0.8;
   // border-bottom: 1px solid #FF533D;
   display: flex;
   flex-direction: column;
+}
+
+
+.listing-commute > header {
+  display: flex
+}
+
+.listing-commute h3 {
+  padding-right: 20px;
 }
 
 .listing-commmute ul {

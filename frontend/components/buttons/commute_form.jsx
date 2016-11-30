@@ -15,7 +15,7 @@ class CommuteForm extends React.Component{
   }
 
   initMap() {
-    const mapDOMNode = document.getElementById('commute-map');
+    const mapDOMNode = document.getElementById('commute-form-map');
     const mapOptions = { // default to sf
       center: {
         lat: this.state.lat || 37.7749,
@@ -87,7 +87,7 @@ class CommuteForm extends React.Component{
             to calculate the commute to your perfect rental
           </section>
           <form onSubmit={this.handleSubmit}>
-            <div id="commute-map"/>
+            <div id="commute-form-map"/>
             <label>
               <input
                 id="pac-input"

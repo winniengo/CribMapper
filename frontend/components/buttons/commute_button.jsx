@@ -55,8 +55,8 @@ class CommuteButton extends React.Component{
 
   render() {
     return (
-       <div>
-        <button onClick={this.openModal}>Calculate your Commute</button>
+       <div className='link-container'>
+        <a onClick={this.openModal}>{this.props.currentUser.lat ? 'Update' : 'Add'}</a>
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}

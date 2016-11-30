@@ -57,6 +57,10 @@
   background-image: image-url("map-view.png");
 }
 
+.street-view {
+  background-image: image-url("street-view.png");
+}
+
 .list-view {
   background-image: image-url("list-view-navy.png");
 }
@@ -65,10 +69,15 @@
   background-image: image-url("thumbnail-view-navy.png");
 }
 
-#commute-map {
+#listing-commute-map {
   height: 250px;
   width: 100%;
   // margin: 10px 0;
+}
+
+#commute-form-map {
+  height: 250px;
+  width: 100%;
 }
 
 .controls {
@@ -204,6 +213,10 @@ padding: 20px;
     // display: flex;
     // justify-content: center;
     // align-items: center;
+}
+
+.view > section {
+  width: 100%;
 }
 
 .background {

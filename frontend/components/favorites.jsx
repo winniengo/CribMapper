@@ -35,6 +35,12 @@ class Favorites extends React.Component {
     this.closeModal = this.closeModal.bind(this);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (!nextProps.loggedIn) {
+      this.props.router.push('/search/index');
+    }
+  }
+
   handleClick(e) {
     this.setState({selected: e.currentTarget.value});
     this.props.router.push(`/favorites/${e.currentTarget.value}`);
@@ -81,7 +87,7 @@ class Favorites extends React.Component {
           <section className='view'>
                 <div className='comparison-list'>
                   <h2>Compare your Favorites</h2>
-                  {React.cloneElement(this.props.children, { openModal: this.openModal })}
+                  {React.cloneElement(this.props.children, { openModal: this.openModal, listings: this.props.listings })}
                 </div>
           </section>
         </div>

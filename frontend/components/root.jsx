@@ -13,11 +13,12 @@ import ListingIndexContainer from './listings/listing_index/listing_index_contai
 import ListingShowContainer from './listings/listing_show/listing_show_container';
 import ListingPreviewContainer from './listings/listing_preview/listing_preview_container';
 // import FavoritesContainer from './favorites_container';
-import Favorites from './favorites';
+import FavoritesContainer from './favorites_container';
 import Sidebar from './search/sidebar';
-import MapContainer from './search/map_container';
-import ListingListContainer from './listings/listing_list/listing_list_container';
-import ListingThumbnailsContainer from './listings/listing_thumbnails_container';
+import MapContainer from './search/map_container'
+import Map from './search/map';
+import ListingList from './listings/listing_list/listing_list';
+import ListingThumbnails from './listings/listing_thumbnails';
 import { requestListing, requestFavoriteListings } from '../actions/listings';
 import { openModal } from '../actions/session';
 
@@ -58,10 +59,10 @@ const Root = ({ store }) => {
             <Route path=':id' components={{main: MapContainer, sidebar: ListingPreviewContainer}} onEnter={_ensureListing} />
           </Route>
           <Route path="listings/:id" components={{main: ListingShowContainer, footer: AboutMe}} onEnter={_ensureListing} />
-          <Route path="favorites" components={{main: Favorites, footer: AboutMe}} onEnter={_ensureLoggedIn} >
-            <Route path='list-view' component={ListingListContainer} onEnter={_ensureFavoriteListings} />
-            <Route path='map-view' component={MapContainer} onEnter={_ensureFavoriteListings} />
-            <Route path='thumbnail-view' component={ListingThumbnailsContainer} onEnter={_ensureFavoriteListings} />
+          <Route path="favorites" components={{main: FavoritesContainer, footer: AboutMe}} onEnter={_ensureLoggedIn} >
+            <Route path='list-view' component={ListingList} onEnter={_ensureFavoriteListings} />
+            <Route path='map-view' component={Map} onEnter={_ensureFavoriteListings} />
+            <Route path='thumbnail-view' component={ListingThumbnails} onEnter={_ensureFavoriteListings} />
           </Route>
         </Route>
       </Router>

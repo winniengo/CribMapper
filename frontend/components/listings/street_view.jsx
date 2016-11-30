@@ -19,7 +19,7 @@ class StreetView extends React.Component {
     }
   }
 
-  renderStreetView(lat, lng) {
+  renderStreetView(lat = 37.7749, lng = -122.4194) {
     this.panorama = new google.maps.StreetViewPanorama(
       document.getElementById('street-view'), {
         position: { lat, lng },
@@ -34,7 +34,6 @@ class StreetView extends React.Component {
   render() {
     return (
       <section>
-        <h3>Street View</h3>
         <div id='street-view'/>
       </section>
     )
