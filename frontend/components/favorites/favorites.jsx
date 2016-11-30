@@ -2,7 +2,7 @@ import React from 'react';
 import Modal from 'react-modal';
 import { withRouter }from 'react-router';
 
-import ListingModal from './listings/listing_modal';
+import ListingModal from '../listings/listing_modal';
 
 const customStyles = {
   content : {
@@ -20,7 +20,6 @@ const customStyles = {
   }
 };
 
-
 class Favorites extends React.Component {
   constructor(props) {
     super(props);
@@ -33,6 +32,7 @@ class Favorites extends React.Component {
     this.handleClick = this.handleClick.bind(this);
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.handleListingClick = this.handleListingClick.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -52,6 +52,10 @@ class Favorites extends React.Component {
 
   closeModal() {
     this.setState({modalIsOpen: false});
+  }
+
+  handleListingClick(listing) {
+    return () => this.openModal(listing);
   }
 
   renderButtons() {
@@ -85,10 +89,10 @@ class Favorites extends React.Component {
             {this.renderButtons()}
           </div>
           <section className='view'>
-                <div className='comparison-list'>
-                  <h2>Compare your Favorites</h2>
-                  {React.cloneElement(this.props.children, { openModal: this.openModal, listings: this.props.listings })}
-                </div>
+            <div className='comparison-list'>
+              <h2>Compare your Favorites</h2>
+              {React.cloneElement(this.props.children, { handleClick: this.handleListingClick, listings: this.props.listings })}
+            </div>
           </section>
         </div>
       </div>

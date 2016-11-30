@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
-import { allFavoriteListings } from '../reducers/selectors';
+import { allFavoriteListings } from '../../reducers/selectors';
 
 import Favorites from './favorites';
 
@@ -10,7 +10,7 @@ const mapStateToProps = state => ({
    listings: allFavoriteListings(state)
 });
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
+const mapDispatchToProps = (dispatch, ownProps) => ({ // TODO
 });
 
 export default connect(

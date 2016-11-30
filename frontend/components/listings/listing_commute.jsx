@@ -51,7 +51,6 @@ class ListingCommute extends React.Component {
       travelMode: this.state.travelMode
     }, (response, status) => {
       if (status === "OK") {
-        console.log(response);
         this.directionsDisplay.setDirections(response);
         this.setState({
           distance: response.routes[0].legs[0].distance.text,

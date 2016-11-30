@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router';
 
 import FavoriteButtonContainer from '../../buttons/favorite_button_container';
-import ListingPreviewGallery from '../listing_preview_gallery';
+import ListingGallery from '../listing_gallery';
 import ListingCommute from '../listing_commute';
 
 class ListingPreview extends React.Component {
@@ -39,7 +39,7 @@ class ListingPreview extends React.Component {
             more details
           </button>
         </section>
-        <ListingPreviewGallery images={listing.images} />
+        <ListingGallery images={listing.images} />
         <header>
           <h2>${listing.rent}</h2>
           <div className='details'>

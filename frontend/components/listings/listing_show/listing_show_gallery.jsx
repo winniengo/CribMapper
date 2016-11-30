@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ImageDisplay from '../image_display';
+
 class ListingShowGallery extends React.Component {
   constructor(props) {
     super(props)
@@ -18,9 +20,9 @@ class ListingShowGallery extends React.Component {
           selected: this.state.selected + 1
         }), 100);
       } else if (idx < this.state.selected ) {
-          this.intervalId = setInterval(() => this.setState({
-            selected: this.state.selected - 1
-          }), 100);
+        this.intervalId = setInterval(() => this.setState({
+          selected: this.state.selected - 1
+        }), 100);
       }
     }
   }
@@ -42,17 +44,12 @@ class ListingShowGallery extends React.Component {
       clearInterval(this.intervalId);
     }
 
-    const selectedSrc = this.props.images[this.state.selected].src;
-
     return (
       <section className='listing-gallery'>
-        <section className='image-display'>
-          <div className='selected' style={{backgroundImage: `url(${selectedSrc})`}} />
-          <div className='arrows'>
-            <button className='previous background-img' onClick={this.handlePrevious} />
-            <button className='next background-img' onClick={this.handleNext}/>
-          </div>
-        </section>
+        <ImageDisplay
+          src={this.props.images[this.state.selected].src}
+          handlePrevious={this.handlePrevious}
+          handleNext={this.handleNext} />
         <section className='thumbnail-gallery'>
           {this.props.images.map(({ src }, idx) => (
             <div

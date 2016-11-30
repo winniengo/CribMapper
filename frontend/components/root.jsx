@@ -6,19 +6,17 @@ import { Router, Route, IndexRoute, hashHistory, IndexRedirect } from 'react-rou
 import App from './app';
 import Search from './search/search';
 import AboutMe from './about_me';
-import SessionFormContainer from './session/session_form_container';
-// import SignupFormContainer from './session/signup_form_container';
-// import LoginFormContainer from './session/login_form_container';
-import ListingIndexContainer from './listings/listing_index/listing_index_container';
+import Sidebar from './search/sidebar';
+// import SessionFormContainer from './session/session_form_container';
+// import ListingIndexContainer from './listings/listing_index/listing_index_container';
 import ListingShowContainer from './listings/listing_show/listing_show_container';
 import ListingPreviewContainer from './listings/listing_preview/listing_preview_container';
-// import FavoritesContainer from './favorites_container';
-import FavoritesContainer from './favorites_container';
-import Sidebar from './search/sidebar';
+import FavoritesContainer from './favorites/favorites_container';
 import MapContainer from './search/map_container'
 import Map from './search/map';
 import ListingList from './listings/listing_list/listing_list';
 import ListingThumbnails from './listings/listing_thumbnails';
+
 import { requestListing, requestFavoriteListings } from '../actions/listings';
 import { openModal } from '../actions/session';
 
