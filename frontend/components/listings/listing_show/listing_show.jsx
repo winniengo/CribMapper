@@ -105,7 +105,7 @@ class ListingShow extends React.Component {
           <ListingDetails listing={listing} />
           <ListingCommute
             origin={{ lat, lng }}
-            destination={{lat: destination.lat, lng: destination.lng}} />
+            destination={destination} />
           <ListingShowContact contact={""}/>
         </section>
       </div>

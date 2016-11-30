@@ -1,16 +1,18 @@
 import { connect } from 'react-redux';
-import { updateCurrentUser } from '../../actions/session';
+import { updateCurrentUser, openModal } from '../../actions/session';
 
 import { withRouter } from 'react-router'
 import CommuteButton from './commute_button';
 
 
 const mapStateToProps = ({ session }) => ({
+  loggedIn: Boolean(session.currentUser),
   currentUser: session.currentUser,
 });
 
 const mapDispatchToProps = dispatch => ({
-  updateCurrentUser: user => dispatch(updateCurrentUser(user))
+  updateCurrentUser: user => dispatch(updateCurrentUser(user)),
+  openModal: () => dispatch(openModal(true))
 });
 
 export default withRouter(connect(

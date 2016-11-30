@@ -16,10 +16,6 @@ class SessionForm extends React.Component {
     this.renderForm = this.renderForm.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
-    // this.clearErrors();
-  }
-
   componentWillUnmount() {
     this.clearErrors();
   }
@@ -39,6 +35,7 @@ class SessionForm extends React.Component {
 
   renderForm() {
     if (this.state.sessionType === 'login') {
+      console.log('render login form');
       return (
         <LoginForm
           errors={this.props.errors}
@@ -46,6 +43,7 @@ class SessionForm extends React.Component {
           switchForm={this.switchForm} />
       );
     } else {
+      console.log('render signup form');
       return (
         <SignupForm
           errors={this.props.errors}

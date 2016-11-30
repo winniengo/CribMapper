@@ -5,10 +5,12 @@ import { selectListing } from '../../../reducers/selectors';
 import ListingPreview from './listing_preview';
 
 const mapStateToProps = (state, ownProps) => {
-  const { lat, lng } = state.session.currentUser;
+  const destination = state.session.currentUser ?
+    {lat: state.session.currentUser.lat, lng: state.session.currentUser.lng} :
+    {lat: null, lng: null};
   return {
     listing: selectListing(state, ownProps),
-    destination: { lat, lng }
+    destination
   };
 };
 

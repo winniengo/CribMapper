@@ -11,6 +11,7 @@ class LoginForm extends React.Component {
       password: "",
     };
 
+    console.log('loginform')
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -21,6 +22,7 @@ class LoginForm extends React.Component {
   }
 
   handleSubmit(e) {
+    console.log('handle submit');
     e.preventDefault();
     this.props.login(this.state);
   }
@@ -33,7 +35,7 @@ class LoginForm extends React.Component {
           <h2>Sign in</h2>
           to save your favorite listings
           <br/>
-          and use our comparison tool
+          and calculate your daily work commute
           <SessionErrors errors={this.props.errors} />
         </section>
         <form onSubmit={this.handleSubmit}>

@@ -7,8 +7,8 @@ class ListingCommute extends React.Component {
     super(props);
     this.state = {
       travelMode: "DRIVING",
-      duration: "",
-      distance: ""
+      duration: "?",
+      distance: "?"
     }
 
     this.handleClick = this.handleClick.bind(this);
@@ -16,7 +16,8 @@ class ListingCommute extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.origin.lat !== nextProps.origin.lat) { // received lat, lng
+    if (this.props.origin.lat !== nextProps.origin.lat ||
+      this.props.destination.lat !== nextProps.destination.lat) { // received new lat, lng
       this.calculateAndDisplayRoute(nextProps);
     }
   }

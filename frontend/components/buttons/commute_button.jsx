@@ -20,6 +20,7 @@ class CommuteButton extends React.Component{
     super(props);
     this.state = {modalIsOpen: false};
 
+    this.handleClick = this.handleClick.bind(this);
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.updateCurrentUser = this.updateCurrentUser.bind(this);
@@ -32,6 +33,14 @@ class CommuteButton extends React.Component{
 
     if (this.props.currentUser.place_id !== nextProps.currentUser.place_id) {
       this.closeModal(); // work address is updated
+    }
+  }
+
+  handleClick() {
+    if (!this.props.loggedIn) {
+      this.props.openModal(); // opens session modal
+    } else {
+      this.openModal(); // opens commute form modal
     }
   }
 
@@ -54,9 +63,11 @@ class CommuteButton extends React.Component{
   }
 
   render() {
+    const link = this.props.loggedIn && this.props.currentUser.lat ? 'Update' : 'Add';
+
     return (
        <div className='link-container'>
-        <a onClick={this.openModal}>{this.props.currentUser.lat ? 'Update' : 'Add'}</a>
+        <a onClick={this.handleClick}>{link}</a>
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
@@ -64,7 +75,8 @@ class CommuteButton extends React.Component{
           style={customStyles}>
           <CommuteForm
             updateCurrentUser={this.updateCurrentUser}
-            currentUser={this.props.currentUser} />
+            currentUser={this.props.currentUser}
+            closeModal={this.closeModal} />
         </Modal>
       </div>
     );

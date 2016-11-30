@@ -26,6 +26,14 @@ class CommuteForm extends React.Component{
     };
 
     this.map = new google.maps.Map(mapDOMNode, mapOptions);
+
+    const { lat, lng } = this.props.currentUser; // display old work address
+    if (lat && lng) {
+      this.marker = new google.maps.Marker({
+        map: this.map,
+        position: { lat, lng }
+      })
+    }
   }
 
   initAutocomplete() {
@@ -41,6 +49,10 @@ class CommuteForm extends React.Component{
     });
 
     autocomplete.addListener('place_changed', () => {
+      if (this.marker) { // remove old work address marker
+        this.marker.setMap(null);
+      }
+
       infoWindow.close();
       marker.setVisible(false);
       const place = autocomplete.getPlace();
@@ -97,6 +109,7 @@ class CommuteForm extends React.Component{
                 placeholder={this.state.address || "Search"} />
             </label>
             <input type="submit" value={`${verb}`} className="modal-btn"/>
+            <button onClick={this.props.closeModal} className="modal-btn">Close</button>
           </form>
           <section className='footer'>
             <div className='logo-img background-img' />
