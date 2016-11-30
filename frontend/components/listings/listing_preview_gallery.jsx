@@ -46,7 +46,7 @@ class ListingPreviewGallery extends React.Component {
 
     return (
       <section className='listing-preview-gallery'>
-        <section className='preview-display'>
+        <section className='image-display'>
           <div
             className='selected'
             style={{backgroundImage: `url(${selectedSrc})`}} />

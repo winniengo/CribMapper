@@ -39,6 +39,7 @@ $dark-grey: #d0dae6;
   font-size: 18px;
 }
 button.back-to-results {
+  border-radius: 2px;
   background: $light-grey;
   padding: 10px 0;
   text-align: center;
@@ -159,6 +160,8 @@ section.thumbnail-gallery {
     flex-direction: row;
     overflow: scroll;
     padding: 10px 0;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
 }
 
 .thumbnail-gallery > div {

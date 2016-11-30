@@ -39,7 +39,7 @@ const Root = ({ store }) => {
 
   const _ensureListing = nextState => {
     const id = nextState.params.id;
-    if (!store.getState().listings[id]) {
+    if (!store.getState().listings.all[id]) {
       store.dispatch(requestListing(id));
     }
   };

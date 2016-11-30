@@ -13,6 +13,10 @@ $dark-grey: #d0dae6;
   white-space: pre-line;
 }
 
+.listing-modal > section:nth-last-child(1) {
+  padding-bottom: 0;
+}
+
 .listing-modal > section > header {
   display: flex;
   flex-direction: row;

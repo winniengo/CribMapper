@@ -15,7 +15,7 @@ const customStyles = {
     width                 : '80%',
     height                : '80%',
     overflow              : 'scroll',
-    maxWidth              : '900px',
+    maxWidth              : '800px',
     minWidth             : '660px'
   }
 };

@@ -7,6 +7,7 @@ import ListingShowContact from './listing_show_contact';
 import ListingShowGallery from './listing_show_gallery';
 import ListingHeader from '../listing_header';
 import StreetView from '../street_view';
+import MapView from '../map_view';
 import ListingCommute from '../listing_commute';
 
 import merge from 'lodash/merge';
@@ -71,7 +72,7 @@ class ListingShow extends React.Component {
     const petFriendly = cats || dogs ? "- Friendly" : "No Pets";
     const view = this.state.selected === 'street-view' ?
       <StreetView lat={lat} lng={lng} /> :
-      <div>Map View</div>;
+      <MapView lat={lat} lng={lng} />;
 
     return (
       <div className='listing-show'>

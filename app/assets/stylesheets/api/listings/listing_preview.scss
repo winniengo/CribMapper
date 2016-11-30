@@ -21,7 +21,10 @@ $coral: #FF533D;
   justify-content: center;
   padding-bottom: 10px;
   // padding: 10px;
+}
 
+.listing-preview section:nth-last-child(1) {
+  padding-bottom: 0;
 }
 
 .listing-preview > description {
@@ -36,7 +39,7 @@ $coral: #FF533D;
 
 .listing-preview h2 {
   font-weight: 400;
-  font-size: 38px;
+  font-size: 36px;
   // border-right: 1px solid #AB987A;
   padding: 0 10px;
 }
@@ -78,10 +81,11 @@ div.details {
 
 }
 
-section.preview-display {
+section.image-display {
   height: 100%;
   width: 100%;
   background: white;
+  max-height: 400px;
   position: relative;
   // padding: 10px;
   // display: flex;
@@ -89,7 +93,7 @@ section.preview-display {
 
 }
 
-.preview-display > div {
+.image-display > div {
   position: absolute;
   top: 0;
   left: 0;

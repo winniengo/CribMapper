@@ -21,7 +21,8 @@ class CommuteForm extends React.Component{
         lat: this.state.lat || 37.7749,
         lng: this.state.lng || -122.4194
       },
-      zoom: 13
+      zoom: 13,
+      scrollwheel: false
     };
 
     this.map = new google.maps.Map(mapDOMNode, mapOptions);
