@@ -38,16 +38,19 @@ $dark-grey: #d0dae6;
 .listing-show h3 {
   font-size: 18px;
 }
-button.back-to-results {
+
+button.navigation {
   border-radius: 2px;
   background: $light-grey;
   padding: 10px 0;
   text-align: center;
   text-transform: uppercase;
-  width: 250px;
+  width: 200px;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
 
-button.back-to-results:hover {
+button.navigation:hover {
     background: $light-blue;
 }
 
@@ -62,7 +65,7 @@ button.back-to-results:hover {
 }
 
 .listing-header header {
-  padding-top: 20px;
+  // padding-top: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;

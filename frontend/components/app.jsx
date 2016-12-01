@@ -16,10 +16,3 @@ const App = ({ children, main, footer }) => {
 };
 
 export default App;
-
-
-// <body class="Site">
-//   <header>…</header>
-//   <main class="Site-content">…</main>
-//   <footer>…</footer>
-// </body>

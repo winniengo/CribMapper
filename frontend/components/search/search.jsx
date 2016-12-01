@@ -1,15 +1,15 @@
 import React from 'react';
 
-import MapContainer from './map_container';
+import SearchMapContainer from './search_map_container';
 import AboutMe from '../about_me';
 
-const Search = ({ main, sidebar, location }) => (
+const Search = ({ children }) => (
   <div className='app'>
     <section className='main'>
-      {main}
+      <SearchMapContainer />
     </section>
     <section id='sidebar'>
-      {sidebar}
+      {children}
       <AboutMe />
     </section>
   </div>

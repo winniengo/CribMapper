@@ -85,14 +85,16 @@ class FilterForm extends React.Component{
               fields={this.renderFields("advanced")} />
           </div>
         </form>
-        <div className="sidebar-buttons">
+        <div className="sidebar-btns">
           <button
             type="button"
+            className='hvr-fade'
             onClick={() => this.setState({"expanded": !expanded})}>
             {expanded ? "done" : "more filters"}
           </button>
           <button
             type="button"
+            className='hvr-fade'
             onClick={this.props.resetFilters}>
             reset
           </button>

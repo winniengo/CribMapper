@@ -47,13 +47,13 @@ $dark-grey: #d0dae6;
   font-size: 14px;
 }
 
-.sidebar-buttons {
+.sidebar-btns {
   display: flex;
   // padding-top: 20px;
   justify-content: space-between;
 }
 
-.sidebar-buttons button {
+.sidebar-btns button {
     /* background: #a5cfe2; */
     /* border-radius: 2px; */
     /* border: 1px solid #8EAEBD; */
@@ -65,11 +65,11 @@ $dark-grey: #d0dae6;
     // font-size: 16px;
   }
 
-.sidebar-buttons button:hover {
-  background: $light-blue;
-}
+// .sidebar-btns button:hover {
+//   background: $light-blue;
+// }
 
-.sidebar-buttons button:nth-child(1) {
+.sidebar-btns button:nth-child(1) {
   margin-right: 5px;
 }
 

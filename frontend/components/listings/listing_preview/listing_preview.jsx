@@ -28,13 +28,14 @@ class ListingPreview extends React.Component {
 
     return (
       <div className='listing-preview'>
-        <section className='sidebar-buttons'>
+        <section className='sidebar-btns'>
           <button
-            className="back-to-results"
+            className='hvr-fade'
             onClick={this.returnToListings}>
             ← back to results
           </button>
           <button
+            className='hvr-fade'
             onClick={this.redirectToDetails}>
             more details
           </button>

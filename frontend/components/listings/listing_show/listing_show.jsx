@@ -78,9 +78,9 @@ class ListingShow extends React.Component {
       <div className='listing-show'>
         <section className="listing-main">
           <button
-            className='back-to-results'
+            className='navigation hvr-fade'
             onClick={this.returnToListings}>
-            ← Back to results
+            ← back to results
           </button>
           <ListingHeader listing={listing} />
           <ListingShowGallery images={images} />

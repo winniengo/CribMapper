@@ -10,7 +10,7 @@ class MapView extends React.Component {
   }
 
   componentDidMount() {
-    this.initMap();
+    this.initMap(); // render google map and markers
   }
 
   componentWillReceiveProps(nextProps) {

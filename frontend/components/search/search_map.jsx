@@ -4,7 +4,7 @@ import { withRouter } from 'react-router';
 
 import MarkerManager from '../../utils/marker_manager';
 
-class Map extends React.Component {
+class SearchMap extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -21,20 +21,15 @@ class Map extends React.Component {
     };
 
     this.map = new google.maps.Map(mapDOMNode, mapOptions);
-    this.MarkerManager = new MarkerManager(this.map, this.props.style);
+    this.MarkerManager = new MarkerManager(this.map, this.handleClick);
     this.MarkerManager.updateMarkers(this.props.listings);
-    if (this.props.style) {
-      // debugger
-      this.MarkerManager.styleMarkers(this.props.selected, this.props.hovered);
-      this._registerListeners();
-    }
+    this.MarkerManager.styleMarkers(this.props.selected, this.props.hovered);
+    this._registerListeners();
   }
 
   componentWillReceiveProps(nextProps) {
     this.MarkerManager.updateMarkers(nextProps.listings);
-    if (this.props.style) {
-      this.MarkerManager.styleMarkers(nextProps.selected, nextProps.hovered);
-    }
+    this.MarkerManager.styleMarkers(nextProps.selected, nextProps.hovered);
   }
 
   _registerListeners() {
@@ -56,12 +51,9 @@ class Map extends React.Component {
   }
 
   render() {
-    return (
-      <div id='map'>
-      </div>
-    );
+    return <div id='map' />;
   }
 
 }
 
-export default Map;
+export default SearchMap;
