@@ -1,16 +1,15 @@
-import { hashHistory } from 'react-router';
-
 const icon = 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478649422/listings/pointer-coral.png';
 const selected = 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478649431/listings/pointer-navy.png';
 const hovered = 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478648973/listings/pointer-red-big.png';
 
 export default class MarkerManager {
-  constructor(map) {
+  constructor(map, handleClick) {
+    this.handleClick = handleClick;
+
     this.map = map;
     this.markers = [];
-
-    this.hovered = [];
-    this.selected = [];
+    // this.hovered = [];
+    this.selectedMarker = null;
   }
 
   updateMarkers(listings) {
@@ -23,10 +22,7 @@ export default class MarkerManager {
 
   _listingsToAdd() {
     const currentListingIds = this.markers.map(({ listingId }) => listingId);
-
-    return this.listings.filter(({ id }) => (
-      !currentListingIds.includes(id)
-    ));
+    return this.listings.filter(({ id }) => !currentListingIds.includes(id));
   }
 
   _markersToRemove() {
@@ -44,8 +40,7 @@ export default class MarkerManager {
       icon,
     });
 
-    this._addOnClickListener(marker);
-    this._addStyleListeners(marker);
+    marker.addListener('click', () => this.handleClick(marker.listingId));
     this.markers.push(marker);
   }
 
@@ -54,62 +49,69 @@ export default class MarkerManager {
     this.markers.splice(this.markers.indexOf(marker), 1);
   }
 
-  styleMarkers(selectedId, hoveredId) {
+  selectMarker(selectedId) {
+    if (this.selectedMarker) { // reset previously selected marker
+      this.selectedMarker.setIcon(icon);
+    }
+
     if (selectedId) {
-      if (this.hovered.length !== 0) {
-        this._removeIcon();
+      for (let i = 0; i < this.markers.length; i++) {
+        if (this.markers[i].listingId === parseInt(selectedId)) { // set selected marker
+          this.selectedMarker = this.markers[i]
+          this.selectedMarker.setIcon(selected);
+          return;
+        }
       }
-      this.selected = this.markers.filter(({ listingId }) => listingId === selectedId);
-      this._addIcon();
     } else {
-      this._removeIcon();
-    }
-
-    if (hoveredId) {
-      if (this.hovered.length !== 0) {
-        this._removeBounce();
+      if (this.selectedMarker) {
+        this.selectedMarker = null;
       }
-      this.hovered = this.markers.filter(({ listingId }) => listingId === hoveredId);
-      // console.log(this.hovered)
-      this._addBounce();
-    } else {
-      this._removeBounce();
     }
   }
 
-  _addStyleListeners(marker) {
-    marker.addListener('mouseover', e => {
-      this.hovered.push(marker);
-      this._addBounce();
-    });
-
-    marker.addListener('mouseout', e => {
-      this._removeBounce();
-    });
-  }
-
-  _addOnClickListener(marker) {
-    marker.addListener('click', () => hashHistory.push(`/search/${marker.listingId}`));
-  }
-
-  _addBounce() {
-    // console.log(this.hovered)
-      // this.hovered.forEach(marker => marker.setIcon(hovered));
-    this.hovered.forEach(marker => marker.setAnimation(google.maps.Animation.BOUNCE));
-  }
-
-  _removeBounce() {
-        this.hovered.forEach(marker => marker.setAnimation(null));
-    // this.markers.forEach(marker => marker.setIcon(icon));
-    this.hovered = [];
-  }
-
-  _addIcon() {
-    this.selected.forEach(marker => marker.setIcon(selected));
-  }
-
-  _removeIcon() {
-    this.selected.forEach(marker => marker.setIcon(icon))
-    this.selected = [];
-  }
+  // styleMarkers(selectedId, hoveredId) {
+    // if (selectedId) {
+    //   if (this.hovered.length !== 0) {
+    //     this._removeIcon();
+    //   }
+    //   this.selected = this.markers.filter(({ listingId }) => listingId === selectedId);
+    //   this._addIcon();
+    // } else {
+    //   this._removeIcon();
+    // }
+    //
+    // if (hoveredId) {
+    //   if (this.hovered.length !== 0) {
+    //     this._removeBounce();
+    //   }
+    //   this.hovered = this.markers.filter(({ listingId }) => listingId === hoveredId);
+    //   // console.log(this.hovered)
+    //   this._addBounce();
+    // } else {
+    //   this._removeBounce();
+    // }
+  // }
+  //
+  // _addStyleListeners(marker) {
+  //   marker.addListener('mouseover', e => {
+  //     this.hovered.push(marker);
+  //     this._addBounce();
+  //   });
+  //
+  //   marker.addListener('mouseout', e => {
+  //     this._removeBounce();
+  //   });
+  // }
+  //
+  // _addBounce() {
+  //   // console.log(this.hovered)
+  //     // this.hovered.forEach(marker => marker.setIcon(hovered));
+  //   this.hovered.forEach(marker => marker.setAnimation(google.maps.Animation.BOUNCE));
+  // }
+  //
+  // _removeBounce() {
+  //       this.hovered.forEach(marker => marker.setAnimation(null));
+  //   // this.markers.forEach(marker => marker.setIcon(icon));
+  //   this.hovered = [];
+  // }
 }

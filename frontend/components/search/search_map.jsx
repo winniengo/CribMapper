@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { withRouter } from 'react-router';
 
 import MarkerManager from '../../utils/marker_manager';
 
 class SearchMap extends React.Component {
   constructor(props) {
     super(props);
+
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
@@ -23,13 +24,20 @@ class SearchMap extends React.Component {
     this.map = new google.maps.Map(mapDOMNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map, this.handleClick);
     this.MarkerManager.updateMarkers(this.props.listings);
-    this.MarkerManager.styleMarkers(this.props.selected, this.props.hovered);
+    this.MarkerManager.selectMarker(this.props.selectedId);
+    // this.MarkerManager.styleMarkers(this.props.selected, this.props.hovered);
     this._registerListeners();
   }
 
   componentWillReceiveProps(nextProps) {
+    // console.log(nextProps);
     this.MarkerManager.updateMarkers(nextProps.listings);
-    this.MarkerManager.styleMarkers(nextProps.selected, nextProps.hovered);
+    this.MarkerManager.selectMarker(nextProps.selectedId);
+    // this.MarkerManager.styleMarkers(nextProps.selected, nextProps.hovered);
+  }
+
+  handleClick(listingId) {
+    this.props.router.push(`/search/${listingId}`);
   }
 
   _registerListeners() {

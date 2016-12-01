@@ -50,12 +50,12 @@ class ListingGallery extends React.Component {
           handlePrevious={this.handlePrevious}
           handleNext={this.handleNext} />
         <section className='dots-gallery'>
-          {this.props.images.map((img, idx) => (
-            <div
-              key={idx}
-              className={`background-img ${this.state.selected == idx ? 'selected' : ''}`}
-              onClick={this.handleSelect(idx)} />
-          ))}
+        {this.props.images.map((img, idx) => (
+          <div
+            key={idx}
+            className={`background-img ${this.state.selected == idx ? 'selected' : ''}`}
+            onClick={this.handleSelect(idx)} />
+        ))}
         </section>
       </section>
     );

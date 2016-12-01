@@ -31,7 +31,7 @@ class Navbar extends React.Component {
     }
   }
 
-  componentWillReceiveProps(nextProps, ownState) {
+  componentWillReceiveProps(nextProps) {
     if (!this.props.loggedIn && nextProps.loggedIn) {
       if (this.state.redirectToFavorites) {
         this.props.router.push('favorites/list-view');

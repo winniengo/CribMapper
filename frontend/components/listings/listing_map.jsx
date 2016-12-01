@@ -15,11 +15,6 @@ class ListingMap extends React.Component {
     this.updateMap(listings);
   }
 
-  // componentWillUnmount () {
-  //   this.markers.forEach(marker => marker.setMap(null));
-  //   this.markers = [];
-  // }
-
   initMap() {
     const mapOptions = {
       center: {lat: 37.7749, lng: -122.4197},

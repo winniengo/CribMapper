@@ -15,7 +15,6 @@ class ListingPreview extends React.Component {
   }
 
   returnToListings() {
-    this.props.deselect();
     this.props.router.push('/search/index');
   }
 

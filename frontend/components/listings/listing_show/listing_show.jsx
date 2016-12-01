@@ -1,14 +1,13 @@
 import React from 'react';
-import { withRouter } from 'react-router';
 
 import FavoriteButtonContainer from '../../buttons/favorite_button_container';
 import ListingDetails from '../listing_details';
+import ListingHeader from '../listing_header';
 import ListingShowContact from './listing_show_contact';
 import ListingShowGallery from './listing_show_gallery';
-import ListingHeader from '../listing_header';
+import ListingCommute from '../listing_commute';
 import StreetView from '../street_view';
 import MapView from '../map_view';
-import ListingCommute from '../listing_commute';
 
 import merge from 'lodash/merge';
 
@@ -113,4 +112,4 @@ class ListingShow extends React.Component {
   }
 }
 
-export default withRouter(ListingShow);
+export default ListingShow;

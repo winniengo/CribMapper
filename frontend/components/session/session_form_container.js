@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import { signup } from '../../actions/session';
 import { login } from '../../actions/session';
-// import { clearErrors } from '../../actions/errors';
 import { receiveErrors, clearErrors } from '../../actions/errors';
 
 import SessionForm from './session_form';

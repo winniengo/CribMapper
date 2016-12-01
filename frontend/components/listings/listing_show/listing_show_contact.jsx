@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ListingShowContact = ({ contact }) => (
+export default ({ contact }) => (
   <section className="listing-contact">
     <h3>contact</h3>
     <section>
@@ -9,5 +9,3 @@ const ListingShowContact = ({ contact }) => (
     </section>
   </section>
 );
-
-export default ListingShowContact;

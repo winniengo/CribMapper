@@ -3,12 +3,10 @@ import { logout, openModal } from '../../actions/session';
 
 import Navbar from './navbar';
 
-const mapStateToProps = ({ session }, { pathname }) => {
-  return {
-    loggedIn: Boolean(session.currentUser),
-    modalOpen: session.modalOpen
-  }
-};
+const mapStateToProps = ({ session }, { pathname }) => ({
+  loggedIn: Boolean(session.currentUser),
+  modalOpen: session.modalOpen
+});
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   logout: () => dispatch(logout()),

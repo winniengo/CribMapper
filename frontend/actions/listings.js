@@ -5,8 +5,8 @@ export const REQUEST_LISTING = "REQUEST_LISTING";
 export const RECEIVE_LISTING = "RECEIVE_LISTING";
 export const REQUEST_FAVORITE_LISTINGS = "REQUEST_FAVORITE_LISTINGS";
 
-export const SELECT = "SELECT";
-export const HOVER = "HOVER";
+// export const SELECT = "SELECT";
+// export const HOVER = "HOVER";
 
 export const requestFavoriteListings = userId => ({
   type: REQUEST_FAVORITE_LISTINGS,
@@ -38,12 +38,12 @@ export const receiveListing = listing => ({
   listing
 });
 
-export const select = id => ({
-  type: SELECT,
-  id
-});
-
-export const hover = id => ({
-  type: HOVER,
-  id
-});
+// export const select = id => ({
+//   type: SELECT,
+//   id
+// });
+//
+// export const hover = id => ({
+//   type: HOVER,
+//   id
+// });

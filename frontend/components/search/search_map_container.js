@@ -7,12 +7,12 @@ import { updateBounds } from '../../actions/filters';
 
 import SearchMap from './search_map';
 
-const mapStateToProps = state => ({
-  listings: allListings(state),
-  selected: state.listings.selected,
-  hovered: state.listings.hovered
-});
+const mapStateToProps = (state, ownProps)=> {
+  return ({
+    listings: allListings(state),
+  });
 
+}
 const mapDispatchToProps = dispatch => ({
   requestListings: () => dispatch(requestListings()),
   updateBounds: bounds => dispatch(updateBounds(bounds)),

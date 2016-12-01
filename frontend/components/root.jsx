@@ -6,10 +6,9 @@ import { Router, Route, IndexRoute, hashHistory, IndexRedirect } from 'react-rou
 import App from './app';
 import Search from './search/search';
 import AboutMe from './about_me';
-import Sidebar from './search/sidebar';
-import SearchMapContainer from './search/search_map_container'
-import ListingShowContainer from './listings/listing_show/listing_show_container';
+import Sidebar from './sidebar';
 import ListingPreviewContainer from './listings/listing_preview/listing_preview_container';
+import ListingShowContainer from './listings/listing_show/listing_show_container';
 import FavoritesContainer from './favorites/favorites_container';
 import ListingList from './listings/listing_list/listing_list';
 import ListingMap from './listings/listing_map';
