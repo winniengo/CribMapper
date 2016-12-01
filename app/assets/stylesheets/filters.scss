@@ -56,7 +56,6 @@ $dark-grey: #d0dae6;
 
 .rent {
   display: flex;
-  border: 1px solid $light-blue;
   border-radius: 2px;
   align-items: center;
   cursor: text;
@@ -67,12 +66,13 @@ $dark-grey: #d0dae6;
   background-image: image-url('dollar.png');
   height: 20px;
   width: 20px;
+  margin: 5px;
 }
 
 .rent > input {
   text-align: right;
   padding: 5px 0;
-  width: 100px;
+  width: 80px;
   border-radius: 2px;
 }
 

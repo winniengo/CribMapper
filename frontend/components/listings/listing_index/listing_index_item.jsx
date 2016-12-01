@@ -5,7 +5,7 @@ import ListingImageThumbnail from '../listing_image_thumbnail';
 
 const ListingIndexItem = ({ listing, clssName, handleFavorite, handleClick, handleMouseEnter, handleMouseOut }) => (
   <li
-    className='listing-index-item'
+    className='listing-index-item hvr-reveal'
     onClick={handleClick}
     onMouseEnter={handleMouseEnter}
     onMouseOut={handleMouseOut}>

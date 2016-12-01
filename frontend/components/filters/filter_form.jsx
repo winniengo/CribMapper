@@ -36,8 +36,8 @@ class FilterForm extends React.Component{
         type ? (
           <label key={idx}>
             {filter}
-            <div className="rent">
-              <div className="dollar-img background-img" />
+            <div className="rent hvr-reveal">
+              <div className="dollar-img background-img hvr-pulse" />
               <input
                 type="number"
                 value={this.state[field][filter]}
@@ -49,7 +49,7 @@ class FilterForm extends React.Component{
           <button
             key={idx}
             type="button"
-            className={this.state[field][filter] ? "selected" : ""}
+            className={`${this.state[field][filter] ? 'selected' : ''}`}
             onClick={this.handleInput(field, filter)} >
             {filter === "noFee" ? "no broker fee" : filter}
           </button>

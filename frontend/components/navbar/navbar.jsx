@@ -53,13 +53,13 @@ class Navbar extends React.Component {
     if (this.props.loggedIn) {
       return (
         <div className='link-container'>
-          <a onClick={this.props.logout}>Log Out</a>
+          <a onClick={this.props.logout} className='hvr-underline-from-center'>Log Out</a>
         </div>
       )
     } else {
       return (
         <div className='link-container'>
-          <a onClick={this.props.openModal}>Sign In</a>
+          <a onClick={this.props.openModal} className='hvr-underline-from-center'>Sign In</a>
           <Modal
             isOpen={this.props.modalOpen}
             onRequestClose={this.closeModal}
@@ -82,7 +82,7 @@ class Navbar extends React.Component {
         </div>
         <div className='links'>
           <div className='link-container'>
-            <a onClick={this.handleRedirectToFavorites}>
+            <a onClick={this.handleRedirectToFavorites} className='hvr-underline-from-center'>
               Favorites
             </a>
           </div>

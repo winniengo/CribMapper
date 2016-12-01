@@ -248,8 +248,8 @@ padding: 20px;
     margin: 2px 2px 0 2px;
     background: #e8edf3;
     text-transform: capitalize;
-    transition: border-bottom-color 0.2s linear 0s;
-    border-bottom: 2px solid transparent;
+    // transition: border-bottom-color 0.2s linear 0s;
+    // border-bottom: 2px solid transparent;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     align-items: center;
@@ -258,7 +258,7 @@ padding: 20px;
 
 .views > button:hover {
   background:#d0dae6;
-  border-bottom-color: #0F1626;
+  // border-bottom-color: #0F1626;
 }
 
 .views > button.selected {

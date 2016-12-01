@@ -66,7 +66,7 @@ class Favorites extends React.Component {
           type="button"
           value={view}
           onClick={this.handleClick}
-          className={this.state.selected === view ? 'selected' : ''}>
+          className={`hvr-underline-from-center ${this.state.selected === view ? 'selected' : ''}`}>
           <div className={`background-img icon ${view}`} />
         </button>
       ))

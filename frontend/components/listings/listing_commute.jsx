@@ -7,8 +7,8 @@ class ListingCommute extends React.Component {
     super(props);
     this.state = {
       travelMode: "DRIVING",
-      duration: "?",
-      distance: "?"
+      duration: "???",
+      distance: "???"
     }
 
     this.handleClick = this.handleClick.bind(this);

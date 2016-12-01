@@ -13,12 +13,13 @@ $coral: #FF533D;
 .listing-index-item {
   margin: 10px;
   height: 150px;
-  border: 1px solid;
+  // border: 1px solid;
   border-radius: 2px;
-  border-color: #8EAEBD;
+  // border-color: #8EAEBD;
   background: #FFFFFF;
   display: flex;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .listing-index-item:hover {

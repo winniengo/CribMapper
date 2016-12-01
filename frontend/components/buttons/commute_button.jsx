@@ -31,7 +31,7 @@ class CommuteButton extends React.Component{
       this.props.router.push('/');
     }
 
-    if (this.props.currentUser.place_id !== nextProps.currentUser.place_id) {
+    if (this.props.loggedIn && this.props.currentUser.place_id !== nextProps.currentUser.place_id) {
       this.closeModal(); // work address is updated
     }
   }
@@ -67,7 +67,7 @@ class CommuteButton extends React.Component{
 
     return (
        <div className='link-container'>
-        <a onClick={this.handleClick}>{link}</a>
+        <a className="hvr-underline-from-center" onClick={this.handleClick}>{link}</a>
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
