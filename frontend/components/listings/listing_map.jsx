@@ -1,6 +1,6 @@
 import React from 'react';
 
-const icon = 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478649422/listings/pointer-coral.png';
+const icon = 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478649422/icons/pointer-coral.png';
 
 class ListingMap extends React.Component {
   constructor(props) {

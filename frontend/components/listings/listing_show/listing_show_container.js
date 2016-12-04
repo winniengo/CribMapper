@@ -15,4 +15,4 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-export default connect(mapStateToProps)(ListingShow);
+export default withRouter(connect(mapStateToProps)(ListingShow));
