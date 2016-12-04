@@ -1,6 +1,5 @@
 const icon = 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478649422/icons/pointer-coral.png';
 const selected = 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478649431/icons/pointer-navy.png';
-// const hovered = 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478648973/listings/pointer-red-big.png';
 
 export default class MarkerManager {
   constructor(map, handleClick) {

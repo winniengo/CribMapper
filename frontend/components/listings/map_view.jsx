@@ -1,5 +1,8 @@
 import React from 'react';
 
+const icon = 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478649431/icons/pointer-navy.png';
+
+
 class MapView extends React.Component {
   constructor(props) {
     super(props);
@@ -30,7 +33,8 @@ class MapView extends React.Component {
     this.map = new google.maps.Map(document.getElementById('map-view'), mapOptions);
     this.marker = new google.maps.Marker({
       position: this.state,
-      map: this.map
+      map: this.map,
+      icon
     });
   }
 
