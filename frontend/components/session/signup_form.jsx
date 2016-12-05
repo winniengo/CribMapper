@@ -31,7 +31,7 @@ class SignupForm extends React.Component {
     return (
       <div className='modal-form'>
         <section className='header'>
-          <div className='logo-img background-img hvr-bob' />
+          <div className='logo-img background-img' />
           <h2>Create an Account</h2>
           to find the perfect rental
           <SessionErrors errors={this.props.errors} />

@@ -39,8 +39,8 @@ Image.create!({listing_id: l1.id, src: 'http://res.cloudinary.com/dbgp4ftst/imag
 
 l2 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94108, USA',
-  lat: 37.734989,
-  lng: -122.388824,
+  lat: 37.772002,
+  lng: -122.390835,
   rent: 4750.00,
   bathrooms: 1.0,
   bedrooms: 1,
@@ -795,8 +795,8 @@ Image.create!({listing_id: l23.id, src: 'http://res.cloudinary.com/dbgp4ftst/ima
 
 l24 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94107, USA',
-  lat: 37.781440,
-  lng: -122.402610,
+  lat: 37.782585,
+  lng: -122.399418,
   rent: 5995,
   bathrooms: 1.5,
   bedrooms: 3,
@@ -973,3 +973,409 @@ Image.create!({listing_id: l30.id, src: 'http://res.cloudinary.com/dbgp4ftst/ima
 Image.create!({listing_id: l30.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480842425/listings/305.jpg'})
 Image.create!({listing_id: l30.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480842362/listings/303.jpg'})
 Image.create!({listing_id: l30.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480842363/listings/304.jpg'})
+
+l31 = Listing.create!({
+  address: Faker::Address.street_address + ', San Francisco, CA 94121, USA',
+  lat: 37.777777,
+  lng: -122.477712,
+  rent: 1650,
+  bathrooms: 1,
+  bedrooms: 1,
+  listing_type: 'sublet',
+  dogs: true,
+  cats: true,
+  description: 'Located in Inner Richmond near the Financial District, Corona Heights and Forest Hill, there is plenty to see and do in the area. Start the day off on the right foot with a stroll around the famous Golden Gate Park less than a mile away. Grab a cup of coffee and a sandwich at Lou\'s Café, but don\'t forget your laptop for the free WiFi! Spend the day checking out the area\'s shops with everything from toys and clothes to gifts, crafts and books. When it comes time for dinner you can\'t go wrong with wings at Hot Sauce and Panko, top-notch American at The Richmond or sushi at Kabuto Restaurant. Cap off the night with a pint and some appetisers at Chomp N\' Swig before coming home to us!
+
+Please remember that you will be staying in a home, not a hotel. Therefore, we ask that you treat our space with the same respect you would show your own. We travel often and have help managing guest services for our home while we are away.'
+})
+
+Image.create!({listing_id: l31.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480885668/311_qke8w9.jpg'})
+Image.create!({listing_id: l31.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480885668/312_rjuaqu.jpg'})
+Image.create!({listing_id: l31.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480885669/313_tqnx9p.jpg'})
+Image.create!({listing_id: l31.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480885669/314_e4qqrv.jpg'})
+Image.create!({listing_id: l31.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480885669/315_i9rndw.jpg'})
+
+l32 = Listing.create!({
+  address: Faker::Address.street_address + ', San Francisco, CA 94121, USA',
+  lat: 37.783882,
+  lng: -122.488698,
+  rent: 4200,
+  bathrooms: 2,
+  bedrooms: 2,
+  listing_type: 'lease',
+  fee: true,
+  parking: true,
+  cats: true,
+  description: 'Representing an entirely unique quality of life with scale and light, this full-floor 2 bedroom, 2 bathroom skylit flat located on the top floor of a boutique building has everything that the most fastidious resident would want. 507 32nd Ave gracefully marries the highest-quality finishes and an open floor plan with a prime location nestled on a peaceful street two blocks away from stunning Land\'s End, four blocks away from legendary Golden Gate Park, and within 2 miles from the ocean. This home has just been beautifully remodeled with new electrical, HVAC, and plumbing systems. It is designed to the latest trends and highest standards of city living. The dramatic open floor plan offers gracious flow between the living areas, dining area, and kitchen providing a multitude of options for entertaining and family gatherings. The spacious living room is anchored by an elegant Ecosmart bio-ethanol fireplace. There is a great deal of designer lighting fixtures including picture lights that provide ambiance along with brand-new double-pane Marvin windows for heat efficiency. The custom kitchen features new cabinetry, a patterned Porcenalosa backsplash, contemporary countertops, and Viking chef\'s grade appliances. Discerning chefs will appreciate the Viking gas range and wine lovers will find the built-in wine refrigerator an exquisite touch to the kitchen\'s center island. The hallway tastefully leads to the large bedrooms that are well delineated from the living areas, with each bedroom offering good-size storage closets and new double-pane windows. The master bedroom suite features a spa-like master bathroom that is luxuriously appointed with intricate tile work, designer fixtures, and a glass shower enclosure. The second bathroom is similar to the master and is located off the hallway. Gleaming brand-new hardwood floors throughout the living areas and bedrooms add warmth and iconic style to the home. Rounding out the amenities are laundry in the building and garage parking for 1 car. '
+})
+
+Image.create!({listing_id: l32.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886051/321_jd83pk.jpg'})
+Image.create!({listing_id: l32.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886054/322_gitmho.jpg'})
+Image.create!({listing_id: l32.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886054/323_n9lgq7.jpg'})
+Image.create!({listing_id: l32.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886051/324_sw7sv2.jpg'})
+Image.create!({listing_id: l32.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886053/325_ydnwte.jpg'})
+Image.create!({listing_id: l32.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886055/326_yfz6ay.jpg'})
+Image.create!({listing_id: l32.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886054/327_sfchtz.jpg'})
+Image.create!({listing_id: l32.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886055/328_cp5u8k.jpg'})
+Image.create!({listing_id: l32.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886057/329_jbsa1v.jpg'})
+Image.create!({listing_id: l32.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886063/3210_ifane9.jpg'})
+Image.create!({listing_id: l32.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886060/3211_gpo7cg.jpg'})
+Image.create!({listing_id: l32.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886058/3212_l85xhl.jpg'})
+Image.create!({listing_id: l32.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886062/3213_stqqqf.jpg'})
+
+l33 = Listing.create!({
+  address: Faker::Address.street_address + ', San Francisco, CA 94121, USA',
+  lat: 37.775199,
+  lng: -122.498311,
+  rent: 3500,
+  bathrooms: 1,
+  bedrooms: 2,
+  listing_type: 'lease',
+  parking: true,
+  description: 'This spacious full floor flat is in the Inner Richmond neighborhood.  Only 1 block from Golden Gate Park and the de Young Museum.  There are a number of neighborhood restaurants and markets on Balboa Street - all within walking distance. Excellent transit score with the 5 Fulton and the 28 only a block away.  The Shuttle stops are located at Park Presidio and Geary Ave - just a few blocks away.
+
+Features the following:
+~  Period details with all the modern upgrades
+~  Full floor flat
+~  Rent controlled
+~  Excellent natural lighting - eastern and western exposure
+~  Hardwood floors
+~  Updated kitchen with a ton of cabinet space, electric stove and dishwasher
+~  Formal living room with wood burning fireplace
+~  Formal dining room right of the living room and kitchen
+~  Large bedroom with closet
+~  Second bedroom with closet and sunroom
+~  Remodeled split bathroom with pedestal sink and shower/tub combo
+~  One car garage parking and a large storage room included
+~  No utilities included
+~  Shared yard
+
+No Pets and No Smoking!
+Call or email today to view
+This is a non-smoking unit.'
+})
+
+Image.create!({listing_id: l33.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886718/331_oa47f3.jpg'})
+Image.create!({listing_id: l33.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886717/332_t6avh6.jpg'})
+Image.create!({listing_id: l33.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886717/333_a1okjp.jpg'})
+Image.create!({listing_id: l33.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886717/334_adfn5m.jpg'})
+Image.create!({listing_id: l33.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886717/335_rwv1rc.jpg'})
+Image.create!({listing_id: l33.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886716/336_i9qz0n.jpg'})
+Image.create!({listing_id: l33.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886720/337_wb5ymu.jpg'})
+Image.create!({listing_id: l33.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886720/338_a7uxow.jpg'})
+Image.create!({listing_id: l33.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886720/339_iprze5.jpg'})
+Image.create!({listing_id: l33.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886820/3312_nljpaa.jpg'})
+Image.create!({listing_id: l33.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886820/3311_i6xvos.jpg'})
+Image.create!({listing_id: l33.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886819/3310_u1thqr.jpg'})
+
+l34 = Listing.create!({
+  address: Faker::Address.street_address + ', San Francisco, CA 94121, USA',
+  lat: 37.773978,
+  lng: -122.488527,
+  rent: 3700,
+  bathrooms: 1,
+  bedrooms: 2,
+  listing_type: 'lease',
+  dogs: true,
+  cats: true,
+  parking: true,
+  description: 'Welcome to the best that Richmond has to offer! Less than two blocks to Tommy\'s Mexican, Thom\'s Organic market and some of the best eateries in SF.
+
+This is a back building which is separated from the front 2 unit building by a beautiful patio which would be happy to house your 4 legged friends!
+
+Walk into the foyer with a great places to hang coats and keep your shoes. Then an open living, dining and kitchen area which have great light and update appliances! There is one smaller bedroom on the back side of the unit which looks out onto a large backyard, a full large bathroom with tub over shower, and a very large bedroom with cedar lined closet. Another coat closet is also out side the larger bedroom.
+
+The neighbors are all super and this unit can come along with the one car parking in garage and one spot blocking driveway as well, if wanted ($300/month). Unit includes a shared washer/dryer and is pet friendly.
+
+Please text or call with any questions.'
+})
+
+Image.create!({listing_id: l34.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480887275/345_tnnxaz.jpg'})
+Image.create!({listing_id: l34.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480887275/341_u5co0h.jpg'})
+Image.create!({listing_id: l34.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480887277/342_ow0xwz.jpg'})
+Image.create!({listing_id: l34.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480887274/343_urhmxd.jpg'})
+Image.create!({listing_id: l34.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480887275/344_xpkcwe.jpg'})
+
+l35 = Listing.create!({
+  address: Faker::Address.street_address + ', San Francisco, CA 94109, USA',
+  lat: 37.799076,
+  lng: -122.420714,
+  rent: 4115,
+  bathrooms: 1,
+  bedrooms: 2,
+  listing_type: 'lease',
+  fee: true,
+  description: 'Just when you thought that it\'s impossible to find an elegant 2 bedroom, 1 bathroom apartment in the urban neighborhood in San Francisco at an affordable price, this lovely unit comes to your way! Grab the opportunity to live in this upscale, modern and sleek apartment in Russian Hill.'
+})
+
+Image.create!({listing_id: l35.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480887768/351_gph3hc.jpg'})
+Image.create!({listing_id: l35.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480887767/352_brtozt.jpg'})
+Image.create!({listing_id: l35.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480887767/353_bqoz0q.jpg'})
+Image.create!({listing_id: l35.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480887767/354_nbszlw.jpg'})
+Image.create!({listing_id: l35.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480887768/355_fom3p6.jpg'})
+Image.create!({listing_id: l35.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480887768/357_oixlda.jpg'})
+
+l36 = Listing.create!({
+  address: Faker::Address.street_address + ', San Francisco, CA 94115, USA',
+  lat: 37.790047,
+  lng: -122.429336,
+  rent: 3195,
+  bathrooms: 1,
+  bedrooms: 2,
+  listing_type: 'lease',
+  parking: true,
+  description: 'The streets of Nob Hill were paved with Gold Rush riches. Topped by mansions, ritzy hotels and landmarks, like Grace Cathedral and Huntington Park, this tycoon territory keeps it classy. Big Four and Nob Hill Cafe are two classic culinary contenders, and halfway down the hill, some hipper hotspots are popping up. Start off the day at Contraband Coffee Bar, nibble on seasonal foodstuffs at Sons & Daughters, or get a snout-full of beers and brats at Hogwash. Get the home advantage in this Polk Street adjacent residence. Just paces away from the action, this dapper gray building has a surprisingly peaceful air about it'
+})
+
+Image.create!({listing_id: l36.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889291/36_0_eavgyw.jpg'})
+Image.create!({listing_id: l36.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889290/36_1_hs1l32.jpg'})
+Image.create!({listing_id: l36.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889290/36_2_py6l1h.jpg'})
+Image.create!({listing_id: l36.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889290/36_3_v0x33j.jpg'})
+
+l37 = Listing.create!({
+  address: Faker::Address.street_address + ', San Francisco, CA 94102, USA',
+  lat: 37.784756,
+  lng: -122.411654,
+  rent: 3875,
+  bathrooms: 1,
+  bedrooms: 2,
+  listing_type: 'lease',
+  dogs: true,
+  fee: true,
+  parking: true,
+  cats: true,
+  description: 'This amazing apartment has all the luxuries of a home. It has been beautifully furnished and has two spacious bedrooms and one spotless bathroom.'
+})
+
+Image.create!({listing_id: l37.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889506/37_2_kdonhc.jpg'})
+Image.create!({listing_id: l37.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889506/37_0_gkwljh.jpg'})
+Image.create!({listing_id: l37.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889506/37_1_yag8xk.jpg'})
+
+l38 = Listing.create!({
+  address: Faker::Address.street_address + ', San Francisco, CA 94104, USA',
+  lat: 37.781364,
+  lng: -122.403068,
+  rent: 5750,
+  bathrooms: 1,
+  bedrooms: 3,
+  listing_type: 'sublet',
+  fee: true,
+  cats: true,
+  description: 'Come home to this apartment with luxurious ambiance. Featuring 1-bedroom and 1-bathroom, this unit boasts of spacious tall ceilings and large windows for the spectacular city views.
+
+Looking for immediate move-in.'
+})
+
+Image.create!({listing_id: l38.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889673/38_0_d3y4gu.jpg'})
+Image.create!({listing_id: l38.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889673/38_1_to85nl.jpg'})
+Image.create!({listing_id: l38.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889673/38_2_jbtepu.jpg'})
+
+l39 = Listing.create!({
+  address: Faker::Address.street_address + ', San Francisco, CA 94103, USA',
+  lat: 37.780686,
+  lng: -122.406676,
+  rent: 2999,
+  bathrooms: 1,
+  bedrooms: 1,
+  listing_type: 'lease',
+  fee: true,
+  description: 'This 15th floor one bedroom + one bath is a south facing light filled sanctuary with large double pained windows and Solar Shades. Your view faces Yerba Buena Gardens, and Mission Street. The bedroom has a custom a lineal closet and with a nook great for storing luggage. Classic tiled bathroom is off the hallway for easy access and has W/D in Unit. Additionally, the home boast brand new hardwood floors throughout, upgraded fixtures and a newly remodeled kitchen. Kitchen features include: A stainless steel built-in oven and microwave, Bosch Cook-top and custom paneled Bosch dishwasher and refrigerator. The elegant upgrades offer a sophisticated look, while the Calcutta marble stone slab provides a refined back-splash to the stainless under mount sink and soft close dark wood cabinetry.
+
+  Pricing includes one month free** **valid for new residents only**s'
+})
+
+Image.create!({listing_id: l39.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889994/39_0_s0icwb.jpg'})
+Image.create!({listing_id: l39.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889994/39_1_hjwd0z.jpg'})
+Image.create!({listing_id: l39.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889994/39_2_ftzen3.jpg'})
+
+l40 = Listing.create!({
+  address: Faker::Address.street_address + ', San Francisco, CA 94121, USA',
+  lat: 37.801170,
+  lng: -122.402900,
+  rent: 4200,
+  bathrooms: 1,
+  bedrooms: 2,
+  listing_type: 'sublet',
+  dogs: true,
+  cats: true,
+  description: 'This stunning apartment is located just one block from Grant. It has amazing easy access to great dining and shopping. It is a few walks to the Financial District and Washington Square.'
+})
+
+Image.create!({listing_id: l40.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890269/40_1_dxwgal.jpg'})
+Image.create!({listing_id: l40.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890270/40_2_evr9tv.jpg'})
+Image.create!({listing_id: l40.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890270/40_3_bacyiz.jpg'})
+Image.create!({listing_id: l40.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890268/40_4_ulwzuq.jpg'})
+Image.create!({listing_id: l40.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890269/40_5_wq5hqo.jpg'})
+Image.create!({listing_id: l40.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890268/40_6_c9glpo.jpg'})
+Image.create!({listing_id: l40.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890271/40_7_zdeyq5.jpg'})
+
+l41 = Listing.create!({
+  address: Faker::Address.street_address + ', San Francisco, CA 94107, USA',
+  lat: 37.756532,
+  lng: -122.389720,
+  rent: 4700,
+  bathrooms: 1,
+  bedrooms: 3,
+  listing_type: 'lease',
+  dogs: true,
+  cats: true,
+  description: 'Newly and tastefully furnished, clean walls of white and adorned with bright pops of color. This 2 bedroom apartment in a triplex is comfortable and cozy, you might want to sleep in!
+
+The peaceful home surrounded by wide boulevards and blossoming apartments with superb bay views. The property is in a lovely residential neighborhood but easily accessible to shops, parks, and public transport.
+
+Owners live in the upper unit'
+})
+
+Image.create!({listing_id: l41.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890552/41_5_zddspn.jpg'})
+Image.create!({listing_id: l41.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890552/41_4_i2pfjy.jpg'})
+Image.create!({listing_id: l41.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890552/41_3_bxrwgo.jpg'})
+Image.create!({listing_id: l41.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890552/41_2_dnqgzd.jpg'})
+Image.create!({listing_id: l41.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890552/41_1_lll33e.jpg'})
+Image.create!({listing_id: l41.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890552/41_0_vtikiu.jpg'})
+Image.create!({listing_id: l41.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890553/41_6_zezg5l.jpg'})
+
+l42 = Listing.create!({
+  address: Faker::Address.street_address + ', San Francisco, CA 94114, USA',
+  lat: 37.758975,
+  lng: -122.435553,
+  rent: 6250,
+  bathrooms: 1,
+  bedrooms: 2,
+  listing_type: 'lease',
+  dogs: true,
+  fee: true,
+  parking: true,
+  cats: true,
+  description: 'Built in 2014, this sun-lit luxury condominium is located in the heart of prime Duboce Triangle.
+
+  This fantastic property offers 2 BR, 2 BAs w/ open floor plan appointed w/ clean & contemporary interior finishes including; custom built-in closets, wide plank oak floors, graphite stained contemporary cabinetry, Bertazzoni gas range, quartz countertops, Samsung refrigerator, Kenmore Elite washer and dryer, and shared roof deck w/ stunning views.
+
+  Walk Score 99, Transit Score 100 and Bike Score 92.'
+})
+
+Image.create!({listing_id: l42.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890951/42_1_ytla91.jpg'})
+Image.create!({listing_id: l42.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890953/42_0_qoe4n2.jpg'})
+Image.create!({listing_id: l42.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890951/42_2_tjainq.jpg'})
+Image.create!({listing_id: l42.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890951/42_4_l4nyke.jpg'})
+Image.create!({listing_id: l42.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890953/42_6_bxskd9.jpg'})
+Image.create!({listing_id: l42.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890951/42_5_lpb986.jpg'})
+Image.create!({listing_id: l42.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890951/42_3_zewfds.jpg'})
+Image.create!({listing_id: l42.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890952/42_7_dj3i3j.jpg'})
+
+l43 = Listing.create!({
+  address: Faker::Address.street_address + ', San Francisco, CA 94114, USA',
+  lat: 37.755853,
+  lng: -122.431090,
+  rent: 5200,
+  bathrooms: 1,
+  bedrooms: 2,
+  listing_type: 'lease',
+  dogs: true,
+  cats: true,
+  description: 'Newly remodeled two bedroom house. Located in Noe Valley, walking distance from 24th street. Parking, laundry, front and back yard. Edwardian with modern interior and hardwood floors.'
+})
+
+Image.create!({listing_id: l43.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891337/43_4_wn7hgj.jpg'})
+Image.create!({listing_id: l43.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891338/43_5_ndhsdo.jpg'})
+Image.create!({listing_id: l43.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891337/43_6_xw6xvm.jpg'})
+Image.create!({listing_id: l43.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891336/43_2_ehwljw.jpg'})
+Image.create!({listing_id: l43.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891337/43_3_j4t6kt.jpg'})
+Image.create!({listing_id: l43.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891336/43_1_dpg43p.jpg'})
+Image.create!({listing_id: l43.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891336/43_0_zs9vrz.jpg'})
+
+l44 = Listing.create!({
+  address: Faker::Address.street_address + ', San Francisco, CA 94131, USA',
+  lat: 37.748524,
+  lng: -122.431262,
+  rent: 6785,
+  bathrooms: 1.5,
+  bedrooms: 2,
+  listing_type: 'lease',
+  dogs: true,
+  cats: true,
+  description: 'Take pleasure in the comfort and serenity in this 2 bedroom, 1.5 bathroom apartment in San Francisco. This unit features large windows that allow an ample amount of natural light to come in. Exquisitely decorated and spacious, this home is a perfect place to live. If you like what you see in the pictures, imagine how wonderful it is in person!
+
+Features and Amenities:
+- High ceilings
+- Rosewood cabinets
+- Granite and marble finishes
+- Brazilian Teak floors'
+})
+
+Image.create!({listing_id: l44.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891802/44_9_jqwbak.png'})
+Image.create!({listing_id: l44.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891800/44_2_fukpgw.png'})
+Image.create!({listing_id: l44.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891800/44_5_lsmieq.png'})
+Image.create!({listing_id: l44.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891803/44_0_jvlx2n.png'})
+Image.create!({listing_id: l44.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891804/44_1_gonqla.png'})
+Image.create!({listing_id: l44.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891800/44_7_idigox.png'})
+Image.create!({listing_id: l44.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891803/44_8_bw6mzk.png'})
+Image.create!({listing_id: l44.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891794/44_6_chotrq.png'})
+Image.create!({listing_id: l44.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891797/44_4_a1saj7.png'})
+
+l45 = Listing.create!({
+  address: Faker::Address.street_address + ', San Francisco, CA 94110, USA',
+  lat: 37.744995,
+  lng: -122.438128,
+  rent: 6000,
+  bathrooms: 2,
+  bedrooms: 2,
+  listing_type: 'lease',
+  dogs: true,
+  cats: true,
+  description: 'Fantastic, updated, spacious, remodeled and renovated, 1909 Edwardian. Most desirable block in Noe Valley. A few blocks to the colorful Mission District and not far off the hip and lively Valencia Corridor. Very safe. All shuttles for Google, Apple, Twitter, Facebook, etc pick up around the corner. High Ceilings, wood floors, deck, yard.  Sit on the deck to enjoy your coffee. Lovely and spacious back yard. Lemon trees, plum trees.'
+})
+
+Image.create!({listing_id: l45.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480892157/45_0_s7vtix.jpg'})
+Image.create!({listing_id: l45.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480892156/45_1_uvqdce.jpg'})
+Image.create!({listing_id: l45.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480892157/45_2_qfkgh7.jpg'})
+Image.create!({listing_id: l45.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480892158/45_3_wml3rp.jpg'})
+
+ l46 = Listing.create!({
+   address: Faker::Address.street_address + ', San Francisco, CA 94131, USA',
+   lat: 37.739429,
+   lng: -122.438128,
+   rent: 3700,
+   bathrooms: 1,
+   bedrooms: 2,
+   listing_type: 'lease',
+   dogs: true,
+   cats: true,
+   parking: true,
+   description: 'Perfect if you want to live in SF but commute to Silicon Valley. Close to BART and 5 minutes to Highways 280 and 101. This is an ideal home for someone who works in the city or who commutes south.
+
+Features and Amenities
+- 2 Bedrooms
+- 1 Bathroom
+- Parking for one standard size vehicle
+- Open plan living room and dining room
+- Kitchen
+- Outdoor patio (shared)
+- Refrigerator
+- Stove with oven
+- Dishwasher
+- Washing machine and dryer
+- Central heating
+- Wireless internet'
+ })
+
+ Image.create!({listing_id: l46.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480892521/46_0_c3rkyh.jpg'})
+ Image.create!({listing_id: l46.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480892521/46_1_bfqhuf.jpg'})
+ Image.create!({listing_id: l46.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480892521/46_2_gkfdob.jpg'})
+ Image.create!({listing_id: l46.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480892521/46_3_yyceqb.jpg'})
+ Image.create!({listing_id: l46.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480892521/46_4_a3nkuo.jpg'})
+ Image.create!({listing_id: l46.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480892521/46_5_stc2jg.jpg'})
+
+# Listing.create!({
+#   address: Faker::Address.street_address + ', San Francisco, CA 94121, USA',
+#   lat: ,
+#   lng: -,
+#   rent: ,
+#   bathrooms: ,
+#   bedrooms: ,
+#   listing_type: 'sublet',
+#   dogs: true,
+#   fee: true,
+#   parking: true,
+#   cats: true,
+#   description: ''
+# })

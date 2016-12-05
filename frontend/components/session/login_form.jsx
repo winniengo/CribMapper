@@ -11,7 +11,6 @@ class LoginForm extends React.Component {
       password: "",
     };
 
-    console.log('loginform')
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -22,7 +21,6 @@ class LoginForm extends React.Component {
   }
 
   handleSubmit(e) {
-    console.log('handle submit');
     e.preventDefault();
     this.props.login(this.state);
   }
@@ -31,7 +29,7 @@ class LoginForm extends React.Component {
     return (
       <div className='modal-form'>
         <section className='header'>
-          <div className='logo-img background-img hvr-bob' />
+          <div className='logo-img background-img' />
           <h2>Sign in</h2>
           to save your favorite listings
           <br/>
