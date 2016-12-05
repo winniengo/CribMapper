@@ -16,7 +16,10 @@ const customStyles = {
     height                : '80%',
     overflow              : 'scroll',
     maxWidth              : '800px',
-    minWidth             : '660px'
+    minWidth              : '660px',
+  },
+  overlay: {
+    zIndex                : 2,
   }
 };
 
