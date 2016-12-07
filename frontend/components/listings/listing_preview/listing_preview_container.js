@@ -11,6 +11,7 @@ const mapStateToProps = (state, ownProps) => {
 
   return {
     listing: selectListing(state, ownProps),
+    path: ownProps.location.pathname.includes('search') ? 'search' : 'favorites',
     destination
   };
 };

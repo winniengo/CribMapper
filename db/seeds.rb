@@ -1181,7 +1181,7 @@ l39 = Listing.create!({
   fee: true,
   description: 'This 15th floor one bedroom + one bath is a south facing light filled sanctuary with large double pained windows and Solar Shades. Your view faces Yerba Buena Gardens, and Mission Street. The bedroom has a custom a lineal closet and with a nook great for storing luggage. Classic tiled bathroom is off the hallway for easy access and has W/D in Unit. Additionally, the home boast brand new hardwood floors throughout, upgraded fixtures and a newly remodeled kitchen. Kitchen features include: A stainless steel built-in oven and microwave, Bosch Cook-top and custom paneled Bosch dishwasher and refrigerator. The elegant upgrades offer a sophisticated look, while the Calcutta marble stone slab provides a refined back-splash to the stainless under mount sink and soft close dark wood cabinetry.
 
-  Pricing includes one month free** **valid for new residents only**s'
+  Pricing includes one month free **valid for new residents only**'
 })
 
 Image.create!({listing_id: l39.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889994/39_0_s0icwb.jpg'})

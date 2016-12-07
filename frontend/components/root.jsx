@@ -7,6 +7,7 @@ import App from './app';
 import Search from './search/search';
 import AboutMe from './about_me';
 import Sidebar from './sidebar';
+import ListingIndexContainer from './listings/listing_index/listing_index_container';
 import ListingPreviewContainer from './listings/listing_preview/listing_preview_container';
 import ListingShowContainer from './listings/listing_show/listing_show_container';
 import FavoritesContainer from './favorites/favorites_container';
@@ -48,17 +49,21 @@ const Root = ({ store }) => {
     <Provider store={store}>
       <Router history={hashHistory}>
         <Route path="/" component={App}>
-          <IndexRedirect to="search/index" />
+          <IndexRedirect to="search" />
           <Route path="search" component={Search}>
-            <Route path='index' component={Sidebar} />
+            <IndexRoute component={Sidebar} />
+            <Route path=':id' component={ListingPreviewContainer} onEnter={_ensureListing} />
+          </Route>
+          <Route path="favorites" component={Search}>
+            <IndexRoute component={ListingIndexContainer} />
             <Route path=':id' component={ListingPreviewContainer} onEnter={_ensureListing} />
           </Route>
           <Route path="listings/:id" components={{main: ListingShowContainer, footer: AboutMe}} onEnter={_ensureListing} />
-          <Route path="favorites" components={{main: FavoritesContainer, footer: AboutMe}} onEnter={_ensureLoggedIn} >
+          {/*<Route path="favorites" components={{main: FavoritesContainer, footer: AboutMe}} onEnter={_ensureLoggedIn} >
             <Route path='list-view' component={ListingList} onEnter={_ensureFavoriteListings} />
             <Route path='map-view' component={ListingMap} onEnter={_ensureFavoriteListings} />
             <Route path='thumbnail-view' component={ListingThumbnails} onEnter={_ensureFavoriteListings} />
-          </Route>
+          </Route>*/}
         </Route>
       </Router>
     </Provider>

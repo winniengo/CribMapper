@@ -3,7 +3,7 @@ import { logout, openModal } from '../../actions/session';
 
 import Navbar from './navbar';
 
-const mapStateToProps = ({ session }, { pathname }) => ({
+const mapStateToProps = ({ session }) => ({
   loggedIn: Boolean(session.currentUser),
   modalOpen: session.modalOpen
 });

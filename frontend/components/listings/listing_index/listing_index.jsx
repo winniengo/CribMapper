@@ -2,11 +2,11 @@ import React from 'react';
 
 import ListingIndexItem from './listing_index_item';
 
-export default ({ listings, router }) => {
+export default ({ listings, path, router }) => {
   const handleClick = listingId => {
     return e => {
       if (!e.target.className.includes("favorite-icon")) {
-        router.push(`/search/${listingId}`);
+        router.push(`/${path}/${listingId}`);
       }
     }
   }

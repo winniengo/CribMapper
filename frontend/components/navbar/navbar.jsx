@@ -23,6 +23,7 @@ class Navbar extends React.Component {
     this.state = {redirectToFavorites: false};
 
     this.renderSessionLink = this.renderSessionLink.bind(this);
+    this.renderNavLink = this.renderNavLink.bind(this);
     this.handleRedirectToFavorites = this.handleRedirectToFavorites.bind(this);
     this.closeModal = this.closeModal.bind(this);
   }
@@ -37,7 +38,7 @@ class Navbar extends React.Component {
   componentWillReceiveProps(nextProps) {
     if (!this.props.loggedIn && nextProps.loggedIn) {
       if (this.state.redirectToFavorites) {
-        this.props.router.push('favorites/list-view');
+        this.props.router.push('favorites');
       }
       this.closeModal();
     }
@@ -45,7 +46,7 @@ class Navbar extends React.Component {
 
   handleRedirectToFavorites() {
     if (this.props.loggedIn) {
-      this.props.router.push('favorites/list-view');
+      this.props.router.push('favorites');
     } else {
       this.props.openModal();
       this.setState({redirectToFavorites: true})
@@ -74,20 +75,28 @@ class Navbar extends React.Component {
     }
   }
 
+  renderNavLink() {
+    return this.props.pathname.includes('favorites') ?
+    <a onClick={()=> this.props.router.push('search')} className='hvr-underline-from-center'>
+      Search
+    </a> :
+    <a onClick={this.handleRedirectToFavorites} className='hvr-underline-from-center'>
+      Favorites
+    </a>
+  }
+
   render () {
     return (
       <header className='navbar'>
         <div className='logo'>
           <Link to="/">
             <div className='logo-img background-img' />
-            <h2>CribMapper</h2>
+            <h3>CribMapper</h3>
           </Link>
         </div>
         <div className='links'>
           <div className='link-container'>
-            <a onClick={this.handleRedirectToFavorites} className='hvr-underline-from-center'>
-              Favorites
-            </a>
+            {this.renderNavLink()}
           </div>
           {this.renderSessionLink()}
         </div>

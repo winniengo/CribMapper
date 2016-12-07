@@ -36,35 +36,37 @@ class LoginForm extends React.Component {
           and calculate your daily work commute
           <SessionErrors errors={this.props.errors} />
         </section>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            <div className='modal-form-field hvr-reveal'>
-              <input
-                type='text'
-                value={this.state.email}
-                placeholder="Email"
-                onChange={this.update('email')} />
-              <div className="email-img background-img" />
-            </div>
-          </label>
-          <label>
-            <div className='modal-form-field hvr-reveal'>
-              <input
-                type='password'
-                value={this.state.password}
-                placeholder="Password"
-                onChange={this.update('password')} />
-              <div className="password-img background-img" />
-            </div>
-          </label>
-          <input type='submit' value='Sign in' className='modal-btn'/>
-        </form>
-        <section className='footer'>
+        <section className='main'>
+          <form onSubmit={this.handleSubmit}>
+            <label>
+              <div className='modal-form-field hvr-reveal'>
+                <input
+                  type='text'
+                  value={this.state.email}
+                  placeholder="Email"
+                  onChange={this.update('email')} />
+                <div className="email-img background-img" />
+              </div>
+            </label>
+            <label>
+              <div className='modal-form-field hvr-reveal'>
+                <input
+                  type='password'
+                  value={this.state.password}
+                  placeholder="Password"
+                  onChange={this.update('password')} />
+                <div className="password-img background-img" />
+              </div>
+            </label>
+            <input type='submit' value='sign in' className='modal-btn'/>
+          </form>
+        </section>
+        <footer>
           New to CribMapper?
           <a
-            className="switch-session-form hvr-underline-from-center"
+            className="hvr-underline-from-center"
             onClick={() => this.props.switchForm()}>Create an account!</a>
-        </section>
+        </footer>
       </div>
     );
   }

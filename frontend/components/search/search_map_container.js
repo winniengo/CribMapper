@@ -1,15 +1,15 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
-import { allListings } from '../../reducers/selectors';
+import { allListings, allFavoriteListings } from '../../reducers/selectors';
 import { requestListings } from '../../actions/listings';
 import { updateBounds } from '../../actions/filters';
 
 import SearchMap from './search_map';
 
-const mapStateToProps = (state, ownProps)=> {
+const mapStateToProps = (state, { pathname })=> {
   return ({
-    listings: allListings(state),
+    listings: pathname.includes('search') ? allListings(state) : allFavoriteListings(state)
   });
 
 }

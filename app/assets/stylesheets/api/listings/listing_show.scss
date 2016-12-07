@@ -6,9 +6,11 @@ $light-grey: #e8edf3;
 $dark-grey: #d0dae6;
 
 .pets {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+      display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
+    padding-top: 10px;
 }
 
 .pets > div {

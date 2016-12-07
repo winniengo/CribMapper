@@ -18,19 +18,12 @@ class ListingShow extends React.Component {
       selected: 'street-view'
     });
 
-    this.returnToListings = this.returnToListings.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
 
   componentWillReceiveProps(newProps) {
     this.setState(newProps.listing);
   }
-
-  returnToListings() {
-    // this.props.deselect();
-    this.props.router.push('/');
-  }
-
   handleClick(e) {
     this.setState({ selected: e.currentTarget.value});
   }
@@ -66,7 +59,7 @@ class ListingShow extends React.Component {
       parking,
       listingType,
       images } = this.state;
-    const { listing, destination } = this.props;
+    const { listing, destination, router } = this.props;
 
     const petFriendly = cats || dogs ? "- Friendly" : "No Pets";
     const view = this.state.selected === 'street-view' ?
@@ -78,7 +71,7 @@ class ListingShow extends React.Component {
         <section className="listing-main">
           <button
             className='navigation hvr-fade'
-            onClick={this.returnToListings}>
+            onClick={() => router.push('search')}>
             ← back to results
           </button>
           <ListingHeader listing={listing} />

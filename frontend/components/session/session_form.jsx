@@ -14,6 +14,7 @@ class SessionForm extends React.Component {
     this.clearErrors = this.clearErrors.bind(this);
     this.switchForm = this.switchForm.bind(this);
     this.renderForm = this.renderForm.bind(this);
+    this.demo = this.demo.bind(this);
   }
 
   componentWillUnmount() {
@@ -33,9 +34,15 @@ class SessionForm extends React.Component {
     })
   }
 
+  demo() {
+    this.props.login({
+      email: "guest",
+      password: "password"
+    });
+  }
+
   renderForm() {
     if (this.state.sessionType === 'login') {
-      console.log('render login form');
       return (
         <LoginForm
           errors={this.props.errors}
@@ -43,7 +50,6 @@ class SessionForm extends React.Component {
           switchForm={this.switchForm} />
       );
     } else {
-      console.log('render signup form');
       return (
         <SignupForm
           errors={this.props.errors}
@@ -57,6 +63,9 @@ class SessionForm extends React.Component {
     return (
       <div className='session modal'>
         {this.renderForm()}
+        <footer>
+          <a onClick={this.demo} className='hvr-underline-from-center'>Or explore as a guest!</a>
+        </footer>
       </div>
     );
   }

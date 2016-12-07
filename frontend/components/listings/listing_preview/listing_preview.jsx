@@ -9,33 +9,22 @@ class ListingPreview extends React.Component {
   constructor(props) {
     super(props);
     this.state = {selected: 0}
-
-    this.returnToListings = this.returnToListings.bind(this);
-    this.redirectToDetails = this.redirectToDetails.bind(this);
-  }
-
-  returnToListings() {
-    this.props.router.push('/search/index');
-  }
-
-  redirectToDetails() {
-    this.props.router.push(`/listings/${this.props.listing.id}`);
   }
 
   render() {
-    const { listing, destination } = this.props;
+    const { listing, destination, router, path } = this.props;
 
     return (
       <div className='listing-preview'>
         <section className='sidebar-btns'>
           <button
             className='hvr-fade'
-            onClick={this.returnToListings}>
+            onClick={() => router.push(path)}>
             ← back to results
           </button>
           <button
             className='hvr-fade'
-            onClick={this.redirectToDetails}>
+            onClick={() => router.push(`listings/${listing.id}`)}>
             more details
           </button>
         </section>
