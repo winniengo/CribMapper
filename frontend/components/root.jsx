@@ -54,7 +54,7 @@ const Root = ({ store }) => {
             <IndexRoute component={Sidebar} />
             <Route path=':id' component={ListingPreviewContainer} onEnter={_ensureListing} />
           </Route>
-          <Route path="favorites" component={Search}>
+          <Route path="favorites" component={Search} onEnter={_ensureFavoriteListings}>
             <IndexRoute component={ListingIndexContainer} />
             <Route path=':id' component={ListingPreviewContainer} onEnter={_ensureListing} />
           </Route>
