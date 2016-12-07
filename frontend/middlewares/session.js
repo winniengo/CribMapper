@@ -51,7 +51,7 @@ const sessionMiddleware = ({ dispatch, getState }) => next => action => {
         dispatch(addAlert(`${capitalize(currentUser.name)} you've successfully updated your profile.`))
       };
 
-      updateUser(action.user, updatedSuccess, error);
+      updateUser(action.user, updateSuccess, error);
       return next(action);
     case FAVORITE_LISTING:
       const favoriteSuccess = ({ listingId }) => dispatch(receiveFavorite(listingId));

@@ -1,6 +1,8 @@
 import React from 'react';
-import Modal from 'react-modal';
 import { Link, withRouter } from 'react-router';
+
+import Alert from './alert';
+import Modal from 'react-modal';
 import SessionFormContainer from '../session/session_form_container';
 
 const customStyles = {
@@ -35,12 +37,19 @@ class Navbar extends React.Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (!this.props.loggedIn && nextProps.loggedIn) {
+  componentWillReceiveProps({ loggedIn, alert }) {
+    if (!this.props.loggedIn && loggedIn) {
       if (this.state.redirectToFavorites) {
         this.props.router.push('favorites');
       }
       this.closeModal();
+    }
+
+    if (alert) {
+      const id = setTimeout(() => {
+        this.props.clearAlert();
+        clearTimeout(id);
+      }, 3000);
     }
   }
 
@@ -85,7 +94,12 @@ class Navbar extends React.Component {
     </a>
   }
 
+  renderAlert() {
+    return this.props.alert ? <Alert alert={this.props.alert} /> : ''
+  }
+
   render () {
+    const { alert, clearAlert } = this.props;
     return (
       <header className='navbar'>
         <div className='logo'>
@@ -94,6 +108,7 @@ class Navbar extends React.Component {
             <h3>CribMapper</h3>
           </Link>
         </div>
+        {this.renderAlert()}
         <div className='links'>
           <div className='link-container'>
             {this.renderNavLink()}
