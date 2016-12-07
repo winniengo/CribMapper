@@ -150,6 +150,10 @@ width: 100%;
   color: $navy-blue;
 }
 
+.session > footer {
+  font-weight: 600;
+}
+
 .session footer {
   display:flex;
   flex-direction: row;

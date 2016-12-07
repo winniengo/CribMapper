@@ -13,15 +13,22 @@ $grey: #e8edf3;
   justify-content: space-between;
   align-items: center;
   opacity: 0.8;
-  padding: 0 10px;
+  padding: 0 10px 0 2px;
   border-bottom: 1px solid $grey;
 }
 
 .navbar .links {
   display: flex;
   flex-direction: row;
-  // text-transform: uppercase;
+  text-transform: uppercase;
     font-weight: 300;
+      border-right: 1px solid $leather;
+
+}
+
+.navbar .links a {
+  width: 80px;
+  text-align: center;
 }
 
 .link-container {

@@ -54,16 +54,11 @@ const Root = ({ store }) => {
             <IndexRoute component={Sidebar} />
             <Route path=':id' component={ListingPreviewContainer} onEnter={_ensureListing} />
           </Route>
-          <Route path="favorites" component={Search} onEnter={_ensureFavoriteListings}>
-            <IndexRoute component={ListingIndexContainer} />
+          <Route path="favorites" component={Search} onEnter={_ensureLoggedIn}>
+            <IndexRoute component={ListingIndexContainer} onEnter={_ensureFavoriteListings} />
             <Route path=':id' component={ListingPreviewContainer} onEnter={_ensureListing} />
           </Route>
           <Route path="listings/:id" components={{main: ListingShowContainer, footer: AboutMe}} onEnter={_ensureListing} />
-          {/*<Route path="favorites" components={{main: FavoritesContainer, footer: AboutMe}} onEnter={_ensureLoggedIn} >
-            <Route path='list-view' component={ListingList} onEnter={_ensureFavoriteListings} />
-            <Route path='map-view' component={ListingMap} onEnter={_ensureFavoriteListings} />
-            <Route path='thumbnail-view' component={ListingThumbnails} onEnter={_ensureFavoriteListings} />
-          </Route>*/}
         </Route>
       </Router>
     </Provider>

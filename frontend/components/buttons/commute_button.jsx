@@ -30,11 +30,9 @@ class CommuteButton extends React.Component{
   }
 
   componentWillReceiveProps(nextProps) {
-    if (!nextProps.currentUser) {
+    if (!nextProps.loggedIn) { // redirect if logged out
       this.props.router.push('/');
-    }
-
-    if (this.props.loggedIn && this.props.currentUser.place_id !== nextProps.currentUser.place_id) {
+    } else if (this.props.currentUser.place_id !== nextProps.currentUser.place_id) {
       this.closeModal(); // work address is updated
     }
   }

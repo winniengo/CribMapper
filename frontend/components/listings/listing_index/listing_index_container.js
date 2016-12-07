@@ -7,6 +7,7 @@ import ListingIndex from './listing_index';
 
 const mapStateToProps = (state, { location }) => {
   return ({
+    loggedIn: Boolean(state.session.currentUser),
     listings: location.pathname.includes('search') ? allListings(state) : allFavoriteListings(state),
     path: location.pathname.includes('search') ? 'search' : 'favorites'
   });
