@@ -10,10 +10,7 @@ import Sidebar from './sidebar';
 import ListingIndexContainer from './listings/listing_index/listing_index_container';
 import ListingPreviewContainer from './listings/listing_preview/listing_preview_container';
 import ListingShowContainer from './listings/listing_show/listing_show_container';
-import FavoritesContainer from './favorites/favorites_container';
-import ListingList from './listings/listing_list/listing_list';
-import ListingMap from './listings/listing_map';
-import ListingThumbnails from './listings/listing_thumbnails';
+// import FavoritesContainer from './favorites/favorites_container';
 
 import { requestListing, requestFavoriteListings } from '../actions/listings';
 import { openModal } from '../actions/session';

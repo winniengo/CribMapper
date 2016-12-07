@@ -8,7 +8,10 @@ $dark-grey: #d0dae6;
 #app {
   display: flex;
   min-height: 100vh;
+  min-width: 1000px;
   flex-direction: column;
+  margin-right: auto;
+ margin-left: auto;
 }
 
 .app-content {

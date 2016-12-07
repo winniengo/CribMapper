@@ -31,10 +31,11 @@ $dark-grey: #d0dae6;
 
 /* Listing Show **************************/
 .listing-show {
-  min-width: 960px;
+  // min-width: 960px;
   display: flex;
   justify-content: center;
   margin: 10px;
+  min-width: 1000px;
 }
 
 .listing-show h3 {

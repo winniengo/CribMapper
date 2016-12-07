@@ -3,9 +3,10 @@ import { logout, openModal } from '../../actions/session';
 
 import Navbar from './navbar';
 
-const mapStateToProps = ({ session }) => ({
+const mapStateToProps = ({ session, alert }) => ({
   loggedIn: Boolean(session.currentUser),
-  modalOpen: session.modalOpen
+  modalOpen: session.modalOpen,
+  alert
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

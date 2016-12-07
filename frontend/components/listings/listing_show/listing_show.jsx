@@ -72,7 +72,7 @@ class ListingShow extends React.Component {
           <button
             className='navigation hvr-fade'
             onClick={() => router.push('search')}>
-            ← back to results
+            ← back to search
           </button>
           <ListingHeader listing={listing} />
           <ListingShowGallery images={images} />
