@@ -22,20 +22,18 @@ $coral: #FF533D;
 .listing-preview > header {
   display: flex;
   justify-content: center;
-  padding-bottom: 10px;
   align-items: center;
-  // padding: 10px;
 }
 
 .listing-preview > section:nth-last-child(1) {
   padding-bottom: 0;
 }
 
-.listing-preview > description {
-  padding-bottom: 10px;
-  width: 458px;
-  white-space: pre-line;
-}
+// .listing-preview > description {
+//   padding-bottom: 10px;
+//   width: 458px;
+//   white-space: pre-line;
+// }
 
 .listing-preview h2 {
   // font-weight: 400;

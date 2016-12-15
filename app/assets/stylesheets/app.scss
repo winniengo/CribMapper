@@ -46,6 +46,7 @@ $dark-grey: #d0dae6;
 #sidebar {
   overflow-y: scroll;
   min-width: 500px;
+  max-width: 500px;
   background: $light-grey;
   font-size: 14px;
 }

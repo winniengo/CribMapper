@@ -37,12 +37,10 @@ class ListingPreview extends React.Component {
           </div>
           <FavoriteButtonContainer id={listing.id} />
         </header>
-        <description>
+        <p>
           {listing.description}
-        </description>
-        <ListingCommute
-          origin={{lat: listing.lat, lng: listing.lng}}
-          destination={{lat: destination.lat, lng: destination.lng}} />
+        </p>
+
       </div>
     );
   }
@@ -50,3 +48,8 @@ class ListingPreview extends React.Component {
 
 
 export default withRouter(ListingPreview);
+
+        // 
+        // <ListingCommute
+        //   origin={{lat: listing.lat, lng: listing.lng}}
+        //   destination={{lat: destination.lat, lng: destination.lng}} />

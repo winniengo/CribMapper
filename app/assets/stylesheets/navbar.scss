@@ -24,27 +24,24 @@ $dark-grey: #d0dae6;
   border-bottom: 1px solid $dark-grey;
 }
 
-.navbar .links {
+.links {
   display: flex;
   flex-direction: row;
   text-transform: uppercase;
-    font-weight: 300;
-      border-right: 1px solid $leather;
-
+  font-weight: 300;
+  border-right: 1px solid $leather;
 }
 
-.navbar .links a {
+.link-container > a {
   width: 80px;
   text-align: center;
 }
 
 .link-container {
-
   cursor: pointer;
   font-size: 16px;
-  padding: 0 20px;
+  padding: 0 10px;
   border-left: 1px solid $leather;
-  // transition: border-bottom-color 0.5s linear 0s;
 }
 
 // .link-container > a {

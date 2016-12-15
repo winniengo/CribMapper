@@ -91,15 +91,17 @@ a {
 
 button {
   cursor: pointer;
+  border-radius: 2px;
+}
+
+p {
+  white-space: pre-line;
+  font-size: 14px;
+  padding: 10px 0;
 }
 
 .background-img {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-}
-
-p {
-  white-space: pre-line;
-  font-size: 14px;
 }

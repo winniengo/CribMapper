@@ -6,9 +6,10 @@ class ListingCommute extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      travelMode: "DRIVING",
-      duration: "???",
-      distance: "???"
+      travelMode: 'driving',
+      duration: '???',
+      distance: '???',
+      selected: 'route-view'
     }
 
     this.handleClick = this.handleClick.bind(this);
@@ -25,6 +26,14 @@ class ListingCommute extends React.Component {
   componentDidMount() {
     this.directionsService = new google.maps.DirectionsService;
     this.directionsDisplay = new google.maps.DirectionsRenderer;
+
+    this.initMap();
+    this.directionsDisplay.setMap(this.map);
+    this.directionsDisplay.setPanel(document.getElementById('listing-commute-panel'));
+    this.calculateAndDisplayRoute();
+  }
+
+  initMap() {
     const mapDOMNode = document.getElementById('listing-commute-map');
     const mapOptions = {
       center: {
@@ -35,11 +44,10 @@ class ListingCommute extends React.Component {
       scrollwheel: false
     };
     this.map = new google.maps.Map(mapDOMNode, mapOptions);
-    this.directionsDisplay.setMap(this.map);
-    this.calculateAndDisplayRoute();
   }
 
   calculateAndDisplayRoute(props) {
+    // console.log('calculating');
     const { origin, destination } = props || this.props;
 
     if (!origin.lat || !destination.lat) {
@@ -49,9 +57,9 @@ class ListingCommute extends React.Component {
     this.directionsService.route({
       origin: `${origin.lat},${origin.lng}`,
       destination: `${destination.lat},${destination.lng}`,
-      travelMode: this.state.travelMode
+      travelMode: this.state.travelMode.toUpperCase()
     }, (response, status) => {
-      if (status === "OK") {
+      if (status === 'OK') {
         this.directionsDisplay.setDirections(response);
         this.setState({
           distance: response.routes[0].legs[0].distance.text,
@@ -64,48 +72,74 @@ class ListingCommute extends React.Component {
   }
 
   handleClick(travelMode) {
-    return e => this.setState({
-       travelMode
-     }, () => this.calculateAndDisplayRoute());
+    return () => this.setState({ travelMode }, () => this.calculateAndDisplayRoute());
+  }
+
+  // renderButtons() {
+  //   return (
+  //     ['route-view', 'panel-view'].map((view, idx) => (
+  //       <button
+  //         key={idx}
+  //         type="button"
+  //         value={view}
+  //         onClick={this.handleClick}
+  //         className={`hvr-underline-from-center ${this.state.selected === view ? 'selected' : ''}`}>
+  //         <div className={`background-img icon ${view}`} />
+  //       </button>
+  //     ))
+  //   )
+  // }
+
+  renderFields() {
+    return (
+      ['driving', 'transit', 'walking'].map((travelMode, idx) => (
+        <button
+          className={this.state.travelMode === travelMode ? 'selected' : ''}
+          onClick={this.handleClick(travelMode)}
+          key={idx}>
+          <div className={`background-img icon ${travelMode}`} />
+        </button>
+      ))
+    );
   }
 
   render() {
     return (
-      <section className="listing-commute">
+      <section className='listing-commute'>
         <header>
           <h3>Calculate your Commute</h3>
           <CommuteButtonContainer />
         </header>
         <section>
-          <div className="commute fields">
-            <button
-              className={this.state.travelMode === "DRIVING" ? 'selected' : ''}
-              onClick={this.handleClick("DRIVING")}>
-              <div className="background-img driving icon" />
-            </button>
-            <button
-              className={this.state.travelMode === "TRANSIT" ? 'selected' : ''}
-              onClick={this.handleClick("TRANSIT")}>
-              <div className="background-img transit icon" />
-            </button>
-            <button
-              className={this.state.travelMode === "WALKING" ? 'selected' : ''}
-              onClick={this.handleClick("WALKING")}>
-              <div className="background-img walking icon" />
-            </button>
-
+          <div className='commute fields'>
+            {this.renderFields()}
           </div>
-          <section className="listing-details">
+          <section className='listing-details'>
             <ul>
               <li>Distance<p>{this.state.distance}</p></li>
               <li>Duration<p>{this.state.duration}</p></li>
             </ul>
           </section>
         </section>
-        <div id="listing-commute-map" />
+         <div id='listing-commute-map' />
+        <div id='listing-commute-panel' />
       </section>
     );
   }
 }
 
 export default ListingCommute;
+
+
+
+
+
+  // <div>
+  //   <div className="views">
+  //     {this.renderButtons()}
+  //   </div>
+  //   <section className='view'>
+  //     <div id='listing-commute-map' />
+  //     <div id='listing-commute-panel' />
+  //   </section>
+  // </div>

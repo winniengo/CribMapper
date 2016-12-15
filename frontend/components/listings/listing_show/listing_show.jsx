@@ -3,7 +3,7 @@ import React from 'react';
 import FavoriteButtonContainer from '../../buttons/favorite_button_container';
 import ListingDetails from '../listing_details';
 import ListingHeader from '../listing_header';
-import ListingShowContact from './listing_show_contact';
+import ListingContact from './listing_contact';
 import ListingShowGallery from './listing_show_gallery';
 import ListingCommute from '../listing_commute';
 import StreetView from '../street_view';
@@ -24,6 +24,7 @@ class ListingShow extends React.Component {
   componentWillReceiveProps(newProps) {
     this.setState(newProps.listing);
   }
+  
   handleClick(e) {
     this.setState({ selected: e.currentTarget.value});
   }
@@ -98,7 +99,7 @@ class ListingShow extends React.Component {
           <ListingCommute
             origin={{ lat, lng }}
             destination={destination} />
-          <ListingShowContact contact={""}/>
+          <ListingContact contact={""}/>
         </section>
       </div>
     );
@@ -106,3 +107,5 @@ class ListingShow extends React.Component {
 }
 
 export default ListingShow;
+
+          //

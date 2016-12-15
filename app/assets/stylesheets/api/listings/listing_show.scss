@@ -10,7 +10,7 @@ $dark-grey: #d0dae6;
     flex-direction: row;
     align-items: center;
     font-size: 14px;
-    padding-top: 14px;
+    // padding-top: 14px;
 }
 
 .pets > div {
@@ -197,8 +197,6 @@ opacity: 0.8;
 /* Listing Details **************************/
 .listing-details {
   text-transform: capitalize;
-  // width: 100%;
-  // margin: 10px;
 }
 
 .listing-details > ul {
@@ -207,13 +205,12 @@ opacity: 0.8;
 }
 
 .listing-details > ul li {
-  padding: 10px;
-  font-size: 14px;
-  font-weight: 300;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #AB987A;
+    padding: 0 10px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #AB987A;
 }
 
 .listing-details > ul li:nth-child(even) {
@@ -236,7 +233,8 @@ opacity: 0.8;
 
 
 .listing-commute > header {
-  display: flex
+  display: flex;
+  justify-content: space-between;
 }
 
 .listing-commute h3 {
