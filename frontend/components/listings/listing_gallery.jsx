@@ -4,7 +4,6 @@ import ImageDisplay from './image_display';
 class ListingGallery extends React.Component {
   constructor(props) {
     super(props)
-    console.log(props)
     this.state = {selected: 0}
 
     this.handleSelect = this.handleSelect.bind(this);

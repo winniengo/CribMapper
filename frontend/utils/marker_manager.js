@@ -3,11 +3,10 @@ const selected = 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478649431/i
 
 export default class MarkerManager {
   constructor(map, handleClick) {
+    this.map = map;
     this.handleClick = handleClick;
 
-    this.map = map;
     this.markers = [];
-    // this.hovered = [];
     this.selectedMarker = null;
   }
 
@@ -67,50 +66,4 @@ export default class MarkerManager {
       }
     }
   }
-
-  // styleMarkers(selectedId, hoveredId) {
-    // if (selectedId) {
-    //   if (this.hovered.length !== 0) {
-    //     this._removeIcon();
-    //   }
-    //   this.selected = this.markers.filter(({ listingId }) => listingId === selectedId);
-    //   this._addIcon();
-    // } else {
-    //   this._removeIcon();
-    // }
-    //
-    // if (hoveredId) {
-    //   if (this.hovered.length !== 0) {
-    //     this._removeBounce();
-    //   }
-    //   this.hovered = this.markers.filter(({ listingId }) => listingId === hoveredId);
-    //   // console.log(this.hovered)
-    //   this._addBounce();
-    // } else {
-    //   this._removeBounce();
-    // }
-  // }
-  //
-  // _addStyleListeners(marker) {
-  //   marker.addListener('mouseover', e => {
-  //     this.hovered.push(marker);
-  //     this._addBounce();
-  //   });
-  //
-  //   marker.addListener('mouseout', e => {
-  //     this._removeBounce();
-  //   });
-  // }
-  //
-  // _addBounce() {
-  //   // console.log(this.hovered)
-  //     // this.hovered.forEach(marker => marker.setIcon(hovered));
-  //   this.hovered.forEach(marker => marker.setAnimation(google.maps.Animation.BOUNCE));
-  // }
-  //
-  // _removeBounce() {
-  //       this.hovered.forEach(marker => marker.setAnimation(null));
-  //   // this.markers.forEach(marker => marker.setIcon(icon));
-  //   this.hovered = [];
-  // }
 }
