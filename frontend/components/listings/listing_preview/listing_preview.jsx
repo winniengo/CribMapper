@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router';
 
 import ListingHeader from './listing_header';
+import ListingDetails from './listing_details';
 import ListingGallery from './listing_gallery';
 import ListingDescription from './listing_description';
 import ListingCommute from '../listing_commute';
@@ -31,6 +32,7 @@ class ListingPreview extends React.Component {
         </section>
         <ListingGallery images={listing.images} />
         <ListingHeader listing={listing} />
+        <ListingDetails listing={listing} />
         <ListingDescription description={listing.description} />
         <ListingCommute
           origin={{lat: listing.lat, lng: listing.lng}}

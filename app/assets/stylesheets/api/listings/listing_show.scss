@@ -18,14 +18,25 @@ $dark-grey: #8A9299;
   margin-left: 2px;
 }
 
-.cats {
+.cat {
   background-image: image-url('cat.png');
 }
 
-.dogs {
+.dog {
   background-image: image-url('dog.png');
 }
 
+.bath {
+  background-image: image-url('bath.png');
+}
+
+.bed {
+  background-image: image-url('bed.png');
+}
+
+.parking {
+  background-image: image-url('parking.png');
+}
   /* Listing Show **************************/
 .listing-show {
   display: flex;
@@ -67,6 +78,7 @@ button.navigation:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 
 .listing-show .listing-header header {
@@ -183,12 +195,12 @@ section.thumbnail-gallery {
   text-transform: capitalize;
 }
 
-.listing-details > ul {
+.listing-table > ul {
   margin: 10px 0;
   border-top: 1px solid #AB987A;
 }
 
-.listing-details > ul li {
+.listing-table > ul li {
   padding: 0 10px;
   font-size: 14px;
   display: flex;
@@ -197,11 +209,11 @@ section.thumbnail-gallery {
   border-bottom: 1px solid #AB987A;
 }
 
-.listing-details > ul li:nth-child(even) {
+.listing-table > ul li:nth-child(even) {
   background: #FAFAFA;
 }
 
-.listing-details > ul li:nth-child(odd) {
+.listing-table > ul li:nth-child(odd) {
   background: #F1F1F1;
 }
 

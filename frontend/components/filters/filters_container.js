@@ -5,7 +5,7 @@ import {
   updateFilter,
   resetFilter,
   resetFilters } from '../../actions/filters';
-import { allTags } from '../../reducers/selectors';
+// import { allTags } from '../../reducers/selectors';
 
 import merge from 'lodash/merge'
 
@@ -23,15 +23,14 @@ const mapDispatchToProps = dispatch => {
   });
 };
 
-const mergeProps = (stateProps, dispatchProps) => {
-  return merge({}, stateProps, dispatchProps, {
-    tags: allTags(stateProps, dispatchProps)
-  });
-}
+// const mergeProps = (stateProps, dispatchProps) => {
+//   return merge({}, stateProps, dispatchProps, {
+//     tags: allTags(stateProps, dispatchProps)
+//   });
+// }
 
 
 export default withRouter(connect(
   mapStateToProps,
-  mapDispatchToProps,
-  mergeProps
+  mapDispatchToProps
 )(Filters));

@@ -54,8 +54,8 @@ class ListingShow extends React.Component {
           <section>
             <p className='description'>{description}</p>
             <div className='pets'>
-              {cats ? <div className='background-img cats' /> : ""}
-              {dogs ? <div className='background-img dogs' /> : ""}
+              {cats ? <div className='background-img icon cat' /> : ""}
+              {dogs ? <div className='background-img icon dog' /> : ""}
               {petFriendly}
             </div>
           </section>

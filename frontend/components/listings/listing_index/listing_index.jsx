@@ -11,7 +11,7 @@ class ListingIndex extends React.Component {
 
   handleClick(listingId) {
     return e => {
-      if (!e.target.className.includes("favorite-icon")) {
+      if (!e.target.className.includes("favorite")) {
         this.props.router.push(`/${this.props.path}/${listingId}`);
       }
     }

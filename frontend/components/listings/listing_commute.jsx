@@ -88,7 +88,7 @@ class ListingCommute extends React.Component {
           <div className='commute fields'>
             {this.renderFields()}
           </div>
-          <section className='listing-details'>
+          <section className='listing-table'>
             <ul>
               <li>Distance<p>{this.state.distance}</p></li>
               <li>Duration<p>{this.state.duration}</p></li>
