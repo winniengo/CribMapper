@@ -67,23 +67,21 @@ class CommuteButton extends React.Component{
     const link = this.props.loggedIn && this.props.currentUser.lat ? 'update' : 'add';
 
     return (
-      <div className='links'>
-        <div className='link-container'>
-          <a className="hvr-underline-from-center" onClick={this.handleClick}>{link}</a>
-          <Modal
-            isOpen={this.state.modalIsOpen}
-            onAfterOpen={this.afterOpenModal}
-            onRequestClose={this.closeModal}
-            style={customStyles}>
-            <CommuteForm
-              closeModal={this.closeModal}
-              updateCurrentUser={this.props.updateCurrentUser}
-              currentUser={this.props.currentUser}
-              receiveErrors={this.props.receiveErrors}
-              clearErrors={this.props.clearErrors}
-              errors={this.props.errors} />
-          </Modal>
-        </div>
+      <div className='link-container'>
+        <a className="hvr-underline-from-center" onClick={this.handleClick}>{link}</a>
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal}
+          style={customStyles}>
+          <CommuteForm
+            closeModal={this.closeModal}
+            updateCurrentUser={this.props.updateCurrentUser}
+            currentUser={this.props.currentUser}
+            receiveErrors={this.props.receiveErrors}
+            clearErrors={this.props.clearErrors}
+            errors={this.props.errors} />
+        </Modal>
       </div>
     );
   }

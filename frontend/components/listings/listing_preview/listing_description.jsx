@@ -3,26 +3,34 @@ import React from 'react';
 class ListingDescription extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {collapsed: true};
+    this.state = {expanded: false};
 
     this.renderReadMore = this.renderReadMore.bind(this);
   }
 
   componentWillReceiveProps({ description }) {
     if (this.props.description !== description) { // collapse on new listing
-      this.setState({collapsed: true});
+      this.setState({expanded: false});
     }
   }
+
   renderReadMore() {
-    return this.state.collapsed ? <a id='read-more' onClick={() => this.setState({collapsed: !this.state.collapsed})}>Read more...</a> : <div />;
+    return this.state.expanded ? <div /> : <a className='hvr-underline-from-center' onClick={() => this.setState({expanded: !this.state.expanded})}>Read more...</a>;
+  }
+
+  renderOverlay() {
+    return this.state.expanded ? <div /> : <div className='overlay' />;
   }
 
   render() {
     return (
-      <section>
-        <p className={`listing-description ${this.state.collapsed ? 'collapsed' : 'displayed'}`}>
-          {this.props.description}
-        </p>
+      <section className='listing-description'>
+        <section>
+          <div className={this.state.expanded ? 'expanded' : 'hidden'}>
+            <p>{this.props.description}</p>
+          </div>
+          {this.renderOverlay()}
+        </section>
         {this.renderReadMore()}
       </section>
     );

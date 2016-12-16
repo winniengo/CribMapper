@@ -3,39 +3,37 @@ $navy-blue: #0F1626;
 $leather: #AB987A;
 $coral: #FF533D;
 $light-grey: #e8edf3;
-$dark-grey: #d0dae6;
+$dark-grey: #8A9299;
 
 .alert {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  padding: 2px 5px;
+  padding: 5px 10px;
   background: $light-grey;
-  font-size: 12px;
 }
 
 .navbar {
   display: flex;
-  height: 39px;
+  height: 59px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   opacity: 0.8;
-  padding: 0 10px 0 2px;
-  border-bottom: 1px solid $dark-grey;
+  padding: 0 20px;
+  border-bottom: 1px solid $light-grey;
 }
 
 .links {
   display: flex;
   flex-direction: row;
-  text-transform: uppercase;
-  font-weight: 300;
   border-right: 1px solid $leather;
 }
 
 .link-container > a {
   width: 80px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .link-container {
@@ -45,45 +43,20 @@ $dark-grey: #d0dae6;
   border-left: 1px solid $leather;
 }
 
-// .link-container > a {
-//   padding-bottom: 2px;
-//   transition: border-bottom-color 0.2s linear 0s;
-//   border-bottom: 2px solid transparent;
-// }
-//
-// .link-container > a:hover, {
-//   border-bottom-color: $navy-blue;
-// }
-
-// ul{float:left; margin:0; padding:0; list-style:none;}
-// .topnav-link {
-//     border-bottom: 2px solid transparent;
-//     color: #000;
-//     font-size: 0.8889em;
-//     font-weight: normal;
-//     padding-bottom: 0.125em;
-//     text-decoration: none;
-//     text-transform: uppercase;
-//     transition: border-bottom-color 50ms linear 0s;
-//     float:left;
-//     margin:0 5px;
-// }
-// .links > div:hover, .links > div:active {
-//   border-bottom-color: $navy-blue;
-// }
-
-.logo > a {
+.logo a {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
-  font-weight: 700;
 }
 
 .logo-img {
   background-image: image-url('home-map-location.png');
-  width: 35px;
-  height: 35px;
   margin: 2px;
+  width: 32px;
+  height: 32px;
+}
+
+.logo h3 {
+  color: $navy-blue;
+  font-size: 24px;
+  font-weight: 900;
 }

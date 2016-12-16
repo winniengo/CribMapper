@@ -9,11 +9,6 @@ export const updateBounds = bounds => ({
   bounds
 });
 
-// export const updateRent = rent => ({
-//   type: UPDATE_RENT,
-//   rent
-// });
-
 export const updateFilter = (field, filter) => ({
   type: UPDATE_FILTER,
   field,

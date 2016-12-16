@@ -3,7 +3,7 @@ $navy-blue: #0F1626;
 $leather: #AB987A;
 $coral: #FF533D;
 $light-grey: #e8edf3;
-$dark-grey: #d0dae6;
+$dark-grey: #8A9299;
 
 #app {
   display: flex;
@@ -11,13 +11,13 @@ $dark-grey: #d0dae6;
   min-width: 1000px;
   flex-direction: column;
   margin-right: auto;
- margin-left: auto;
+  margin-left: auto;
 }
 
 .app-content {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .app {
@@ -31,10 +31,9 @@ $dark-grey: #d0dae6;
 }
 
 .main {
-  // width: 100%;
-      width: 100%;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 #map {
@@ -49,48 +48,49 @@ $dark-grey: #d0dae6;
   max-width: 500px;
   background: $light-grey;
   font-size: 14px;
+  padding: 10px;
 }
 
 .sidebar-btns {
   display: flex;
-  // padding-top: 20px;
   justify-content: space-between;
 }
 
 .sidebar-btns button {
-    /* background: #a5cfe2; */
-    /* border-radius: 2px; */
-    /* border: 1px solid #8EAEBD; */
-    background: $light-grey;
-    padding: 10px 0;
-    width: 100%;
-    text-align: center;
-    text-transform: uppercase;
-    // font-size: 16px;
-  }
-
-// .sidebar-btns button:hover {
-//   background: $light-blue;
-// }
+  background: $light-grey;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
 
 .sidebar-btns button:nth-child(1) {
   margin-right: 5px;
 }
 
-.hidden {
-  height: 0px;
-  overflow: hidden;
-  transition: height 0.5s ease;
+.icon {
+  width: 24px;
+  height: 24px;
 }
 
-.expanded {
-  height: 220px;
-  overflow: hidden;
-  transition: height 0.5s ease;
+/* scroll up button *********************/
+
+.scroll-up-icon {
+  width: 35px;
+  height: 35px;
+  background-image: image-url("up-arrow.png");
+  z-index: 1;
+  position: absolute;
+  right: 70px;
+  bottom: 70px;
+  opacity: 0.3;
 }
 
+.scroll-up-icon:hover {
+  opacity: 0.9;
+}
 
-/* about me *********************/
+  /* about me *********************/
 
 .about-me {
   display: flex;

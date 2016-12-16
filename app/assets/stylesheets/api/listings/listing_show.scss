@@ -3,22 +3,19 @@ $navy-blue: #0F1626;
 $leather: #AB987A;
 $coral: #FF533D;
 $light-grey: #e8edf3;
-$dark-grey: #d0dae6;
+$dark-grey: #8A9299;
 
 .pets {
-      display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 14px;
-    // padding-top: 14px;
+    display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 14px;
 }
 
 .pets > div {
-    width: 24px;
-    height: 24px;
-    // background-position: center;
-    // background-size: contain;
-    margin-left: 2px;
+  width: 24px;
+  height: 24px;
+  margin-left: 2px;
 }
 
 .cats {
@@ -29,9 +26,8 @@ $dark-grey: #d0dae6;
   background-image: image-url('dog.png');
 }
 
-/* Listing Show **************************/
+  /* Listing Show **************************/
 .listing-show {
-  // min-width: 960px;
   display: flex;
   justify-content: center;
   margin: 10px;
@@ -54,7 +50,7 @@ button.navigation {
 }
 
 button.navigation:hover {
-    background: $light-blue;
+  background: $light-blue;
 }
 
 .listing-main {
@@ -68,24 +64,21 @@ button.navigation:hover {
 }
 
 .listing-header header {
-  // padding-top: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+}
+
+.listing-show .listing-header header {
+  justify-content: space-between;;
 }
 
 .listing-header h2 {
-  // font-weight: 400;
   font-size: 36px;
-  // font-weight: 400;
 }
 
 .listing-header h3 {
   font-size: 24px;
-  // padding-top: 5px;
-  // text-transform: capitalize;
-  // font-weight: 400;
 }
 
 .listing-main > .description {
@@ -95,41 +88,33 @@ button.navigation:hover {
 
 
 .listing-sidebar {
-  // width: 350px;
   min-width: 350px;
   max-width: 400px;
   margin: 10px;
 }
 
 .listing-sidebar h3 {
-  // font-size: 18px;
 }
 
 .listing-sidebar > section {
   margin: 10px;
 }
 
-/* Listing Gallery **************************/
+  /* Listing Gallery **************************/
 .listing-gallery {
   height: 420px;
-  // padding-top: 20px;
 }
 
 section.display {
   height: 400px;
   background: $navy-blue;
-  // padding: 10px;
   display: flex;
   flex-direction: row;
 
 }
 
 .display > div {
-  // height: 100%;
   width: 35px;
-  // background-repeat: no-repeat;
-  // background-size: contain;
-  // background-position: center;
 }
 
 .display > div.selected {
@@ -161,25 +146,25 @@ section.display {
 }
 
 section.thumbnail-gallery {
-    height: 100px;
-    background: #e8edf3;
-    display: flex;
-    flex-direction: row;
-    overflow: scroll;
-    padding: 10px 0;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
+  height: 100px;
+  background: #e8edf3;
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  padding: 10px 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 .thumbnail-gallery > div {
-cursor: pointer;
-height: 98px;
-min-width: 125px;
-margin-right: 5px;
-border: 1px solid;
-border-radius: 2px;
-border-color: #8EAEBD;
-opacity: 0.8;
+  cursor: pointer;
+  height: 98px;
+  min-width: 125px;
+  margin-right: 5px;
+  border: 1px solid;
+  border-radius: 2px;
+  border-color: #8EAEBD;
+  opacity: 0.8;
 
 }
 
@@ -193,9 +178,7 @@ opacity: 0.8;
   opacity: 1;
 }
 
-
-
-/* Listing Details **************************/
+  /* Listing Details **************************/
 .listing-details {
   text-transform: capitalize;
 }
@@ -206,12 +189,12 @@ opacity: 0.8;
 }
 
 .listing-details > ul li {
-    padding: 0 10px;
-    font-size: 14px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #AB987A;
+  padding: 0 10px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #AB987A;
 }
 
 .listing-details > ul li:nth-child(even) {
@@ -222,32 +205,8 @@ opacity: 0.8;
   background: #F1F1F1;
 }
 
-// .listing-details ul li h4 {
-//   font-weight: 400;
-// }
-
-.listing-commute {
-  // border-bottom: 1px solid #FF533D;
-  display: flex;
-  flex-direction: column;
-}
-
-
-.listing-commute > header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.listing-commute h3 {
-  padding-right: 20px;
-}
-
-.listing-commmute ul {
-
-}
 /* Listing Contact **************************/
 .listing-contact {
-  // margin: 10px;
 }
 
 .listing-contact > section {

@@ -1,21 +1,14 @@
 $ligh-blue: #8EAEBD;
-$ultramarine: #031424;
-$indigo: #30415D;
 $navy-blue: #0F1626;
 $leather: #AB987A;
 $coral: #FF533D;
 
 /* Listing Index **************************/
-.listing-index {
-
-}
 
 .listing-index-item {
   margin: 10px;
   height: 150px;
-  // border: 1px solid;
   border-radius: 2px;
-  // border-color: #8EAEBD;
   background: #FFFFFF;
   display: flex;
   font-size: 16px;
@@ -38,7 +31,6 @@ $coral: #FF533D;
 }
 
 .thumbnail {
-  // background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -48,10 +40,10 @@ $coral: #FF533D;
 }
 
 .listing-index-item header {
-    border-bottom: 1px solid #AB987A;
-    font-weight: 400;
-    font-size: 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  border-bottom: 1px solid #AB987A;
+  font-weight: 400;
+  font-size: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

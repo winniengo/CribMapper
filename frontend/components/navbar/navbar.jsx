@@ -115,7 +115,7 @@ class Navbar extends React.Component {
       <header className='navbar'>
         <div className='logo'>
           <Link to="/">
-            <div className='logo-img background-img' />
+            <div className='logo-img background-img hvr-pulse' />
             <h3>CribMapper</h3>
           </Link>
         </div>

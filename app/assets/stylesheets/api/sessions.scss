@@ -1,83 +1,65 @@
-$light-blue: #8EAEBD;
-$navy-blue: #0F1626;
-$leather: #AB987A;
-$coral: #FF533D;
-$light-grey: #e8edf3;
-$dark-grey: #d0dae6;
+  $light-blue: #8EAEBD;
+  $navy-blue: #0F1626;
+  $leather: #AB987A;
+  $coral: #FF533D;
+  $light-grey: #e8edf3;
+  $dark-grey: #8A9299;
 
 .modal {
-    // width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .modal label {
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .modal-form {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .session.modal {
   width: 300px;
 }
 
-// .modal-form > section {
-//   // padding: 20px;
-//   text-align: center;
-//   // display: flex;
-//   // justify-content: space-between;
-// }
-
 .modal-form .footer {
-      // display: flex;
-    // justify-content: space-between;
-    width: 100%;
-    align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
 }
 
-// .modal-form form {
-//   //  margin: 20px 0;
-//   padding: 20px 0 10px 0;
-//   //  border-bottom: 1px solid #FF533D;
-// }
-
 .modal-form section {
-width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 
 }
 
 .modal-form .main {
-    padding: 20px 0 10px 0;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #FF533D;
+  padding: 20px 0 10px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #FF533D;
 }
 
 .modal-btn {
   cursor: pointer;
-      /* background: #a5cfe2; */
-    /* border-radius: 2px; */
-    /* border: 1px solid #8EAEBD; */
-    background: #e8edf3;
-    padding: 10px 0;
-    margin-bottom: 10px;
-    width: 100%;
-    text-align: center;
-    text-transform: uppercase;
+  background: #e8edf3;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .modal-btn:hover {
@@ -85,16 +67,14 @@ width: 100%;
 }
 
 .modal-form-field {
-    padding: 5px;
-    width: 100%;
-    /* border-radius: 2px; */
-    display: flex;
-    justify-content: space-between;
-    border-radius: 2px;
-    // align-items: center;
-    cursor: text;
-    text-align: left;
-    font-size: 14px;
+  padding: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 2px;
+  cursor: text;
+  text-align: left;
+  font-size: 14px;
 }
 
 .header {
@@ -110,17 +90,13 @@ width: 100%;
 
 .footer {
   border-top: 1px solid #FF533D;
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 .footer > .logo-img {
   width: 20px;
   height: 20px;
 }
-
-// .modal-form-field:focus {
-//   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-// }
 
 .email-img {
   background-image: image-url('email.png');
@@ -162,16 +138,6 @@ width: 100%;
 .session footer > a {
   padding-left: 4px;
 }
-
-
-// .switch-session-form {
-//   cursor: pointer;
-//   color: $light-blue;
-// }
-//
-// .switch-session-form:hover {
-//   color: $navy-blue;
-// }
 
 .errors {
   font-size: 12px;

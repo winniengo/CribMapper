@@ -66,7 +66,7 @@ class ListingCommute extends React.Component {
     return (
       ['driving', 'transit', 'walking'].map((travelMode, idx) => (
         <button
-          className={this.state.travelMode === travelMode ? 'selected' : ''}
+          className={`hvr-face ${this.state.travelMode === travelMode ? 'selected' : ''}`}
           onClick={this.handleClick(travelMode)}
           key={idx}>
           <div className={`background-img icon ${travelMode}`} />

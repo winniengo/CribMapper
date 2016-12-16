@@ -19,7 +19,11 @@ $navy-blue: #0F1626;
 $leather: #AB987A;
 $coral: #FF533D;
 $light-grey: #e8edf3;
-$dark-grey: #d0dae6;
+$dark-grey: #8A9299;
+
+*, :after, :before {
+ box-sizing: border-box;
+}
 
 html, body, header, nav, h1, a,
 ul, li, strong, main, button, i,
@@ -38,22 +42,23 @@ span, article, footer, time, small, h4 {
   vertical-align: inherit;
   box-sizing: inherit;
   background: transparent;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
-  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
   font-size: 14px;
+  font-weight: 700;
+  color: #8A9299;
+  line-height: 1.43;
   padding-bottom: 2px;
-  // transition: border-bottom-color 0.2s linear 0s;
-  // border-bottom: 2px solid transparent;
-}
-
-a:hover {
-  // border-bottom-color: #0F1626;
+  background-color: transparent;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
 
@@ -84,19 +89,20 @@ h4 {
   text-transform: capitalize;
 }
 
-a {
-  text-decoration: none;
-  cursor: pointer;
-}
-
 button {
   cursor: pointer;
   border-radius: 2px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
 }
 
 p {
+  font-family: 'Roboto', sans-serif;
   white-space: pre-line;
   font-size: 14px;
+  font-weight: 300;
+  letter-spacing: .01em;
+  line-height: 21px;
   padding: 10px 0;
 }
 

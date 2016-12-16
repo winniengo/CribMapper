@@ -4,9 +4,13 @@ Image.destroy_all
 Favorite.destroy_all
 
 guest = User.create!({
-    email: 'guest',
-    name: 'Guest',
-    password: 'password'
+  email: 'guest@email.com',
+  name: 'guest',
+  password: 'password',
+  lat: 37.7765452,
+  lng: -122.3919706,
+  place_id: "ChIJFb2cDjp-j4AR3h8Hy3Cu9-c",
+  address: "185 Berry St, San Francisco, CA 94107, USA"
 })
 
 l1 = Listing.create!({
@@ -1379,3 +1383,19 @@ Features and Amenities
 #   cats: true,
 #   description: ''
 # })
+# 
+# Image.create!({
+#   listing_id: ,
+#   src: ''
+# })
+
+Favorite.create!({user_id: 1, listing_id: 46})
+Favorite.create!({user_id: 1, listing_id: 47})
+Favorite.create!({user_id: 1, listing_id: 45})
+Favorite.create!({user_id: 1, listing_id: 44})
+Favorite.create!({user_id: 1, listing_id: 25})
+Favorite.create!({user_id: 1, listing_id: 30})
+Favorite.create!({user_id: 1, listing_id: 17})
+Favorite.create!({user_id: 1, listing_id: 6})
+Favorite.create!({user_id: 1, listing_id: 42})
+Favorite.create!({user_id: 1, listing_id: 35})

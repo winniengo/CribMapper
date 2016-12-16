@@ -12,7 +12,7 @@ class SessionForm extends React.Component {
     this.clearErrors = this.clearErrors.bind(this);
     this.switchForm = this.switchForm.bind(this);
     this.renderForm = this.renderForm.bind(this);
-    this.demo = this.demo.bind(this);
+    this.loginAsGuest = this.loginAsGuest.bind(this);
   }
 
   componentWillUnmount() {
@@ -32,9 +32,9 @@ class SessionForm extends React.Component {
     })
   }
 
-  demo() {
+  loginAsGuest() {
     this.props.login({
-      email: "guest",
+      email: "guest@email.com",
       password: "password"
     });
   }
@@ -62,7 +62,7 @@ class SessionForm extends React.Component {
       <div className='session modal'>
         {this.renderForm()}
         <footer>
-          <a onClick={this.demo} className='hvr-underline-from-center'>Or explore as a guest!</a>
+          <a onClick={this.loginAsGuest} className='hvr-underline-from-center'>Or explore as a guest!</a>
         </footer>
       </div>
     );

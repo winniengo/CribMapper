@@ -103,7 +103,7 @@ class CommuteForm extends React.Component{
   }
 
   render() {
-    const verb = this.props.currentUser.place_id ? 'Update' : 'Add';
+    const verb = this.props.currentUser.place_id ? 'update' : 'add';
     return (
       <div className='work modal'>
         <div className='modal-form'>
@@ -121,8 +121,10 @@ class CommuteForm extends React.Component{
                 type="text"
                 placeholder={this.state.address || "Search"} />
             </label>
-            <input type="submit" value={`${verb}`} className="modal-btn"/>
-            <button onClick={this.props.closeModal} className="modal-btn">Close</button>
+            <button onClick={this.handleSubmit} className="modal-btn">
+              {verb}
+            </button>
+            <button onClick={this.props.closeModal} className="modal-btn">close</button>
           </form>
           <section className='footer'>
             <div className='logo-img background-img' />
