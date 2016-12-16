@@ -44,7 +44,7 @@ class SignupForm extends React.Component {
                   value={this.state.name}
                   placeholder="Name"
                   onChange={this.update('name')} />
-                <div className="name-img background-img" />
+                <div className="name icon background-img" />
               </div>
             </label>
             <label>
@@ -54,7 +54,7 @@ class SignupForm extends React.Component {
                   value={this.state.email}
                   placeholder="Email"
                   onChange={this.update('email')} />
-                <div className="email-img background-img" />
+                <div className="email icon background-img" />
               </div>
             </label>
             <label>
@@ -64,7 +64,7 @@ class SignupForm extends React.Component {
                   value={this.state.password}
                   placeholder='Password'
                   onChange={this.update('password')} />
-                <div className="password-img background-img" />
+                <div className="password icon background-img" />
               </div>
             </label>
             <input type='submit' value='sign up' className='modal-btn'/>

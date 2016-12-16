@@ -78,7 +78,7 @@ $dark-grey: #8A9299;
 .scroll-up-icon {
   width: 35px;
   height: 35px;
-  background-image: image-url("up-arrow.png");
+  background-image: url("http://res.cloudinary.com/dbgp4ftst/image/upload/v1481929810/icons/up-arrow.png");
   z-index: 1;
   position: absolute;
   right: 70px;
@@ -110,9 +110,9 @@ $dark-grey: #8A9299;
 }
 
 .github {
-  background-image: image-url('github-logo.png');
+  background-image: url("http://res.cloudinary.com/dbgp4ftst/image/upload/v1481929811/icons/github-logo.png");
 }
 
 .linkedin {
-  background-image: image-url('linkedin-logo.png');
+  background-image: url("http://res.cloudinary.com/dbgp4ftst/image/upload/v1481929811/icons/linkedin-logo.png");
 }

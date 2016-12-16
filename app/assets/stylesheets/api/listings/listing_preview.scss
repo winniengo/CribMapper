@@ -76,12 +76,12 @@ section.image-display {
 
 .next {
   margin: 0 10px;
-  background-image: image-url("arrow-right.png");
+  background-image: url("http://res.cloudinary.com/dbgp4ftst/image/upload/v1481929809/icons/arrow-right.png");
 }
 
 .previous {
   margin: 0 10px;
-  background-image: image-url("arrow-left.png");
+  background-image: url("http://res.cloudinary.com/dbgp4ftst/image/upload/v1481929809/icons/arrow-left.png");
 }
 
 section.dots-gallery {
@@ -98,18 +98,18 @@ section.dots-gallery {
   height: 10px;
   width: 10px;
   margin: 0 2px;
-  background-image: image-url("dot-unfilled.png");
+  background-image: url("http://res.cloudinary.com/dbgp4ftst/image/upload/v1481929810/icons/dot-unfilled.png");
   opacity: 0.2;
 
 }
 
 .dots-gallery > div:hover {
-  background-image: image-url("dot-filled.png");
+  background-image: url("http://res.cloudinary.com/dbgp4ftst/image/upload/v1481929810/icons/dot-filled.png");
   opacity: 0.4;
 }
 
 .dots-gallery > div.selected {
-  background-image: image-url("dot-filled.png");
+  background-image: url("http://res.cloudinary.com/dbgp4ftst/image/upload/v1481929810/icons/dot-filled.png");
   opacity: 0.4;
 }
 

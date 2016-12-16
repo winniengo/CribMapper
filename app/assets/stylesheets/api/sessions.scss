@@ -98,22 +98,16 @@
   height: 20px;
 }
 
-.email-img {
-  background-image: image-url('email.png');
-  width: 20px;
-  height: 20px;
+.email {
+  background-image: url("http://res.cloudinary.com/dbgp4ftst/image/upload/v1481929811/icons/email.png");
 }
 
-.password-img {
-  background-image: image-url('locked.png');
-  width: 20px;
-  height: 20px;
+.password {
+  background-image: url("http://res.cloudinary.com/dbgp4ftst/image/upload/v1481929811/icons/password.png");
 }
 
-.name-img {
-  background-image: image-url('user.png');
-  width: 20px;
-  height: 20px;
+.name {
+  background-image: url("http://res.cloudinary.com/dbgp4ftst/image/upload/v1481929809/icons/name.png")
 }
 
 .session a {

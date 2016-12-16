@@ -1,7 +1,10 @@
 .medium-icon {
   width: 32px;
   height: 32px;
-  background-image: image-url("favorite.png");
+}
+
+.favorite {
+  background-image: url("http://res.cloudinary.com/dbgp4ftst/image/upload/v1481931520/icons/favorite.png");
 }
 
 .unfavorited {
@@ -41,15 +44,15 @@
   width: 100%;
 }
 
-.background {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background-image: image-url('ndlpvogrdjm-matthew-smith.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+// .background {
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   background-image: image-url('ndlpvogrdjm-matthew-smith.jpg');
+//   background-position: center;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+// }
 
 .views {
   display: flex;
