@@ -1,5 +1,8 @@
 import React from 'react';
 
+import Errors from '../errors';
+import merge from 'lodash/merge';
+
 class CommuteForm extends React.Component{
   constructor(props) {
     super(props);
@@ -58,7 +61,7 @@ class CommuteForm extends React.Component{
       const place = autocomplete.getPlace();
 
       if (!place.geometry) { // place does not exist or request failed
-        window.alert("No details available for input: '" + place.name + "'");
+        this.props.receiveErrors([`No details available for ${place.name}`]);
         return;
       }
 
@@ -87,7 +90,16 @@ class CommuteForm extends React.Component{
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.updateCurrentUser(this.state);
+    this.clearErrors();
+    this.props.updateCurrentUser(merge({}, this.state, {
+      id: this.props.currentUser.id
+    }));
+  }
+
+  clearErrors() {
+    if (this.props.errors) {
+      this.props.clearErrors();
+    }
   }
 
   render() {
@@ -98,6 +110,7 @@ class CommuteForm extends React.Component{
           <section className='header'>
             <h2>{`${verb} your Work Address`}</h2>
             to calculate the commute to your perfect rental
+            <Errors errors={this.props.errors} />
           </section>
           <form onSubmit={this.handleSubmit}>
             <div id="commute-form-map"/>

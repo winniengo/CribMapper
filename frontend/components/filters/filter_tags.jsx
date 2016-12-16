@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; // unused
 
 const FilterTags = ({ tags, resetFilter }) => {
   return (

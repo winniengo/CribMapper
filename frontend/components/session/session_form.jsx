@@ -4,8 +4,6 @@ import { Link } from 'react-router';
 import LoginForm from './login_form';
 import SignupForm from './signup_form';
 
-import SessionErrors from './session_errors';
-
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);

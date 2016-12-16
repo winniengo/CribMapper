@@ -12,14 +12,19 @@ class ListingCommute extends React.Component {
       travelMode: 'driving',
       duration: '???',
       distance: '???',
-      selected: 'route-view'
     }
 
     this.handleClick = this.handleClick.bind(this);
     this.calculateAndDisplayRoute = this.calculateAndDisplayRoute.bind(this);
+  }
 
+  componentWillMount() {
     this.directionsService = new google.maps.DirectionsService;
     this.directionsDisplay = new google.maps.DirectionsRenderer;
+  }
+
+  componentDidMount() {
+    this.calculateAndDisplayRoute();
   }
 
   componentWillReceiveProps(nextProps) {
@@ -29,31 +34,7 @@ class ListingCommute extends React.Component {
     }
   }
 
-  componentDidMount() {
-    // this.directionsService = new google.maps.DirectionsService;
-    // this.directionsDisplay = new google.maps.DirectionsRenderer;
-
-    // this.initMap();
-    // this.directionsDisplay.setMap(this.map);
-    // this.directionsDisplay.setPanel(document.getElementById('panel-view'));
-    this.calculateAndDisplayRoute();
-  }
-
-  // initMap() {
-  //   const mapDOMNode = document.getElementById('route-view');
-  //   const mapOptions = {
-  //     center: {
-  //       lat: this.props.lat || 37.7749,
-  //       lng: this.props.lng || -122.4197
-  //     },
-  //     zoom: 17,
-  //     scrollwheel: false
-  //   };
-  //   this.map = new google.maps.Map(mapDOMNode, mapOptions);
-  // }
-
   calculateAndDisplayRoute(props) {
-    console.log('calculating...');
     const { origin, destination } = props || this.props;
 
     if (!origin.lat || !destination.lat) {
@@ -97,8 +78,6 @@ class ListingCommute extends React.Component {
   render() {
     const { lat, lng } = this.props;
 
-    // <RouteView lat={lat} lng={lng} directionsDisplay={this.directionsDisplay} />
-
     return (
       <section className='listing-commute'>
         <header>
@@ -123,17 +102,3 @@ class ListingCommute extends React.Component {
 }
 
 export default ListingCommute;
-
-
-
-
-
-  // <div>
-  //   <div className="views">
-  //     {this.renderButtons()}
-  //   </div>
-  //   <section className='view'>
-  //     <div id='listing-commute-map' />
-  //     <div id='listing-commute-panel' />
-  //   </section>
-  // </div>

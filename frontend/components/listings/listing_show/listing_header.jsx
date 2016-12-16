@@ -1,5 +1,6 @@
 import React from 'react';
-import FavoriteButtonContainer from '../buttons/favorite_button_container';
+
+import FavoriteButtonContainer from '../../buttons/favorite_button_container';
 
 export default ({ listing }) => {
   const { id, rent, bedrooms, bathrooms, address } = listing;

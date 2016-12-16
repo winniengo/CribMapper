@@ -1,14 +1,12 @@
 import React from 'react';
 
-import FavoriteButtonContainer from '../../buttons/favorite_button_container';
-import ListingDetails from '../listing_details';
-import ListingHeader from '../listing_header';
+import ListingDetails from './listing_details';
+import ListingHeader from './listing_header';
 import ListingContact from './listing_contact';
-import ListingShowGallery from './listing_show_gallery';
+import ListingGallery from './listing_gallery';
 import ListingCommute from '../listing_commute';
 import StreetView from '../street_view';
 import MapView from '../map_view';
-
 import Tabs from '../../tabs';
 
 import merge from 'lodash/merge';
@@ -17,7 +15,6 @@ class ListingShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = merge({}, this.props.listing);
-
   }
 
   componentWillReceiveProps(newProps) {
@@ -53,7 +50,7 @@ class ListingShow extends React.Component {
             ← back to search
           </button>
           <ListingHeader listing={listing} />
-          <ListingShowGallery images={images} />
+          <ListingGallery images={images} />
           <section>
             <p className='description'>{description}</p>
             <div className='pets'>
@@ -77,5 +74,3 @@ class ListingShow extends React.Component {
 }
 
 export default ListingShow;
-
-          //

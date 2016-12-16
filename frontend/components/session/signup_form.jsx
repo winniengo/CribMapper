@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router';
 
-import SessionErrors from './session_errors';
+import Errors from '../errors';
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -33,7 +33,7 @@ class SignupForm extends React.Component {
           <div className='logo-img background-img' />
           <h2>Create an Account</h2>
           to find the perfect rental
-          <SessionErrors errors={this.props.errors} />
+          <Errors errors={this.props.errors} />
         </section>
         <section className='main'>
           <form onSubmit={this.handleSubmit}>

@@ -1,10 +1,6 @@
 import React from 'react';
 
 class RouteView extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
-
   componentDidMount() {
     const map = new google.maps.Map(
       document.getElementById('route-view'), {

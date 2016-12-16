@@ -177,20 +177,6 @@ section.dots-gallery {
     flex: 1;
 }
 
-.listing-preview > .listing-commute ul li {
-  // display: flex;
-  // justify-content: space-between;
-  border-bottom: 1px solid #AB987A;
-  padding: 10px;
-    font-size: 14px;
-    font-weight: 300;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    // border-bottom: 1px solid #AB987A;
-}
-
-
 .listing-preview > .listing-commute ul li:nth-child(odd) {
     background: #F1F1F1;
 }

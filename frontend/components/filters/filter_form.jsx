@@ -1,6 +1,5 @@
 import React from "react";
-import FilterFormInput from './filter_form_input';
-// import FilterTags from './filter_tags';
+import FilterFormFields from './filter_form_fields';
 
 import merge from "lodash/merge";
 
@@ -64,23 +63,23 @@ class FilterForm extends React.Component{
     return (
       <section id='filter-form' className='filter-form'>
         <form>
-          <FilterFormInput
+          <FilterFormFields
             field="rent"
             fields={this.renderFields("rent", "number")} />
-          <FilterFormInput
+          <FilterFormFields
             field="bedrooms"
             fields={this.renderFields("bedrooms")} />
-          <FilterFormInput
+          <FilterFormFields
             field="bathrooms"
             fields={this.renderFields("bathrooms")} />
           <div id='more-filters' className={`more-filters ${expanded ? "expanded" : "hidden"}`}>
-            <FilterFormInput
+            <FilterFormFields
               field="type"
               fields={this.renderFields("listingType")} />
-            <FilterFormInput
+            <FilterFormFields
               field="pets"
               fields={this.renderFields("pets")} />
-            <FilterFormInput
+            <FilterFormFields
               field="advanced"
               fields={this.renderFields("advanced")} />
           </div>

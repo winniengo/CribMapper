@@ -4,7 +4,6 @@ import {
 import merge from 'lodash/merge';
 
 const nullListings = {
-  hovered: null,
   all: {}
 };
 
@@ -18,14 +17,6 @@ const listings = (state = nullListings, action) => {
       return merge({}, state, {
         all: {[action.listing.id]: action.listing}
       });
-    // case SELECT:
-    //   return merge({}, state, {
-    //     selected: action.id
-    //   });
-    // case HOVER:
-    //   return merge({}, state, {
-    //     hovered: action.id
-    //   });
     default:
       return state;
   }

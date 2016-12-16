@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-import SessionErrors from './session_errors';
+import Errors from '../errors';
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -34,7 +34,7 @@ class LoginForm extends React.Component {
           to save your favorite listings
           <br/>
           and calculate your daily work commute
-          <SessionErrors errors={this.props.errors} />
+          <Errors errors={this.props.errors} />
         </section>
         <section className='main'>
           <form onSubmit={this.handleSubmit}>

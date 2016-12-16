@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FilterFormInput = ({ field, fields }) => (
+export default ({ field, fields }) => (
   <div className="filter">
     <h3>{field}</h3>
     <div className="fields">
@@ -8,5 +8,3 @@ const FilterFormInput = ({ field, fields }) => (
     </div>
   </div>
 );
-
-export default FilterFormInput;

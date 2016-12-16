@@ -2,18 +2,6 @@ import React from 'react';
 
 import ListingIndexItem from './listing_index_item';
 
-// export default ({ listings, path, router }) => {
-//   const handleClick = listingId => {
-//     return e => {
-//       if (!e.target.className.includes("favorite-icon")) {
-//         router.push(`/${path}/${listingId}`);
-//       }
-//     }
-//   }
-//
-//
-// };
-
 class ListingIndex extends React.Component {
   constructor(props) {
     super(props);

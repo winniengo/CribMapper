@@ -18,7 +18,8 @@ import { addAlert } from '../actions/alert';
 const capitalize = name => name.slice(0, 1).toUpperCase() + name.slice(1).toLowerCase();
 
 const sessionMiddleware = ({ dispatch, getState }) => next => action => {
-  const error = e => dispatch(receiveErrors('session', e.responseJSON));
+  const sessionError = e => dispatch(receiveErrors('session', e.responseJSON));
+  const commuteError = e => dispatch(receiveErrors('commute', e.responseJSON));
 
   switch(action.type) {
     case LOGIN:
@@ -27,7 +28,7 @@ const sessionMiddleware = ({ dispatch, getState }) => next => action => {
         dispatch(addAlert(`Logged in successfully. Welcome back ${capitalize(currentUser.name)}!`));
       };
 
-      login(action.user, loginSuccess, error);
+      login(action.user, loginSuccess, sessionError);
       return next(action);
     case LOGOUT:
       const logoutSuccess = () => {
@@ -43,7 +44,7 @@ const sessionMiddleware = ({ dispatch, getState }) => next => action => {
         dispatch(addAlert(`Signed up successfully. Welcome to CribMapper ${capitalize(currentUser.name)}!`));
       };
 
-      signup(action.user, signupSuccess, error);
+      signup(action.user, signupSuccess, sessinoError);
       return next(action);
     case UPDATE_CURRENT_USER:
       const updateSuccess = currentUser => {
@@ -51,15 +52,15 @@ const sessionMiddleware = ({ dispatch, getState }) => next => action => {
         dispatch(addAlert(`${capitalize(currentUser.name)} you've successfully updated your profile.`))
       };
 
-      updateUser(action.user, updateSuccess, error);
+      updateUser(action.user, updateSuccess, commuteError);
       return next(action);
     case FAVORITE_LISTING:
       const favoriteSuccess = ({ listingId }) => dispatch(receiveFavorite(listingId));
-      createFavorite(action.listingId, favoriteSuccess, error);
+      createFavorite(action.listingId, favoriteSuccess, sessionError);
       return next(action);
     case UNFAVORITE_LISTING:
       const unfavoriteSuccess = ({ listingId }) => dispatch(removeFavorite(listingId));
-      destroyFavorite(action.listingId, unfavoriteSuccess, error);
+      destroyFavorite(action.listingId, unfavoriteSuccess, sessionError);
       return next(action);
     default:
       return next(action);

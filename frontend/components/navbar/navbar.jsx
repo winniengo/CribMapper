@@ -26,15 +26,9 @@ class Navbar extends React.Component {
 
     this.renderSessionLink = this.renderSessionLink.bind(this);
     this.renderNavLink = this.renderNavLink.bind(this);
-    this.handleRedirectToFavorites = this.handleRedirectToFavorites.bind(this);
+    this.redirectToFavorites = this.redirectToFavorites.bind(this);
+    this.redirectToSearch = this.redirectToSearch.bind(this);
     this.closeModal = this.closeModal.bind(this);
-  }
-
-  closeModal() {
-    this.props.closeModal();
-    if (this.state.redirectToFavorites) {
-      this.setState({redirectToFavorites: false});
-    }
   }
 
   componentWillReceiveProps({ loggedIn, alert }) {
@@ -49,11 +43,22 @@ class Navbar extends React.Component {
       const id = setTimeout(() => {
         this.props.clearAlert();
         clearTimeout(id);
-      }, 3000);
+      }, 2500);
     }
   }
 
-  handleRedirectToFavorites() {
+  closeModal() {
+    this.props.closeModal();
+    if (this.state.redirectToFavorites) {
+      this.setState({redirectToFavorites: false});
+    }
+  }
+
+  redirectToSearch() {
+    this.props.router.push('search');
+  }
+
+  redirectToFavorites() {
     if (this.props.loggedIn) {
       this.props.router.push('favorites');
     } else {
@@ -63,35 +68,41 @@ class Navbar extends React.Component {
   }
 
   renderSessionLink() {
-    if (this.props.loggedIn) {
-      return (
-        <div className='link-container'>
-          <a onClick={this.props.logout} className='hvr-underline-from-center'>Log Out</a>
-        </div>
-      )
-    } else {
-      return (
-        <div className='link-container'>
-          <a onClick={this.props.openModal} className='hvr-underline-from-center'>Sign In</a>
-          <Modal
-            isOpen={this.props.modalOpen}
-            onRequestClose={this.closeModal}
-            style={customStyles}>
-            <SessionFormContainer />
-          </Modal>
-        </div>
-      );
-    }
+    return this.props.loggedIn ? (
+      <div className='link-container'>
+        <a onClick={this.props.logout} className='hvr-underline-from-center'>
+          log out
+        </a>
+      </div>
+    ) : (
+      <div className='link-container'>
+        <a onClick={this.props.openModal} className='hvr-underline-from-center'>
+          sign in
+        </a>
+        <Modal
+          isOpen={this.props.modalOpen}
+          onRequestClose={this.closeModal}
+          style={customStyles}>
+          <SessionFormContainer />
+        </Modal>
+      </div>
+    );
   }
 
   renderNavLink() {
-    return this.props.pathname.includes('favorites') ?
-    <a onClick={()=> this.props.router.push('search')} className='hvr-underline-from-center'>
-      Search
-    </a> :
-    <a onClick={this.handleRedirectToFavorites} className='hvr-underline-from-center'>
-      Favorites
-    </a>
+    return this.props.pathname.includes('favorites') ? (
+      <div className='link-container'>
+        <a onClick={this.redirectToSearch} className='hvr-underline-from-center'>
+          search
+        </a>
+      </div>
+    ) : (
+      <div className='link-container'>
+        <a onClick={this.redirectToFavorites} className='hvr-underline-from-center'>
+          favorites
+        </a>
+      </div>
+    );
   }
 
   renderAlert() {
@@ -110,9 +121,7 @@ class Navbar extends React.Component {
         </div>
         {this.renderAlert()}
         <div className='links'>
-          <div className='link-container'>
-            {this.renderNavLink()}
-          </div>
+          {this.renderNavLink()}
           {this.renderSessionLink()}
         </div>
       </header>

@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 
 import { select } from '../../../actions/listings';
 import { selectListing } from '../../../reducers/selectors';
@@ -16,4 +17,4 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-export default connect(mapStateToProps)(ListingPreview);
+export default withRouter(connect(mapStateToProps)(ListingPreview));

@@ -173,7 +173,10 @@ width: 100%;
 //   color: $navy-blue;
 // }
 
-.session-errors {
+.errors {
   font-size: 12px;
   text-align: center;
+  color: #FF533D;
+  padding-top: 20px;
+  font-family: 'Open Sans', sans-serif;
 }

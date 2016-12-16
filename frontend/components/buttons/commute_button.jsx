@@ -32,7 +32,7 @@ class CommuteButton extends React.Component{
   componentWillReceiveProps({ loggedIn, currentUser}) {
     if (!loggedIn) { // redirect if logged out
       this.props.router.push('/');
-    } else if (this.props.loggedIn && this.props.currentUser.place_id !== currentUser.place_id) {
+    } else if (this.props.loggedIn && currentUser.place_id) {
       this.closeModal(); // work address is updated
     }
   }
@@ -76,9 +76,12 @@ class CommuteButton extends React.Component{
             onRequestClose={this.closeModal}
             style={customStyles}>
             <CommuteForm
-              updateCurrentUser={this.updateCurrentUser}
+              closeModal={this.closeModal}
+              updateCurrentUser={this.props.updateCurrentUser}
               currentUser={this.props.currentUser}
-              closeModal={this.closeModal} />
+              receiveErrors={this.props.receiveErrors}
+              clearErrors={this.props.clearErrors}
+              errors={this.props.errors} />
           </Modal>
         </div>
       </div>

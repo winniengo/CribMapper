@@ -1,8 +1,8 @@
 import React from 'react';
 
-import ImageDisplay from '../image_display';
+import ListingImageDisplay from '../listing_image_display';
 
-class ListingShowGallery extends React.Component {
+class ListingGallery extends React.Component {
   constructor(props) {
     super(props)
     this.state = {selected: 0}
@@ -46,7 +46,7 @@ class ListingShowGallery extends React.Component {
 
     return (
       <section className='listing-gallery'>
-        <ImageDisplay
+        <ListingImageDisplay
           src={this.props.images[this.state.selected].src}
           handlePrevious={this.handlePrevious}
           handleNext={this.handleNext} />
@@ -64,4 +64,4 @@ class ListingShowGallery extends React.Component {
   }
 };
 
-export default ListingShowGallery;
+export default ListingGallery;

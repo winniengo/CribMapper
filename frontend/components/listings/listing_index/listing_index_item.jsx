@@ -1,9 +1,9 @@
 import React from 'react';
 
 import FavoriteButtonContainer from '../../buttons/favorite_button_container';
-import ListingImageThumbnail from '../listing_image_thumbnail';
+import ListingImageThumbnail from './listing_image_thumbnail';
 
-export default ({ listing, clssName, handleFavorite, handleClick }) => (
+export default ({ listing, handleClick }) => (
   <li className='listing-index-item hvr-reveal' onClick={handleClick}>
     <ListingImageThumbnail src={listing.images[0].src} />
     <description>
