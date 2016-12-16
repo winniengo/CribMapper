@@ -8,7 +8,6 @@ const nullSession = Object.freeze({
 });
 
 const session = (state = nullSession, action) => {
-  console.log(action); // TODO
   switch(action.type) {
     case LOGOUT:
       return merge({}, nullSession);
