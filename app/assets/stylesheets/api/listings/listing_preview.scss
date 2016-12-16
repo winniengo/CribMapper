@@ -188,3 +188,17 @@ section.dots-gallery {
 .commute.fields button:nth-child(1) {
   margin-left: 0;
 }
+
+.listing-description {
+}
+
+.collapsed {
+  max-height: 100px;
+  overflow: hidden;
+  transition: max-height 0.75s ease;
+}
+
+.displayed {
+  max-height: 100%;
+  transition: max-height 0.75s ease;
+}

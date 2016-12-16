@@ -5,5 +5,5 @@ export default ({ pathname }) => (
     <div /> :
     <button
       className={`background-img scroll-up-icon hvr-pulse`}
-      onClick={() => scrollUp()} />
+      onClick={animateScrollUp} />
 );

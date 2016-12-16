@@ -1,5 +1,5 @@
 import React from 'react';
-import ListingImageDisplay from './listing_image_display';
+import ListingImageDisplay from '../listing_image_display';
 
 class ListingGallery extends React.Component {
   constructor(props) {

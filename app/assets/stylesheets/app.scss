@@ -80,13 +80,13 @@ $dark-grey: #d0dae6;
 .hidden {
   height: 0px;
   overflow: hidden;
-  transition: height 0.5s;
+  transition: height 0.5s ease;
 }
 
 .expanded {
-  height: 210px;
-    overflow: hidden;
-  transition: height 0.5s;
+  height: 220px;
+  overflow: hidden;
+  transition: height 0.5s ease;
 }
 
 

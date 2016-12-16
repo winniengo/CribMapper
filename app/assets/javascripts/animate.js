@@ -1,1 +1,1 @@
-const scrollUp = () => $('#sidebar').animate({scrollTop: 0}, 300);
+const animateScrollUp = () => $('#sidebar').animate({scrollTop: 0}, 300);
