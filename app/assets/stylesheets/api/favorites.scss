@@ -227,20 +227,24 @@
 }
 
 .view {
-      display: flex;
+  display: flex;
   flex: 1;
-padding: 15px;
-    background: #e8edf3;
-    border-bottom-right-radius: 2px;
-    border-bottom-left-radius: 2px;
-    // border-radius: 5px;
-    // border: 1px solid #8EAEBD;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
+  padding: 10px;
+  background: #e8edf3;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
 }
 
-.view > section {
+// .view > section {
+//   width: 100%;
+//   height: 250px;
+//   border-radius: 5px;
+// }
+
+.view > div {
+  position: relative;
+  border-radius: 2px;
+  height: 250px;
   width: 100%;
 }
 
@@ -259,10 +263,6 @@ padding: 15px;
 .views {
   display: flex;
   justify-content: space-around;
-}
-
-.comparison-list > h2 {
-  padding-bottom: 20px;
 }
 
 .views > button {
@@ -298,3 +298,21 @@ padding: 15px;
 .views > button:nth-last-child(1) {
   margin-right: 0;
 }
+
+
+// #route-view {
+// }
+//
+
+#panel-view {
+    overflow-y: auto;
+    font-size: 14px;
+    background: white;
+    padding: 0 10px;
+}
+
+// #street-view {
+// }
+//
+// #map-view {
+// }

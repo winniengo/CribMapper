@@ -9,39 +9,19 @@ import ListingCommute from '../listing_commute';
 import StreetView from '../street_view';
 import MapView from '../map_view';
 
+import Tabs from '../../tabs';
+
 import merge from 'lodash/merge';
 
 class ListingShow extends React.Component {
   constructor(props) {
     super(props);
-    this.state = merge({}, this.props.listing, {
-      selected: 'street-view'
-    });
+    this.state = merge({}, this.props.listing);
 
-    this.handleClick = this.handleClick.bind(this);
   }
 
   componentWillReceiveProps(newProps) {
     this.setState(newProps.listing);
-  }
-  
-  handleClick(e) {
-    this.setState({ selected: e.currentTarget.value});
-  }
-
-  renderButtons() {
-    return (
-      ['street-view', 'map-view'].map((view, idx) => (
-        <button
-          key={idx}
-          type="button"
-          value={view}
-          onClick={this.handleClick}
-          className={`hvr-underline-from-center ${this.state.selected === view ? 'selected' : ''}`}>
-          <div className={`background-img icon ${view}`} />
-        </button>
-      ))
-    );
   }
 
   render() {
@@ -63,9 +43,6 @@ class ListingShow extends React.Component {
     const { listing, destination, router } = this.props;
 
     const petFriendly = cats || dogs ? "- Friendly" : "No Pets";
-    const view = this.state.selected === 'street-view' ?
-      <StreetView lat={lat} lng={lng} /> :
-      <MapView lat={lat} lng={lng} />;
 
     return (
       <div className='listing-show'>
@@ -85,14 +62,7 @@ class ListingShow extends React.Component {
               {petFriendly}
             </div>
           </section>
-          <div>
-            <div className="views">
-              {this.renderButtons()}
-            </div>
-            <section className='view'>
-              {view}
-            </section>
-          </div>
+          <Tabs tabs={['street-view', 'map-view']} views={[<StreetView lat={lat} lng={lng} />,   <MapView lat={lat} lng={lng} />]}/>
         </section>
         <section className="listing-sidebar">
           <ListingDetails listing={listing} />

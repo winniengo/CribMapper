@@ -1,6 +1,9 @@
 import React from 'react';
 
 import CommuteButtonContainer from '../buttons/commute_button_container';
+import RouteView from './route_view';
+import PanelView from './panel_view';
+import Tabs from '../tabs';
 
 class ListingCommute extends React.Component {
   constructor(props) {
@@ -14,6 +17,9 @@ class ListingCommute extends React.Component {
 
     this.handleClick = this.handleClick.bind(this);
     this.calculateAndDisplayRoute = this.calculateAndDisplayRoute.bind(this);
+
+    this.directionsService = new google.maps.DirectionsService;
+    this.directionsDisplay = new google.maps.DirectionsRenderer;
   }
 
   componentWillReceiveProps(nextProps) {
@@ -24,30 +30,30 @@ class ListingCommute extends React.Component {
   }
 
   componentDidMount() {
-    this.directionsService = new google.maps.DirectionsService;
-    this.directionsDisplay = new google.maps.DirectionsRenderer;
+    // this.directionsService = new google.maps.DirectionsService;
+    // this.directionsDisplay = new google.maps.DirectionsRenderer;
 
-    this.initMap();
-    this.directionsDisplay.setMap(this.map);
-    this.directionsDisplay.setPanel(document.getElementById('listing-commute-panel'));
+    // this.initMap();
+    // this.directionsDisplay.setMap(this.map);
+    // this.directionsDisplay.setPanel(document.getElementById('panel-view'));
     this.calculateAndDisplayRoute();
   }
 
-  initMap() {
-    const mapDOMNode = document.getElementById('listing-commute-map');
-    const mapOptions = {
-      center: {
-        lat: this.props.lat || 37.7749,
-        lng: this.props.lng || -122.4197
-      },
-      zoom: 17,
-      scrollwheel: false
-    };
-    this.map = new google.maps.Map(mapDOMNode, mapOptions);
-  }
+  // initMap() {
+  //   const mapDOMNode = document.getElementById('route-view');
+  //   const mapOptions = {
+  //     center: {
+  //       lat: this.props.lat || 37.7749,
+  //       lng: this.props.lng || -122.4197
+  //     },
+  //     zoom: 17,
+  //     scrollwheel: false
+  //   };
+  //   this.map = new google.maps.Map(mapDOMNode, mapOptions);
+  // }
 
   calculateAndDisplayRoute(props) {
-    // console.log('calculating');
+    console.log('calculating...');
     const { origin, destination } = props || this.props;
 
     if (!origin.lat || !destination.lat) {
@@ -66,7 +72,7 @@ class ListingCommute extends React.Component {
           duration: response.routes[0].legs[0].duration.text
         });
       } else {
-        window.alert(`Directions request failed due to ${status}`);
+        console.log(`Directions request failed due to ${status}`);
       }
     })
   }
@@ -74,21 +80,6 @@ class ListingCommute extends React.Component {
   handleClick(travelMode) {
     return () => this.setState({ travelMode }, () => this.calculateAndDisplayRoute());
   }
-
-  // renderButtons() {
-  //   return (
-  //     ['route-view', 'panel-view'].map((view, idx) => (
-  //       <button
-  //         key={idx}
-  //         type="button"
-  //         value={view}
-  //         onClick={this.handleClick}
-  //         className={`hvr-underline-from-center ${this.state.selected === view ? 'selected' : ''}`}>
-  //         <div className={`background-img icon ${view}`} />
-  //       </button>
-  //     ))
-  //   )
-  // }
 
   renderFields() {
     return (
@@ -104,6 +95,10 @@ class ListingCommute extends React.Component {
   }
 
   render() {
+    const { lat, lng } = this.props;
+
+    // <RouteView lat={lat} lng={lng} directionsDisplay={this.directionsDisplay} />
+
     return (
       <section className='listing-commute'>
         <header>
@@ -121,8 +116,7 @@ class ListingCommute extends React.Component {
             </ul>
           </section>
         </section>
-         <div id='listing-commute-map' />
-        <div id='listing-commute-panel' />
+        <Tabs tabs={['route-view', 'panel-view']} views={[<RouteView lat={lat} lng={lng} directionsDisplay={this.directionsDisplay} />, <PanelView directionsDisplay={this.directionsDisplay} />]} />
       </section>
     );
   }
