@@ -1383,7 +1383,7 @@ Features and Amenities
 #   cats: true,
 #   description: ''
 # })
-# 
+#
 # Image.create!({
 #   listing_id: ,
 #   src: ''

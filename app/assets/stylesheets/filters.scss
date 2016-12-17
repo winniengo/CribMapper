@@ -3,6 +3,7 @@ $navy-blue: #0F1626;
 $leather: #AB987A;
 $coral: #FF533D;
 $light-grey: #e8edf3;
+$medium-grey: #d0dae6;
 $dark-grey: #8A9299;
 
 .filters .hidden {
@@ -87,10 +88,11 @@ $dark-grey: #8A9299;
   text-transform: capitalize;
   font-weight: 300;
   font-family: 'Roboto', sans-serif;
+  color: $navy-blue;
 }
 
 .fields > button:hover {
-  background: $dark-grey;
+  background: $medium-grey;
 }
 
 .fields > button:nth-child(1) {

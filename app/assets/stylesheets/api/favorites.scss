@@ -72,12 +72,14 @@
   flex: 1;
 }
 
+$medium-grey: #d0dae6;
+
 .views > button:hover {
-  background:#8A9299;
+  background: $medium-grey;
 }
 
 .views > button.selected {
-  background:#8A9299;
+  background: $medium-grey;
   border-bottom-color: #0F1626;
 }
 

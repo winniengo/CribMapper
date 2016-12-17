@@ -42,9 +42,9 @@
   -webkit-transition-property: color, background-color;
   transition-property: color, background-color;
 }
-.hvr-fade:hover, .hvr-fade:focus {
+.hvr-fade:hover {
   background-color: #8EAEBD;
-  /*color: white;*/
+  color: white;
 }
 
 /* pulse */

@@ -19,6 +19,7 @@ $navy-blue: #0F1626;
 $leather: #AB987A;
 $coral: #FF533D;
 $light-grey: #e8edf3;
+$medium-grey: #d0dae6;
 $dark-grey: #8A9299;
 
 *, :after, :before {
@@ -92,8 +93,9 @@ h4 {
 button {
   cursor: pointer;
   border-radius: 2px;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 400;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: $light-blue;
 }
 
 p {

@@ -39,7 +39,6 @@
 }
 
 section.image-display {
-  /* height: 100%; */
   width: 100%;
   background: white;
   height: 300px;
@@ -154,6 +153,10 @@ section.dots-gallery {
   overflow: hidden;
 }
 
+.listing-description > a {
+  padding-top: 10px;
+}
+
 .listing-description .overlay {
   height: 90px;
   z-index: 2;
@@ -195,7 +198,6 @@ section.dots-gallery {
 }
 
 /* listing details ***************/
-
 .listing-preview .listing-details {
   border-bottom: 1px solid #e8edf3;
   border-top: 1px solid #e8edf3;
