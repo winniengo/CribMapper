@@ -1,10 +1,10 @@
 import { applyMiddleware } from 'redux';
 
-import createLogger from 'redux-logger';
+// import createLogger from 'redux-logger';
 import listingsMiddleware from './listings';
 import sessionMiddleware from './session';
 
-const logger = createLogger(); // TODO remove
+// const logger = createLogger();
 
 export default applyMiddleware(
   listingsMiddleware,
