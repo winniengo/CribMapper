@@ -35,7 +35,7 @@ a Google Map for an convenient beautiful at-a-glance look at available listings.
 
 CribMapper offers basic filtering based on price, bedrooms, bathrooms, and location. In addition, it offers advanced filtering on pets, parking availability and broker fees.
 
-<!-- TODO gif of the filters -->
+![hlOrJL](http://i.makeagif.com/media/12-17-2016/hlOrJL.gif)
 
 ### Displaying Listings
 When a user clicks on a map marker or search result, CribMapper displays a visually appealing preview of the apartment listing with a photo gallery, a summary of its amenities and an expandable view of its description.
@@ -53,15 +53,13 @@ Registered users can add and update their work addresses and view Google Maps' c
 
 Using Google Maps Geocoding, Geolocation, Place and Directions API, CribMapper displays the route and directions for users interested in driving, taking public transit or walking to work. Users can easily visualize their morning and evening commutes when viewing any listing relieving some of the stress of planning out their workdays.
 
-
-
 ![calculating-your-commute](http://i.makeagif.com/media/12-17-2016/UB7HbQ.gif)
 
 ### Favoriting Listings
 
 Registered users can easily save their favorite listings and revisit them.
 
-<!-- TODO gif of favoriting a listing and visiting favorites-->
+![cEXybN](http://i.makeagif.com/media/12-17-2016/cEXybN.gif)
 
 ### Registering on CribMapper
 
@@ -74,7 +72,7 @@ Signing up and using the advanced features of CribMapper is simple! A button loc
 + sign in to an existing account,
 
   ![sign-in]
-  
+
 + or easily log in to a guest account.
 
 [logo]:http://res.cloudinary.com/dbgp4ftst/image/upload/v1481929810/icons/cribmapper-logo.png
