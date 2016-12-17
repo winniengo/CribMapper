@@ -103,7 +103,7 @@ class CommuteForm extends React.Component{
   }
 
   render() {
-    const verb = this.props.currentUser.place_id ? 'update' : 'add';
+    const verb = this.props.currentUser.place_id ? 'Update' : 'Add';
     return (
       <div className='work modal'>
         <div className='modal-form'>
