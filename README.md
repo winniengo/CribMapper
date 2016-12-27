@@ -51,7 +51,7 @@ Registered users can add and update their work addresses and view Google Maps' c
 
 ![commute-form]
 
-Using Google Maps Geocoding, Geolocation, Place and Directions API, CribMapper displays the route and directions for users interested in driving, taking public transit or walking to work. Users can easily visualize their morning and evening commutes when viewing any listing relieving some of the stress of planning out their workdays.
+Using Google Maps Geocoding, Geolocation, Place and Directions APIs, CribMapper displays the route and directions for users interested in driving, taking public transit or walking to work. Users can easily visualize their morning and evening commutes when viewing any listing relieving some of the stress of planning out their workdays.
 
 ![calculating-your-commute](http://i.makeagif.com/media/12-17-2016/UB7HbQ.gif)
 
