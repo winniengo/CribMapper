@@ -17,7 +17,7 @@ with landlords. Now what if all of these tools lived in one place?
 
 CribMapper began as a clone of PadMapper. But it quickly outgrew its inspiration
 in features to begin including some of the different tools I used and wish
-existed in one easy-to-access one stop shop whenever I've apartment hunted.
+existed in one easy-to-access site whenever I've apartment hunted.
 CribMapper is driven by my goal to create the only web application users will need
 and want to use to find their perfect rentals.
 
