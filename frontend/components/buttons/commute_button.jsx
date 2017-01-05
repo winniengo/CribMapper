@@ -73,7 +73,8 @@ class CommuteButton extends React.Component{
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}
-          style={customStyles}>
+          style={customStyles}
+          contentLabel="Commute Modal">
           <CommuteForm
             closeModal={this.closeModal}
             updateCurrentUser={this.props.updateCurrentUser}

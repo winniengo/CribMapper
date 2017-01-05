@@ -35,11 +35,11 @@ Thoughtfully designed kitchens for entertaining or quick culinary creations.
 Industrial strength internet that includes gigabit speed for fast TV, internet and telephone connections.",
 })
 
-Image.create!({listing_id: l1.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1477454158/listings/3-0.jpg'})
-Image.create!({listing_id: l1.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1477454155/listings/3-1.jpg'})
-Image.create!({listing_id: l1.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1477454155/listings/3-2.jpg'})
-Image.create!({listing_id: l1.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1477454155/listings/3-3.jpg'})
-Image.create!({listing_id: l1.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1477454155/listings/3-4.jpg'})
+Image.create!({listing_id: l1.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1477454158/listings/3-0.jpg'})
+Image.create!({listing_id: l1.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1477454155/listings/3-1.jpg'})
+Image.create!({listing_id: l1.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1477454155/listings/3-2.jpg'})
+Image.create!({listing_id: l1.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1477454155/listings/3-3.jpg'})
+Image.create!({listing_id: l1.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1477454155/listings/3-4.jpg'})
 
 l2 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94108, USA',
@@ -67,12 +67,12 @@ Features:
 ~ 1 year lease required"
 })
 
-Image.create!({listing_id: l2.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1477454149/listings/2-1.jpg'})
-Image.create!({listing_id: l2.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1477454150/listings/2-3.jpg'})
-Image.create!({listing_id: l2.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1477454150/listings/2-4.jpg'})
-Image.create!({listing_id: l2.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1477454148/listings/2-0.jpg'})
-Image.create!({listing_id: l2.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1477454150/listings/2-2.jpg'})
-Image.create!({listing_id: l2.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1477454150/listings/2-6.jpg'})
+Image.create!({listing_id: l2.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1477454149/listings/2-1.jpg'})
+Image.create!({listing_id: l2.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1477454150/listings/2-3.jpg'})
+Image.create!({listing_id: l2.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1477454150/listings/2-4.jpg'})
+Image.create!({listing_id: l2.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1477454148/listings/2-0.jpg'})
+Image.create!({listing_id: l2.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1477454150/listings/2-2.jpg'})
+Image.create!({listing_id: l2.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1477454150/listings/2-6.jpg'})
 
 l3 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94108, USA',
@@ -101,11 +101,11 @@ Features:
 • Woodburning fireplaces with marble hearths (some plans)."
 })
 
-Image.create!({listing_id: l3.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1477454142/listings/1-0.jpg'})
-Image.create!({listing_id: l3.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1477454142/listings/1-1.jpg'})
-Image.create!({listing_id: l3.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1477454142/listings/1-2.jpg'})
-Image.create!({listing_id: l3.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1477454142/listings/1-3.jpg'})
-Image.create!({listing_id: l3.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1477454144/listings/1-4.jpg'})
+Image.create!({listing_id: l3.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1477454142/listings/1-0.jpg'})
+Image.create!({listing_id: l3.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1477454142/listings/1-1.jpg'})
+Image.create!({listing_id: l3.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1477454142/listings/1-2.jpg'})
+Image.create!({listing_id: l3.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1477454142/listings/1-3.jpg'})
+Image.create!({listing_id: l3.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1477454144/listings/1-4.jpg'})
 
 
 l4 = Listing.create!({
@@ -125,16 +125,16 @@ l4 = Listing.create!({
 There is optional parking for one medium sized car for an additional $300. There is a wonderful shared patio in the back for relaxing and barbecuing. There is no on-site laundry but two coin operated laundrymats are at the end of the street."
 })
 
-Image.create!({listing_id: l4.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1477454148/listings/0-7.jpg'})
-Image.create!({listing_id: l4.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1477454147/listings/0-8.jpg'})
-Image.create!({listing_id: l4.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1477454144/listings/0-2.jpg'})
-Image.create!({listing_id: l4.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1477454146/listings/0-3.jpg'})
-Image.create!({listing_id: l4.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1477454145/listings/0-4.jpg'})
-Image.create!({listing_id: l4.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1477454146/listings/0-5.jpg'})
-Image.create!({listing_id: l4.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1477454148/listings/0-6.jpg'})
-Image.create!({listing_id: l4.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1477454148/listings/0-9.jpg'})
-Image.create!({listing_id: l4.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1477454147/listings/0-0.jpg'})
-Image.create!({listing_id: l4.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1477454143/listings/0-1.jpg'})
+Image.create!({listing_id: l4.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1477454148/listings/0-7.jpg'})
+Image.create!({listing_id: l4.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1477454147/listings/0-8.jpg'})
+Image.create!({listing_id: l4.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1477454144/listings/0-2.jpg'})
+Image.create!({listing_id: l4.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1477454146/listings/0-3.jpg'})
+Image.create!({listing_id: l4.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1477454145/listings/0-4.jpg'})
+Image.create!({listing_id: l4.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1477454146/listings/0-5.jpg'})
+Image.create!({listing_id: l4.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1477454148/listings/0-6.jpg'})
+Image.create!({listing_id: l4.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1477454148/listings/0-9.jpg'})
+Image.create!({listing_id: l4.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1477454147/listings/0-0.jpg'})
+Image.create!({listing_id: l4.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1477454143/listings/0-1.jpg'})
 
 l5 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94103, USA',
@@ -149,11 +149,11 @@ l5 = Listing.create!({
   description: "Bennett Lofts SoMa features super spacious floor plans with hardwood-style floors. Large windows set in high ceilings provide stellar views of the city, including stunning views of the Bay Bridge breaking through the morning fog. Easily explore downtown San Francisco on the brand new MUNI trolley, or go beyond the city???s borders with Caltrain, located just one block away. Wander through the multitude of local eateries and shops, or stock up on groceries at Whole Foods and Safeway. In your downtime, work on your swing at Bay Club Tennis across the street, or walk to AT&T Park to cheer on World Series Champions the San Francisco Giants!"
 })
 
-Image.create!({listing_id: l5.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478760490/5-00_lqzgcg.jpg'})
-Image.create!({listing_id: l5.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478760492/5-01_dosexd.jpg'})
-Image.create!({listing_id: l5.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478760490/5-02_nbcfrh.jpg'})
-Image.create!({listing_id: l5.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478760490/5-03_vthbv9.jpg'})
-Image.create!({listing_id: l5.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478760490/5-04_qyne6x.jpg'})
+Image.create!({listing_id: l5.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1478760490/5-00_lqzgcg.jpg'})
+Image.create!({listing_id: l5.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1478760492/5-01_dosexd.jpg'})
+Image.create!({listing_id: l5.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1478760490/5-02_nbcfrh.jpg'})
+Image.create!({listing_id: l5.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1478760490/5-03_vthbv9.jpg'})
+Image.create!({listing_id: l5.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1478760490/5-04_qyne6x.jpg'})
 
 
 l6 = Listing.create!({
@@ -187,13 +187,13 @@ l6 = Listing.create!({
 Pets: Up to two pet(s) allowed with an additional deposit of $500 per pet, plus pet rent of $50, per pet, per month. No Aggressive Breeds. Terms and Conditions Apply."
 })
 
-Image.create!({listing_id: l6.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1450914452/12-1_wjrqq8.jpg'})
-Image.create!({listing_id: l6.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1450914452/12-7_yy5vqo.jpg'})
-Image.create!({listing_id: l6.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1450914452/12-3_odbwsl.jpg'})
-Image.create!({listing_id: l6.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1450914452/12-6_qanpa1.jpg'})
-Image.create!({listing_id: l6.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1450914452/12-5_fdb35o.jpg'})
-Image.create!({listing_id: l6.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1450914452/12-8_obem0i.jpg'})
-Image.create!({listing_id: l6.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1450914452/12-9_bxcopc.jpg'})
+Image.create!({listing_id: l6.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1450914452/12-1_wjrqq8.jpg'})
+Image.create!({listing_id: l6.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1450914452/12-7_yy5vqo.jpg'})
+Image.create!({listing_id: l6.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1450914452/12-3_odbwsl.jpg'})
+Image.create!({listing_id: l6.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1450914452/12-6_qanpa1.jpg'})
+Image.create!({listing_id: l6.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1450914452/12-5_fdb35o.jpg'})
+Image.create!({listing_id: l6.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1450914452/12-8_obem0i.jpg'})
+Image.create!({listing_id: l6.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1450914452/12-9_bxcopc.jpg'})
 
 l7 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94110, USA',
@@ -223,16 +223,16 @@ Broker solely represents building owner.
 6 unit building, comprised of 3 upper residential units and 3 lower commercial units is designated non smoking. This is a non smoking apartment."
 })
 
-Image.create!({listing_id: l7.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480824859/listings/7-1.jpg'})
-Image.create!({listing_id: l7.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480824859/listings/7-0.jpg'})
-Image.create!({listing_id: l7.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480824859/listings/7-3.jpg'})
-Image.create!({listing_id: l7.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480824859/listings/7-4.jpg'})
-Image.create!({listing_id: l7.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480824859/listings/7-2.jpg'})
-Image.create!({listing_id: l7.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480824859/listings/7-5.jpg'})
-Image.create!({listing_id: l7.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480824860/listings/7-6.jpg'})
-Image.create!({listing_id: l7.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480824861/listings/7-7.jpg'})
-Image.create!({listing_id: l7.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480824861/listings/7-9.jpg'})
-Image.create!({listing_id: l7.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480824861/listings/7-10.jpg'})
+Image.create!({listing_id: l7.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480824859/listings/7-1.jpg'})
+Image.create!({listing_id: l7.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480824859/listings/7-0.jpg'})
+Image.create!({listing_id: l7.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480824859/listings/7-3.jpg'})
+Image.create!({listing_id: l7.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480824859/listings/7-4.jpg'})
+Image.create!({listing_id: l7.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480824859/listings/7-2.jpg'})
+Image.create!({listing_id: l7.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480824859/listings/7-5.jpg'})
+Image.create!({listing_id: l7.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480824860/listings/7-6.jpg'})
+Image.create!({listing_id: l7.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480824861/listings/7-7.jpg'})
+Image.create!({listing_id: l7.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480824861/listings/7-9.jpg'})
+Image.create!({listing_id: l7.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480824861/listings/7-10.jpg'})
 
 
 l8 = Listing.create!({
@@ -269,18 +269,18 @@ Coin Laundry on site.
 Fun Mission District location near 24th Street Bart, Muni, 101 and 280, El Rio bar and much more.'
 })
 
-Image.create!({listing_id: l8.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1450725230/1-1_zke45w.jpg'})
-Image.create!({listing_id: l8.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1450725231/1-2_ldaunc.jpg'})
-Image.create!({listing_id: l8.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1450725230/1-4_xoizqj.jpg'})
-Image.create!({listing_id: l8.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1450725230/1-6_le9aww.jpg'})
-Image.create!({listing_id: l8.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1450725230/1-3_hyn40x.jpg'})
-Image.create!({listing_id: l8.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1450725230/1-5_p6yza0.jpg'})
-Image.create!({listing_id: l8.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1450725232/1-8_zfj8ox.jpg'})
-Image.create!({listing_id: l8.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1450725232/1-11_neljhe.jpg'})
-Image.create!({listing_id: l8.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1450725232/1-9_kh2sug.jpg'})
-Image.create!({listing_id: l8.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1450725231/1-7_lznwxi.jpg'})
-Image.create!({listing_id: l8.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1450725232/1-10_muwmqs.jpg'})
-Image.create!({listing_id: l8.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1450725232/1-12_dlm2w7.jpg'})
+Image.create!({listing_id: l8.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1450725230/1-1_zke45w.jpg'})
+Image.create!({listing_id: l8.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1450725231/1-2_ldaunc.jpg'})
+Image.create!({listing_id: l8.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1450725230/1-4_xoizqj.jpg'})
+Image.create!({listing_id: l8.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1450725230/1-6_le9aww.jpg'})
+Image.create!({listing_id: l8.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1450725230/1-3_hyn40x.jpg'})
+Image.create!({listing_id: l8.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1450725230/1-5_p6yza0.jpg'})
+Image.create!({listing_id: l8.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1450725232/1-8_zfj8ox.jpg'})
+Image.create!({listing_id: l8.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1450725232/1-11_neljhe.jpg'})
+Image.create!({listing_id: l8.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1450725232/1-9_kh2sug.jpg'})
+Image.create!({listing_id: l8.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1450725231/1-7_lznwxi.jpg'})
+Image.create!({listing_id: l8.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1450725232/1-10_muwmqs.jpg'})
+Image.create!({listing_id: l8.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1450725232/1-12_dlm2w7.jpg'})
 
 l9 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94121, USA',
@@ -301,16 +301,16 @@ Charming bars and restaurants within walking distance
 Thanks for looking!'
 })
 
-Image.create!({listing_id: l9.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480825701/listings/1280x960.jpg'})
-Image.create!({listing_id: l9.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480825696/listings/1280x960_1.jpg'})
-Image.create!({listing_id: l9.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480825699/listings/1280x960_5.jpg'})
-Image.create!({listing_id: l9.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480825698/listings/1280x960_6.jpg'})
-Image.create!({listing_id: l9.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480825697/listings/1280x960_2.jpg'})
-Image.create!({listing_id: l9.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480825698/listings/1280x960_3.jpg'})
-Image.create!({listing_id: l9.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480825698/listings/1280x960_4.jpg'})
-Image.create!({listing_id: l9.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480825701/listings/1280x960_8.jpg'})
-Image.create!({listing_id: l9.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480825701/listings/1280x960_10.jpg'})
-Image.create!({listing_id: l9.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480825701/listings/1280x960_9.jpg'})
+Image.create!({listing_id: l9.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480825701/listings/1280x960.jpg'})
+Image.create!({listing_id: l9.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480825696/listings/1280x960_1.jpg'})
+Image.create!({listing_id: l9.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480825699/listings/1280x960_5.jpg'})
+Image.create!({listing_id: l9.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480825698/listings/1280x960_6.jpg'})
+Image.create!({listing_id: l9.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480825697/listings/1280x960_2.jpg'})
+Image.create!({listing_id: l9.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480825698/listings/1280x960_3.jpg'})
+Image.create!({listing_id: l9.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480825698/listings/1280x960_4.jpg'})
+Image.create!({listing_id: l9.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480825701/listings/1280x960_8.jpg'})
+Image.create!({listing_id: l9.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480825701/listings/1280x960_10.jpg'})
+Image.create!({listing_id: l9.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480825701/listings/1280x960_9.jpg'})
 
 
 l10 = Listing.create!({
@@ -345,16 +345,16 @@ RENTAL TERMS:
 - Small pets are allowed with additional deposit and references.'
 })
 
-Image.create!({listing_id: l10.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480826531/listings/10-0.jpg'})
-Image.create!({listing_id: l10.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480826528/listings/10-1.jpg'})
-Image.create!({listing_id: l10.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480826530/listings/10-2.jpg'})
-Image.create!({listing_id: l10.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480826530/listings/10-3.jpg'})
-Image.create!({listing_id: l10.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480826531/listings/10-4.jpg'})
-Image.create!({listing_id: l10.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480826529/listings/10-5.jpg'})
-Image.create!({listing_id: l10.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480826532/listings/10-6.jpg'})
-Image.create!({listing_id: l10.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480826532/listings/10-7.jpg'})
-Image.create!({listing_id: l10.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480826532/listings/10-8.jpg'})
-Image.create!({listing_id: l10.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480826532/listings/10-9.jpg'})
+Image.create!({listing_id: l10.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480826531/listings/10-0.jpg'})
+Image.create!({listing_id: l10.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480826528/listings/10-1.jpg'})
+Image.create!({listing_id: l10.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480826530/listings/10-2.jpg'})
+Image.create!({listing_id: l10.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480826530/listings/10-3.jpg'})
+Image.create!({listing_id: l10.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480826531/listings/10-4.jpg'})
+Image.create!({listing_id: l10.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480826529/listings/10-5.jpg'})
+Image.create!({listing_id: l10.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480826532/listings/10-6.jpg'})
+Image.create!({listing_id: l10.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480826532/listings/10-7.jpg'})
+Image.create!({listing_id: l10.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480826532/listings/10-8.jpg'})
+Image.create!({listing_id: l10.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480826532/listings/10-9.jpg'})
 
 l11 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94133, USA',
@@ -384,14 +384,14 @@ The light filled condo is newly painted with
 There is ROOF DECK access with ICONIC VIEWS of COIT TOWER-GOLDEN GATE BRIDGE-SF BAY. The walk score is 97/Transit Score-89/Bike Score-82.Steps away from Wash Square Park/Library/Wharf/Pier 39. Around corner is Northpoint Centre,Trader Joes & SF finest restaurants-cafes. Small Pets allowed'
 })
 
-Image.create!({listing_id: l11.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480831233/listings/11-0.jpg'})
-Image.create!({listing_id: l11.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480831233/listings/11-1.jpg'})
-Image.create!({listing_id: l11.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480831233/listings/11-2.jpg'})
-Image.create!({listing_id: l11.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480831233/listings/11-3.jpg'})
-Image.create!({listing_id: l11.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480831234/listings/11-4.jpg'})
-Image.create!({listing_id: l11.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480831234/listings/11-5.jpg'})
-Image.create!({listing_id: l11.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480831233/listings/11-6.jpg'})
-Image.create!({listing_id: l11.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480831233/listings/11-7.jpg'})
+Image.create!({listing_id: l11.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480831233/listings/11-0.jpg'})
+Image.create!({listing_id: l11.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480831233/listings/11-1.jpg'})
+Image.create!({listing_id: l11.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480831233/listings/11-2.jpg'})
+Image.create!({listing_id: l11.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480831233/listings/11-3.jpg'})
+Image.create!({listing_id: l11.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480831234/listings/11-4.jpg'})
+Image.create!({listing_id: l11.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480831234/listings/11-5.jpg'})
+Image.create!({listing_id: l11.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480831233/listings/11-6.jpg'})
+Image.create!({listing_id: l11.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480831233/listings/11-7.jpg'})
 
 l12 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94111, USA',
@@ -420,14 +420,14 @@ The unit\'s great features and amenities are as follows:
 -	Water and garbage utilities are included'
   })
 
-Image.create!({listing_id: l12.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480831948/listings/12-0.jpg'})
-Image.create!({listing_id: l12.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480831948/listings/12-1.jpg'})
-Image.create!({listing_id: l12.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480831947/listings/12-4.jpg'})
-Image.create!({listing_id: l12.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480831948/listings/12-2.jpg'})
-Image.create!({listing_id: l12.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480831948/listings/12-3.jpg'})
-Image.create!({listing_id: l12.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480831948/listings/12-6.jpg'})
-Image.create!({listing_id: l12.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480831949/listings/12-7.jpg'})
-Image.create!({listing_id: l12.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480831947/listings/12-5.jpg'})
+Image.create!({listing_id: l12.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480831948/listings/12-0.jpg'})
+Image.create!({listing_id: l12.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480831948/listings/12-1.jpg'})
+Image.create!({listing_id: l12.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480831947/listings/12-4.jpg'})
+Image.create!({listing_id: l12.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480831948/listings/12-2.jpg'})
+Image.create!({listing_id: l12.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480831948/listings/12-3.jpg'})
+Image.create!({listing_id: l12.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480831948/listings/12-6.jpg'})
+Image.create!({listing_id: l12.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480831949/listings/12-7.jpg'})
+Image.create!({listing_id: l12.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480831947/listings/12-5.jpg'})
 
 l13 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94123, USA',
@@ -462,15 +462,15 @@ Non smoking building (all new leases will be non-smoking)
 Sorry no pets.'
 })
 
-Image.create!({listing_id: l13.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480832744/listings/13-0.jpg'})
-Image.create!({listing_id: l13.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480832743/listings/13-1.jpg'})
-Image.create!({listing_id: l13.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480832743/listings/13-2.jpg'})
-Image.create!({listing_id: l13.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480832744/listings/13-3.jpg'})
-Image.create!({listing_id: l13.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480832744/listings/13-4.jpg'})
-Image.create!({listing_id: l13.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480832743/listings/13-5.jpg'})
-Image.create!({listing_id: l13.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480832747/listings/13-6.jpg'})
-Image.create!({listing_id: l13.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480832748/listings/13-7.jpg'})
-Image.create!({listing_id: l13.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480832747/listings/13-8.jpg'})
+Image.create!({listing_id: l13.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480832744/listings/13-0.jpg'})
+Image.create!({listing_id: l13.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480832743/listings/13-1.jpg'})
+Image.create!({listing_id: l13.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480832743/listings/13-2.jpg'})
+Image.create!({listing_id: l13.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480832744/listings/13-3.jpg'})
+Image.create!({listing_id: l13.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480832744/listings/13-4.jpg'})
+Image.create!({listing_id: l13.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480832743/listings/13-5.jpg'})
+Image.create!({listing_id: l13.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480832747/listings/13-6.jpg'})
+Image.create!({listing_id: l13.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480832748/listings/13-7.jpg'})
+Image.create!({listing_id: l13.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480832747/listings/13-8.jpg'})
 
 l14 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94109, USA',
@@ -496,14 +496,14 @@ The building has an on-site common laundry facility.
 The minimum lease term is 12 months.'
 })
 
-Image.create!({listing_id: l14.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480833359/listings/14-0.jpg'})
-Image.create!({listing_id: l14.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480833358/listings/14-1.jpg'})
-Image.create!({listing_id: l14.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480833357/listings/14-2.jpg'})
-Image.create!({listing_id: l14.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480833359/listings/14-3.jpg'})
-Image.create!({listing_id: l14.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480833359/listings/14-4.jpg'})
-Image.create!({listing_id: l14.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480833357/listings/14-5.jpg'})
-Image.create!({listing_id: l14.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480833360/listings/14-6.jpg'})
-Image.create!({listing_id: l14.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480833360/listings/14-7.jpg'})
+Image.create!({listing_id: l14.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480833359/listings/14-0.jpg'})
+Image.create!({listing_id: l14.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480833358/listings/14-1.jpg'})
+Image.create!({listing_id: l14.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480833357/listings/14-2.jpg'})
+Image.create!({listing_id: l14.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480833359/listings/14-3.jpg'})
+Image.create!({listing_id: l14.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480833359/listings/14-4.jpg'})
+Image.create!({listing_id: l14.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480833357/listings/14-5.jpg'})
+Image.create!({listing_id: l14.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480833360/listings/14-6.jpg'})
+Image.create!({listing_id: l14.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480833360/listings/14-7.jpg'})
 
 l15 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94105, USA',
@@ -533,13 +533,13 @@ Features:
 Sorry, no pets.'
 })
 
-Image.create!({listing_id: l15.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480833878/listings/15-0.jpg'})
-Image.create!({listing_id: l15.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480833878/listings/15-1.jpg'})
-Image.create!({listing_id: l15.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480833878/listings/15-2.jpg'})
-Image.create!({listing_id: l15.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480833877/listings/15-4.jpg'})
-Image.create!({listing_id: l15.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480833876/listings/15-3.jpg'})
-Image.create!({listing_id: l15.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480833878/listings/15-5.jpg'})
-Image.create!({listing_id: l15.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480833936/listings/15-6.jpg'})
+Image.create!({listing_id: l15.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480833878/listings/15-0.jpg'})
+Image.create!({listing_id: l15.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480833878/listings/15-1.jpg'})
+Image.create!({listing_id: l15.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480833878/listings/15-2.jpg'})
+Image.create!({listing_id: l15.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480833877/listings/15-4.jpg'})
+Image.create!({listing_id: l15.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480833876/listings/15-3.jpg'})
+Image.create!({listing_id: l15.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480833878/listings/15-5.jpg'})
+Image.create!({listing_id: l15.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480833936/listings/15-6.jpg'})
 
 l16 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94107, USA',
@@ -554,11 +554,11 @@ l16 = Listing.create!({
   description: 'Rooftop Deck, Game Lounge, BBQ Terrace, Pet Park, Fitness Center, Resident Lounge, EV Charging Stations, Stainless Steel Appliances, Soaking Tubs, USB Charging Outlets, Balconies/Decks Panoramic Views*, Guest Parking'
 })
 
-Image.create!({listing_id: l16.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480834385/listings/16-0.jpg'})
-Image.create!({listing_id: l16.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480834384/listings/16-1.jpg'})
-Image.create!({listing_id: l16.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480834384/listings/16-2.jpg'})
-Image.create!({listing_id: l16.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480834384/listings/16-3.jpg'})
-Image.create!({listing_id: l16.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480834384/listings/16-4.jpg'})
+Image.create!({listing_id: l16.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480834385/listings/16-0.jpg'})
+Image.create!({listing_id: l16.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480834384/listings/16-1.jpg'})
+Image.create!({listing_id: l16.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480834384/listings/16-2.jpg'})
+Image.create!({listing_id: l16.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480834384/listings/16-3.jpg'})
+Image.create!({listing_id: l16.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480834384/listings/16-4.jpg'})
 
 l17 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94114, USA',
@@ -573,11 +573,11 @@ l17 = Listing.create!({
   Classic property combines the best of both worlds - timeless character and contemporary comfort. Many of our units are pet-friendly, too. Iconic Charm. Modern Living.'
 })
 
-Image.create!({listing_id: l17.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480834815/listings/17-0.jpg'})
-Image.create!({listing_id: l17.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480834814/listings/17-1.jpg'})
-Image.create!({listing_id: l17.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480834813/listings/17-2.jpg'})
-Image.create!({listing_id: l17.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480834813/listings/17-3.jpg'})
-Image.create!({listing_id: l17.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480834813/listings/17-4.jpg'})
+Image.create!({listing_id: l17.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480834815/listings/17-0.jpg'})
+Image.create!({listing_id: l17.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480834814/listings/17-1.jpg'})
+Image.create!({listing_id: l17.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480834813/listings/17-2.jpg'})
+Image.create!({listing_id: l17.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480834813/listings/17-3.jpg'})
+Image.create!({listing_id: l17.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480834813/listings/17-4.jpg'})
 
 l18 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94122, USA',
@@ -590,11 +590,11 @@ l18 = Listing.create!({
   description: 'Ride off into the Sunset, where the surfers tame the waves, fog or shine. This Golden Gate Park adjacent neighborhood is so big, it is divided into Inner and Outer Sunset - with 9th and Irving being the commercial and dining hub of the former. Further toward the ocean, Irving turns into an area that locals call the city\'s third Chinatown. Find your place in the Sunset. You only have to look up to see how special this building is; the lobby ceiling is a mediterranean-themed masterpiece. Arched doorways, cozy alcoves and fit-for-fashionistas closet space make each apartment a work of art.'
 })
 
-Image.create!({listing_id: l18.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480835242/listings/18-0.jpg'})
-Image.create!({listing_id: l18.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480835241/listings/18-1.jpg'})
-Image.create!({listing_id: l18.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480835241/listings/18-2.jpg'})
-Image.create!({listing_id: l18.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480835241/listings/18-4.jpg'})
-Image.create!({listing_id: l18.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480835243/listings/18-3.jpg'})
+Image.create!({listing_id: l18.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480835242/listings/18-0.jpg'})
+Image.create!({listing_id: l18.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480835241/listings/18-1.jpg'})
+Image.create!({listing_id: l18.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480835241/listings/18-2.jpg'})
+Image.create!({listing_id: l18.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480835241/listings/18-4.jpg'})
+Image.create!({listing_id: l18.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480835243/listings/18-3.jpg'})
 
 l19 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94121, USA',
@@ -609,14 +609,14 @@ l19 = Listing.create!({
   description: 'Fabulously updated 3 bed, 1.5 bath top-floor flat. Beautiful wood floors highlight the elegance of this remodel. Enjoy Western vistas out the front bedroom & living room which enjoys decorative fireplace & recessed lighting. Formal dining room, also fitted with recessed lighting. Modern kitchen features stainless appliances, quartz counters, beautiful farmer\'s sink & gas stove. Appointed with all the luxuries, including stack washer & dryer in the hall, two updated bathrooms, one with a beautiful shower over tub & one enjoys the supreme commode with built-in bidet. The two main bedrooms are at the rear and look over the shared yard. Both bedrooms enjoy ample closet space with in-closet lighting. Off-street/garage parking available for fee.'
 })
 
-Image.create!({listing_id: l19.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480835650/listings/19.jpg'})
-Image.create!({listing_id: l19.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480835647/listings/19-1.jpg'})
-Image.create!({listing_id: l19.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480835648/listings/19-2.jpg'})
-Image.create!({listing_id: l19.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480835647/listings/19-3.jpg'})
-Image.create!({listing_id: l19.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480835648/listings/19-4.jpg'})
-Image.create!({listing_id: l19.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480835648/listings/19-6.jpg'})
-Image.create!({listing_id: l19.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480835647/listings/19-5.jpg'})
-Image.create!({listing_id: l19.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480835651/listings/19-7.jpg'})
+Image.create!({listing_id: l19.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480835650/listings/19.jpg'})
+Image.create!({listing_id: l19.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480835647/listings/19-1.jpg'})
+Image.create!({listing_id: l19.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480835648/listings/19-2.jpg'})
+Image.create!({listing_id: l19.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480835647/listings/19-3.jpg'})
+Image.create!({listing_id: l19.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480835648/listings/19-4.jpg'})
+Image.create!({listing_id: l19.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480835648/listings/19-6.jpg'})
+Image.create!({listing_id: l19.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480835647/listings/19-5.jpg'})
+Image.create!({listing_id: l19.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480835651/listings/19-7.jpg'})
 
 l20 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94118, USA',
@@ -650,18 +650,18 @@ Laundry: Laundry In Unit, Laundry Type
 Pets: Cat Friendly, Dog Friendly, No Pets, Pets Considered'
 })
 
-Image.create!({listing_id: l20.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480836536/listings/20-8.jpg'})
-Image.create!({listing_id: l20.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480836534/listings/20-3.jpg'})
-Image.create!({listing_id: l20.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480836533/listings/20-7.jpg'})
-Image.create!({listing_id: l20.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480836536/listings/20-10.jpg'})
-Image.create!({listing_id: l20.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480836536/listings/20-9.jpg'})
-Image.create!({listing_id: l20.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480836534/listings/20-6.jpg'})
-Image.create!({listing_id: l20.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480836531/listings/20-2.jpg'})
-Image.create!({listing_id: l20.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480836533/listings/20-1.jpg'})
-Image.create!({listing_id: l20.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480836537/listings/20.jpg'})
-Image.create!({listing_id: l20.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480836536/listings/20-11.jpg'})
-Image.create!({listing_id: l20.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480836535/listings/20-4.jpg'})
-Image.create!({listing_id: l20.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480836536/listings/20-5.jpg'})
+Image.create!({listing_id: l20.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480836536/listings/20-8.jpg'})
+Image.create!({listing_id: l20.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480836534/listings/20-3.jpg'})
+Image.create!({listing_id: l20.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480836533/listings/20-7.jpg'})
+Image.create!({listing_id: l20.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480836536/listings/20-10.jpg'})
+Image.create!({listing_id: l20.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480836536/listings/20-9.jpg'})
+Image.create!({listing_id: l20.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480836534/listings/20-6.jpg'})
+Image.create!({listing_id: l20.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480836531/listings/20-2.jpg'})
+Image.create!({listing_id: l20.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480836533/listings/20-1.jpg'})
+Image.create!({listing_id: l20.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480836537/listings/20.jpg'})
+Image.create!({listing_id: l20.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480836536/listings/20-11.jpg'})
+Image.create!({listing_id: l20.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480836535/listings/20-4.jpg'})
+Image.create!({listing_id: l20.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480836536/listings/20-5.jpg'})
 
 l21 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94117, USA',
@@ -692,14 +692,14 @@ No on-site laundry
 Non smoking building'
 })
 
-Image.create!({listing_id: l21.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480837648/listings/210.jpg'})
-Image.create!({listing_id: l21.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480837650/listings/211.jpg'})
-Image.create!({listing_id: l21.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480837650/listings/212.jpg'})
-Image.create!({listing_id: l21.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480837650/listings/213.jpg'})
-Image.create!({listing_id: l21.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480837651/listings/214.jpg'})
-Image.create!({listing_id: l21.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480837650/listings/215.jpg'})
-Image.create!({listing_id: l21.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480837652/listings/216.jpg'})
-Image.create!({listing_id: l21.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480837652/listings/217.jpg'})
+Image.create!({listing_id: l21.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480837648/listings/210.jpg'})
+Image.create!({listing_id: l21.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480837650/listings/211.jpg'})
+Image.create!({listing_id: l21.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480837650/listings/212.jpg'})
+Image.create!({listing_id: l21.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480837650/listings/213.jpg'})
+Image.create!({listing_id: l21.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480837651/listings/214.jpg'})
+Image.create!({listing_id: l21.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480837650/listings/215.jpg'})
+Image.create!({listing_id: l21.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480837652/listings/216.jpg'})
+Image.create!({listing_id: l21.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480837652/listings/217.jpg'})
 
 l21 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94115, USA',
@@ -730,16 +730,16 @@ WALKSCORE of 97 out of 100 and also known as "Walker\'s Paradise" Walkability fa
 -2 blocks to Blue Fog Market gourmet prepared foods and Blue Bottle coffee.'
 })
 
-Image.create!({listing_id: l21.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480838170/listings/220.jpg'})
-Image.create!({listing_id: l21.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480838170/listings/221.jpg'})
-Image.create!({listing_id: l21.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480838170/listings/222.jpg'})
-Image.create!({listing_id: l21.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480838170/listings/223.jpg'})
-Image.create!({listing_id: l21.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480838170/listings/224.jpg'})
-Image.create!({listing_id: l21.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480838173/listings/227.jpg'})
-Image.create!({listing_id: l21.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480838173/listings/226.jpg'})
-Image.create!({listing_id: l21.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480838170/listings/225.jpg'})
-Image.create!({listing_id: l21.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480838173/listings/228.jpg'})
-Image.create!({listing_id: l21.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480838173/listings/229.jpg'})
+Image.create!({listing_id: l21.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480838170/listings/220.jpg'})
+Image.create!({listing_id: l21.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480838170/listings/221.jpg'})
+Image.create!({listing_id: l21.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480838170/listings/222.jpg'})
+Image.create!({listing_id: l21.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480838170/listings/223.jpg'})
+Image.create!({listing_id: l21.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480838170/listings/224.jpg'})
+Image.create!({listing_id: l21.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480838173/listings/227.jpg'})
+Image.create!({listing_id: l21.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480838173/listings/226.jpg'})
+Image.create!({listing_id: l21.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480838170/listings/225.jpg'})
+Image.create!({listing_id: l21.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480838173/listings/228.jpg'})
+Image.create!({listing_id: l21.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480838173/listings/229.jpg'})
 
 l22 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94117, USA',
@@ -771,9 +771,9 @@ Other details:
 •Washer/dryer in flat'
 })
 
-Image.create!({listing_id: l22.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480838649/listings/232.jpg'})
-Image.create!({listing_id: l22.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480838648/listings/231.jpg'})
-Image.create!({listing_id: l22.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480838649/listings/233.jpg'})
+Image.create!({listing_id: l22.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480838649/listings/232.jpg'})
+Image.create!({listing_id: l22.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480838648/listings/231.jpg'})
+Image.create!({listing_id: l22.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480838649/listings/233.jpg'})
 
 l23 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94131, USA',
@@ -788,14 +788,14 @@ The first floor opens up to the large living room with hardwood floors and a fir
 The house is positioned perfectly for families and everyday commuters with easy access to Highway 280 and walking distance to BART. Just a 5 minute walk will lead you to Glen Park and newly built recreation center.'
 })
 
-Image.create!({listing_id: l23.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480839097/listings/240.jpg'})
-Image.create!({listing_id: l23.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480839097/listings/241.jpg'})
-Image.create!({listing_id: l23.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480839097/listings/242.jpg'})
-Image.create!({listing_id: l23.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480839097/listings/243.jpg'})
-Image.create!({listing_id: l23.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480839097/listings/244.jpg'})
-Image.create!({listing_id: l23.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480839097/listings/245.jpg'})
-Image.create!({listing_id: l23.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480839098/listings/246.jpg'})
-Image.create!({listing_id: l23.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480839098/listings/247.jpg'})
+Image.create!({listing_id: l23.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480839097/listings/240.jpg'})
+Image.create!({listing_id: l23.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480839097/listings/241.jpg'})
+Image.create!({listing_id: l23.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480839097/listings/242.jpg'})
+Image.create!({listing_id: l23.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480839097/listings/243.jpg'})
+Image.create!({listing_id: l23.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480839097/listings/244.jpg'})
+Image.create!({listing_id: l23.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480839097/listings/245.jpg'})
+Image.create!({listing_id: l23.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480839098/listings/246.jpg'})
+Image.create!({listing_id: l23.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480839098/listings/247.jpg'})
 
 l24 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94107, USA',
@@ -808,14 +808,14 @@ l24 = Listing.create!({
   description: 'This charming 3 bedroom, 1.5 bath urban oasis in the heart of the SoMa district offers a dynamic living experience by taking advantage of both its location on one of San Francisco\'s most quiet side streets and its beautiful, private garden, which the unit opens directly into. Rarely do rental properties in bustling and urban areas like SOMA incorporate such a desirable mix of attributes, combining the convenience of city life with private enclaves of preserved nature.'
 })
 
-Image.create!({listing_id: l24.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480839681/listings/640x4809jpeg.jpg'})
-Image.create!({listing_id: l24.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480839681/listings/640x4808.jpg'})
-Image.create!({listing_id: l24.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480839679/listings/640x480_4.jpg'})
-Image.create!({listing_id: l24.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480839679/listings/640x480_2.jpg'})
-Image.create!({listing_id: l24.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480839679/listings/640x480_1.jpg'})
-Image.create!({listing_id: l24.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480839681/listings/640x480.jpg'})
-Image.create!({listing_id: l24.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480839680/listings/640x480_7.jpg'})
-Image.create!({listing_id: l24.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480839679/listings/640x480_5.jpg'})
+Image.create!({listing_id: l24.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480839681/listings/640x4809jpeg.jpg'})
+Image.create!({listing_id: l24.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480839681/listings/640x4808.jpg'})
+Image.create!({listing_id: l24.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480839679/listings/640x480_4.jpg'})
+Image.create!({listing_id: l24.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480839679/listings/640x480_2.jpg'})
+Image.create!({listing_id: l24.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480839679/listings/640x480_1.jpg'})
+Image.create!({listing_id: l24.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480839681/listings/640x480.jpg'})
+Image.create!({listing_id: l24.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480839680/listings/640x480_7.jpg'})
+Image.create!({listing_id: l24.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480839679/listings/640x480_5.jpg'})
 
 l25 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94122, USA',
@@ -851,13 +851,13 @@ Indoor garage parking is an extra $100 per month to be collected in cash or chec
 No pets, no smokers please.'
 })
 
-Image.create!({listing_id: l25.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480840210/listings/250.jpg'})
-Image.create!({listing_id: l25.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480840210/listings/251.jpg'})
-Image.create!({listing_id: l25.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480840210/listings/252.jpg'})
-Image.create!({listing_id: l25.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480840210/listings/253.jpg'})
-Image.create!({listing_id: l25.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480840210/listings/254.jpg'})
-Image.create!({listing_id: l25.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480840210/listings/255.jpg'})
-Image.create!({listing_id: l25.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480840211/listings/256.jpg'})
+Image.create!({listing_id: l25.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480840210/listings/250.jpg'})
+Image.create!({listing_id: l25.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480840210/listings/251.jpg'})
+Image.create!({listing_id: l25.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480840210/listings/252.jpg'})
+Image.create!({listing_id: l25.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480840210/listings/253.jpg'})
+Image.create!({listing_id: l25.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480840210/listings/254.jpg'})
+Image.create!({listing_id: l25.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480840210/listings/255.jpg'})
+Image.create!({listing_id: l25.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480840211/listings/256.jpg'})
 
 l26 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94118, USA',
@@ -872,12 +872,12 @@ l26 = Listing.create!({
   description: 'With Stunning views of Sutro Tower, Twin Peaks, Cole Valley, GG Park, Buena Vista Park & Mt. Sutro Open Space Reserve, this one-of-a-kind luxurious home is a rare find! This beautiful 3 bedroom, 1 bath unit is the perfect place to stay for families or for colleagues on work trips. The home is tastefully furnished and decorated with vintage and antique artwork. A surprisingly quiet and peaceful location in the center of SF.'
 })
 
-Image.create!({listing_id: l26.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480840593/listings/262.jpg'})
-Image.create!({listing_id: l26.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480840593/listings/263.jpg'})
-Image.create!({listing_id: l26.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480840594/listings/260.jpg'})
-Image.create!({listing_id: l26.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480840592/listings/264.jpg'})
-Image.create!({listing_id: l26.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480840593/listings/265.jpg'})
-Image.create!({listing_id: l26.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480840595/listings/266.jpg'})
+Image.create!({listing_id: l26.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480840593/listings/262.jpg'})
+Image.create!({listing_id: l26.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480840593/listings/263.jpg'})
+Image.create!({listing_id: l26.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480840594/listings/260.jpg'})
+Image.create!({listing_id: l26.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480840592/listings/264.jpg'})
+Image.create!({listing_id: l26.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480840593/listings/265.jpg'})
+Image.create!({listing_id: l26.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480840595/listings/266.jpg'})
 
 l27 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94109, USA',
@@ -905,7 +905,7 @@ Laundry: Laundry On Site, Laundry In Building, Laundry In Unit, Laundry Type
 Pets: Cat Friendly, Dog Friendly, No Pets'
 })
 
-Image.create!({listing_id: l27.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480840923/listings/27.jpg'})
+Image.create!({listing_id: l27.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480840923/listings/27.jpg'})
 
 l28 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94121, USA',
@@ -927,14 +927,14 @@ The property is centrally located in one of San Francisco’s best neighborhoods
 Unit 259 offers: Two bedrooms, one king & one queen bed, split bath with shower over tub, eat-in kitchen, patio and garden. Furnished or Unfurnished ok.'
 })
 
-Image.create!({listing_id: l28.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480841452/listings/287.jpg'})
-Image.create!({listing_id: l28.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480841447/listings/280.jpg'})
-Image.create!({listing_id: l28.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480841447/listings/281.jpg'})
-Image.create!({listing_id: l28.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480841447/listings/282.jpg'})
-Image.create!({listing_id: l28.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480841448/listings/283.jpg'})
-Image.create!({listing_id: l28.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480841447/listings/284.jpg'})
-Image.create!({listing_id: l28.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480841451/listings/285.jpg'})
-Image.create!({listing_id: l28.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480841445/listings/286.jpg'})
+Image.create!({listing_id: l28.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480841452/listings/287.jpg'})
+Image.create!({listing_id: l28.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480841447/listings/280.jpg'})
+Image.create!({listing_id: l28.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480841447/listings/281.jpg'})
+Image.create!({listing_id: l28.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480841447/listings/282.jpg'})
+Image.create!({listing_id: l28.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480841448/listings/283.jpg'})
+Image.create!({listing_id: l28.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480841447/listings/284.jpg'})
+Image.create!({listing_id: l28.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480841451/listings/285.jpg'})
+Image.create!({listing_id: l28.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480841445/listings/286.jpg'})
 
 l29 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94108, USA',
@@ -954,10 +954,10 @@ Walk 10-15 minutes to the BART Station.
 Plenty of good restaurants, shops, bars all aroun'
 })
 
-Image.create!({listing_id: l29.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480841910/listings/290.jpg'})
-Image.create!({listing_id: l29.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480841911/listings/292.jpg'})
-Image.create!({listing_id: l29.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480841910/listings/293.jpg'})
-Image.create!({listing_id: l29.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480841911/listings/294.jpg'})
+Image.create!({listing_id: l29.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480841910/listings/290.jpg'})
+Image.create!({listing_id: l29.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480841911/listings/292.jpg'})
+Image.create!({listing_id: l29.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480841910/listings/293.jpg'})
+Image.create!({listing_id: l29.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480841911/listings/294.jpg'})
 
 l30 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94105, USA',
@@ -971,12 +971,12 @@ l30 = Listing.create!({
   description: 'This 2 bedroom, 2 bathroom condo offers the best value for a South Beach boutique building.'
 })
 
-Image.create!({listing_id: l30.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480842362/listings/300.jpg'})
-Image.create!({listing_id: l30.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480842362/listings/301.jpg'})
-Image.create!({listing_id: l30.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480842362/listings/302.jpg'})
-Image.create!({listing_id: l30.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480842425/listings/305.jpg'})
-Image.create!({listing_id: l30.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480842362/listings/303.jpg'})
-Image.create!({listing_id: l30.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480842363/listings/304.jpg'})
+Image.create!({listing_id: l30.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480842362/listings/300.jpg'})
+Image.create!({listing_id: l30.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480842362/listings/301.jpg'})
+Image.create!({listing_id: l30.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480842362/listings/302.jpg'})
+Image.create!({listing_id: l30.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480842425/listings/305.jpg'})
+Image.create!({listing_id: l30.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480842362/listings/303.jpg'})
+Image.create!({listing_id: l30.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480842363/listings/304.jpg'})
 
 l31 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94121, USA',
@@ -993,11 +993,11 @@ l31 = Listing.create!({
 Please remember that you will be staying in a home, not a hotel. Therefore, we ask that you treat our space with the same respect you would show your own. We travel often and have help managing guest services for our home while we are away.'
 })
 
-Image.create!({listing_id: l31.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480885668/311_qke8w9.jpg'})
-Image.create!({listing_id: l31.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480885668/312_rjuaqu.jpg'})
-Image.create!({listing_id: l31.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480885669/313_tqnx9p.jpg'})
-Image.create!({listing_id: l31.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480885669/314_e4qqrv.jpg'})
-Image.create!({listing_id: l31.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480885669/315_i9rndw.jpg'})
+Image.create!({listing_id: l31.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480885668/311_qke8w9.jpg'})
+Image.create!({listing_id: l31.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480885668/312_rjuaqu.jpg'})
+Image.create!({listing_id: l31.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480885669/313_tqnx9p.jpg'})
+Image.create!({listing_id: l31.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480885669/314_e4qqrv.jpg'})
+Image.create!({listing_id: l31.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480885669/315_i9rndw.jpg'})
 
 l32 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94121, USA',
@@ -1013,19 +1013,19 @@ l32 = Listing.create!({
   description: 'Representing an entirely unique quality of life with scale and light, this full-floor 2 bedroom, 2 bathroom skylit flat located on the top floor of a boutique building has everything that the most fastidious resident would want. 507 32nd Ave gracefully marries the highest-quality finishes and an open floor plan with a prime location nestled on a peaceful street two blocks away from stunning Land\'s End, four blocks away from legendary Golden Gate Park, and within 2 miles from the ocean. This home has just been beautifully remodeled with new electrical, HVAC, and plumbing systems. It is designed to the latest trends and highest standards of city living. The dramatic open floor plan offers gracious flow between the living areas, dining area, and kitchen providing a multitude of options for entertaining and family gatherings. The spacious living room is anchored by an elegant Ecosmart bio-ethanol fireplace. There is a great deal of designer lighting fixtures including picture lights that provide ambiance along with brand-new double-pane Marvin windows for heat efficiency. The custom kitchen features new cabinetry, a patterned Porcenalosa backsplash, contemporary countertops, and Viking chef\'s grade appliances. Discerning chefs will appreciate the Viking gas range and wine lovers will find the built-in wine refrigerator an exquisite touch to the kitchen\'s center island. The hallway tastefully leads to the large bedrooms that are well delineated from the living areas, with each bedroom offering good-size storage closets and new double-pane windows. The master bedroom suite features a spa-like master bathroom that is luxuriously appointed with intricate tile work, designer fixtures, and a glass shower enclosure. The second bathroom is similar to the master and is located off the hallway. Gleaming brand-new hardwood floors throughout the living areas and bedrooms add warmth and iconic style to the home. Rounding out the amenities are laundry in the building and garage parking for 1 car. '
 })
 
-Image.create!({listing_id: l32.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886051/321_jd83pk.jpg'})
-Image.create!({listing_id: l32.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886054/322_gitmho.jpg'})
-Image.create!({listing_id: l32.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886054/323_n9lgq7.jpg'})
-Image.create!({listing_id: l32.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886051/324_sw7sv2.jpg'})
-Image.create!({listing_id: l32.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886053/325_ydnwte.jpg'})
-Image.create!({listing_id: l32.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886055/326_yfz6ay.jpg'})
-Image.create!({listing_id: l32.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886054/327_sfchtz.jpg'})
-Image.create!({listing_id: l32.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886055/328_cp5u8k.jpg'})
-Image.create!({listing_id: l32.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886057/329_jbsa1v.jpg'})
-Image.create!({listing_id: l32.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886063/3210_ifane9.jpg'})
-Image.create!({listing_id: l32.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886060/3211_gpo7cg.jpg'})
-Image.create!({listing_id: l32.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886058/3212_l85xhl.jpg'})
-Image.create!({listing_id: l32.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886062/3213_stqqqf.jpg'})
+Image.create!({listing_id: l32.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480886051/321_jd83pk.jpg'})
+Image.create!({listing_id: l32.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480886054/322_gitmho.jpg'})
+Image.create!({listing_id: l32.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480886054/323_n9lgq7.jpg'})
+Image.create!({listing_id: l32.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480886051/324_sw7sv2.jpg'})
+Image.create!({listing_id: l32.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480886053/325_ydnwte.jpg'})
+Image.create!({listing_id: l32.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480886055/326_yfz6ay.jpg'})
+Image.create!({listing_id: l32.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480886054/327_sfchtz.jpg'})
+Image.create!({listing_id: l32.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480886055/328_cp5u8k.jpg'})
+Image.create!({listing_id: l32.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480886057/329_jbsa1v.jpg'})
+Image.create!({listing_id: l32.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480886063/3210_ifane9.jpg'})
+Image.create!({listing_id: l32.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480886060/3211_gpo7cg.jpg'})
+Image.create!({listing_id: l32.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480886058/3212_l85xhl.jpg'})
+Image.create!({listing_id: l32.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480886062/3213_stqqqf.jpg'})
 
 l33 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94121, USA',
@@ -1059,18 +1059,18 @@ Call or email today to view
 This is a non-smoking unit.'
 })
 
-Image.create!({listing_id: l33.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886718/331_oa47f3.jpg'})
-Image.create!({listing_id: l33.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886717/332_t6avh6.jpg'})
-Image.create!({listing_id: l33.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886717/333_a1okjp.jpg'})
-Image.create!({listing_id: l33.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886717/334_adfn5m.jpg'})
-Image.create!({listing_id: l33.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886717/335_rwv1rc.jpg'})
-Image.create!({listing_id: l33.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886716/336_i9qz0n.jpg'})
-Image.create!({listing_id: l33.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886720/337_wb5ymu.jpg'})
-Image.create!({listing_id: l33.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886720/338_a7uxow.jpg'})
-Image.create!({listing_id: l33.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886720/339_iprze5.jpg'})
-Image.create!({listing_id: l33.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886820/3312_nljpaa.jpg'})
-Image.create!({listing_id: l33.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886820/3311_i6xvos.jpg'})
-Image.create!({listing_id: l33.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480886819/3310_u1thqr.jpg'})
+Image.create!({listing_id: l33.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480886718/331_oa47f3.jpg'})
+Image.create!({listing_id: l33.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480886717/332_t6avh6.jpg'})
+Image.create!({listing_id: l33.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480886717/333_a1okjp.jpg'})
+Image.create!({listing_id: l33.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480886717/334_adfn5m.jpg'})
+Image.create!({listing_id: l33.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480886717/335_rwv1rc.jpg'})
+Image.create!({listing_id: l33.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480886716/336_i9qz0n.jpg'})
+Image.create!({listing_id: l33.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480886720/337_wb5ymu.jpg'})
+Image.create!({listing_id: l33.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480886720/338_a7uxow.jpg'})
+Image.create!({listing_id: l33.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480886720/339_iprze5.jpg'})
+Image.create!({listing_id: l33.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480886820/3312_nljpaa.jpg'})
+Image.create!({listing_id: l33.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480886820/3311_i6xvos.jpg'})
+Image.create!({listing_id: l33.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480886819/3310_u1thqr.jpg'})
 
 l34 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94121, USA',
@@ -1094,11 +1094,11 @@ The neighbors are all super and this unit can come along with the one car parkin
 Please text or call with any questions.'
 })
 
-Image.create!({listing_id: l34.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480887275/345_tnnxaz.jpg'})
-Image.create!({listing_id: l34.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480887275/341_u5co0h.jpg'})
-Image.create!({listing_id: l34.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480887277/342_ow0xwz.jpg'})
-Image.create!({listing_id: l34.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480887274/343_urhmxd.jpg'})
-Image.create!({listing_id: l34.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480887275/344_xpkcwe.jpg'})
+Image.create!({listing_id: l34.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480887275/345_tnnxaz.jpg'})
+Image.create!({listing_id: l34.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480887275/341_u5co0h.jpg'})
+Image.create!({listing_id: l34.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480887277/342_ow0xwz.jpg'})
+Image.create!({listing_id: l34.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480887274/343_urhmxd.jpg'})
+Image.create!({listing_id: l34.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480887275/344_xpkcwe.jpg'})
 
 l35 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94109, USA',
@@ -1112,12 +1112,12 @@ l35 = Listing.create!({
   description: 'Just when you thought that it\'s impossible to find an elegant 2 bedroom, 1 bathroom apartment in the urban neighborhood in San Francisco at an affordable price, this lovely unit comes to your way! Grab the opportunity to live in this upscale, modern and sleek apartment in Russian Hill.'
 })
 
-Image.create!({listing_id: l35.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480887768/351_gph3hc.jpg'})
-Image.create!({listing_id: l35.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480887767/352_brtozt.jpg'})
-Image.create!({listing_id: l35.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480887767/353_bqoz0q.jpg'})
-Image.create!({listing_id: l35.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480887767/354_nbszlw.jpg'})
-Image.create!({listing_id: l35.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480887768/355_fom3p6.jpg'})
-Image.create!({listing_id: l35.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480887768/357_oixlda.jpg'})
+Image.create!({listing_id: l35.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480887768/351_gph3hc.jpg'})
+Image.create!({listing_id: l35.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480887767/352_brtozt.jpg'})
+Image.create!({listing_id: l35.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480887767/353_bqoz0q.jpg'})
+Image.create!({listing_id: l35.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480887767/354_nbszlw.jpg'})
+Image.create!({listing_id: l35.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480887768/355_fom3p6.jpg'})
+Image.create!({listing_id: l35.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480887768/357_oixlda.jpg'})
 
 l36 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94115, USA',
@@ -1131,10 +1131,10 @@ l36 = Listing.create!({
   description: 'The streets of Nob Hill were paved with Gold Rush riches. Topped by mansions, ritzy hotels and landmarks, like Grace Cathedral and Huntington Park, this tycoon territory keeps it classy. Big Four and Nob Hill Cafe are two classic culinary contenders, and halfway down the hill, some hipper hotspots are popping up. Start off the day at Contraband Coffee Bar, nibble on seasonal foodstuffs at Sons & Daughters, or get a snout-full of beers and brats at Hogwash. Get the home advantage in this Polk Street adjacent residence. Just paces away from the action, this dapper gray building has a surprisingly peaceful air about it'
 })
 
-Image.create!({listing_id: l36.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889291/36_0_eavgyw.jpg'})
-Image.create!({listing_id: l36.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889290/36_1_hs1l32.jpg'})
-Image.create!({listing_id: l36.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889290/36_2_py6l1h.jpg'})
-Image.create!({listing_id: l36.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889290/36_3_v0x33j.jpg'})
+Image.create!({listing_id: l36.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480889291/36_0_eavgyw.jpg'})
+Image.create!({listing_id: l36.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480889290/36_1_hs1l32.jpg'})
+Image.create!({listing_id: l36.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480889290/36_2_py6l1h.jpg'})
+Image.create!({listing_id: l36.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480889290/36_3_v0x33j.jpg'})
 
 l37 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94102, USA',
@@ -1151,9 +1151,9 @@ l37 = Listing.create!({
   description: 'This amazing apartment has all the luxuries of a home. It has been beautifully furnished and has two spacious bedrooms and one spotless bathroom.'
 })
 
-Image.create!({listing_id: l37.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889506/37_2_kdonhc.jpg'})
-Image.create!({listing_id: l37.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889506/37_0_gkwljh.jpg'})
-Image.create!({listing_id: l37.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889506/37_1_yag8xk.jpg'})
+Image.create!({listing_id: l37.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480889506/37_2_kdonhc.jpg'})
+Image.create!({listing_id: l37.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480889506/37_0_gkwljh.jpg'})
+Image.create!({listing_id: l37.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480889506/37_1_yag8xk.jpg'})
 
 l38 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94104, USA',
@@ -1170,9 +1170,9 @@ l38 = Listing.create!({
 Looking for immediate move-in.'
 })
 
-Image.create!({listing_id: l38.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889673/38_0_d3y4gu.jpg'})
-Image.create!({listing_id: l38.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889673/38_1_to85nl.jpg'})
-Image.create!({listing_id: l38.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889673/38_2_jbtepu.jpg'})
+Image.create!({listing_id: l38.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480889673/38_0_d3y4gu.jpg'})
+Image.create!({listing_id: l38.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480889673/38_1_to85nl.jpg'})
+Image.create!({listing_id: l38.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480889673/38_2_jbtepu.jpg'})
 
 l39 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94103, USA',
@@ -1188,9 +1188,9 @@ l39 = Listing.create!({
   Pricing includes one month free **valid for new residents only**'
 })
 
-Image.create!({listing_id: l39.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889994/39_0_s0icwb.jpg'})
-Image.create!({listing_id: l39.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889994/39_1_hjwd0z.jpg'})
-Image.create!({listing_id: l39.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480889994/39_2_ftzen3.jpg'})
+Image.create!({listing_id: l39.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480889994/39_0_s0icwb.jpg'})
+Image.create!({listing_id: l39.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480889994/39_1_hjwd0z.jpg'})
+Image.create!({listing_id: l39.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480889994/39_2_ftzen3.jpg'})
 
 l40 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94121, USA',
@@ -1205,13 +1205,13 @@ l40 = Listing.create!({
   description: 'This stunning apartment is located just one block from Grant. It has amazing easy access to great dining and shopping. It is a few walks to the Financial District and Washington Square.'
 })
 
-Image.create!({listing_id: l40.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890269/40_1_dxwgal.jpg'})
-Image.create!({listing_id: l40.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890270/40_2_evr9tv.jpg'})
-Image.create!({listing_id: l40.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890270/40_3_bacyiz.jpg'})
-Image.create!({listing_id: l40.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890268/40_4_ulwzuq.jpg'})
-Image.create!({listing_id: l40.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890269/40_5_wq5hqo.jpg'})
-Image.create!({listing_id: l40.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890268/40_6_c9glpo.jpg'})
-Image.create!({listing_id: l40.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890271/40_7_zdeyq5.jpg'})
+Image.create!({listing_id: l40.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480890269/40_1_dxwgal.jpg'})
+Image.create!({listing_id: l40.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480890270/40_2_evr9tv.jpg'})
+Image.create!({listing_id: l40.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480890270/40_3_bacyiz.jpg'})
+Image.create!({listing_id: l40.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480890268/40_4_ulwzuq.jpg'})
+Image.create!({listing_id: l40.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480890269/40_5_wq5hqo.jpg'})
+Image.create!({listing_id: l40.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480890268/40_6_c9glpo.jpg'})
+Image.create!({listing_id: l40.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480890271/40_7_zdeyq5.jpg'})
 
 l41 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94107, USA',
@@ -1230,13 +1230,13 @@ The peaceful home surrounded by wide boulevards and blossoming apartments with s
 Owners live in the upper unit'
 })
 
-Image.create!({listing_id: l41.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890552/41_5_zddspn.jpg'})
-Image.create!({listing_id: l41.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890552/41_4_i2pfjy.jpg'})
-Image.create!({listing_id: l41.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890552/41_3_bxrwgo.jpg'})
-Image.create!({listing_id: l41.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890552/41_2_dnqgzd.jpg'})
-Image.create!({listing_id: l41.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890552/41_1_lll33e.jpg'})
-Image.create!({listing_id: l41.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890552/41_0_vtikiu.jpg'})
-Image.create!({listing_id: l41.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890553/41_6_zezg5l.jpg'})
+Image.create!({listing_id: l41.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480890552/41_5_zddspn.jpg'})
+Image.create!({listing_id: l41.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480890552/41_4_i2pfjy.jpg'})
+Image.create!({listing_id: l41.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480890552/41_3_bxrwgo.jpg'})
+Image.create!({listing_id: l41.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480890552/41_2_dnqgzd.jpg'})
+Image.create!({listing_id: l41.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480890552/41_1_lll33e.jpg'})
+Image.create!({listing_id: l41.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480890552/41_0_vtikiu.jpg'})
+Image.create!({listing_id: l41.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480890553/41_6_zezg5l.jpg'})
 
 l42 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94114, USA',
@@ -1257,14 +1257,14 @@ l42 = Listing.create!({
   Walk Score 99, Transit Score 100 and Bike Score 92.'
 })
 
-Image.create!({listing_id: l42.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890951/42_1_ytla91.jpg'})
-Image.create!({listing_id: l42.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890953/42_0_qoe4n2.jpg'})
-Image.create!({listing_id: l42.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890951/42_2_tjainq.jpg'})
-Image.create!({listing_id: l42.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890951/42_4_l4nyke.jpg'})
-Image.create!({listing_id: l42.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890953/42_6_bxskd9.jpg'})
-Image.create!({listing_id: l42.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890951/42_5_lpb986.jpg'})
-Image.create!({listing_id: l42.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890951/42_3_zewfds.jpg'})
-Image.create!({listing_id: l42.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480890952/42_7_dj3i3j.jpg'})
+Image.create!({listing_id: l42.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480890951/42_1_ytla91.jpg'})
+Image.create!({listing_id: l42.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480890953/42_0_qoe4n2.jpg'})
+Image.create!({listing_id: l42.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480890951/42_2_tjainq.jpg'})
+Image.create!({listing_id: l42.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480890951/42_4_l4nyke.jpg'})
+Image.create!({listing_id: l42.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480890953/42_6_bxskd9.jpg'})
+Image.create!({listing_id: l42.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480890951/42_5_lpb986.jpg'})
+Image.create!({listing_id: l42.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480890951/42_3_zewfds.jpg'})
+Image.create!({listing_id: l42.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480890952/42_7_dj3i3j.jpg'})
 
 l43 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94114, USA',
@@ -1279,13 +1279,13 @@ l43 = Listing.create!({
   description: 'Newly remodeled two bedroom house. Located in Noe Valley, walking distance from 24th street. Parking, laundry, front and back yard. Edwardian with modern interior and hardwood floors.'
 })
 
-Image.create!({listing_id: l43.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891337/43_4_wn7hgj.jpg'})
-Image.create!({listing_id: l43.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891338/43_5_ndhsdo.jpg'})
-Image.create!({listing_id: l43.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891337/43_6_xw6xvm.jpg'})
-Image.create!({listing_id: l43.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891336/43_2_ehwljw.jpg'})
-Image.create!({listing_id: l43.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891337/43_3_j4t6kt.jpg'})
-Image.create!({listing_id: l43.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891336/43_1_dpg43p.jpg'})
-Image.create!({listing_id: l43.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891336/43_0_zs9vrz.jpg'})
+Image.create!({listing_id: l43.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480891337/43_4_wn7hgj.jpg'})
+Image.create!({listing_id: l43.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480891338/43_5_ndhsdo.jpg'})
+Image.create!({listing_id: l43.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480891337/43_6_xw6xvm.jpg'})
+Image.create!({listing_id: l43.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480891336/43_2_ehwljw.jpg'})
+Image.create!({listing_id: l43.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480891337/43_3_j4t6kt.jpg'})
+Image.create!({listing_id: l43.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480891336/43_1_dpg43p.jpg'})
+Image.create!({listing_id: l43.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480891336/43_0_zs9vrz.jpg'})
 
 l44 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94131, USA',
@@ -1306,15 +1306,15 @@ Features and Amenities:
 - Brazilian Teak floors'
 })
 
-Image.create!({listing_id: l44.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891802/44_9_jqwbak.png'})
-Image.create!({listing_id: l44.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891800/44_2_fukpgw.png'})
-Image.create!({listing_id: l44.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891800/44_5_lsmieq.png'})
-Image.create!({listing_id: l44.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891803/44_0_jvlx2n.png'})
-Image.create!({listing_id: l44.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891804/44_1_gonqla.png'})
-Image.create!({listing_id: l44.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891800/44_7_idigox.png'})
-Image.create!({listing_id: l44.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891803/44_8_bw6mzk.png'})
-Image.create!({listing_id: l44.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891794/44_6_chotrq.png'})
-Image.create!({listing_id: l44.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480891797/44_4_a1saj7.png'})
+Image.create!({listing_id: l44.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480891802/44_9_jqwbak.png'})
+Image.create!({listing_id: l44.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480891800/44_2_fukpgw.png'})
+Image.create!({listing_id: l44.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480891800/44_5_lsmieq.png'})
+Image.create!({listing_id: l44.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480891803/44_0_jvlx2n.png'})
+Image.create!({listing_id: l44.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480891804/44_1_gonqla.png'})
+Image.create!({listing_id: l44.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480891800/44_7_idigox.png'})
+Image.create!({listing_id: l44.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480891803/44_8_bw6mzk.png'})
+Image.create!({listing_id: l44.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480891794/44_6_chotrq.png'})
+Image.create!({listing_id: l44.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480891797/44_4_a1saj7.png'})
 
 l45 = Listing.create!({
   address: Faker::Address.street_address + ', San Francisco, CA 94110, USA',
@@ -1329,10 +1329,10 @@ l45 = Listing.create!({
   description: 'Fantastic, updated, spacious, remodeled and renovated, 1909 Edwardian. Most desirable block in Noe Valley. A few blocks to the colorful Mission District and not far off the hip and lively Valencia Corridor. Very safe. All shuttles for Google, Apple, Twitter, Facebook, etc pick up around the corner. High Ceilings, wood floors, deck, yard.  Sit on the deck to enjoy your coffee. Lovely and spacious back yard. Lemon trees, plum trees.'
 })
 
-Image.create!({listing_id: l45.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480892157/45_0_s7vtix.jpg'})
-Image.create!({listing_id: l45.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480892156/45_1_uvqdce.jpg'})
-Image.create!({listing_id: l45.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480892157/45_2_qfkgh7.jpg'})
-Image.create!({listing_id: l45.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480892158/45_3_wml3rp.jpg'})
+Image.create!({listing_id: l45.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480892157/45_0_s7vtix.jpg'})
+Image.create!({listing_id: l45.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480892156/45_1_uvqdce.jpg'})
+Image.create!({listing_id: l45.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480892157/45_2_qfkgh7.jpg'})
+Image.create!({listing_id: l45.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480892158/45_3_wml3rp.jpg'})
 
  l46 = Listing.create!({
    address: Faker::Address.street_address + ', San Francisco, CA 94131, USA',
@@ -1362,12 +1362,12 @@ Features and Amenities
 - Wireless internet'
  })
 
- Image.create!({listing_id: l46.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480892521/46_0_c3rkyh.jpg'})
- Image.create!({listing_id: l46.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480892521/46_1_bfqhuf.jpg'})
- Image.create!({listing_id: l46.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480892521/46_2_gkfdob.jpg'})
- Image.create!({listing_id: l46.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480892521/46_3_yyceqb.jpg'})
- Image.create!({listing_id: l46.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480892521/46_4_a3nkuo.jpg'})
- Image.create!({listing_id: l46.id, src: 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1480892521/46_5_stc2jg.jpg'})
+ Image.create!({listing_id: l46.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480892521/46_0_c3rkyh.jpg'})
+ Image.create!({listing_id: l46.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480892521/46_1_bfqhuf.jpg'})
+ Image.create!({listing_id: l46.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480892521/46_2_gkfdob.jpg'})
+ Image.create!({listing_id: l46.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480892521/46_3_yyceqb.jpg'})
+ Image.create!({listing_id: l46.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480892521/46_4_a3nkuo.jpg'})
+ Image.create!({listing_id: l46.id, src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1480892521/46_5_stc2jg.jpg'})
 
 # Listing.create!({
 #   address: Faker::Address.street_address + ', San Francisco, CA 94121, USA',
