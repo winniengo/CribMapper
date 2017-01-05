@@ -12,7 +12,7 @@ const _emptyListing = {
   bedrooms: "",
   bathrooms: "",
   listingType: "",
-  images: [{src: '/assets/listing.jpeg'}]
+  images: [{src: 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1483582435/icons/logo-large.png'}]
 };
 
 export const selectListing = ({ listings }, { params }) => (
