@@ -1,5 +1,5 @@
-const icon = 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478649422/icons/pointer-coral.png';
-const selected = 'http://res.cloudinary.com/dbgp4ftst/image/upload/v1478649431/icons/pointer-navy.png';
+const icon = 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1478649422/icons/pointer-coral.png';
+const selected = 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1478649431/icons/pointer-navy.png';
 
 export default class MarkerManager {
   constructor(map, handleClick) {
