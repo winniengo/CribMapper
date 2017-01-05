@@ -1,6 +1,6 @@
 import React from 'react';
 
-const icon = 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1478649431/icons/pointer-navy.png';
+const icon = 'https://res.cloudinary.com/dbgp4ftst/image/upload/v1483582122/icons/pointer-navy.png';
 
 class MapView extends React.Component {
   constructor(props) {
