@@ -7,39 +7,39 @@ export default ({ listing }) => (
       <ul>
         <li>
           type
-          <p>{listing.listingType}</p>
+          <span>{listing.listingType}</span>
         </li>
         <li>
           rent
-          <p>${listing.rent}</p>
+          <span>${listing.rent}</span>
         </li>
         <li>
           bedrooms
-          <p>{listing.bedrooms}</p>
+          <span>{listing.bedrooms}</span>
         </li>
         <li>
           bathrooms
-          <p>{listing.bathrooms}</p>
+          <span>{listing.bathrooms}</span>
         </li>
         <li>
           available
-          <p>now!</p>
+          <span>now!</span>
         </li>
         <li>
           cats?
-          <p>{listing.cats ? "yes" : "no"}</p>
+          <span>{listing.cats ? "yes" : "no"}</span>
         </li>
         <li>
           dogs?
-          <p>{listing.dogs ? "yes" : "no"}</p>
+          <span>{listing.dogs ? "yes" : "no"}</span>
         </li>
         <li>
           broker fee?
-          <p>{listing.fee ? "yes" : "no"}</p>
+          <span>{listing.fee ? "yes" : "no"}</span>
         </li>
         <li>
           parking?
-          <p>{listing.parking ? "yes" : "no"}</p>
+          <span>{listing.parking ? "yes" : "no"}</span>
         </li>
       </ul>
     </section>
